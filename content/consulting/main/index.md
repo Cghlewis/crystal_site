@@ -4,7 +4,7 @@ title:  # leave blank to exclude
 number_featured: 0 # pulling from mainSections in config.toml
 number_categories: 0 # set to zero to exclude
 show_intro: true
-intro: "<h1> <i class='fas fa-comment-dots'></i>  Data Managment Consulting</h1>
+intro: "<h1> <i class='fas fa-comment-dots'></i>  Data Management Consulting</h1>
 
 
 I provide both short and long-term data management planning for every phase of the research life cycle. I can help your team set up an efficient and reproducible process for just one phase of data management, such as data entry or data sharing, or help your team plan an entire data management workflow for your center or project.

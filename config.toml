@@ -1,4 +1,4 @@
-baseURL = "https://crystal-lewis.netlify.app/"
+baseURL = "https://crystal-lewis.com/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "Crystal Lewis"

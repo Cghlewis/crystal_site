@@ -1,18 +1,18 @@
 ---
 ## Configure sidebar content in narrow column
-author: "Hugo Apéro"
-role: "A Hugo theme"
+author: "About Me"
 avatar_shape: rounded # circle, square, rounded, leave blank to exclude
-show_social_links: true # specify social accounts in site config
-audio_link_label: "How to say my name" # leave blank to exclude
-link_list_label: "Interests" # bookmarks, elsewhere, etc.
+show_social_links: false
+show_audio_link: false
+link_list_label:
 link_list:
-- name: Paris
-  url: https://en.wikipedia.org/wiki/Paris
-- name: Pastries
-  url: https://en.wikipedia.org/wiki/Pastry
-- name: People
-  url: https://en.wikipedia.org/wiki/People
+- name: Organizer of the Issues in Education Research Data Management Hub
+  url: https://www.womeninedresearch.com/
+- name: Co-Organizer for R-Ladies St. Louis
+  url: https://www.meetup.com/rladies-st-louis/
+- name: A mom of a preschooler and rescue puppy
+- name: A lover of spending time outdoors hiking, camping, and exploring
+
 ---
 
 ** index doesn't contain a body, just front matter above.

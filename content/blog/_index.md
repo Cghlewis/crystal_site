@@ -1,31 +1,36 @@
 ---
-author:
+title: Blog
+description: |
+  A blog about data management. 
+author: "Crystal Lewis"
+show_post_thumbnail: true
+thumbnail_left: false
+show_author_byline: true
+show_post_date: true
+# for listing page layout
+layout: list-sidebar # list, list-sidebar, list-grid
+
+# for list-sidebar layout
+sidebar: 
+  title: Blog
+  description: |
+    This is where I store and share any ideas I have about data management practices or data wrangling in #rstats.
+  author: "Crystal Lewis"
+  text_link_label:
+  text_link_url:
+  show_sidebar_adunit: true # show ad container
+
+# set up common front matter for all pages inside blog/
 cascade:
-  author:
+  author: "Crystal Lewis"
   show_author_byline: true
-  show_comments: true
   show_post_date: true
+  show_comments: false # see site config to choose Disqus or Utterances
+  # for single-sidebar layout
   sidebar:
-    show_sidebar_adunit: false
     text_link_label: View recent posts
     text_link_url: /blog/
-description: "Welcome to my blog where I provide tips on R coding as well as general research data management! \n"
-layout: list
-show_author_byline: true
-show_button_links: false
-show_post_date: true
-show_post_thumbnail: true
-sidebar:
-  author:
-  description: "This is a fully featured blog that supports categories,\ntags, series,
-    and pagination. Even this sidebar offers \na ton of customizations.\n\nCheck out
-    the _index.md file in the /blog folder \nto edit this content. \n"
-  show_sidebar_adunit: true
-  text_link_label: Subscribe via RSS
-  text_link_url: /index.xml
-  title: A Sidebar for Your Thoughts
-thumbnail_left: true
-title: Data Management Tips
+    show_sidebar_adunit: false # show ad container
 ---
 
 ** No content below YAML for the blog _index. This file provides front matter for the listing page layout and sidebar content. It is also a branch bundle, and all settings under `cascade` provide front matter for all pages inside blog/. You may still override any of these by changing them in a page's front matter.**

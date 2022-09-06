@@ -33,7 +33,7 @@ enableEmoji = true
   description = "My website."
   favicon = "/img/favicon.ico"
   logo = "/img/flower2.png"
-  mainSections = ["consulting", "blog", "projects", "contact"]
+  mainSections = []
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -56,6 +56,7 @@ enableEmoji = true
   # add the filename name here, without extension
   # to use hex colors instead of named tachyons colors, include "hex" in filename
   custom_theme = "" 
+  headlineColor = "bg-yellow"
   
   # use an embedded font-family
   # serif options: Fraunces / EB Garamond / Bitter
@@ -71,7 +72,7 @@ enableEmoji = true
   # Configuration of https://utteranc.es/ for comments
   [params.utterances]
     use_utterances = true
-    repo_name = "apreshill/apero"
+    repo_name = "Cghlewis/crystal_site"
     issue_term = "pathname" # url, pathname, or title
     theme = "boxy-light"
     label = "comments :crystal_ball:"
@@ -88,7 +89,7 @@ enableEmoji = true
   [[params.social]]
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://github.com/Cghlewis/crystal_site"
+      url       = "https://github.com/Cghlewis"
   [[params.social]]
       icon      = "twitter" # icon name without the 'fa-'
       icon_pack = "fab"
@@ -96,7 +97,7 @@ enableEmoji = true
   [[params.social]]
       icon      = "linkedin-in" # icon name without the 'fa-'
       icon_pack = "fab"
-      url       = "https://twitter.com/Cghlewis"
+      url       = "https://www.linkedin.com/in/crystal-lewis-922b4193/"
 
 
 [taxonomies]
@@ -104,6 +105,7 @@ enableEmoji = true
   series = "series"
   tag = "tags"
 
+  
 [menu]
   # Configure header 
   [[menu.header]]
@@ -118,14 +120,19 @@ enableEmoji = true
     weight = 2
   [[menu.header]]
     name = "Projects"
-    title = "Project Portfolio"
-    url = "/project/"
+    title = "Projects"
+    url = "/projects/"
     weight = 3
+  [[menu.header]]
+    name = "Talks"
+    title = "Talks"
+    url = "/talk/"
+    weight = 4    
   [[menu.header]]
     name = "Contact"
     title = "Contact Form"
     url = "/contact/"
-    weight = 4
+    weight = 5
 
     
   # Configure footer  

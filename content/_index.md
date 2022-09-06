@@ -1,20 +1,16 @@
 ---
-action_label: Read More &rarr;
-action_link: /about
+action_label: Learn More &rarr;
+action_link: /consulting
 action_type: text
-description: Sit down, relax, and get to know Hugo Apéro. Built on top of Blogophonic,
-  we wanted to create a polished Hugo theme with the right features for a true personal
-  website. We set out to create a theme that is a pleasure to learn, and one that
-  helps others get to know you better. It is more than a blog, with flexible custom
-  layouts that help you introduce yourself online.
-image_left: true
+description: I am currently doing freelance consulting in data management while taking time to work on a book titled Data Management in Large-Scale Education Research. After spending over eight years in the field of education research, I found that the most fulfilling part of my experience was helping researchers build and implement quality data management processes that allowed them to focus more on using their data to make positive changes in the field, and less time wrangling their data into a usable format. If you and your team are looking for data management services or training, I would love to work with you!
+image_left: false 
 images:
-- img/revoir.jpg
+- img/me2022v02.JPG
 show_action_link: true
 show_social_links: true
-subtitle: A Hugo theme you'll want to hang out with
-text_align_left: false
-title: Hugo Apéro
+subtitle: Research Data Management Consultant
+text_align_left: true
+title: Crystal Lewis
 type: home
 ---
 

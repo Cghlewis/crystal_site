@@ -25,9 +25,9 @@ categories:
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
-Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow. 
+Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2022/09/16* 
+*Resources were last updated on 2022/09/17* 
 
 ### Guides
 
@@ -194,10 +194,6 @@ These are slides from presentations on the research data management life cycle a
    <td style="text-align:left;"> All slides available from Kristin Briney </td>
    <td style="text-align:left;"> <a href="https://www.slideshare.net/kbriney?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideview">Kristin Briney Slide Share</a> </td>
   </tr>
-  <tr>
-   <td style="text-align:left;"> Search "data management" in repository databases for great slide decks </td>
-   <td style="text-align:left;"> <a href="https://osf.io/">OSF</a>;  <a href="https://zenodo.org/">Zenodo</a>;  <a href="https://figshare.com/">figshare</a> </td>
-  </tr>
 </tbody>
 </table>
 
@@ -272,13 +268,17 @@ These are organizations, many working in the area of open science and reproducib
    <td style="text-align:left;"> University Librarians (this is just a small sampling!) </td>
    <td style="text-align:left;"> <a href="https://libraryguides.unh.edu/datamanagement">University of New Hampshire Library</a>; <a href="https://laneguides.stanford.edu/DataManagement/Introduction">Stanford Medicine Lane Medical Library</a>; <a href="https://pitt.libguides.com/managedata">University of Pittsburgh Library System</a> </td>
   </tr>
+  <tr>
+   <td style="text-align:left;"> Search "data management" in repository databases for great resources </td>
+   <td style="text-align:left;"> <a href="https://osf.io/">OSF</a>;  <a href="https://zenodo.org/">Zenodo</a>;  <a href="https://figshare.com/">figshare</a>;  <a href="https://www.ldbase.org/">LDbase</a> </td>
+  </tr>
 </tbody>
 </table>
 
 
 ### Data Cleaning Resources 
 
-Oftentimes people are interested in resources specific to developing good data cleaning workflows. While the resources above are about overall data management practices, below are some resources specific for how to structure and organize your data files, as well as common rules and steps for cleaning and validating your data in preparation for sharing and analysis. Although I advocate using code for data cleaning, and I am an avid #rstats user, I recognize that researchers uses different tools and I want to provide resources that meet people where they are. Therefore, the resources below, even if specific tools are mentioned, are provided because I simply appreciate the general data cleaning process that is provided. In a future blog post I plan write about setting up a reproducible, reliable, and automated data cleaning workflow in R for those who are interested.
+Oftentimes people are interested in resources specific to developing good data cleaning workflows. While the resources above are about overall data management practices, below are some resources specific for how to structure and organize your data files, as well as common rules and steps for cleaning and validating your data in preparation for sharing and analysis. Although I advocate using code for data cleaning, and I am an avid #rstats user, I recognize that researchers use different tools and I want to provide resources that meet people where they are. Therefore, the resources below, even if specific tools are mentioned, are provided because I simply appreciate the general data cleaning process that is provided. In a future blog post I plan write about setting up a reproducible, reliable, and automated data cleaning workflow in R for those who are interested.
 
 *Note: The entries with asterisks are cross-references from earlier in this post. They just fit in both areas.
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">

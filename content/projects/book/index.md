@@ -1,5 +1,5 @@
 ---
-title: "Data Management for Large-Scale Education Research"
+title: "Data Management in Large-Scale Education Research"
 subtitle: 
 excerpt: "What started as a series of modules on managing data for education research studies, is now a work in progress book."
 date: 2022-09-03
@@ -20,7 +20,7 @@ links:
 - icon: book-open
   icon_pack: fas
   name: forthcoming book
-  url:
+  url: "https://datamgmtinedresearch.com"
 ---
 
 ## About the Book

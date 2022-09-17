@@ -18,10 +18,8 @@ My process is to meet with you and your core team to learn more about your proje
 <h1> <i class='fas fa-laptop-code'></i>  Direct Services</h1>
 
 
-I also provide direct services such as data cleaning, documentation, database design, or creation of other data management or collection tools. I have proficiency with the following tools: R and RStudio, Microsoft Access and Excel, and Qualtrics. If you use other database, data collection, or data wrangling tools, let's connect! We may still be able to find ways to work together.
-<br>
-<br>
-Read how my documentation, data wrangling, and validation services helped the Ganley Lab at FSU confidently prepare their IES funded REALM study data for public sharing.
+I also provide direct services such as data cleaning, documentation, database design, or creation of other data management or collection tools. I have proficiency with the following tools: R and RStudio, Microsoft Access and Excel, and Qualtrics. If you use other database, data collection, or data wrangling tools, let's connect! We may still be able to find ways to work together. 
+
 
 
 <h1> <i class='fas fa-chalkboard-teacher'></i>  Training</h1>

@@ -1,7 +1,7 @@
 ---
 title: "Comparison of Available R Codebook Packages"
 subtitle: 
-excerpt: "I reviewed 10 codebook packages based on criteria typically useful in creating a codebook for purposes such as data sharing and created a table to compare each packages functionality."
+excerpt: "I reviewed 10 packages that can be used to generate codebooks based on criteria typically useful in creating a codebook for purposes such as data sharing and created a table to compare each packages functionality."
 date: 2022-09-01 
 author:
 draft: false
@@ -17,7 +17,7 @@ links:
 - icon: tv
   icon_pack: fas
   name: Comparison Table
-  url: "https://cghlewis.github.io/mpsi-data-training/"
+  url: "https://github.com/Cghlewis/codebook-pkg-comparison"
 
 ---
 
@@ -42,8 +42,6 @@ I started this table as a way to compare existing r packages that assist in code
 + Mean (if continuous)
 
 A table of all packages I reviewed can be found here: https://cghlewis.github.io/codebook-pkg-comparison/
-
-If you see that I have mistakenly marked any category for any package, please let me know and I will update!
 
 Ultimately I have narrowed the table down to these 5 packages. I removed several packages from this final table because they do not work well with haven::labelled() data and/or they do not meet enough of the criteria above.
 

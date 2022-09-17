@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data documentation on Crystal Lewis</title>
+    <link>https://crystal-lewis.com/categories/data-documentation/</link>
+    <description>Recent content in data documentation on Crystal Lewis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://crystal-lewis.com/categories/data-documentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comparison of Available R Codebook Packages</title>
+      <link>https://crystal-lewis.com/projects/codebook/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/projects/codebook/</guid>
+      <description>Codebook Comparison I started this table as a way to compare existing r packages that assist in codebook creation. The criteria I am looking for include the following variable level metrics (specifically for working with haven::labelled() data):
+Name Label Type Values (if categorical) Value labels (if categorical) NA values (Missing values: for example -99 and -98) NA labels (Missing value labels: for example -99 = No response, -98 = Unclear response) Total valid N Total missing N N per value (if categorical) % per value (if categorical) N per NA value (Missing value) % per NA value (Missing value) Range (if continuous) Mean (if continuous) A table of all packages I reviewed can be found here: https://cghlewis.</description>
+    </item>
+    
+  </channel>
+</rss>

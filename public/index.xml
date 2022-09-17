@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Crystal Lewis</title>
+    <link>https://crystal-lewis.com/</link>
+    <description>Recent content on Crystal Lewis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 14 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://crystal-lewis.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Netlify</title>
+      <link>https://crystal-lewis.com/collection/day02/01-netlify/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/collection/day02/01-netlify/</guid>
+      <description>So far, we&amp;rsquo;ve been leveraging GitHub Pages for publishing. This works great, but for blogdown we&amp;rsquo;ll start using Netlify. Let&amp;rsquo;s start RIGHT NOW with a site we&amp;rsquo;ve already built and published.
+Pre-requisites Pick either your postcards site, or your distill site from day 01. Refresh your memory- which repository was it again?</description>
+    </item>
+    
+    <item>
+      <title>A GitHub profile</title>
+      <link>https://crystal-lewis.com/collection/day01/01-github/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/collection/day01/01-github/</guid>
+      <description>Profile https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/personalizing-your-profile
+Pin projects to profile https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/pinning-items-to-your-profile
+Profile README This is new! Let&amp;rsquo;s do it:
+https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme</description>
+    </item>
+    
+    <item>
+      <title>Prework</title>
+      <link>https://crystal-lewis.com/collection/prework/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/collection/prework/</guid>
+      <description>Welcome to the Introducing Yourself Online workshop! We look forward to meeting you. Before attending the workshop, please complete the following prework.
+Set up RStudio Cloud Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. I recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember). I want you to be able to work from your own laptop in this workshop, but Cloud is an important back-up plan should you run into troubles.</description>
+    </item>
+    
+    <item>
+      <title>A postcard</title>
+      <link>https://crystal-lewis.com/collection/day01/02-postcards/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/collection/day01/02-postcards/</guid>
+      <description>Pre-requisites First, make sure you have the latest version of the postcards package installed from CRAN:
+install.packages(&amp;#34;postcards&amp;#34;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
+Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS). packageVersion(&amp;#34;postcards&amp;#34;) [1] ‘0.2.0’ Create GitHub repo Online.
+Clone GitHub repo usethis::create_from_github(&amp;#34;https://github.com/apreshill/global-postcard.git&amp;#34;) ✨ Commit &amp;amp; Push! ✨</description>
+    </item>
+    
+    <item>
+      <title>Using blogdown</title>
+      <link>https://crystal-lewis.com/collection/day02/02-blogdown/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/collection/day02/02-blogdown/</guid>
+      <description>Pre-requisites First, make sure you have the latest version of the blogdown package installed from CRAN:
+install.packages(&amp;#34;blogdoown&amp;#34;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
+Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS). packageVersion(&amp;#34;blogdown&amp;#34;) [1] ‘1.0’ Create GitHub repo Online.
+Clone GitHub repo usethis::create_from_github(&amp;#34;https://github.com/apreshill/global-blogdown.git&amp;#34;) ✨ Commit &amp;amp; Push! ✨</description>
+    </item>
+    
+    <item>
+      <title>A distill site</title>
+      <link>https://crystal-lewis.com/collection/day01/03-distill/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/collection/day01/03-distill/</guid>
+      <description>Pre-requisites First, make sure you have the latest version of the distill package installed from CRAN:
+install.packages(&amp;quot;distill&amp;quot;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
+Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS). &amp;lt;!-- --&amp;gt; packageVersion(&amp;quot;distill&amp;quot;) [1] ‘1.2’ Create GitHub repo Online.
+Clone GitHub repo usethis::create_from_github(&amp;quot;https://github.com/apreshill/global-distill.git&amp;quot;) ✨ Commit &amp;amp; Push!</description>
+    </item>
+    
+    <item>
+      <title>Warm woolen mittens</title>
+      <link>https://crystal-lewis.com/collection/day02/03-blogdown/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/collection/day02/03-blogdown/</guid>
+      <description> Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
+Here I am: content/collection\day02\03-blogdown\index.md To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
+My content section is: collection My layout is: single-series part 2! does this work? now for some very cool things more get ready! </description>
+    </item>
+    
+    <item>
+      <title>A Curated Collection of Data Management Resources</title>
+      <link>https://crystal-lewis.com/blog/data_mgmt_resources/</link>
+      <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/blog/data_mgmt_resources/</guid>
+      <description>Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
+Resources were last updated on 2022/09/16</description>
+    </item>
+    
+    <item>
+      <title>Data Management in Large-Scale Education Research</title>
+      <link>https://crystal-lewis.com/projects/book/</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/projects/book/</guid>
+      <description>About the Book The modules and book are a compilation of lessons I have learned in my personal experiences as a data manager, knowledge collected from existing books, sites and blogs (many written by librarians or those involved in the open science movement), as well as advice and stories collected through interviews with other researchers who work with data. I cover best practices throughout the research data management life cycle that education researchers and research staff can implement into their workflow.</description>
+    </item>
+    
+    <item>
+      <title>Data Wrangling Functions</title>
+      <link>https://crystal-lewis.com/projects/data_wrangling_functions/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/projects/data_wrangling_functions/</guid>
+      <description>About the Wiki The Data Wrangling Functions Wiki is a reference resource that I have been developing for myself and others to refer to when cleaning education data (or any data) using R. It is a collection of functions that I have found helpful to use in my data wrangling process and can be referred to whenever you forget how to or are unsure how to perform a data task.</description>
+    </item>
+    
+    <item>
+      <title>Comparison of Available R Codebook Packages</title>
+      <link>https://crystal-lewis.com/projects/codebook/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/projects/codebook/</guid>
+      <description>Codebook Comparison I started this table as a way to compare existing r packages that assist in codebook creation. The criteria I am looking for include the following variable level metrics (specifically for working with haven::labelled() data):
+Name Label Type Values (if categorical) Value labels (if categorical) NA values (Missing values: for example -99 and -98) NA labels (Missing value labels: for example -99 = No response, -98 = Unclear response) Total valid N Total missing N N per value (if categorical) % per value (if categorical) N per NA value (Missing value) % per NA value (Missing value) Range (if continuous) Mean (if continuous) A table of all packages I reviewed can be found here: https://cghlewis.</description>
+    </item>
+    
+    <item>
+      <title>R Flexdashboard of School Closure Trends</title>
+      <link>https://crystal-lewis.com/projects/flexdashboard/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/projects/flexdashboard/</guid>
+      <description>About the dashboard This R Flexdashboard pulled data daily from Google Trends to display 7 day school closure trends across the U.S.</description>
+    </item>
+    
+    <item>
+      <title>Data Management Overview</title>
+      <link>https://crystal-lewis.com/talk/schoen_res/</link>
+      <pubDate>Thu, 26 May 2022 12:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/talk/schoen_res/</guid>
+      <description>The slides are from a 6 part workshop series given to the Schoen Research Team at Florida State University. Parts 1 &amp;amp; 2 cover best practices throughout the research data managment life cycle. Parts 3-6 cover an introduction to R and RStudio and data wrangling in the Tidyverse.</description>
+    </item>
+    
+    <item>
+      <title>A Synthesis of Data Management Issues</title>
+      <link>https://crystal-lewis.com/blog/synthesis_data_mgmt/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/blog/synthesis_data_mgmt/</guid>
+      <description>Everyone who works with data has experienced data management difficulties. While it is a pain in the moment to work through those issues, it is refreshing to know that you are never alone. This is evident from the several meetups that have even been started just to commiserate around shared data mishap experiences. Take for instance the Second Annual Data Mishaps Night occurring next Thursday February 24th, or the Be Afraid, Be Very Afraid: Data Management Horror Stories and Lessons Learned sharing session occurring at the COS: Unconference next Friday, February 25th.</description>
+    </item>
+    
+    <item>
+      <title>Data Management in Large-Scale Ed Research</title>
+      <link>https://crystal-lewis.com/talk/mpsi/</link>
+      <pubDate>Fri, 25 Sep 2020 12:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/talk/mpsi/</guid>
+      <description>These slides are from a series of talks on best practices in documentation, creating a style guide and collecting data.</description>
+    </item>
+    
+    <item>
+      <title>Contact Me</title>
+      <link>https://crystal-lewis.com/contact/</link>
+      <pubDate>Mon, 25 Feb 2019 13:38:41 -0600</pubDate>
+      
+      <guid>https://crystal-lewis.com/contact/</guid>
+      <description>** Contact page don&amp;rsquo;t contain a body, just the front matter above. See form.html in the layouts folder.
+Formspree requires a (free) account and new form to be set up. The link is made on the final published url in the field: Restrict to Domain. It is possible to register up to 2 emails free and you can select which one you want the forms to go to within Formspree in the Settings tab.</description>
+    </item>
+    
+    <item>
+      <title>Typography Styles &amp; Element Examples</title>
+      <link>https://crystal-lewis.com/elements/</link>
+      <pubDate>Mon, 18 Feb 2019 12:27:33 -0600</pubDate>
+      
+      <guid>https://crystal-lewis.com/elements/</guid>
+      <description>Font Sizes A A A A A A A A 6rem
+(96px) 5rem
+(80px) 3rem
+(48px) 2.25rem
+(36px) 1.5rem
+(24px) 1.25rem
+(20px) 1rem
+(16px) .875rem
+(14px) Type Samples Head&amp;shy;line Sub&amp;shy;head&amp;shy;line Level 1 Heading One page to rule them all...well, not really. This page displays sample typography and page elements to illustrate their style. Things like headings and paragraphs showing the beautiful type scale, form elements, tabular data, and image layouts just to name a few.</description>
+    </item>
+    
+    <item>
+      <title>Contributors</title>
+      <link>https://crystal-lewis.com/contributors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/contributors/</guid>
+      <description>Thank you to all the folks who have contributed both technical and creative skills to this project:
+Desirée De Leon 🦒 (designed 5 of the custom color themes, made illustrations for the workshop, and provided general aesthetic feedback along the way)
+Garrick Aden-Buie 🧙‍♀️ (debugged headroom.js and lent his panelset.js code to the theme)
+Allison Horst 🐕 (awesome illustrations of campfires, seedlings, and evergreens, as well as my R Markdown hedgehog mascot 🦔)</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://crystal-lewis.com/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/license/</guid>
+      <description>My blog posts are released under a Creative Commons Attribution-ShareAlike 4.0 International License.</description>
+    </item>
+    
+  </channel>
+</rss>

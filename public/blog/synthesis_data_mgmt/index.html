@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.101.0" />
+<title>A Synthesis of Data Management Issues | Crystal Lewis</title>
+
+
+<meta property="twitter:site" content="@cghlewis">
+<meta property="twitter:creator" content="@cghlewis">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="This is a blog post originally written for [Streamline Data Science](https://www.streamlinedatascience.io/).">
+
+
+<meta property="og:site_name" content="Crystal Lewis">
+<meta property="og:title" content="A Synthesis of Data Management Issues | Crystal Lewis">
+<meta property="og:description" content="This is a blog post originally written for [Streamline Data Science](https://www.streamlinedatascience.io/)." />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://crystal-lewis.com/blog/synthesis_data_mgmt/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://crystal-lewis.com/blog/synthesis_data_mgmt/featured.PNG" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://crystal-lewis.com/blog/synthesis_data_mgmt/featured.PNG" >
+    
+    
+  <meta itemprop="name" content="A Synthesis of Data Management Issues">
+<meta itemprop="description" content="Everyone who works with data has experienced data management difficulties. While it is a pain in the moment to work through those issues, it is refreshing to know that you are never alone. This is evident from the several meetups that have even been started just to commiserate around shared data mishap experiences. Take for instance the Second Annual Data Mishaps Night occurring next Thursday February 24th, or the Be Afraid, Be Very Afraid: Data Management Horror Stories and Lessons Learned sharing session occurring at the COS: Unconference next Friday, February 25th."><meta itemprop="datePublished" content="2022-02-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-02-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="798"><meta itemprop="image" content="https://crystal-lewis.com/blog/synthesis_data_mgmt/featured.PNG">
+<meta itemprop="keywords" content="" />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.36233a39979933db8877785b1879dd1ee29d2f4bf092a7566e716b04552caf2c.css" integrity="sha256-NiM6OZeZM9uId3hbGHndHuKdL0vwkqdWbnFrBFUsryw=" media="screen">
+  
+  
+  <script src="/panelset.min.dca42702d7daf6fd31dc352efd2bcf0e4ac8c05ccaa58d9293f6177462de5d5f.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.6003fae4f0a991c47f3ebffd1d7c0c5d116b39c00d67970ca34464bf62cd2e7a.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://crystal-lewis.com/" title="Home">
+      <img src="/img/flower2.png" class="dib db-l h2 w-auto" alt="Crystal Lewis">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/consulting/" title="Consulting Work">Consulting</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/projects/" title="Projects">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact Form">Contact</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">A Synthesis of Data Management Issues</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Crystal Lewis in <a href="https://crystal-lewis.com/categories/data-management">data management</a> </p>
+        <p class="f7 db mv0 ttu">February 23, 2022</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <p>Everyone who works with data has experienced data management difficulties. While it is a pain in the moment to work through those issues, it is refreshing to know that you are never alone. This is evident from the several meetups that have even been started just to commiserate around shared data mishap experiences. Take for instance the 
+<a href="https://datamishapsnight.com/" target="_blank" rel="noopener">Second Annual Data Mishaps Night</a> occurring next Thursday February 24th, or the Be Afraid, Be Very Afraid: Data Management Horror Stories and Lessons Learned sharing session occurring at the 
+<a href="https://www.cos.io/education-research-2022-unconference" target="_blank" rel="noopener">COS: Unconference</a> next Friday, February 25th.</p>
+<p>And while sharing data mishaps or horror stories is very therapeutic and fun, it also provides an opportunity for us to learn from each other.</p>
+<p>A month ago, Jeff Leek posted a question on 
+<a href="https://twitter.com/jtleek/status/1478384980686524420?s=11" target="_blank" rel="noopener">Twitter</a>: What is your most painful data cleanup experience?</p>
+<p><img src="tweet1.png" alt=""></p>
+<p>I decided to synthesize the themes brought up in this thread and to brainstorm some possible solutions. Four common themes I saw throughout this thread were standardization, interoperability, automation, and documentation.</p>
+
+
+
+
+<h3 id="standardization">Standardization
+  <a href="#standardization"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>This theme generally encompasses bringing data together in a consistent format that allows collaboration and reproducibility. This could be standardization of variable names, column values, file types, variable formats, file names, and more. Jesse Mostipak provided a very digestible incident of lack of standardization in a K-12 education dataset, where the meaning of the categories of a variable changed across time, rendering the dataset difficult to interpret.</p>
+<p><img src="tweet2.png" alt=""></p>
+<p>Oscar Garcia Hinde provided another example of a dataset with multiple issues with standardization:</p>
+<p><img src="tweet3.png" alt=""></p>
+<p>While standardization in some instances can be tricky (ex: multiple users creating data, software issues, ongoing data updates), there are some very simple measures that can be taken to ensure your data is more accessible including:</p>
+<ol>
+<li>Consistent variable naming across files and time</li>
+<li>Versioning of variable names
+a.	If a state test is now scored differently than previous years, it should be given a new variable name to reduce confusion</li>
+<li>Standardization of data categories across files and time
+a.	If the IDEA category was a 2 digit numeric variable last year, it should not be a 4 letter character variable this year
+b.	If a date format is YYYY-MM-DD one year, keep it the same format across time</li>
+<li>Standardization of data format across time
+a.	Same file format, headers, and number of columns (unless new data is collected) across time</li>
+</ol>
+
+
+
+
+<h3 id="interoperability">Interoperability
+  <a href="#interoperability"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>As defined in the 
+<a href="https://www.go-fair.org/fair-principles/" target="_blank" rel="noopener">FAIR principles</a>, “the data need to interoperate with applications or workflows for analysis, storage, and processing”. Several people mentioned receiving data in an inaccessible format such as a PDF. I think Suzanne Dahlberg may have my favorite response with having a dataset “faxed” to her.</p>
+<p><img src="tweet4.png" alt=""></p>
+<p>While there are many ways to access data, in most use cases, accessing data in a machine-readable rectangular, tidy format that follows data organization in spreadsheet guidelines is usually ideal.</p>
+
+
+
+
+<h3 id="automation">Automation
+  <a href="#automation"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Here responses refer to both automation of the data entry process as well as the data cleaning process. Lack of automation in the data entry process means there are hand entered values, whether that means the entire dataset is hand entered, or just certain questions allow manual entry.</p>
+<p><img src="tweet5.png" alt=""></p>
+<p>While manual entry is sometimes actually very important in allowing us to capture the full information of a variable (ex: an open-ended demographics question), there are times when it may be better for us to provide limited input values that a user selects from. This not only reduces errors in data entry but also reduces the headaches that may come along with having to recategorize values later on.</p>
+<p>Lack of automation also refers to the data cleaning process as well. As much as possible, all data manipulation should be done through programming. This allows your work to be reproducible and reduces errors. Take for instance, this example where someone encountered data that had been hand merged.</p>
+<p><img src="tweet6.png" alt=""></p>
+
+
+
+
+<h3 id="documentation">Documentation
+  <a href="#documentation"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>If I had to pick one of the most worrisome data management problems to encounter, but also one that, if remedied, provides the most relief of data management headaches, it’s documentation. A dataset with the gnarliest of problems can at least begin to be interpreted by a user as long as someone has created thorough documentation. And a beautiful standardized dataset that checks all the boxes, is still somewhat useless with no documentation.</p>
+<p><img src="tweet7.png" alt=""></p>
+<p>Metadata that documents the who, what, where, when and why of the project, the data and the variables is key to data being used and interpreted correctly. Data dictionaries, codebooks, and READMEs are all guaranteed ways to improve data management.</p>
+<hr>
+<p>In summary, while we cannot always control how we receive data, sharing lessons learned with data producers is still a worthwhile endeavor. It may help others implement better data curation practices. And sometimes that data producer who we are so frustrated with, turns out to be our past or future selves!</p>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">February 23, 2022</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">4 minute read, 798 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://crystal-lewis.com/categories/data-management">data management</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://crystal-lewis.com/blog/data_mgmt_resources/">&larr; A Curated Collection of Data Management Resources</a>
+  
+  
+  
+</div>
+
+      </footer>
+    </article>
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2022 Crystal Lewis
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/Cghlewis" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/Cghlewis" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/crystal-lewis-922b4193/" title="linkedin-in" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

@@ -2,8 +2,9 @@
 author: 
 categories:
 - workshop
-date: "2022-05-26"
-date_end: "2022-07-14"
+date: "2022-05-26T12:00:00"
+date_end: "2022-07-14T12:00:00"
+time: false
 draft: false
 event: 
 event_url: 
@@ -15,7 +16,7 @@ links:
   icon_pack: fas
   name: Slides
   url: https://cghlewis.github.io/schoen-data-mgmt-series-public/
-location: remote
+location: virtual
 show_post_time: false
 subtitle:
 title: Data Management Overview

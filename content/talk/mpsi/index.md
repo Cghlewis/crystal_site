@@ -2,8 +2,8 @@
 author: 
 categories:
 - workshop
-date: "2020-09-25"
-date_end: "2021-04-16"
+date: "2020-09-25T12:00:00"
+date_end: "2021-04-16T12:00:00"
 draft: false
 event: 
 event_url: 
@@ -23,7 +23,7 @@ links:
   icon_pack: fas
   name: Style Guide Slides
   url: https://cghlewis.github.io/mpsi-training3/#1
-location: remote
+location: virtual
 show_post_time: false
 subtitle:
 title: Data Management in Large-Scale Ed Research

@@ -4,7 +4,7 @@ description: "This section contains information about active/completed projects 
 
 - I am an organizer of the [POWER](https://www.womeninedresearch.com/) Issues in Education Data Management Research Hub
 
-- I am a Co-Organizer of [R-Ladies St. Louis](https://www.meetup.com/rladies-st-louis/)
+- I am a co-organizer of [R-Ladies St. Louis](https://www.meetup.com/rladies-st-louis/)
 
 - I do ongoing consulting with [R for the Rest of Us](https://rfortherestofus.com/)"
 

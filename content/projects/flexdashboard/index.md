@@ -18,8 +18,8 @@ links:
   name: Dashboard
   url: "https://gtrends-school.streamlinedatascience.io/"
 - icon: github
-  icon_pack: fas
-  name: code
+  icon_pack: fab
+  name: Code
   url: "https://github.com/Cghlewis/gtrends_school_closure"
 ---
 

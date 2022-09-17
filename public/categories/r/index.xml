@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Crystal Lewis</title>
+    <link>https://crystal-lewis.com/categories/r/</link>
+    <description>Recent content in R on Crystal Lewis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://crystal-lewis.com/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Wrangling Functions</title>
+      <link>https://crystal-lewis.com/projects/data_wrangling_functions/</link>
+      <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/projects/data_wrangling_functions/</guid>
+      <description>About the Wiki The Data Wrangling Functions Wiki is a reference resource that I have been developing for myself and others to refer to when cleaning education data (or any data) using R. It is a collection of functions that I have found helpful to use in my data wrangling process and can be referred to whenever you forget how to or are unsure how to perform a data task.</description>
+    </item>
+    
+    <item>
+      <title>Comparison of Available R Codebook Packages</title>
+      <link>https://crystal-lewis.com/projects/codebook/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/projects/codebook/</guid>
+      <description>Codebook Comparison I started this table as a way to compare existing r packages that assist in codebook creation. The criteria I am looking for include the following variable level metrics (specifically for working with haven::labelled() data):
+Name Label Type Values (if categorical) Value labels (if categorical) NA values (Missing values: for example -99 and -98) NA labels (Missing value labels: for example -99 = No response, -98 = Unclear response) Total valid N Total missing N N per value (if categorical) % per value (if categorical) N per NA value (Missing value) % per NA value (Missing value) Range (if continuous) Mean (if continuous) A table of all packages I reviewed can be found here: https://cghlewis.</description>
+    </item>
+    
+    <item>
+      <title>R Flexdashboard of School Closure Trends</title>
+      <link>https://crystal-lewis.com/projects/flexdashboard/</link>
+      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://crystal-lewis.com/projects/flexdashboard/</guid>
+      <description>About the dashboard This R Flexdashboard pulled data daily from Google Trends to display 7 day school closure trends across the U.S.</description>
+    </item>
+    
+  </channel>
+</rss>

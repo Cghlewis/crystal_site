@@ -1,7 +1,7 @@
 ---
-title: Talks & workshops
+title: Talks & Workshops
 description: |
-  Talks and Workshops I have given on Data Management and Data Wrangling in #rstats.
+  Talks and workshops I have given on data management and data wrangling in #rstats.
 author: "Alison Hill"
 show_post_thumbnail: true
 thumbnail_left: false

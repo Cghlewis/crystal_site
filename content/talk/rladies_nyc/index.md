@@ -11,6 +11,10 @@ event_url:
 excerpt: Slides from a 5 minute lightning talk for R-Ladies NYC.
 layout: single
 links:
+- icon: edit
+  icon_pack: fas
+  name: RSVP!
+  url: https://www.meetup.com/rladies-newyork/events/287520144/
 - icon: tv
   icon_pack: fas
   name: Slides

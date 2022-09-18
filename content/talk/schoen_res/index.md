@@ -16,7 +16,7 @@ links:
   url: https://cghlewis.github.io/schoen-data-mgmt-series-public/
 location: virtual
 show_post_time: false
-tags:
+categories:
   - data management
   - rstats
 ---

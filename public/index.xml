@@ -6,7 +6,7 @@
     <description>Recent content on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 17 Sep 2022 18:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netlify</title>
       <link>https://cghlewis.com/collection/day02/01-netlify/</link>
@@ -84,15 +84,6 @@ Clone GitHub repo usethis::create_from_github(&amp;quot;https://github.com/apres
       <description> Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
 Here I am: content/collection\day02\03-blogdown\index.md To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
 My content section is: collection My layout is: single-series part 2! does this work? now for some very cool things more get ready! </description>
-    </item>
-    
-    <item>
-      <title>A Comparison of Packages to Generate Codebooks in R</title>
-      <link>https://cghlewis.com/talk/rladies_nyc/</link>
-      <pubDate>Sat, 17 Sep 2022 18:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/talk/rladies_nyc/</guid>
-      <description>The slides are from a 5 minute lightning talk given to R-Ladies NYC. The topic was comparing 4 R packages that can be used to create codebooks for data documentation.</description>
     </item>
     
     <item>

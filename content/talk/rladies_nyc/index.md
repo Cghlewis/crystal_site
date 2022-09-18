@@ -1,8 +1,8 @@
 ---
 title: A Comparison of Packages to Generate Codebooks in R
 author: 
-date: "2022-09-17T18:00:00"
-date_end: "2022-09-17T20:00:00"
+date: "2022-09-20T18:00:00"
+date_end: "2022-09-20T20:00:00"
 time: false
 draft: false
 event: 
@@ -20,7 +20,7 @@ links:
   url: "https://github.com/Cghlewis/rladies-nyc-codebook-comparison/"
 location: virtual
 show_post_time: false
-tags:
+categories:
   - rstats
 ---
 

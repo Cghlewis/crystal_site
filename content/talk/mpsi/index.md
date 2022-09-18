@@ -25,7 +25,7 @@ links:
   url: https://cghlewis.github.io/mpsi-training3/#1
 location: virtual
 show_post_time: false
-tags:
+categories:
   - data management
 ---
 

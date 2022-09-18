@@ -29,21 +29,6 @@
     <loc>https://cghlewis.com/collection/day02/03-blogdown/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cghlewis.com/talk/rladies_nyc/</loc>
-    <lastmod>2022-09-17T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cghlewis.com/</loc>
-    <lastmod>2022-09-17T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cghlewis.com/tags/rstats/</loc>
-    <lastmod>2022-09-17T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cghlewis.com/tags/</loc>
-    <lastmod>2022-09-17T18:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cghlewis.com/talk/</loc>
-    <lastmod>2022-09-17T18:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://cghlewis.com/blog/data_mgmt_resources/</loc>
     <lastmod>2022-09-14T00:00:00+00:00</lastmod>
   </url><url>
@@ -51,6 +36,9 @@
     <lastmod>2022-09-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/categories/</loc>
+    <lastmod>2022-09-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cghlewis.com/</loc>
     <lastmod>2022-09-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/categories/data-management/</loc>
@@ -74,7 +62,7 @@
     <loc>https://cghlewis.com/projects/data_wrangling_functions/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cghlewis.com/categories/r/</loc>
+    <loc>https://cghlewis.com/categories/rstats/</loc>
     <lastmod>2022-09-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/projects/codebook/</loc>
@@ -92,10 +80,10 @@
     <loc>https://cghlewis.com/projects/flexdashboard/</loc>
     <lastmod>2022-08-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cghlewis.com/tags/data-management/</loc>
+    <loc>https://cghlewis.com/talk/schoen_res/</loc>
     <lastmod>2022-05-26T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cghlewis.com/talk/schoen_res/</loc>
+    <loc>https://cghlewis.com/talk/</loc>
     <lastmod>2022-05-26T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/blog/synthesis_data_mgmt/</loc>
@@ -105,9 +93,6 @@
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/talk/mpsi/</loc>
-    <lastmod>2020-09-25T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cghlewis.com/categories/workshop/</loc>
     <lastmod>2020-09-25T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/contact/</loc>
@@ -128,5 +113,7 @@
     <loc>https://cghlewis.com/series/</loc>
   </url><url>
     <loc>https://cghlewis.com/consulting/</loc>
+  </url><url>
+    <loc>https://cghlewis.com/tags/</loc>
   </url>
 </urlset>

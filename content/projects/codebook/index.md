@@ -9,7 +9,7 @@ featured: true
 show_post_thumbnail: true
 categories:
   - data management
-  - R
+  - rstats
   - data sharing
   - data documentation
 layout: single

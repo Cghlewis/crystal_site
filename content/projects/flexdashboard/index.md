@@ -9,7 +9,7 @@ featured: true
 show_post_thumbnail: true
 categories:
   - data visualization
-  - R
+  - rstats
   - data wrangling
 layout: single
 links:

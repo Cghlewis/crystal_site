@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>data wrangling on Crystal Lewis</title>
-    <link>https://crystal-lewis.com/categories/data-wrangling/</link>
+    <link>https://cghlewis.com/categories/data-wrangling/</link>
     <description>Recent content in data wrangling on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://crystal-lewis.com/categories/data-wrangling/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/data-wrangling/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Wrangling Functions</title>
-      <link>https://crystal-lewis.com/projects/data_wrangling_functions/</link>
+      <link>https://cghlewis.com/projects/data_wrangling_functions/</link>
       <pubDate>Fri, 02 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://crystal-lewis.com/projects/data_wrangling_functions/</guid>
+      <guid>https://cghlewis.com/projects/data_wrangling_functions/</guid>
       <description>About the Wiki The Data Wrangling Functions Wiki is a reference resource that I have been developing for myself and others to refer to when cleaning education data (or any data) using R. It is a collection of functions that I have found helpful to use in my data wrangling process and can be referred to whenever you forget how to or are unsure how to perform a data task.</description>
     </item>
     
     <item>
       <title>R Flexdashboard of School Closure Trends</title>
-      <link>https://crystal-lewis.com/projects/flexdashboard/</link>
+      <link>https://cghlewis.com/projects/flexdashboard/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://crystal-lewis.com/projects/flexdashboard/</guid>
+      <guid>https://cghlewis.com/projects/flexdashboard/</guid>
       <description>About the dashboard This R Flexdashboard pulled data daily from Google Trends to display 7 day school closure trends across the U.S.</description>
     </item>
     

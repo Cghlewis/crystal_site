@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>education research on Crystal Lewis</title>
-    <link>https://crystal-lewis.com/categories/education-research/</link>
+    <link>https://cghlewis.com/categories/education-research/</link>
     <description>Recent content in education research on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://crystal-lewis.com/categories/education-research/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/education-research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Management in Large-Scale Education Research</title>
-      <link>https://crystal-lewis.com/projects/book/</link>
+      <link>https://cghlewis.com/projects/book/</link>
       <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://crystal-lewis.com/projects/book/</guid>
+      <guid>https://cghlewis.com/projects/book/</guid>
       <description>About the Book The modules and book are a compilation of lessons I have learned in my personal experiences as a data manager, knowledge collected from existing books, sites and blogs (many written by librarians or those involved in the open science movement), as well as advice and stories collected through interviews with other researchers who work with data. I cover best practices throughout the research data management life cycle that education researchers and research staff can implement into their workflow.</description>
     </item>
     

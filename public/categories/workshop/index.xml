@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>workshop on Crystal Lewis</title>
-    <link>https://crystal-lewis.com/categories/workshop/</link>
+    <link>https://cghlewis.com/categories/workshop/</link>
     <description>Recent content in workshop on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 26 May 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://crystal-lewis.com/categories/workshop/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 May 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/workshop/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Management Overview</title>
-      <link>https://crystal-lewis.com/talk/schoen_res/</link>
+      <link>https://cghlewis.com/talk/schoen_res/</link>
       <pubDate>Thu, 26 May 2022 12:00:00 +0000</pubDate>
       
-      <guid>https://crystal-lewis.com/talk/schoen_res/</guid>
+      <guid>https://cghlewis.com/talk/schoen_res/</guid>
       <description>The slides are from a 6 part workshop series given to the Schoen Research Team at Florida State University. Parts 1 &amp;amp; 2 cover best practices throughout the research data managment life cycle. Parts 3-6 cover an introduction to R and RStudio and data wrangling in the Tidyverse.</description>
     </item>
     
     <item>
       <title>Data Management in Large-Scale Ed Research</title>
-      <link>https://crystal-lewis.com/talk/mpsi/</link>
+      <link>https://cghlewis.com/talk/mpsi/</link>
       <pubDate>Fri, 25 Sep 2020 12:00:00 +0000</pubDate>
       
-      <guid>https://crystal-lewis.com/talk/mpsi/</guid>
+      <guid>https://cghlewis.com/talk/mpsi/</guid>
       <description>These slides are from a series of talks on best practices in documentation, creating a style guide and collecting data.</description>
     </item>
     

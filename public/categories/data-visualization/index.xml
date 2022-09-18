@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>data visualization on Crystal Lewis</title>
-    <link>https://crystal-lewis.com/categories/data-visualization/</link>
+    <link>https://cghlewis.com/categories/data-visualization/</link>
     <description>Recent content in data visualization on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://crystal-lewis.com/categories/data-visualization/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/data-visualization/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>R Flexdashboard of School Closure Trends</title>
-      <link>https://crystal-lewis.com/projects/flexdashboard/</link>
+      <link>https://cghlewis.com/projects/flexdashboard/</link>
       <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://crystal-lewis.com/projects/flexdashboard/</guid>
+      <guid>https://cghlewis.com/projects/flexdashboard/</guid>
       <description>About the dashboard This R Flexdashboard pulled data daily from Google Trends to display 7 day school closure trends across the U.S.</description>
     </item>
     

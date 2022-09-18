@@ -26,4 +26,4 @@ subtitle:
 title: A Comparison of Packages to Generate Codebooks in R
 ---
 
-The slides are from a 5 minute lightning talk given to R-Ladies NYC. The topic was comparing 4 R packages that can be used to create codebooks for data documentation.
+The slides are from a 5 minute lightning talk given to R-Ladies NYC. The topic was comparing 4 R packages that can be used to create codebooks for data documentation. 

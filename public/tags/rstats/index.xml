@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rstats on Crystal Lewis</title>
+    <link>https://cghlewis.com/tags/rstats/</link>
+    <description>Recent content in rstats on Crystal Lewis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 26 May 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Management Overview</title>
+      <link>https://cghlewis.com/talk/schoen_res/</link>
+      <pubDate>Thu, 26 May 2022 12:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/schoen_res/</guid>
+      <description>The slides are from a 6 part workshop series given to the Schoen Research Team at Florida State University. Parts 1 &amp;amp; 2 cover best practices throughout the research data managment life cycle. Parts 3-6 cover an introduction to R and RStudio and data wrangling in the Tidyverse.</description>
+    </item>
+    
+  </channel>
+</rss>

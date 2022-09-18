@@ -1,4 +1,5 @@
 ---
+title: Data Management in Large-Scale Ed Research
 author: 
 categories:
 - workshop
@@ -8,7 +9,6 @@ draft: false
 event: 
 event_url: 
 excerpt: Slides from a workshop series on Data Management given to the Missouri Prevention Science Institute.
-featured: true
 layout: single
 links:
 - icon: tv
@@ -25,8 +25,8 @@ links:
   url: https://cghlewis.github.io/mpsi-training3/#1
 location: virtual
 show_post_time: false
-subtitle:
-title: Data Management in Large-Scale Ed Research
+tags:
+  - data management
 ---
 
 These slides are from a series of talks on best practices in documentation, creating a style guide and collecting data.

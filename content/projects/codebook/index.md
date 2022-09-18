@@ -1,9 +1,9 @@
 ---
 title: "Comparison of Available R Codebook Packages"
-subtitle: 
+subtitle:
+author:
 excerpt: "I reviewed 10 packages that can be used to generate codebooks based on criteria typically useful in creating a codebook for purposes such as data sharing and created a table to compare each packages functionality."
 date: 2022-09-01 
-author:
 draft: false
 featured: true
 show_post_thumbnail: true

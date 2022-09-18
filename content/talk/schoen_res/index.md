@@ -8,6 +8,7 @@ draft: false
 event: 
 event_url: 
 excerpt: Slides from a workshop series given to Schoen Research at Florida State University on data management and data wrangling in R.
+featured: true
 layout: single
 links:
 - icon: tv

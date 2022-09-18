@@ -9,6 +9,7 @@ draft: false
 event: 
 event_url: 
 excerpt: Slides from a 5 minute lightning talk for R-Ladies NYC.
+featured: true
 layout: single
 links:
 - icon: edit

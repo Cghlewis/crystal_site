@@ -3,7 +3,7 @@ title: "Data Wrangling Functions"
 subtitle: 
 excerpt: "A reference Wiki including a collection of functions that are commonly used in wrangling education research data."
 date: 2022-09-02
-author:
+author: 
 draft: false
 featured: true
 show_post_thumbnail: true

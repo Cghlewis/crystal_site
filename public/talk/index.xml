@@ -6,7 +6,16 @@
     <description>Recent content in Talks &amp; Workshops on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 26 May 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/talk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Sep 2022 18:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/talk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Comparison of Packages to Generate Codebooks in R</title>
+      <link>https://cghlewis.com/talk/rladies_nyc/</link>
+      <pubDate>Tue, 20 Sep 2022 18:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/rladies_nyc/</guid>
+      <description>The slides are from a 5 minute lightning talk given to R-Ladies NYC. The topic was comparing 4 R packages that can be used to create codebooks for data documentation.</description>
+    </item>
+    
     <item>
       <title>Data Management Overview</title>
       <link>https://cghlewis.com/talk/schoen_res/</link>

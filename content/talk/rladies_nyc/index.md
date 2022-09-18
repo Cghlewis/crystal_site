@@ -3,6 +3,7 @@ title: A Comparison of Packages to Generate Codebooks in R
 author: 
 date: "2022-09-20T18:00:00"
 date_end: "2022-09-20T20:00:00"
+publishDate: "2022-09-18"
 time: false
 draft: false
 event: 

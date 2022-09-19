@@ -9,7 +9,7 @@ draft: false
 event: 
 event_url: 
 excerpt: Slides from a workshop series on Data Management given to the Missouri Prevention Science Institute.
-featured: true
+featured: true 
 layout: single
 links:
 - icon: tv

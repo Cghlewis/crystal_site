@@ -27,9 +27,9 @@ categories:
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2022/09/17* 
+*Resources were last updated on 2022/09/19* 
 
-### Guides
+### Guides 
 
 These are guides that are helpful for understanding data management in the context of the entire research process.
 
@@ -257,8 +257,12 @@ These are organizations, many working in the area of open science and reproducib
    <td style="text-align:left;"> <a href="https://www.fosteropenscience.eu/resources">Resources</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> OER Commons </td>
-   <td style="text-align:left;"> <a href="https://www.oercommons.org/">Open Educational Resources</a> </td>
+   <td style="text-align:left;"> OER Commons - Hubs </td>
+   <td style="text-align:left;"> <a href="https://www.oercommons.org/hubs/OSKB">Open Scholarship Knowledge Base</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Search "data management" in repository databases for great resources </td>
+   <td style="text-align:left;"> <a href="https://osf.io/">OSF</a>;  <a href="https://zenodo.org/">Zenodo</a>;  <a href="https://figshare.com/">figshare</a>;  <a href="https://www.ldbase.org/">LDbase</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> UK Data Service </td>
@@ -267,10 +271,6 @@ These are organizations, many working in the area of open science and reproducib
   <tr>
    <td style="text-align:left;"> University Librarians (this is just a small sampling!) </td>
    <td style="text-align:left;"> <a href="https://libraryguides.unh.edu/datamanagement">University of New Hampshire Library</a>; <a href="https://laneguides.stanford.edu/DataManagement/Introduction">Stanford Medicine Lane Medical Library</a>; <a href="https://pitt.libguides.com/managedata">University of Pittsburgh Library System</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Search "data management" in repository databases for great resources </td>
-   <td style="text-align:left;"> <a href="https://osf.io/">OSF</a>;  <a href="https://zenodo.org/">Zenodo</a>;  <a href="https://figshare.com/">figshare</a>;  <a href="https://www.ldbase.org/">LDbase</a> </td>
   </tr>
 </tbody>
 </table>

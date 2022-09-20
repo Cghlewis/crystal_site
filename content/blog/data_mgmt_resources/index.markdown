@@ -27,7 +27,7 @@ categories:
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2022/09/19* 
+*Resources were last updated on 2022/09/20* 
 
 ### Guides
 
@@ -72,7 +72,7 @@ These are guides that are helpful for understanding data management in the conte
 </tbody>
 </table>
 
-### Papers 
+### Papers
 
 These are papers written about research data management practices and workflows.
 
@@ -115,7 +115,7 @@ Research Ideas and Outcomes</a> </td>
   <tr>
    <td style="text-align:left;"> Butters, O., Wilson, R. &amp; Burton, P. </td>
    <td style="text-align:right;"> 2020 </td>
-   <td style="text-align:left;"> <a href="https://academic.oup.com/ije/article/49/4/1067/5866677?login=false">Recognizing, reporting and reducing the data curation debt of cohort studies</a> </td>
+   <td style="text-align:left;"> <a href="https://academic.oup.com/ije/article/49/4/1067/5866677?login=false">Recognizing, Reporting and Reducing the Data Curation Debt of Cohort Studies</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Gonzales, S., Carson, M. &amp; Holmes, K. </td>
@@ -300,6 +300,10 @@ Oftentimes people are interested in resources specific to developing good data c
   <tr>
    <td style="text-align:left;"> Crystal Lewis* </td>
    <td style="text-align:left;"> <a href="https://cghlewis.github.io/mpsi-data-training/training_4.html">Data Cleaning Plan</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Ellis, S. &amp; Leek, J. </td>
+   <td style="text-align:left;"> <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7518408/">How to Share Data for Collaboration</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Hubbard, A. </td>

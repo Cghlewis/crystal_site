@@ -29,7 +29,7 @@ Below are resources for those wanting to learn more about research data manageme
 
 *Resources were last updated on 2022/09/19* 
 
-### Guides 
+### Guides
 
 These are guides that are helpful for understanding data management in the context of the entire research process.
 
@@ -62,10 +62,6 @@ These are guides that are helpful for understanding data management in the conte
    <td style="text-align:left;"> <a href="https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf">Sharing Study Data: A Guide for Education Researchers</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Ldbase </td>
-   <td style="text-align:left;"> <a href="https://www.ldbase.org/resources/best-practices/general-data-management-guidelines">General Data Management Guidelines</a> </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> Reynolds, T., Schatschneider, C. &amp; Logan, J. </td>
    <td style="text-align:left;"> <a href="https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350">The Basics of Data Management</a> </td>
   </tr>
@@ -76,7 +72,7 @@ These are guides that are helpful for understanding data management in the conte
 </tbody>
 </table>
 
-### Papers
+### Papers 
 
 These are papers written about research data management practices and workflows.
 
@@ -164,8 +160,8 @@ Thesea are checklists to help researchers plan for the data management process t
    <td style="text-align:left;"> <a href="https://laneguides.stanford.edu/DataManagement/checklist">Data Management Checklist</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> University of Pittsburgh Library System </td>
-   <td style="text-align:left;"> <a href="https://pitt.libguides.com/managedata/understanding">Data Management Planning: things to Consider</a> </td>
+   <td style="text-align:left;"> UK Data Service </td>
+   <td style="text-align:left;"> <a href="https://ukdataservice.ac.uk/learning-hub/research-data-management/plan-to-share/checklist/">Checklist</a> </td>
   </tr>
 </tbody>
 </table>

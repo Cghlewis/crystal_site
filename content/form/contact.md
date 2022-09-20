@@ -1,6 +1,6 @@
 ---
 date: "2019-02-25T13:38:41-06:00"
-description: If you are interested in data managment consultation, data management services, or personalized training, please reach out to me here and I will get back to you as soon as possible. I look forward to hearing from you!
+description: If you are interested in data management consultation, data management services, or personalized training, please reach out to me here and I will get back to you as soon as possible. I look forward to hearing from you!
 draft: false
 formspree_form_id: mknydqwl
 layout: split-right

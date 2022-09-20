@@ -15,7 +15,7 @@ Below are resources for those wanting to learn more about research data manageme
 
 *Resources were last updated on `r format(Sys.time(), '%Y/%m/%d')`* 
 
-### Guides 
+### Guides
 
 These are guides that are helpful for understanding data management in the context of the entire research process.
 
@@ -31,7 +31,7 @@ data %>%
 
 ```
 
-### Papers
+### Papers 
 
 These are papers written about research data management practices and workflows.
 

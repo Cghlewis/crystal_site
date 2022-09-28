@@ -30,4 +30,4 @@ categories:
   - rstats
 ---
 
-These are materials for a 5 minute lightning talk I am giving to R-Ladies NYC. The topic is comparing 4 R packages that can be used to create codebooks for data documentation. 
+These are materials for a 5 minute lightning talk I gave to R-Ladies NYC. The topic was comparing 4 R packages that can be used to create codebooks for data documentation. 

@@ -16,6 +16,10 @@ links:
   icon_pack: fas
   name: Slides
   url: https://docs.google.com/presentation/d/1pzOmdbwQzGcDDpyFvYgkqbxm-BbEM-RBqI3pE9iJq-c/edit?usp=sharing
+- icon: play-circle
+  icon_pack: fas
+  name: recording
+  url: https://www.youtube.com/watch?v=Gb6xzJGvWUs
 location: virtual
 show_post_time: false
 categories:

@@ -27,9 +27,9 @@ categories:
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2022/10/11* 
+*Resources were last updated on 2022/10/21* 
 
-### Guides
+### Guides 
 
 These are guides that are helpful for understanding data management in the context of the entire research process.
 
@@ -153,6 +153,10 @@ Thesea are checklists to help researchers plan for the data management process t
  </thead>
 <tbody>
   <tr>
+   <td style="text-align:left;"> Crystal Lewis </td>
+   <td style="text-align:left;"> <a href="https://cghlewis.github.io/mpsi-data-training/training_6.html#Checklists">Checklists</a> </td>
+  </tr>
+  <tr>
    <td style="text-align:left;"> Harvard Longwood Research Data Management </td>
    <td style="text-align:left;"> <a href="https://datamanagement.hms.harvard.edu/about/what-research-data-management/biomedical-data-lifecycle">Research Data Management Checklist</a> </td>
   </tr>
@@ -217,6 +221,10 @@ These are other types of resources ranging from blog posts to podcasts, that als
   <tr>
    <td style="text-align:left;"> Blog </td>
    <td style="text-align:left;"> <a href="https://www.teaguehenry.com/strings-not-factors">Teague Henry: Strings Not Factors Blog</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Glossaries </td>
+   <td style="text-align:left;"> <a href="https://forrt.org/glossary/open-science/">FORRT Glossary</a>; <a href="https://open-science-training-handbook.gitbook.io/book/glossary">Open Science Training Handbook Glossary</a>; <a href="https://dataflowtoolkit.dk/process.php?otypeid=120">Data Flow Toolkit Processes</a>; <a href="https://irb.ucsf.edu/definitions">UCSF HRPP Definitions</a>; <a href="https://data.research.cornell.edu/content/glossary">Cornell University Glossary of data management terms</a>; </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Podcast </td>

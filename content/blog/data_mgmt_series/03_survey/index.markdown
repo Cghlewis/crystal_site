@@ -1,0 +1,159 @@
+---
+title: "How to export analysis-ready survey data"
+subtitle: "Part of the data management tips series"
+excerpt: "This is the second post in a series about data management tips."
+author: "Crystal Lewis"
+date: "2022-10-24"
+draft: true 
+# layout options: single, single-sidebar
+layout: single
+categories:
+- data management
+- tutorials
+- data management tips series
+- Qualtrics
+- data quality
+---
+
+
+
+
+Have you ever downloaded your data from a survey platform and expected it to look like this? ❤️
+
+<img src="img/not_messy.PNG" width="50%" style="display: block; margin: auto;" />
+
+But instead you export data that looks like this? 🙀 
+
+<img src="img/messy.PNG" width="50%" style="display: block; margin: auto;" />
+
+There are many issues with this data, ranging from inconsistent and unclear value entries, to poor variable naming, to incorrect variable types. While this data can still hopefully be salvaged, the time consuming, decision-heavy process that will go along with cleaning this data is an avoidable step in our data management process. 
+
+So how do we prevent this from happening? We build our data collection tools with our end result in mind. In this tutorial I am going to go through some tips to help you export data that is more usable and more interpretable. While building tools with your end in mind does require some up front, planning and developing, it pays off in dividends.
+
+### Planning with the end in mind
+
+So how do we plan with the end in mind? How do we know what our end data should look like? Our data dictionary! If you missed the post on data dictionaries, you can read about them [here]().
+
+So let's say we've created this data dictionary, and it includes all of the items we plan to add to our survey instrument. We can use this as our guide as we build a survey that exports data exactly as we expect it to! 
+
+Disclaimer: Please ignore the poor quality of these survey items. They are only for demonstration purposes, not to show quality of actual survey questions. :)
+
+![](img/dict.PNG)
+
+
+### Building surveys using the Qualtrics platform
+
+Why the focus on Qualtrics? Well, it just happens to be the survey platform that I am most familiar with. This is definitely not an advertisement for using Qualtrics. I have no opinion on it as a tool other than it does have many helpful features and it meets many industry standard for privacy compliance. I, like many of you reading this, gained access to it because my employer had a contract with Qualtrics and that is the tool that was used and trusted by our institution. As prolific as Qualtrics is though, it also happens to be known for having a fair share of pain points, and a lack of awareness of its quirks has led to many frustrations in the research community. So I am hoping some of the tips in this post will help you avoid these frustrations.
+
+<img src="img/qualtrics1.PNG" width="50%" style="display: block; margin: auto;" />
+
+With that said, I believe all platforms have their own quirks and I think many of the tips listed below can generally be applied to other data collection platforms as well.
+
+Disclaimer: The tips below are just that, tips. This is not a comprehensive manual for building a survey. It's just a collection of lessons I've learned over the years after building surveys and exporting bad data. This is my attempt to give you some ideas to help you export more reliable and quality data from your survey platform.
+
+
+#### Tip #1: Use your data dictionary to rename all variables
+
+In Qualtrics, variable names are assigned based on the order in which a variable is created, starting with Q1. Not only does exporting variable names like Q1, Q5, etc. require the extra step of renaming variables after export, it also leads to errors. I have been in several situations where a cleaning syntax is written for a survey, but then at some point the survey items are reordered or a question is deleted (and subsequently renamed) and Q1 no longer aligns with what we thought it did in the syntax.
+
+The solution here is to name all of your variables according to your data dictionary. You can rename variables by simply clicking into the variable name space and renaming the item. While this is a manual process in Qualtrics, it saves you such much time and energy in the long run. 
+
+
+<img src="img/rename2.PNG" width="318" style="display: block; margin: auto;" />
+
+One other piece of advice: If you are collecting data longitudinally, you may be tempted to add time to variable names (ex: age_t1, age_t2). My advice to you is **don't**. Name variables consistently over time. If you plan to make copies of your survey over time, for different waves of data collection, your process is reproducible if your variable names stay consistent over time. You simply copy the survey and resend as needed. However, if your variable names change each wave, you will need to edit your survey variable names each wave. Not fun. You can always add time to your variable names programatically after you download your data.
+
+#### Tip #2: Use your data dictionary to recode all variables
+
+Similar to names, Qualtrics automatically assigns value codes to categorical variables based on the order values are provided. You can think of this in a yes/no question where you provide the option yes first and Qualtrics assigns it a 1, and then you provide no and Qualtrics assigns it a 2. But similar to the problems above, these may not be the values you want, requiring additional data cleaning after export, and moving values or replacing values may lead to odd values that you were not expecting. In Qualtrics you can recode values by going to "Recode values" and checking the "Recode Values" box to change your values from example (1,2,3,5) to (1,2,3,4) as denoted in your data dictionary.
+
+<img src="img/recode.PNG" width="377" style="display: block; margin: auto;" />
+
+
+Note: If you add new questions or choice options at any point, check the back end coding **again** before exporting.
+
+#### Tip #3: Use your data dictionary to add content validation to variables
+
+This step is crucial to ensuring you collect valid data for open-ended response options. For example, if your variable type is numeric according to your data dictionary, you do not want to allow text entry. If your allowable variable range is only 10-20, you do not want to allow values outside of that range. If you do not add this validation to your data collection tool, you run the risk of potentially collecting unusable data or at best, messy data that requires lots of additional data cleaning. You can add validation in Qualtrics by selecting "Add validation" and then selecting the type of validation you want, for instance "Content type". From there you can add more information, such as "Content type" = "Number" and set a minimum and maximum range for the question.
+
+<img src="img/valid.PNG" width="459" style="display: block; margin: auto;" />
+
+This content validation does not only apply to numeric questions though. Another example may be only allowing a date input and setting the format for those dates to a format of your choosing. If someone does not enter the date using the assigned format, they will receive the following message `Please enter a valid international date of the form: yyyy/mm/dd.`
+
+<img src="img/valid2.PNG" width="458" style="display: block; margin: auto;" />
+
+
+#### Tip #4: Use controlled vocabularies when possible
+
+As we saw in the beginning of this post, open-text boxes are often riddled with typos, misspellings, unclear responses, and misinterpretations. There are times when you really do need to use a text box to collect data. You may need to use an open response box in order to be inclusive of all response options or you may need to use one because there really is an undetermined number of response options. But if you have a manageable, finite number of response options to choose from, use a multiple choice list or drop-down menu to prevent you from having to clean up a messy text variable.
+
+If you have many response options, one nice feature of Qualtrics is that you can drag and drop a list of options into Qualtrics, removing the step of having to manually type each option. After the response options are added you can then go in and recode the response option values.
+
+<center><video src="img/dropdown.mp4" controls="controls" style="max-width: 730px;">
+</video></center>
+
+#### Tip #5: Choose the right question type and format for the question
+
+This may sound like a no brainer, but it's not always clear which question type should be used for your question. It is important to become familiar with the various question types available to you and test out what works best. For instance if you were unaware that "Rank order" was an actual question type available to you, you might be tempted to create a multiple line text entry form where participants freely enter their ranking order of your items. However, without carefully constructing this kind of question, you may miss the fact that a free form may allow duplicate entries (such as selecting a rank of 1 more than once). 
+
+However, if for example you choose the "Rank order" type and select the "Drag and drop" format, you will no longer run the risk of people selecting duplicate options as they are only allowed to drag the 3 existing response options and order them. However, you still have to pay attention to your options. If you instead select the "Rank order" type and "Text box" format, users are still allowed to enter duplicate response options, unless you go one step further and select "Add validation" and "Must rank all". Then if a user tries to select "1" for both "Pepperoni" and "Cheese", they will receive this error message, `Please assign a value from 1 to 3 for each item. Values may not be repeated.`
+
+![](img/rank2.PNG)
+
+The takeaway here is to study your question types and formats and choose whichever provides you the most accurate and reliable response data.
+
+#### Tip #6: Don't use names for linking
+
+Similar to our discussion above about using controlled vocabularies, I think it's best to not rely on name entry to be used as your survey unique identifiers. Many times we are attempting to create de-identified data, where identifiers are later replaced with study unique IDs. And if we send out public links to our survey, we may ask participants to enter names, which we then plan to replace with a study ID. However, as you can imagine, the way we may have names spelled in our study databases is not always going to align with the way participants provide their names on your form, often creating difficulties when trying to link names to study IDs.
+
+If at all possible, have names and unique identifiers already connected within your survey platform. This may look like embedding a participant list into your survey and then sending unique links to those who are already enrolled in your study. It may look like having data collectors selecting participant names from an existing list already built into your survey. Or it may look like having participants entering assigned IDs into the survey. 
+
+Whatever method you choose, just make sure to add verification to your process. For example, after a participant opens a unique link or enters an ID, a prompt is opened asking participants to verify their identity.
+
+To learn more about embedding data in Qualtrics, such as unique IDs from a contact list, you can visit [Qualtrics Help](https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/standard-elements/embedded-data/#SettingValuesFromAContactList).
+
+#### Tip #7: Collect sample responses
+
+Before you send out your survey to the world, make sure to collect sample data first. Send it to people on your team and provide them with a specific list of things to test and look for. For example:
+
+- Can everyone access the survey?
+- Are all questions accounted for in the survey (according to the data dictionary)?
+- Are all response options accounted for each question (according to the data dictionary)?
+- Does skip/display logic follow the rules assigned in the data dictionary?
+- Are there any poorly worded questions?
+- Are there any unclear response options?
+
+Once you gather feedback from all users, integrate that feedback into the survey.
+
+#### Tip #8: Check your survey by exporting the data
+
+Here I mean two types of exporting.
+
+1. Export your survey instrument to Word or PDF. Exporting your survey this way allows you to once again, check all of the things we mentioned above (ex: are all questions accounted for, all response options accounted for and coded as expected, is display logic doing what you expect). You can export a copy of your survey in Qualtrics by going to ...
+
+2. Export your sample data. You can export your sample data in whatever format works for you (csv, excel, spss, etc.). What you most want to see is if the data is exporting in the format that you expect it to. You can export your sample data in Qualtrics in any way that you usually export your data. By going to Data & Analysis... Things to review are:
+
+1. Are there any unexpected variable names?
+2. Are there any unexpected values?
+3. How are variables exported? Especially review "select all" and "rank" variables.
+4. Is data exporting in an analyzable, rectangular format? Is there anything that violates the rules of basic data structure. You can read more about data structure rules [here](https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules).
+
+
+In our sample exported data here, I see that everything looks as I would expect it (variables named correctly, values coded correctly). But if you have never exported "select all" or "rank" questions, you may not be aware how those questions will export. If you export your data to an Excel file, these items will export to the same variable (as we have it described in our data dictionary). However, if you export to an SPSS file, these items will be exported as unique columns (each column includes a 1 if the item was selected). And to be honest, this way makes more sense. We cannot actually analyze a variable that has more than one piece of information (remember our data structure rules above). We will ultimately want each item to be it's own yes/no dummy variable.
+
+No matter how you export the data (csv, excel, spss), it is important to know what the raw data will look, to start planning for what transformations will be needed, and update your data dictionary accordingly.
+
+#### Tip #9: Be aware of Qualtrics quirks
+
+Qualtrics has many quirks and many of you reading this may know WAY more quirks than I do. And if you are unaware of these features, it can lead to serious errors in your data. A few of the quirks I have come across and want to share with you are:
+
+1. Make sure to publish all changes. Any time you make a change to your survey, those changes will not appear in your public facing survey unless you select "Publish"
+
+2. If one of your item response options is "don't know" and you want to assign a specific value such as 7 to that item, be warned that Qualtrics has a different plan for those values. Qualtrics will recode those values to missing (NA) unless you select a certain box.
+
+#### Tip #10: Decide how you want to export skipped questions (can select -99)
+
+#### Tip #11: If collecting anonymous responses, make sure it is really anonymous
+
+https://www.qualtrics.com/support/survey-platform/survey-module/survey-options/survey-protection/#AnonymizingResponses
+

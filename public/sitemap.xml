@@ -29,11 +29,32 @@
     <loc>https://cghlewis.com/collection/day02/03-blogdown/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://cghlewis.com/blog/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://cghlewis.com/categories/</loc>
-    <lastmod>2022-09-28T12:00:00+00:00</lastmod>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/</loc>
-    <lastmod>2022-09-28T12:00:00+00:00</lastmod>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cghlewis.com/tags/data-management/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cghlewis.com/tags/data-quality/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cghlewis.com/tags/documentation/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cghlewis.com/tags/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cghlewis.com/categories/tutorials/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cghlewis.com/blog/data_dict/</loc>
+    <lastmod>2022-10-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/categories/data-management/</loc>
     <lastmod>2022-09-28T12:00:00+00:00</lastmod>
@@ -53,7 +74,10 @@
     <loc>https://cghlewis.com/blog/data_mgmt_resources/</loc>
     <lastmod>2022-09-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cghlewis.com/blog/</loc>
+    <loc>https://cghlewis.com/tags/data-cleaning/</loc>
+    <lastmod>2022-09-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cghlewis.com/categories/resources/</loc>
     <lastmod>2022-09-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/categories/data-life-cycle/</loc>
@@ -95,6 +119,9 @@
     <loc>https://cghlewis.com/blog/synthesis_data_mgmt/</loc>
     <lastmod>2022-02-23T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://cghlewis.com/categories/tips/</loc>
+    <lastmod>2022-02-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://cghlewis.com/collection/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url><url>
@@ -119,7 +146,5 @@
     <loc>https://cghlewis.com/series/</loc>
   </url><url>
     <loc>https://cghlewis.com/consulting/</loc>
-  </url><url>
-    <loc>https://cghlewis.com/tags/</loc>
   </url>
 </urlset>

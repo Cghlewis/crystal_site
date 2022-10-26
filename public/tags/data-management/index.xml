@@ -6,23 +6,33 @@
     <description>Recent content in data management on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 26 May 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/tags/data-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Data Management Overview</title>
-      <link>https://cghlewis.com/talk/schoen_res/</link>
-      <pubDate>Thu, 26 May 2022 12:00:00 +0000</pubDate>
+      <title>Using a data dictionary as your roadmap to quality data</title>
+      <link>https://cghlewis.com/blog/data_dict/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://cghlewis.com/talk/schoen_res/</guid>
-      <description>The slides are from a 6 part workshop series given to the Schoen Research Team at Florida State University. Parts 1 &amp;amp; 2 cover best practices throughout the research data managment life cycle. Parts 3-6 cover an introduction to R and RStudio and data wrangling in the Tidyverse.</description>
+      <guid>https://cghlewis.com/blog/data_dict/</guid>
+      <description>A data dictionary, a rectangular format collection of names, definitions, and attributes about variables in a dataset, is arguably the single most important piece of documentation you will create in your research study. While a data dictionary, sometimes also called a codebook or variable information log, is often used as a tool to help you and others interpret your data at the end of your project, it is actually even more powerful if created before you ever collect a single piece of data, serving as a roadmap as you design your data collection tools and clean your data, in order to ultimately get to where you want to go.</description>
     </item>
     
     <item>
-      <title>Data Management in Large-Scale Ed Research</title>
-      <link>https://cghlewis.com/talk/mpsi/</link>
-      <pubDate>Fri, 25 Sep 2020 12:00:00 +0000</pubDate>
+      <title>A Curated Collection of Data Management Resources</title>
+      <link>https://cghlewis.com/blog/data_mgmt_resources/</link>
+      <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://cghlewis.com/talk/mpsi/</guid>
-      <description>These slides are from a series of talks on best practices in documentation, creating a style guide and collecting data.</description>
+      <guid>https://cghlewis.com/blog/data_mgmt_resources/</guid>
+      <description>Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
+Resources were last updated on 2022/10/26</description>
+    </item>
+    
+    <item>
+      <title>A Synthesis of Data Management Issues</title>
+      <link>https://cghlewis.com/blog/synthesis_data_mgmt/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/synthesis_data_mgmt/</guid>
+      <description>Everyone who works with data has experienced data management difficulties. While it is a pain in the moment to work through those issues, it is refreshing to know that you are never alone. This is evident from the several meetups that have even been started just to commiserate around shared data mishap experiences. Take for instance the Second Annual Data Mishaps Night occurring next Thursday February 24th, or the Be Afraid, Be Very Afraid: Data Management Horror Stories and Lessons Learned sharing session occurring at the COS: Unconference next Friday, February 25th.</description>
     </item>
     
   </channel>

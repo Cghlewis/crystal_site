@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.101.0" />
+<title>Using a data dictionary as your roadmap to quality data | Crystal Lewis</title>
+
+
+<meta property="twitter:site" content="@cghlewis">
+<meta property="twitter:creator" content="@cghlewis">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="An introduction into why and how to build a data dictionary.">
+
+
+<meta property="og:site_name" content="Crystal Lewis">
+<meta property="og:title" content="Using a data dictionary as your roadmap to quality data | Crystal Lewis">
+<meta property="og:description" content="An introduction into why and how to build a data dictionary." />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://cghlewis.com/blog/data_dict/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://cghlewis.com/blog/data_dict/featured.png" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://cghlewis.com/blog/data_dict/featured.png" >
+    
+    
+  <meta itemprop="name" content="Using a data dictionary as your roadmap to quality data">
+<meta itemprop="description" content="A data dictionary, a rectangular format collection of names, definitions, and attributes about variables in a dataset, is arguably the single most important piece of documentation you will create in your research study. While a data dictionary, sometimes also called a codebook or variable information log, is often used as a tool to help you and others interpret your data at the end of your project, it is actually even more powerful if created before you ever collect a single piece of data, serving as a roadmap as you design your data collection tools and clean your data, in order to ultimately get to where you want to go."><meta itemprop="datePublished" content="2022-10-26T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-10-26T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1483"><meta itemprop="image" content="https://cghlewis.com/blog/data_dict/featured.png">
+<meta itemprop="keywords" content="data management,documentation,data quality," />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.36233a39979933db8877785b1879dd1ee29d2f4bf092a7566e716b04552caf2c.css" integrity="sha256-NiM6OZeZM9uId3hbGHndHuKdL0vwkqdWbnFrBFUsryw=" media="screen">
+  
+  
+  <script src="/panelset.min.dca42702d7daf6fd31dc352efd2bcf0e4ac8c05ccaa58d9293f6177462de5d5f.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.6003fae4f0a991c47f3ebffd1d7c0c5d116b39c00d67970ca34464bf62cd2e7a.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://cghlewis.com/" title="Home">
+      <img src="/img/flower2.png" class="dib db-l h2 w-auto" alt="Crystal Lewis">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/consulting/" title="Consulting Work">Consulting</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/projects/" title="Projects">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact Form">Contact</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Using a data dictionary as your roadmap to quality data</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Crystal Lewis in <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </p>
+        <p class="f7 db mv0 ttu">October 26, 2022</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <p>A data dictionary, a rectangular format collection of names, definitions, and attributes about variables in a dataset, is arguably the single most important piece of documentation you will create in your research study. While a data dictionary, sometimes also called a codebook or variable information log, is often used as a tool to help you and others interpret your data at the end of your project, it is actually even more powerful if created before you ever collect a single piece of data, serving as a roadmap as you design your data collection tools and clean your data, in order to ultimately get to where you want to go.</p>
+
+
+
+
+<h3 id="creating-a-data-dictionary-before-you-collect-data">Creating a data dictionary before you collect data
+  <a href="#creating-a-data-dictionary-before-you-collect-data"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Imagine you have the luxury of starting here – creating a data dictionary before you ever collect a single piece of data. You know what measures you want to collect and what items make up that measure. But how will you name those variables? What types should your variables be? What are allowable values of those items? What transformations are needed for those variables? These are all questions you should start asking before you ever collect data. And your answers should be documented in a data dictionary.</p>
+<p>So what documents do you need to collect in order to start creating your data dictionary?</p>
+<ol>
+<li>Your Style Guide: If you are new to style guides, it is a set of standards for how your team should organize data for your project. Style guide rules can apply to many aspects of your project, but for the sake of a data dictionary, I am particularly focusing on rules for naming variables and coding response values. If you want to read more about creating a style guide for your project and learn best practices for variable naming and value coding, you can review this 
+<a href="https://cghlewis.github.io/mpsi-data-training/training_3.html#Variable_Naming" target="_blank" rel="noopener">resource</a>.</li>
+<li>The other piece of information you will need are the actual measures you plan to collect. This may look like a technical documents from an assessment company, or instruments attached to publications. Whatever format you are gathering your measures from, you will want your documents to provide information such as:
+<ul>
+<li>What items make up the measures/scales? What is the exact wording of items?</li>
+<li>How are items coded?</li>
+<li>Are there any calculations/reverse coding needed?</li>
+</ul>
+</li>
+</ol>
+<p>Examples of documents you might collect:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Pearson SAT10 Codebook</th>
+<th style="text-align:center">TOCA-R Kindergarten/Year 1 Fast Track Project Technical Report</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="img/sat10.PNG" alt=""></td>
+<td style="text-align:center"><img src="img/toca-r.PNG" alt=""></td>
+</tr>
+</tbody>
+</table>
+<p>Once your documents are collected, you can start to construct your data dictionary.</p>
+
+
+
+
+<h4 id="building-a-data-dictionary">Building a data dictionary
+  <a href="#building-a-data-dictionary"></a>
+</h4>
+<p>A data dictionary is typically created in a rectangular format. What tool you use to build your data dictionary is up to you. But there are key pieces of information that should be included, as well as additional optional fields that can be helpful as well.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Fields to include</th>
+<th style="text-align:center">Optional helpful fields to include</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Variable name</td>
+<td style="text-align:center">Skip patterns</td>
+</tr>
+<tr>
+<td style="text-align:center">Variable label (What is this item?)</td>
+<td style="text-align:center">Required item (Were participants allowed to skip this item?)</td>
+</tr>
+<tr>
+<td style="text-align:center">Variable type</td>
+<td style="text-align:center">Variable universe (Who got this item?)</td>
+</tr>
+<tr>
+<td style="text-align:center">Allowable values/range</td>
+<td style="text-align:center">Notes (such as versions/changes to this variable)</td>
+</tr>
+<tr>
+<td style="text-align:center">Assigned missing values</td>
+<td style="text-align:center">Associated scale/subscale</td>
+</tr>
+<tr>
+<td style="text-align:center">Recoding/calculations</td>
+<td style="text-align:center">Time periods this items is available (if study is longitudinal)</td>
+</tr>
+</tbody>
+</table>
+<p>You will build one data dictionary for each instrument you plan to collect (ex: student survey data dictionary, teacher survey data dictionary, student assessment data dictionary). These can be separate files, or separate tabs in the same spreadsheet. Again, it&rsquo;s up to you. Just think of each data dictionary as a plan for what variables will exist in the final dataset for that instrument.</p>
+<p>As you build your data dictionary, consider the following:</p>
+<ol>
+<li>Are your variable names meeting the requirements laid out in your style guide?</li>
+<li>If your items come from an existing scale, does your value coding align with the coding laid out in the documentation? If your items do not come from an existing scale, does your value coding align with the requirements in your style guide?</li>
+<li>What additional items will make up your final dataset (it could be items that you plan to add to the data after it is collected, i.e. treatment, unique identifiers, calculated variables)?</li>
+</ol>
+<p><strong>Example data dictionary for a student survey</strong></p>
+<p><img src="img/data_dict.PNG" alt=""></p>
+<p>The last step before you are ready to release your data dictionary into the world, is to do a review with your team. Is everyone in agreement about how variables are named, how values are coded, and our variable types? Are we all in agreement about <strong>who</strong> gets each item? Do we want to adjust any of the question/item wording? Does our data dictionary include everything we plan to collect? Are we missing any items?</p>
+
+
+
+
+<h3 id="using-your-data-dictionary">Using your data dictionary
+  <a href="#using-your-data-dictionary"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Once your data dictionaries are finalized, you can start to:</p>
+<ol>
+<li>
+<p>Build your data collection instruments and data entry forms based on your data dictionary. If you are building any of your own tools (forms, surveys, assessments), you can use your data dictionary as a guide to do the following:</p>
+<ul>
+<li>Add items to your instrument</li>
+<li>Name your items in your tool</li>
+<li>Correctly code items in your tool</li>
+<li>Add validation to your items (acceptable variable type, allowable ranges, etc.)</li>
+</ul>
+</li>
+<li>
+<p>And then once you capture data, you can once again use your data dictionary as a guide to help you further clean your data, using your data dictionary in the cleaning process (knowing what calculations to do, adding embedded labels, etc.)</p>
+</li>
+<li>
+<p>You can also use your data dictionary in your data verification process (ex: confirming variable types, acceptable ranges, etc.).</p>
+</li>
+<li>
+<p>And then last – your data dictionary serves as metadata that allows others to interpret your data when you share your data.</p>
+</li>
+</ol>
+<p>Be on the lookout for future blog posts for more details on using your data dictionary for each of these purposes above!</p>
+<p><img src="img/roadmap.png" alt=""></p>
+
+
+
+
+<h3 id="creating-a-data-dictionary-after-data-is-collected">Creating a data dictionary after data is collected
+  <a href="#creating-a-data-dictionary-after-data-is-collected"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Everything we have covered above requires a lot of planning, upfront knowledge, and control over your data collection efforts. While this is of course the ideal situation, we all know this is not always how projects go. You might be reading this after you have already collected data without using a data dictionary, or you may receive data from someone else who did not use a data dictionary as their guide. Totally okay, you can still build a data dictionary! You will just be working backwards now, using detective work to answer questions such as, what DO these variables represent, what SHOULD the values be, who DID receive the questions, what types SHOULD the variables be, what SHOULD the variables be named?</p>
+<p>This detective work is not easy, it may require one or more means to collect information. Of course it&rsquo;s best to start out here:</p>
+<ol>
+<li>Digging into the data to see what currently exists and begin to build your data dictionary here.
+<ul>
+<li>But it turns out all this usually tells you is what DOES exist in the data, not what SHOULD actually exist in the data. Items could be incorrectly coded, columns could be assigned the incorrect variable type, etc.</li>
+<li>So as you dig into the data, start to collect questions
+<ul>
+<li>What was the wording of this item?</li>
+<li>Who received this item?</li>
+<li>What was the expected range or categorical options of this item?</li>
+<li>Is the range I&rsquo;m seeing the full range, or is it larger than this?</li>
+<li>Do I have values in my data that don&rsquo;t make sense for this item?</li>
+<li>What type should this variable be?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>Once you collect your questions, the detective work will continue. If possible:</p>
+<ol start="2">
+<li>Contact the person who originally collected the data to learn more about the instrument and the data</li>
+<li>Contact the person who cleaned the data (if cleaned) to see what transformations they completed on the raw data</li>
+<li>Request access to the original instruments to see things like exact question wording, item response options, skip patterns, etc.</li>
+<li>Request any documentation they have. Do they have their own data dictionaries, codebooks, or syntax that might help you understand what is going on in the data?</li>
+</ol>
+<p>Ultimately you will hopefully end up with a data dictionary structured very similar to the one above. You may add additional fields that help you keep track of further changes (like any variables you plan to rename), and your transformations section may become more verbose as the values assigned previously may not align with the values you prefer based on your style guide or the existing measures. Otherwise, the data dictionary should still be constructed in the same manner mentioned above.</p>
+<p><img src="img/data_dict2.PNG" alt=""></p>
+<p>Again, once this data dictionary is created, you can pick up at step 2 – using your data dictionary as a roadmap for further data cleaning.</p>
+
+
+
+
+<h3 id="further-resources">Further Resources
+  <a href="#further-resources"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>If you would like to learn more about data dictionaries, here are some resources for further reading!</p>
+<ul>
+<li>
+<a href="https://help.osf.io/article/217-how-to-make-a-data-dictionary" target="_blank" rel="noopener">OSF: How to Make a Data Dictionary</a></li>
+<li>
+<a href="https://journals.sagepub.com/doi/full/10.1177/2515245920928007" target="_blank" rel="noopener">Getting Started Creating Data Dictionaries: How to Create a Shareable Data Set</a></li>
+<li>
+<a href="https://data.nal.usda.gov/data-dictionary-purpose" target="_blank" rel="noopener">USDA Data Dictionary Purpose</a></li>
+<li>
+<a href="https://ictrweb.johnshopkins.edu/ictr/dmig/Best_Practice/a8376318-ebd6-421f-be63-acf8c88376a1_6342a1c3-1a5d-4287-a46e-374824e3780e.html?v=65849&amp;ip=hpdkvlttuiyioooqhw" target="_blank" rel="noopener">Johns Hopkins Data Dictionary Best Practice</a></li>
+<li>
+<a href="https://www.usgs.gov/data-management/data-dictionaries#what" target="_blank" rel="noopener">USGS Data Dictionaries</a></li>
+<li>
+<a href="https://cghlewis.github.io/mpsi-data-training/training_1.html#Data_Dictionary" target="_blank" rel="noopener">Data Managment in Large-Scale Research: Data Documentation Module</a></li>
+</ul>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">October 26, 2022</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">7 minute read, 1483 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/tags/data-management">data management</a>  <a href="https://cghlewis.com/tags/documentation">documentation</a>  <a href="https://cghlewis.com/tags/data-quality">data quality</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_mgmt_resources/">A Curated Collection of Data Management Resources</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/synthesis_data_mgmt/">A Synthesis of Data Management Issues</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://cghlewis.com/blog/data_mgmt_resources/">A Curated Collection of Data Management Resources &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="Cghlewis/crystal_site"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2022 Crystal Lewis
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/Cghlewis" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/Cghlewis" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/crystal-lewis-922b4193/" title="linkedin-in" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

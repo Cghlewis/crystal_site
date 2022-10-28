@@ -85,7 +85,7 @@ One other piece of advice: If you are collecting data longitudinally, you may be
 
 #### Tip #2: Use your data dictionary to recode all variables 
 
-Similar to item names, Qualtrics automatically assigns value codes to categorical variables based on the order values are provided. You can think of this in a yes/no question where you provide the option `yes` first and Qualtrics assigns it a 1, and then you provide `no` and Qualtrics assigns it a 2. But similar to the problems above, these may not be the values you want, requiring additional data cleaning after export. What's worse, reordering or replacing response options may lead to odd values that you were not expecting. In Qualtrics you can recode values by going to "Recode values" and checking the "Recode Values" box to change your values from icky coding like `1,2,5,7` to `1,2,3,4` as denoted in your data dictionary.
+Similar to item names, Qualtrics automatically assigns numeric value codes to response options of categorical variables based on the order that options are provided. You can think of this in a yes/no question where you provide the option `yes` first and Qualtrics assigns it a `1` behind the scenes, and then you provide the option `no` and Qualtrics assigns it a `2`. But similar to the problems above, these may not be the numeric values you want associated with your text labels, requiring additional data cleaning after export. What's worse, reordering or replacing response options may lead to odd values that you were not expecting. In Qualtrics you can recode values by going to "Recode values" and checking the "Recode Values" box to change your values from icky coding like `1,2,5,7` to `1,2,3,4` as denoted in your data dictionary.
 
 ```{r echo = FALSE, fig.align= "center"}
 knitr::include_graphics("img/recode.PNG")
@@ -132,15 +132,17 @@ knitr::include_graphics("img/rank.PNG")
 
 The takeaway here is to study your question types and formats and choose whichever provides you the most accurate and reliable response data.
 
-#### Tip #6: Don't use names for linking
+#### Tip #6: Embed unique identifiers
 
-Oftentimes in survey research, unless we are collecting anonymous data, we will collect some sort of a unique identifier in our survey to be able to link data across time or across forms. Many times that unique identifier can't be a participant's name because our study requires confidentiality AND because names aren't actually unique. So to create this confidential data, we instead create a unique numeric or alphanumeric ID associated with each participant in our study. 
+Oftentimes in survey research, unless we are collecting anonymous data, we need unique identifiers in our survey to be able to link data across time or across forms. Many times that unique identifier can't be a participant's name (or other identifying information) because our study requires confidentiality. So instead we create a participant list and assign a unique numeric or alphanumeric ID to each person in our study.
 
-Sometimes, if we have an existing list of study participants, we may send out a generic link to our survey and ask participants to enter names, which we then plan to replace with a study ID using our existing roster of participants and their IDs. However, as you can imagine, the way we may have names spelled in our roster is not always going to align with the way participants provide their names in our survey, often creating difficulties when trying to link names to study IDs.
+When collecting online survey data, I highly recommend pre-loading this participant list, rather than having participants enter their identifying information that you can later replace with their study ID. I recognize this will not work for all situations, but if it is possible, it will create better data. As you can imagine, the way we may have names spelled in our participant list is not always going to align with the way participants provide their names in our survey, creating difficulties when trying to link and replace names with study IDs.
 
-If at all possible (I recognize this will not work for all situations), you will want to have names and unique identifiers already connected within your survey platform. This may look like embedding a participant list into your survey and then sending unique links to those who are already enrolled in your study. Or it may look like having field data collectors selecting participant names from an existing list already built into your survey. Or it may look like having participants entering assigned IDs into the survey.
+|Names collected from our survey            | Names recorded in our participant list |
+|:--------------------------:|:-----------:|
+|![](img/name1.PNG)  |![](img/name2.PNG)|
 
-Whatever method you choose, just make sure to add verification to your process. For example, after a participant opens a unique link or enters an ID, a prompt is opened asking participants to verify their identity.
+There are many different ways you can collect data using an embedded participant list, but one method is sending unique links to participants. To prevent errors, upon opening each unique link, a prompt can be triggered asking participants to verify their identity (based on the embedded data you have added - such as name). Once all surveys are collected and this data is exported, no laborious process of merging inexact participant information with your participant list is needed. Study IDs are already assigned to each participant and identifiers can quickly be removed to create confidential data.
 
 To learn more about embedding data in Qualtrics, such as names and IDs from a contact list, you can visit [Qualtrics Help](https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/standard-elements/embedded-data/#SettingValuesFromAContactList).
 
@@ -165,7 +167,8 @@ Before you send out your survey to the world, make sure to collect sample data f
 
 - Can everyone access the survey?
 - Are all questions accounted for in the survey (according to the data dictionary)?
-- Are all response options accounted for each question (according to the data dictionary)?
+- Are all response options visible for each categorical question (according to the data dictionary)?
+- Is your data validation working or are people allowed to enter unallowable values?
 - Does skip/display logic follow the rules assigned in the data dictionary?
 - Are there any poorly worded questions?
 - Are there any unclear response options?
@@ -243,7 +246,9 @@ I hope some or all of the tips above can help you build your survey instruments,
 - How will you protect the confidentiality and/or anonymity of your data?
 - Are you collecting all the identifiers you need to be able to link your data across other sources?
 
-I recognize that each survey is different, each project is different, and each user's needs are different. But I think ultimately what I want to emphasize here is, just make sure to take the time to think through what matters for your project, your data, and your analyses and make sure to account for as much of this as possible in your instrument before you collect data so that you end up with usable and reliable data. 
+I recognize that each survey is different, each project is different, and each user's needs are different. But I think ultimately what I want to emphasize here is, take the time to think through what matters for your project, your data, and your analyses and make sure to account for as much of this as possible in your instrument before you collect data so that you end up with usable and reliable data. If changes are made to your survey at any point after data collection has started, make sure to account for and track those changes in your data dictionary.
+
+Last, J-Pal has put together a very thorough [document](https://www.povertyactionlab.org/resource/survey-programming) on survey design if you would like to learn more. This resource also includes a survey platform comparison table that can be helpful in deciding which platform best meets your projects needs.
 
 <center><iframe src="https://giphy.com/embed/3oeSAz6FqXCKuNFX6o" width="480" height="208" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/starwars-star-wars-return-of-the-jedi-3oeSAz6FqXCKuNFX6o">via GIPHY</a></p></center>
 

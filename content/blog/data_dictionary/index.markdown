@@ -24,7 +24,7 @@ Imagine you have the luxury of starting here – creating a data dictionary befo
 So what documents do you need to collect in order to start creating your data dictionary?
 
 1. Your Style Guide: If you are new to style guides, it is a set of standards for how your team should organize data for your project. Style guide rules can apply to many aspects of your project, but for the sake of a data dictionary, I am particularly focusing on rules for naming variables and coding response values. If you want to read more about creating a style guide for your project and learn best practices for variable naming and value coding, you can review this [resource](https://cghlewis.github.io/mpsi-data-training/training_3.html#Variable_Naming).
-2. The other piece of information you will need are the actual measures you plan to collect. This may look like a technical documents from an assessment company, or instruments attached to publications. Whatever format you are gathering your measures from, you will want your documents to provide information such as:
+2. The other piece of information you will need are the actual measures you plan to collect. This may look like technical documents from an assessment company, or instruments attached to publications. Whatever format you are gathering your measures from, you will want your documents to provide information such as:
    - What items make up the measures/scales? What is the exact wording of items?
    - How are items coded?
    - Are there any calculations/reverse coding needed?

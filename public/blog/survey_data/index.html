@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.101.0" />
+<title>How to export analysis-ready survey data | Crystal Lewis</title>
+
+
+<meta property="twitter:site" content="@cghlewis">
+<meta property="twitter:creator" content="@cghlewis">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Tips for building a Qualtrics survey that exports quality, usable data.">
+
+
+<meta property="og:site_name" content="Crystal Lewis">
+<meta property="og:title" content="How to export analysis-ready survey data | Crystal Lewis">
+<meta property="og:description" content="Tips for building a Qualtrics survey that exports quality, usable data." />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://cghlewis.com/blog/survey_data/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://cghlewis.com/blog/survey_data/featured.PNG" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://cghlewis.com/blog/survey_data/featured.PNG" >
+    
+    
+  <meta itemprop="name" content="How to export analysis-ready survey data">
+<meta itemprop="description" content="Have you ever downloaded your data from a survey platform and expected it to look like this? 😻
+But instead you export data that looks like this? 🙀
+There are many issues with this data, ranging from unclear and inconsistent value entries, to poor variable naming, to conflicting variable types, to multiple things being measured in one variable. While this data can still hopefully be salvaged, the time consuming, decision-heavy process that will go along with cleaning this data is an avoidable step in our data management process."><meta itemprop="datePublished" content="2022-10-31T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-10-31T00:00:00+00:00" />
+<meta itemprop="wordCount" content="3217"><meta itemprop="image" content="https://cghlewis.com/blog/survey_data/featured.PNG">
+<meta itemprop="keywords" content="data collection,data management,Qualtrics,data quality," />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.36233a39979933db8877785b1879dd1ee29d2f4bf092a7566e716b04552caf2c.css" integrity="sha256-NiM6OZeZM9uId3hbGHndHuKdL0vwkqdWbnFrBFUsryw=" media="screen">
+  
+  
+  <script src="/panelset.min.dca42702d7daf6fd31dc352efd2bcf0e4ac8c05ccaa58d9293f6177462de5d5f.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.6003fae4f0a991c47f3ebffd1d7c0c5d116b39c00d67970ca34464bf62cd2e7a.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://cghlewis.com/" title="Home">
+      <img src="/img/flower2.png" class="dib db-l h2 w-auto" alt="Crystal Lewis">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/consulting/" title="Consulting Work">Consulting</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/projects/" title="Projects">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact Form">Contact</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">How to export analysis-ready survey data</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Crystal Lewis in <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </p>
+        <p class="f7 db mv0 ttu">October 31, 2022</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <p>Have you ever downloaded your data from a survey platform and expected it to look like this? 😻</p>
+<img src="img/not_messy.PNG" width="65%" style="display: block; margin: auto;" />
+<p>But instead you export data that looks like this? 🙀</p>
+<img src="img/messy.PNG" width="55%" style="display: block; margin: auto;" />
+<p>There are many issues with this data, ranging from unclear and inconsistent value entries, to poor variable naming, to conflicting variable types, to multiple things being measured in one variable. While this data can still hopefully be salvaged, the time consuming, decision-heavy process that will go along with cleaning this data is an avoidable step in our data management process.</p>
+<p>So how do we prevent this from happening? We build our data collection tools with our end result in mind. In this tutorial I am going to go through some tips to help you export data that is more interpretable and more usable. While building tools with your end in mind does require some up front, planning and developing, it pays off in dividends.</p>
+
+
+
+
+<h3 id="planning-with-the-end-in-mind">Planning with the end in mind
+  <a href="#planning-with-the-end-in-mind"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>So how do we plan with the end in mind? How do we know what our end data should look like? Our data dictionary! If you missed the post on data dictionaries, you can read about them 
+<a href="https://cghlewis.com/blog/data_dictionary/" target="_blank" rel="noopener">here</a>.</p>
+<p>So let’s say we’ve created this data dictionary below, and it includes all of the items we plan to add to our survey instrument (as well as items we plan to calculate after we collect data). We can use this as our guide to build a survey that exports data exactly as we expect it to!</p>
+<p>Disclaimer: Please ignore the poor quality of these survey items. They are only for demonstration purposes, not to show quality of actual survey questions. :)</p>
+<p><img src="img/dict.PNG" alt=""></p>
+
+
+
+
+<h3 id="building-surveys-using-the-qualtrics-platform">Building surveys using the Qualtrics platform
+  <a href="#building-surveys-using-the-qualtrics-platform"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Why the focus on Qualtrics? Well, it just happens to be the survey platform that I am most familiar with. This is definitely not an advertisement for using Qualtrics. I have no opinion on it as a tool other than it does have many helpful features and it meets many industry standard for privacy compliance. I, like probably some of you reading this, gained access to it because my former institution had a contract with Qualtrics and that is the tool that was used and trusted by my organization. As prolific as Qualtrics is though, it also happens to be known for having a fair share of pain points, and a lack of awareness of its quirks has led to many frustrations in the research community.</p>
+<blockquote class="twitter-tweet" data-dnt="true"><p lang="en" dir="ltr">Have you truly used Qualtrics for data collection if one random item isn&#39;t coded from 13-19 instead of 1-7? 🙃</p>&mdash; Dr. Tessa Benson-Greenwald (@GreenwaldTessa) <a href="https://twitter.com/GreenwaldTessa/status/1483190358905344009?ref_src=twsrc%5Etfw">January 17, 2022</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>I am hoping some of the tips in this post will help you avoid some of these Qualtrics frustrations. With that said, I believe all platforms have their own quirks and I think many of the tips listed below can generally be applied to other data collection platforms as well.</p>
+<p>Disclaimer: The tips below are just that, tips. This is not a comprehensive manual for building a survey. It’s just a collection of lessons I’ve learned over the years after building surveys and exporting bad data. This is my attempt to give you some ideas to help you export more reliable and quality data from your survey platform.</p>
+
+
+
+
+<h4 id="tip-1-use-your-data-dictionary-to-rename-all-variables">Tip #1: Use your data dictionary to rename all variables
+  <a href="#tip-1-use-your-data-dictionary-to-rename-all-variables"></a>
+</h4>
+<p>In Qualtrics, variable names are assigned based on the order in which a variable is created, starting with Q1. Not only does exporting variable names like Q1, Q5, etc. require the extra step of renaming variables after export, it also leads to errors. I have been in several situations where a cleaning syntax is written for a survey, but then at some point the survey items are reordered or a question is added or deleted and Q7 no longer aligns with what we think it does in the syntax.</p>
+<p>The solution here is to name all of your variables according to your data dictionary. You can rename variables by simply clicking into the variable name space and renaming the item. While this is a manual process in Qualtrics, it saves you such much time and energy in the long run.</p>
+<img src="img/rename.PNG" width="50%" style="display: block; margin: auto;" />
+<p>One other piece of advice: If you are collecting data longitudinally, you may be tempted to add time to variable names (ex: age_t1, age_t2). My advice to you is <strong>don’t</strong>. Name variables consistently over time. If you plan to make copies of your survey over time, for different waves of data collection, your process is reproducible if your variable names stay consistent over time. You simply copy the survey and resend as needed. However, if your variable names change each wave, you will need to edit your survey variable names each wave. Not fun. You can always add time to your variable names programatically after you download your data.</p>
+
+
+
+
+<h4 id="tip-2-use-your-data-dictionary-to-recode-all-variables">Tip #2: Use your data dictionary to recode all variables
+  <a href="#tip-2-use-your-data-dictionary-to-recode-all-variables"></a>
+</h4>
+<p>Similar to item names, Qualtrics automatically assigns numeric value codes to response options of categorical variables based on the order that options are provided. You can think of this in a yes/no question where you provide the option <code>yes</code> first and Qualtrics assigns it a <code>1</code> behind the scenes, and then you provide the option <code>no</code> and Qualtrics assigns it a <code>2</code>. But similar to the problems above, these may not be the numeric values you want associated with your text labels, requiring additional data cleaning after export. What’s worse, reordering or replacing response options may lead to odd values that you were not expecting. In Qualtrics you can recode values by going to “Recode values” and checking the “Recode Values” box to change your values from icky coding like <code>1,2,5,7</code> to <code>1,2,3,4</code> as denoted in your data dictionary.</p>
+<img src="img/recode.PNG" width="407" style="display: block; margin: auto;" />
+<p>Note: If you add new questions or choice options at any point, check the back end coding <strong>again</strong> before exporting.</p>
+
+
+
+
+<h4 id="tip-3-use-your-data-dictionary-to-add-content-validation-to-variables">Tip #3: Use your data dictionary to add content validation to variables
+  <a href="#tip-3-use-your-data-dictionary-to-add-content-validation-to-variables"></a>
+</h4>
+<p>This step is crucial to ensuring you collect valid data for open-ended response questions. For example, if your variable type is numeric according to your data dictionary, you do not want to allow text entry. If your allowable variable range is only 10-20, you do not want to allow values outside of that range. If you do not add this validation to your data collection tool, you run the risk of potentially collecting unusable data or at best, messy data that requires lots of additional data cleaning. You can add validation in Qualtrics by selecting “Add validation” and then selecting the type of validation you want, for instance “Content type”. From there you can add more information, such as “Content type” is “Number” and set a minimum and maximum range for the question.</p>
+<img src="img/valid.PNG" width="386" style="display: block; margin: auto;" />
+<p>This content validation does not only apply to numeric questions though. Another example may be only allowing a date input and setting the format for those dates to a format of your choosing. If someone does not enter the date using the assigned format, they will receive the following message <code>Please enter a valid international date of the form: yyyy/mm/dd.</code></p>
+<img src="img/valid2.PNG" width="506" style="display: block; margin: auto;" />
+
+
+
+
+<h4 id="tip-4-use-controlled-vocabularies-when-possible">Tip #4: Use controlled vocabularies when possible
+  <a href="#tip-4-use-controlled-vocabularies-when-possible"></a>
+</h4>
+<p>As we saw in the beginning of this post, open-text boxes are often riddled with typos, misspellings, unclear responses, and misinterpretations. There are times when you really do need to use a text box to collect data. You may need to use an open response box in order to be inclusive of all response options or you may need to use one because there really is an undetermined number of response options. But if you have a manageable, finite number of response options to choose from, use a multiple choice list or drop-down menu to prevent you from having to clean up a messy text variable.</p>
+<p>If you have many response options, one nice feature of Qualtrics is that you can drag and drop a list of options into Qualtrics, removing the step of having to manually type each option. After the response options are added you can then go in and recode the response option values.</p>
+<center>
+<video src="img/dropdown.mp4" controls="controls" style="max-width: 730px;">
+</video>
+</center>
+
+
+
+
+<h4 id="tip-5-choose-the-right-question-type-and-format-for-the-question">Tip #5: Choose the right question type and format for the question
+  <a href="#tip-5-choose-the-right-question-type-and-format-for-the-question"></a>
+</h4>
+<p>This may sound like a no brainer, but it’s not always clear which question type should be used for your question. It is important to become familiar with the various question types available to you and test out what works best. For instance if you were unaware that “Rank order” was an actual question type available to you, you might be tempted to create a multiple line text entry form where participants freely enter their ranking order of your items. However, without carefully constructing this kind of question, you may miss the fact that a free form may allow duplicate entries (such as selecting a rank of 1 more than once).</p>
+<p>However, if for example you choose the “Rank order” type and select the “Drag and drop” format, you will no longer run the risk of people selecting duplicate options as they are only allowed to drag the 3 existing response options and order them.</p>
+<p>But wait! You still have to pay attention to your options. If you select the “Rank order” type and instead select the “Text box” format, <strong>users are still allowed to enter duplicate response options</strong>, unless you go one step further and select “Add validation” and “Must rank all”. Then if a user tries to select “1” for both “Pepperoni” and “Cheese”, they will receive this error message, <code>Please assign a value from 1 to 3 for each item. Values may not be repeated.</code></p>
+<img src="img/rank.PNG" width="80%" style="display: block; margin: auto;" />
+<p>The takeaway here is to study your question types and formats and choose whichever provides you the most accurate and reliable response data.</p>
+
+
+
+
+<h4 id="tip-6-dont-collect-names-as-unique-identifiers">Tip #6: Don’t collect names as unique identifiers
+  <a href="#tip-6-dont-collect-names-as-unique-identifiers"></a>
+</h4>
+<p>Oftentimes in survey research, unless we are collecting anonymous data, we need unique identifiers in our survey to be able to link data across time or across forms. You may be tempted to collect names in order to link data, but there are many problems with using names:</p>
+<ol>
+<li>Names aren’t unique</li>
+<li>Most studies require confidentiality so you will need to end up replacing names with a numeric or alphanumeric study ID before releasing data</li>
+<li>Free form text fields lead to inconsistent values making linking difficult</li>
+</ol>
+<p><strong>An example of entries that might be troublesome to link:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Spelling of names in pre-test</th>
+<th style="text-align:center">Spelling of names in post-test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Frieda A. Maeda</td>
+<td style="text-align:center">Frieda Maeda</td>
+</tr>
+<tr>
+<td style="text-align:center">violet Mcgonical</td>
+<td style="text-align:center">Violet McGonical</td>
+</tr>
+<tr>
+<td style="text-align:center">Chris Lucass</td>
+<td style="text-align:center">Christopher Lucas</td>
+</tr>
+<tr>
+<td style="text-align:center">Oriana Koyla</td>
+<td style="text-align:center">Oriana Koyla-Ross</td>
+</tr>
+</tbody>
+</table>
+<p>My recommendation here is, if you are running a study where you already have an existing list of participants in your study, pre-load that list into your survey and use it to collect data. Using your embedded participant list you can do things like send unique links to participants, removing the need to have participants enter their own information. To prevent errors, upon opening each unique link, a prompt can be triggered asking participants to verify their identity (based on the embedded data you have added - such as name). Even better, if you already have both name and unique ID assigned, embed all of that information, removing the need to merge in study ID after export.</p>
+<p>To learn more about embedding data in Qualtrics, such as names and IDs from a contact list, you can visit 
+<a href="https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/standard-elements/embedded-data/#SettingValuesFromAContactList" target="_blank" rel="noopener">Qualtrics Help</a>.</p>
+
+
+
+
+<h4 id="tip-7-check-your-survey-by-exporting-the-instrument">Tip #7: Check your survey by exporting the instrument
+  <a href="#tip-7-check-your-survey-by-exporting-the-instrument"></a>
+</h4>
+<p>Export your survey instrument to a human-readable document. Exporting your survey this way allows you to more easily check things such as:</p>
+<ul>
+<li>Are all questions accounted for?</li>
+<li>Are all response options accounted for and coded as expected?</li>
+<li>Is display logic doing what you expect?</li>
+</ul>
+<p>You can export a copy of your survey in Qualtrics by going to “Tools” -&gt; “Import/Export” -&gt; “Export Survey to Word”. This Word document will show you the variable names, the back-end value coding of response options, as well as any display logic associated with your survey.</p>
+<img src="img/export_word.PNG" width="70%" style="display: block; margin: auto;" />
+
+
+
+
+<h4 id="tip-8-collect-sample-responses">Tip #8: Collect sample responses
+  <a href="#tip-8-collect-sample-responses"></a>
+</h4>
+<p>Before you send out your survey to the world, make sure to collect sample data first. Send it to people on your team and provide them with a specific list of things to test and look for, similar to those we mentioned above. For example:</p>
+<ul>
+<li>Can everyone access the survey?</li>
+<li>Are all questions accounted for in the survey (according to the data dictionary)?</li>
+<li>Are all response options visible for each categorical question (according to the data dictionary)?</li>
+<li>Is your data validation working or are people allowed to enter unallowable values?</li>
+<li>Does skip/display logic follow the rules assigned in the data dictionary?</li>
+<li>Are there any poorly worded questions?</li>
+<li>Are there any unclear response options?</li>
+</ul>
+<p>Once you gather feedback from all users, integrate that feedback into the survey.</p>
+
+
+
+
+<h4 id="tip-9-choose-a-file-type-for-exporting-your-data">Tip #9: Choose a file type for exporting your data
+  <a href="#tip-9-choose-a-file-type-for-exporting-your-data"></a>
+</h4>
+<p>You may think that choosing a file type to export to is a decision that can be made after your data is collected, and generally it is. But it is important to know that each file exports a little differently and has different export options. One example of this is understanding how “select all” questions export differently across different file types. Or understanding how value choices will be displayed. Just for demonstration purposes, I will compare a few differences between exporting to an SPSS file versus a csv file.</p>
+<p>Example 1: Choosing to export to an SPSS file</p>
+<ul>
+<li>Multi-value fields (like my “select-all” and “rank choice” questions) will be exported as unique items, with each item being coded as “1” if the item was selected and blank if not selected.</li>
+<li>My response options will all be exported as numeric values (with the value labels displayed on the <em>Variable View</em> tab)</li>
+</ul>
+<p><img src="img/spss.PNG" alt=""></p>
+<p>Example 2: Choosing to export to a csv file</p>
+<ul>
+<li>Here the default is again to export “select-all” and “rank choice” questions to unique items, however, we now have the option to unselect the check box “Split multi-value fields into columns” and allow all of our response options for “select-all” to be displayed in one variable, with each value separated by a comma. NOTE: While this is an allowable option, be aware that a variable in this format will not be analyzable unless you do further transformations in your data cleaning process.</li>
+<li>Again, the default for this format is to export my response options as numeric, but I also now have the option (not provided in the SPSS format), to export choice text instead of numeric response options.</li>
+<li>This file type also exports these additional rows of metadata (notice the 2 additional rows of information below the variable names). I will need to account for this in my data cleaning process.</li>
+</ul>
+<p><img src="img/csv.PNG" alt=""></p>
+<p>Choosing your export file type ahead of time allows you to plan for future data cleaning (for example recoding blanks to 0 in your “select all” and “rank choice” questions) as well as make any needed edits for your data dictionary (for example displaying your “select all” question as 4 separate items with yes/no response options, rather than one item as it is displayed as right now).</p>
+
+
+
+
+<h4 id="tip-10-check-your-data-by-exporting-your-sample-responses">Tip #10: Check your data by exporting your sample responses
+  <a href="#tip-10-check-your-data-by-exporting-your-sample-responses"></a>
+</h4>
+<p>I cannot emphasize enough, how important it is that you export sample data from your instrument before you ever send your survey out for actual data collection. It is so important you check that your data is exporting in the way you expect it to.</p>
+<p>Things to check are:</p>
+<ol>
+<li>Are there any unexpected variables?</li>
+<li>Are there any unexpected variable names?</li>
+<li>Are there any unexpected values?</li>
+<li>Are any values missing where you expected data?</li>
+<li>Are there any unexpected variable formats?</li>
+<li>Is data exporting in an analyzable, rectangular format? Is there anything that violates the rules of basic data structure. You can read more about data structure rules 
+<a href="https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules" target="_blank" rel="noopener">here</a>.</li>
+</ol>
+<p>You can export your sample data in any way that you usually export your data. Probably the most common way is by going to “Data &amp; Analysis” -&gt; “Export &amp; Import” -&gt; “Export Data” -&gt; And then choose your file type.</p>
+<p>In our sample data below, I exported to a csv file. I notice a few things. First I see that Qualtrics exported some of additional metadata that I was not expecting (ex: RecordedDate, ResponseId) and I will need to account for that in my cleaning process and data dictionary. Second, I see that a -15 was allowed to be added in my <code>age</code> variable which means something is wrong with my content validation for this item (which should only allow the range of 10-20). I will want to fix this before I send my survey out for data collection.</p>
+<p><img src="img/metadata.PNG" alt=""></p>
+
+
+
+
+<h4 id="tip-11-be-aware-of-qualtrics-quirks">Tip #11: Be aware of Qualtrics quirks
+  <a href="#tip-11-be-aware-of-qualtrics-quirks"></a>
+</h4>
+<p>Qualtrics has many quirks, features that are not necessarily bad but they just aren’t intuitive. My guess is that many of you reading this may have experience quirks of your own. And if you are unaware of these features, it can lead to serious errors in your data. Just a few of the quirks I have come across and want to share with you are:</p>
+<p>1. Make sure to publish all changes. Any time you make a change to your survey, those changes will not appear in your public facing survey unless you select “Publish” (the big BLUE button in the top-right corner of your survey page).</p>
+<p>2. If one of your item response options is “don’t know” or “unsure”, Qualtrics automatically recognizes those as <em>special</em> response options and places a warning sign next to it. 🚫</p>
+<p>If you don’t pay close attention (which has happened to me before), you will not notice the warning sign and you will not hover over it to read that Qualtrics has chosen to exclude those response options (meaning that when a user selects “don’t know”, instead of that value being coded to 5, as I have assigned, it will be recoded to missing in my data export).🙀</p>
+<img src="img/exclude.PNG" width="60%" style="display: block; margin: auto;" />
+<p>If this is not the behavior you want, and you prefer those response to appear in your data as the value you have assigned (in this case a 5), you can click into the response option and uncheck the option “Exclude from analysis”.</p>
+<img src="img/not_exclude.PNG" width="60%" style="display: block; margin: auto;" />
+<p>I am sure there are MANY more quirks to be known about Qualtrics (or other survey platforms) and if you have any you would like to share with others, please feel free to comment at the bottom of this blog post!</p>
+
+
+
+
+<h3 id="wrapping-it-up">Wrapping it up
+  <a href="#wrapping-it-up"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>I hope some or all of the tips above can help you build your survey instruments, or at least get you started in thinking about the many steps that go into creating a survey that exports analysis-ready data.</p>
+<p>I recognize that each survey is different, each project is different, and each user’s needs are different. But ultimately what I want to emphasize here is, take the time to thoughtfully plan and test your survey before you collect data so that you end up with usable and reliable data. If changes are made to your survey at any point after data collection has started, make sure to account for and track those changes in your data dictionary.</p>
+<p>Last, J-Pal has put together a very thorough 
+<a href="https://www.povertyactionlab.org/resource/survey-programming" target="_blank" rel="noopener">document</a> on survey design if you would like to learn more. This resource also includes a survey platform comparison table (Table1) that can be helpful in deciding which platform best meets your projects needs.</p>
+<center>
+<iframe src="https://giphy.com/embed/3oeSAz6FqXCKuNFX6o" width="480" height="208" frameBorder="0" class="giphy-embed" allowFullScreen>
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/starwars-star-wars-return-of-the-jedi-3oeSAz6FqXCKuNFX6o">via GIPHY</a>
+</p>
+</center>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">October 31, 2022</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">16 minute read, 3217 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/tags/data-collection">data collection</a>  <a href="https://cghlewis.com/tags/data-management">data management</a>  <a href="https://cghlewis.com/tags/qualtrics">Qualtrics</a>  <a href="https://cghlewis.com/tags/data-quality">data quality</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_dictionary/">Using a data dictionary as your roadmap to quality data</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_mgmt_resources/">A Curated Collection of Data Management Resources</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/synthesis_data_mgmt/">A Synthesis of Data Management Issues</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://cghlewis.com/blog/data_dictionary/">Using a data dictionary as your roadmap to quality data &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="Cghlewis/crystal_site"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2022 Crystal Lewis
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/Cghlewis" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/Cghlewis" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/crystal-lewis-922b4193/" title="linkedin-in" target="_blank" rel="noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

@@ -6,7 +6,18 @@
     <description>Recent content in tutorials on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to export analysis-ready survey data</title>
+      <link>https://cghlewis.com/blog/survey_data/</link>
+      <pubDate>Mon, 31 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/survey_data/</guid>
+      <description>Have you ever downloaded your data from a survey platform and expected it to look like this? 😻
+But instead you export data that looks like this? 🙀
+There are many issues with this data, ranging from unclear and inconsistent value entries, to poor variable naming, to conflicting variable types, to multiple things being measured in one variable. While this data can still hopefully be salvaged, the time consuming, decision-heavy process that will go along with cleaning this data is an avoidable step in our data management process.</description>
+    </item>
+    
     <item>
       <title>Using a data dictionary as your roadmap to quality data</title>
       <link>https://cghlewis.com/blog/data_dictionary/</link>

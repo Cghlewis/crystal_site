@@ -4,7 +4,7 @@ subtitle:
 excerpt: "Tips for building a Qualtrics survey that exports quality, usable data."
 author: "Crystal Lewis"
 date: "2022-10-31"
-draft: true 
+draft: false
 # layout options: single, single-sidebar
 layout: single
 citation: 
@@ -20,11 +20,11 @@ tags:
 
 Have you ever downloaded your data from a survey platform and expected it to look like this? 😻
 
-<img src="img/not_messy.PNG" width="50%" style="display: block; margin: auto;" />
+<img src="img/not_messy.PNG" width="65%" style="display: block; margin: auto;" />
 
 But instead you export data that looks like this? 🙀
 
-<img src="img/messy.PNG" width="50%" style="display: block; margin: auto;" />
+<img src="img/messy.PNG" width="55%" style="display: block; margin: auto;" />
 
 There are many issues with this data, ranging from unclear and inconsistent value entries, to poor variable naming, to conflicting variable types, to multiple things being measured in one variable. While this data can still hopefully be salvaged, the time consuming, decision-heavy process that will go along with cleaning this data is an avoidable step in our data management process.
 
@@ -70,7 +70,7 @@ Note: If you add new questions or choice options at any point, check the back en
 
 #### Tip \#3: Use your data dictionary to add content validation to variables
 
-This step is crucial to ensuring you collect valid data for open-ended response questions. For example, if your variable type is numeric according to your data dictionary, you do not want to allow text entry. If your allowable variable range is only 10-20, you do not want to allow values outside of that range. If you do not add this validation to your data collection tool, you run the risk of potentially collecting unusable data or at best, messy data that requires lots of additional data cleaning. You can add validation in Qualtrics by selecting “Add validation” and then selecting the type of validation you want, for instance “Content type”. From there you can add more information, such as “Content type” = “Number” and set a minimum and maximum range for the question.
+This step is crucial to ensuring you collect valid data for open-ended response questions. For example, if your variable type is numeric according to your data dictionary, you do not want to allow text entry. If your allowable variable range is only 10-20, you do not want to allow values outside of that range. If you do not add this validation to your data collection tool, you run the risk of potentially collecting unusable data or at best, messy data that requires lots of additional data cleaning. You can add validation in Qualtrics by selecting “Add validation” and then selecting the type of validation you want, for instance “Content type”. From there you can add more information, such as “Content type” is “Number” and set a minimum and maximum range for the question.
 
 <img src="img/valid.PNG" width="386" style="display: block; margin: auto;" />
 
@@ -101,17 +101,24 @@ But wait! You still have to pay attention to your options. If you select the “
 
 The takeaway here is to study your question types and formats and choose whichever provides you the most accurate and reliable response data.
 
-#### Tip \#6: Embed unique identifiers
+#### Tip \#6: Don’t collect names as unique identifiers
 
-Oftentimes in survey research, unless we are collecting anonymous data, we need unique identifiers in our survey to be able to link data across time or across forms. Many times that unique identifier can’t be a participant’s name (or other identifying information) because our study requires confidentiality. So instead we create a participant list and assign a unique numeric or alphanumeric ID to each person in our study.
+Oftentimes in survey research, unless we are collecting anonymous data, we need unique identifiers in our survey to be able to link data across time or across forms. You may be tempted to collect names in order to link data, but there are many problems with using names:
 
-When collecting online survey data, I highly recommend pre-loading this participant list, rather than having participants enter their identifying information that you can later replace with their study ID. I recognize this will not work for all situations, but if it is possible, it will create better data. As you can imagine, the way we may have names spelled in our participant list is not always going to align with the way participants provide their names in our survey, creating difficulties when trying to link and replace names with study IDs.
+1.  Names aren’t unique
+2.  Most studies require confidentiality so you will need to end up replacing names with a numeric or alphanumeric study ID before releasing data
+3.  Free form text fields lead to inconsistent values making linking difficult
 
-| Names collected from our survey | Names recorded in our participant list |
-|:-------------------------------:|:--------------------------------------:|
-|       ![](img/name1.PNG)        |           ![](img/name2.PNG)           |
+**An example of entries that might be troublesome to link:**
 
-There are many different ways you can collect data using an embedded participant list, but one method is sending unique links to participants. To prevent errors, upon opening each unique link, a prompt can be triggered asking participants to verify their identity (based on the embedded data you have added - such as name). Once all surveys are collected and this data is exported, no laborious process of merging inexact participant information with your participant list is needed. Study IDs are already assigned to each participant and identifiers can quickly be removed to create confidential data.
+| Spelling of names in pre-test | Spelling of names in post-test |
+|:-----------------------------:|:------------------------------:|
+|        Frieda A. Maeda        |          Frieda Maeda          |
+|       violet Mcgonical        |        Violet McGonical        |
+|         Chris Lucass          |       Christopher Lucas        |
+|         Oriana Koyla          |       Oriana Koyla-Ross        |
+
+My recommendation here is, if you are running a study where you already have an existing list of participants in your study, pre-load that list into your survey and use it to collect data. Using your embedded participant list you can do things like send unique links to participants, removing the need to have participants enter their own information. To prevent errors, upon opening each unique link, a prompt can be triggered asking participants to verify their identity (based on the embedded data you have added - such as name). Even better, if you already have both name and unique ID assigned, embed all of that information, removing the need to merge in study ID after export.
 
 To learn more about embedding data in Qualtrics, such as names and IDs from a contact list, you can visit [Qualtrics Help](https://www.qualtrics.com/support/survey-platform/survey-module/survey-flow/standard-elements/embedded-data/#SettingValuesFromAContactList).
 
@@ -119,9 +126,9 @@ To learn more about embedding data in Qualtrics, such as names and IDs from a co
 
 Export your survey instrument to a human-readable document. Exporting your survey this way allows you to more easily check things such as:
 
--   Are all questions accounted for
--   Are all response options accounted for and coded as expected
--   Is display logic doing what you expect
+-   Are all questions accounted for?
+-   Are all response options accounted for and coded as expected?
+-   Is display logic doing what you expect?
 
 You can export a copy of your survey in Qualtrics by going to “Tools” -\> “Import/Export” -\> “Export Survey to Word”. This Word document will show you the variable names, the back-end value coding of response options, as well as any display logic associated with your survey.
 
@@ -145,14 +152,14 @@ Once you gather feedback from all users, integrate that feedback into the survey
 
 You may think that choosing a file type to export to is a decision that can be made after your data is collected, and generally it is. But it is important to know that each file exports a little differently and has different export options. One example of this is understanding how “select all” questions export differently across different file types. Or understanding how value choices will be displayed. Just for demonstration purposes, I will compare a few differences between exporting to an SPSS file versus a csv file.
 
-Example 1: Choosing to export to an SPSS file.
+Example 1: Choosing to export to an SPSS file
 - Multi-value fields (like my “select-all” and “rank choice” questions) will be exported as unique items, with each item being coded as “1” if the item was selected and blank if not selected.
-- My response options will all be exported as numeric values (with the value labels displayed on the Variable View tab)
+- My response options will all be exported as numeric values (with the value labels displayed on the *Variable View* tab)
 
 ![](img/spss.PNG)
 
-Example 2: Choosing to export to a csv file.
-- Here the default is again to export “select-all” and “rank choice” questions to unique items, however, we now have the option to unselect the check box “Split multi-value fields into columns” and allow all of our response options for “select-all” (not for “rank choice”) to be displayed in one variable, with each value separated by a comma. NOTE: While this is an allowable option, be aware that a variable in this format will not be analyzable unless you do further transformations in your data cleaning process.
+Example 2: Choosing to export to a csv file
+- Here the default is again to export “select-all” and “rank choice” questions to unique items, however, we now have the option to unselect the check box “Split multi-value fields into columns” and allow all of our response options for “select-all” to be displayed in one variable, with each value separated by a comma. NOTE: While this is an allowable option, be aware that a variable in this format will not be analyzable unless you do further transformations in your data cleaning process.
 - Again, the default for this format is to export my response options as numeric, but I also now have the option (not provided in the SPSS format), to export choice text instead of numeric response options.
 - This file type also exports these additional rows of metadata (notice the 2 additional rows of information below the variable names). I will need to account for this in my data cleaning process.
 
@@ -175,21 +182,19 @@ Things to check are:
 
 You can export your sample data in any way that you usually export your data. Probably the most common way is by going to “Data & Analysis” -\> “Export & Import” -\> “Export Data” -\> And then choose your file type.
 
-In our sample data below, I exported to a csv file. If you have never exported Qualtrics data before, unless you anonymize your survey, you need to be prepared for all the additional metadata variables that will be exported with your data (ex: RecordedDate, ResponseId, and LocationLatitude, among many others). You can choose to keep or remove this metadata in your data cleaning process. Either way, you should know what will be exported in your file and update your data dictionary accordingly.
+In our sample data below, I exported to a csv file. I notice a few things. First I see that Qualtrics exported some of additional metadata that I was not expecting (ex: RecordedDate, ResponseId) and I will need to account for that in my cleaning process and data dictionary. Second, I see that a -15 was allowed to be added in my `age` variable which means something is wrong with my content validation for this item (which should only allow the range of 10-20). I will want to fix this before I send my survey out for data collection.
 
 ![](img/metadata.PNG)
 
-Other than some unexpected metadata, I see that everything looks as I would expect it (variables named correctly, values coded correctly, variables are exported in the format I expected). If anything did not look as I expected, **now** is the time to fix it before you collect data.
-
 #### Tip \#11: Be aware of Qualtrics quirks
 
-Qualtrics has many quirks, features that are not necessarily bad but they just aren’t intuitive. My guess is that many of you reading this may know WAY more quirks than I do. And if you are unaware of these features, it can lead to serious errors in your data. Just a few of the quirks I have come across and want to share with you are:
+Qualtrics has many quirks, features that are not necessarily bad but they just aren’t intuitive. My guess is that many of you reading this may have experience quirks of your own. And if you are unaware of these features, it can lead to serious errors in your data. Just a few of the quirks I have come across and want to share with you are:
 
 1\. Make sure to publish all changes. Any time you make a change to your survey, those changes will not appear in your public facing survey unless you select “Publish” (the big BLUE button in the top-right corner of your survey page).
 
 2\. If one of your item response options is “don’t know” or “unsure”, Qualtrics automatically recognizes those as *special* response options and places a warning sign next to it. 🚫
 
-If you don’t pay close attention (which has happened to me before), you will not notice the warning sign and you will not hover over it to read that Qualtrics has chosen to exclude those response options (meaning that when a user selects “don’t know”, instead of that value being coded to 5, as I have assigned, it will be recoded to missing in my data export.🙀
+If you don’t pay close attention (which has happened to me before), you will not notice the warning sign and you will not hover over it to read that Qualtrics has chosen to exclude those response options (meaning that when a user selects “don’t know”, instead of that value being coded to 5, as I have assigned, it will be recoded to missing in my data export).🙀
 
 <img src="img/exclude.PNG" width="60%" style="display: block; margin: auto;" />
 
@@ -201,15 +206,11 @@ I am sure there are MANY more quirks to be known about Qualtrics (or other surve
 
 ### Wrapping it up
 
-I hope some or all of the tips above can help you build your survey instruments, or at least get you started in thinking about the many steps that go into creating a survey that exports quality data. In addition to all the things we’ve covered above, there is actually so much more to consider such as:
+I hope some or all of the tips above can help you build your survey instruments, or at least get you started in thinking about the many steps that go into creating a survey that exports analysis-ready data.
 
--   How do you want missing data to be exported? Qualtrics provides several options and you need to consider the implications of the various options
--   How will you protect the confidentiality and/or anonymity of your data?
--   Are you collecting all the identifiers you need to be able to link your data across other sources?
+I recognize that each survey is different, each project is different, and each user’s needs are different. But ultimately what I want to emphasize here is, take the time to thoughtfully plan and test your survey before you collect data so that you end up with usable and reliable data. If changes are made to your survey at any point after data collection has started, make sure to account for and track those changes in your data dictionary.
 
-I recognize that each survey is different, each project is different, and each user’s needs are different. But I think ultimately what I want to emphasize here is, take the time to think through what matters for your project, your data, and your analyses and make sure to account for as much of this as possible in your instrument before you collect data so that you end up with usable and reliable data. If changes are made to your survey at any point after data collection has started, make sure to account for and track those changes in your data dictionary.
-
-Last, J-Pal has put together a very thorough [document](https://www.povertyactionlab.org/resource/survey-programming) on survey design if you would like to learn more. This resource also includes a survey platform comparison table that can be helpful in deciding which platform best meets your projects needs.
+Last, J-Pal has put together a very thorough [document](https://www.povertyactionlab.org/resource/survey-programming) on survey design if you would like to learn more. This resource also includes a survey platform comparison table (Table1) that can be helpful in deciding which platform best meets your projects needs.
 
 <center>
 <iframe src="https://giphy.com/embed/3oeSAz6FqXCKuNFX6o" width="480" height="208" frameBorder="0" class="giphy-embed" allowFullScreen>

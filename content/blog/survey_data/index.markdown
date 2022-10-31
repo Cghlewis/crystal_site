@@ -26,9 +26,9 @@ But instead you export data that looks like this? 🙀
 
 <img src="img/messy.PNG" width="55%" style="display: block; margin: auto;" />
 
-There are many issues with this data, ranging from unclear and inconsistent value entries, to poor variable naming, to conflicting variable types, to multiple things being measured in one variable. While this data can still hopefully be salvaged, the time consuming, decision-heavy process that will go along with cleaning this data is an avoidable step in our data management process.
+There are many issues with this data, ranging from unclear and inconsistent value entries, to vague variable names, to conflicting variable types, to multiple things being measured in one variable. While this data can still hopefully be salvaged, the time consuming, decision-heavy process that will go along with cleaning this data is an avoidable step in our data management process.
 
-So how do we prevent this from happening? We build our data collection tools with our end result in mind. In this tutorial I am going to go through some tips to help you export data that is more interpretable and more usable. While building tools with your end in mind does require some up front, planning and developing, it pays off in dividends.
+So how do we prevent this from happening? We build our data collection tools with our end result in mind. In this tutorial I am going to go through some tips to help you export data that is more interpretable and more usable. While building tools with your end in mind does require some up front time, planning and developing, it pays off in dividends.
 
 ### Planning with the end in mind
 

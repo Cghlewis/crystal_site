@@ -89,7 +89,7 @@ If you have many response options, one nice feature of Qualtrics is that you can
 </video>
 </center>
 
-#### Tip \#5: Choose the right question type and format for the question
+#### Tip \#5: Choose the right type and format for the question
 
 This may sound like a no brainer, but it’s not always clear which question type should be used for your question. It is important to become familiar with the various question types available to you and test out what works best. For instance if you were unaware that “Rank order” was an actual question type available to you, you might be tempted to create a multiple line text entry form where participants freely enter their ranking order of your items. However, without carefully constructing this kind of question, you may miss the fact that a free form may allow duplicate entries (such as selecting a rank of 1 more than once).
 
@@ -182,7 +182,7 @@ Things to check are:
 
 You can export your sample data in any way that you usually export your data. Probably the most common way is by going to “Data & Analysis” -\> “Export & Import” -\> “Export Data” -\> And then choose your file type.
 
-In our sample data below, I exported to a csv file. I notice a few things. First I see that Qualtrics exported some of additional metadata that I was not expecting (ex: RecordedDate, ResponseId) and I will need to account for that in my cleaning process and data dictionary. Second, I see that a -15 was allowed to be added in my `age` variable which means something is wrong with my content validation for this item (which should only allow the range of 10-20). I will want to fix this before I send my survey out for data collection.
+In our sample data below, I exported to a csv file. I notice a few things. First I see that Qualtrics exported some additional metadata that I was not expecting (ex: RecordedDate, ResponseId) and I will need to account for that in my cleaning process and data dictionary. Second, I see that a -15 was allowed to be added in my `age` variable which means something is wrong with my content validation for this item (which should only allow the range of 10-20). I will want to fix this before I send my survey out for data collection.
 
 ![](img/metadata.PNG)
 

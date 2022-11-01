@@ -94,7 +94,7 @@ My content section is: collection My layout is: single-series part 2! does this 
       <guid>https://cghlewis.com/blog/survey_data/</guid>
       <description>Have you ever downloaded your data from a survey platform and expected it to look like this? 😻
 But instead you export data that looks like this? 🙀
-There are many issues with this data, ranging from unclear and inconsistent value entries, to poor variable naming, to conflicting variable types, to multiple things being measured in one variable. While this data can still hopefully be salvaged, the time consuming, decision-heavy process that will go along with cleaning this data is an avoidable step in our data management process.</description>
+There are many issues with this data, ranging from unclear and inconsistent value entries, to vague variable names, to conflicting variable types, to multiple things being measured in one variable. While this data can still hopefully be salvaged, the time consuming, decision-heavy process that will go along with cleaning this data is an avoidable step in our data management process.</description>
     </item>
     
     <item>

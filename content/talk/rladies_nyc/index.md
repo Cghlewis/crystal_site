@@ -1,6 +1,6 @@
 ---
 title: A Comparison of Packages to Generate Codebooks in R
-author: 
+author:
 date: "2022-09-20T18:00:00"
 date_end: "2022-09-20T20:00:00"
 publishDate: "2022-09-18"
@@ -12,10 +12,6 @@ excerpt: Slides from a 5 minute lightning talk for R-Ladies NYC.
 featured: true
 layout: single
 links:
-- icon: edit
-  icon_pack: fas
-  name: RSVP!
-  url: https://www.meetup.com/rladies-newyork/events/287520144/
 - icon: tv
   icon_pack: fas
   name: Slides
@@ -24,6 +20,10 @@ links:
   icon_pack: fab
   name: Code
   url: "https://github.com/Cghlewis/rladies-nyc-codebook-comparison/"
+- icon: play-circle
+  icon_pack: fas
+  name: recording
+  url: https://www.youtube.com/watch?v=v5QZEerzI4s
 location: virtual
 show_post_time: false
 categories:

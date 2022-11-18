@@ -6,7 +6,7 @@
     <description>Recent content on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 31 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Nov 2022 09:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netlify</title>
       <link>https://cghlewis.com/collection/day02/01-netlify/</link>
@@ -84,6 +84,15 @@ Clone GitHub repo usethis::create_from_github(&amp;quot;https://github.com/apres
       <description> Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
 Here I am: content/collection\day02\03-blogdown\index.md To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
 My content section is: collection My layout is: single-series part 2! does this work? now for some very cool things more get ready! </description>
+    </item>
+    
+    <item>
+      <title>Data Management Workflows for Education Research Studies</title>
+      <link>https://cghlewis.com/talk/uhcl/</link>
+      <pubDate>Mon, 21 Nov 2022 09:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/uhcl/</guid>
+      <description>These are slides from a guest lecture presentation for a graduate research methods class at the UHCL. The talk was on how to create data management workflows for education research studies.</description>
     </item>
     
     <item>

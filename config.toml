@@ -98,6 +98,10 @@ enableEmoji = true
       icon      = "linkedin-in" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://www.linkedin.com/in/crystal-lewis-922b4193/"
+  [[params.social]]
+   icon      = "mastodon" # icon name without the 'fa-'
+   icon_pack = "fab"
+   url       = "https://fosstodon.org/@cghlewis"
 
 
 [taxonomies]

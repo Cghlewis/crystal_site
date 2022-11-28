@@ -32,11 +32,11 @@ And why would we want to use our data dictionary to automate these four processe
 
 1. It's faster. Imagine if you have to rename 40 variables. Would you rather write out all 40 new names in a naming function or use your data dictionary to do the renaming for you?
 
-2. It's more reproducible. How many times have you chosen a name for a variable and then later decided that was a bad name and wanted to rename it again. That is totally okay, but now you not only have to rename it in your data cleaning syntax, you **ALSO** have to rename it in your data dictionary. 😟 But if you use your data dictionary to rename your variables, your only have to update in one location!
+2. It's more reproducible. How many times have you chosen a name for a variable and then later decided that was a bad name and wanted to rename it again? That is totally okay, but now you not only have to rename it in your data cleaning syntax, you **ALSO** have to rename it in your data dictionary. 😟 But if you use your data dictionary to rename your variables, you only have to update in one location!
 
 3. It reduces errors. We are all human and we create typos. Reducing the amount of times we have to type out variable names or write variable labels reduces the amount of errors we may introduce into our data.
 
-Before we dive into these four use cases, let's take a look at our example data and data dictionary.
+Before we dive into these four use cases, let's take a look at our example data and data dictionary. 
 
 #### Our data
 

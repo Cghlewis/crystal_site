@@ -13,7 +13,7 @@
       <pubDate>Sun, 27 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/blog/dict_clean/</guid>
-      <description>In an earlier blog post I wrote about the importance of a data dictionary. In that post I argued that data dictionaries are one of the most important pieces of documentation you can keep for a project and I spoke about the three purposes of a data dictionary. One of those purposes being that they can be used in your data cleaning process. And when I say &amp;ldquo;used&amp;rdquo;, I mean that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also meant it in a very literal sense.</description>
+      <description>In an earlier blog post I argued that data dictionaries are one of the most important pieces of documentation you can keep for a project and I spoke about the three purposes of a data dictionary. One of those purposes being that they can be used in your data cleaning process. And when I say &amp;ldquo;used&amp;rdquo;, I meant that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also meant it in a very literal sense.</description>
     </item>
     
     <item>

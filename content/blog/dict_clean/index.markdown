@@ -17,8 +17,7 @@ tags:
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
-
-In an earlier blog post I wrote about the importance of a [data dictionary](https://cghlewis.com/blog/data_dictionary/). In that post I argued that data dictionaries are one of the most important pieces of documentation you can keep for a project and I spoke about the three purposes of a data dictionary. One of those purposes being that they can be used in your data cleaning process. And when I say "used", I mean that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also meant it in a very literal sense. You can actually integrate your data dictionary into your cleaning script and use it in functions.
+In an earlier blog post I argued that [data dictionaries](https://cghlewis.com/blog/data_dictionary/) are one of the most important pieces of documentation you can keep for a project and I spoke about the three purposes of a data dictionary. One of those purposes being that they can be used in your data cleaning process. And when I say "used", I mean that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also mean it in a very literal sense. You can actually integrate your data dictionary into your cleaning script and use it in functions.
 
 ### Four ways to integrate your data dictionary into your cleaning process
 

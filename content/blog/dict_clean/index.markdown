@@ -1,7 +1,7 @@
 ---
 title: "Four simple ways to integrate your data dictionary into your data cleaning process"
 subtitle:
-excerpt: "An introduction to four ways you can integrate your data dictionary into your data cleaning process to make your work less tedious, less error prone, and more reproducible."
+excerpt: "An introduction to four ways you can integrate your data dictionary into your #rstats data cleaning process to make your work less tedious, less error prone, and more reproducible."
 author: "Crystal Lewis"
 date: "2022-11-27"
 draft: false

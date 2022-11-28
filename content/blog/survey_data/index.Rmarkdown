@@ -7,8 +7,6 @@ date: "2022-10-31"
 draft: false
 # layout options: single, single-sidebar
 layout: single
-citation: 
-  url: https://cghlewis.com/blog/survey_data
 categories:
 - tutorials
 tags:

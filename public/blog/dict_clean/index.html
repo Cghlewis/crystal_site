@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.101.0" />
+<title>Four simple ways to integrate your data dictionary into your data cleaning process | Crystal Lewis</title>
+
+
+<meta property="twitter:site" content="@cghlewis">
+<meta property="twitter:creator" content="@cghlewis">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="An introduction to four ways you can integrate your data dictionary into your data cleaning process to make your work less tedious, less error prone, and more reproducible.">
+
+
+<meta property="og:site_name" content="Crystal Lewis">
+<meta property="og:title" content="Four simple ways to integrate your data dictionary into your data cleaning process | Crystal Lewis">
+<meta property="og:description" content="An introduction to four ways you can integrate your data dictionary into your data cleaning process to make your work less tedious, less error prone, and more reproducible." />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://cghlewis.com/blog/dict_clean/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://cghlewis.com/blog/dict_clean/featured.PNG" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://cghlewis.com/blog/dict_clean/featured.PNG" >
+    
+    
+  <meta itemprop="name" content="Four simple ways to integrate your data dictionary into your data cleaning process">
+<meta itemprop="description" content="In an earlier blog post I wrote about the importance of a data dictionary. In that post I argued that data dictionaries are one of the most important pieces of documentation you can keep for a project and I spoke about the three purposes of a data dictionary. One of those purposes being that they can be used in your data cleaning process. And when I say &ldquo;used&rdquo;, I mean that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also meant it in a very literal sense."><meta itemprop="datePublished" content="2022-11-27T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-11-27T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1323"><meta itemprop="image" content="https://cghlewis.com/blog/dict_clean/featured.PNG">
+<meta itemprop="keywords" content="rstats,data cleaning,documentation," />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.36233a39979933db8877785b1879dd1ee29d2f4bf092a7566e716b04552caf2c.css" integrity="sha256-NiM6OZeZM9uId3hbGHndHuKdL0vwkqdWbnFrBFUsryw=" media="screen">
+  
+  
+  <script src="/panelset.min.dca42702d7daf6fd31dc352efd2bcf0e4ac8c05ccaa58d9293f6177462de5d5f.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.6003fae4f0a991c47f3ebffd1d7c0c5d116b39c00d67970ca34464bf62cd2e7a.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://cghlewis.com/" title="Home">
+      <img src="/img/flower2.png" class="dib db-l h2 w-auto" alt="Crystal Lewis">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/consulting/" title="Consulting Work">Consulting</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/projects/" title="Projects">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact Form">Contact</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Four simple ways to integrate your data dictionary into your data cleaning process</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Crystal Lewis in <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </p>
+        <p class="f7 db mv0 ttu">November 27, 2022</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <script src="https://cghlewis.com/blog/dict_clean/index_files/kePrint/kePrint.js"></script>
+<link href="https://cghlewis.com/blog/dict_clean/index_files/lightable/lightable.css" rel="stylesheet" />
+<p>In an earlier blog post I wrote about the importance of a 
+<a href="https://cghlewis.com/blog/data_dictionary/" target="_blank" rel="noopener">data dictionary</a>. In that post I argued that data dictionaries are one of the most important pieces of documentation you can keep for a project and I spoke about the three purposes of a data dictionary. One of those purposes being that they can be used in your data cleaning process. And when I say &ldquo;used&rdquo;, I mean that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also meant it in a very literal sense. You can actually integrate your data dictionary into your cleaning script and use it in functions.</p>
+
+
+
+
+<h3 id="four-ways-to-integrate-your-data-dictionary-into-your-cleaning-process">Four ways to integrate your data dictionary into your cleaning process
+  <a href="#four-ways-to-integrate-your-data-dictionary-into-your-cleaning-process"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>This blog post will cover four simple ways to integrate your data dictionary into your data cleaning process. There are probably many other, more clever ways to integrate your data dictionary, and if you have other ideas, I would love to hear them! But for now, these are the ways I currently use my data dictionary in my data cleaning process.</p>
+<ol>
+<li>To drop variables</li>
+<li>To rename variables</li>
+<li>To relocate variables</li>
+<li>To add variable labels (metadata)</li>
+</ol>
+<p>And why would we want to use our data dictionary to automate these four processes?</p>
+<ol>
+<li>
+<p>It&rsquo;s faster. Imagine if you have to rename 40 variables. Would you rather write out all 40 new names in a naming function or use your data dictionary to do the renaming for you?</p>
+</li>
+<li>
+<p>It&rsquo;s more reproducible. How many times have you chosen a name for a variable and then later decided that was a bad name and wanted to rename it again. That is totally okay, but now you not only have to rename it in your data cleaning syntax, you <strong>ALSO</strong> have to rename it in your data dictionary. 😟 But if you use your data dictionary to rename your variables, your only have to update in one location!</p>
+</li>
+<li>
+<p>It reduces errors. We are all human and we create typos. Reducing the amount of times we have to type out variable names or write variable labels reduces the amount of errors we may introduce into our data.</p>
+</li>
+</ol>
+<p>Before we dive into these four use cases, let&rsquo;s take a look at our example data and data dictionary.</p>
+
+
+
+
+<h4 id="our-data">Our data
+  <a href="#our-data"></a>
+</h4>
+<p>For this example we are using items from a 
+<a href="https://www.researchgate.net/figure/CENSHARE-attachment-scale-answers-for-favourite-pet-reported-as-owned-by-child_tbl3_236738494" target="_blank" rel="noopener">pet survey</a> I found online, populated with fictitious data.</p>
+<p><img src="img/raw.PNG" alt=""></p>
+
+
+
+
+<h4 id="our-data-dictionary">Our data dictionary
+  <a href="#our-data-dictionary"></a>
+</h4>
+<p>Along with our data, I also have a data dictionary that provides a glimpse into what I expect our final clean dataset to look like. The four columns in my data dictionary tell me what the variable names are currently in my raw data, how I plan to rename the variables, the labels corresponding to those variables, and the values corresponding to those variable. Normally I would have additional columns, such as variable type, but I kept this dictionary very small for simplicity.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> new_name </th>
+   <th style="text-align:left;"> old_name </th>
+   <th style="text-align:left;"> label </th>
+   <th style="text-align:left;"> value </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> drop </td>
+   <td style="text-align:left;"> extra_var1 </td>
+   <td style="text-align:left;"> Identifier provided by survey platform </td>
+   <td style="text-align:left;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> drop </td>
+   <td style="text-align:left;"> extra_var2 </td>
+   <td style="text-align:left;"> Survey time provided by survey platform </td>
+   <td style="text-align:left;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> drop </td>
+   <td style="text-align:left;"> identifying_var </td>
+   <td style="text-align:left;"> Respondent email </td>
+   <td style="text-align:left;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> participant_id </td>
+   <td style="text-align:left;"> id </td>
+   <td style="text-align:left;"> Respondent study ID </td>
+   <td style="text-align:left;"> 1-100 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> pet_type </td>
+   <td style="text-align:left;"> q5 </td>
+   <td style="text-align:left;"> What type of pet do you have </td>
+   <td style="text-align:left;"> dog, cat </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> age </td>
+   <td style="text-align:left;"> q6 </td>
+   <td style="text-align:left;"> Respondent age </td>
+   <td style="text-align:left;"> 10-18 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> pet_1 </td>
+   <td style="text-align:left;"> q1 </td>
+   <td style="text-align:left;"> In your family, your pet likes you best </td>
+   <td style="text-align:left;"> almost always, often, sometimes, almost never </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> pet_2 </td>
+   <td style="text-align:left;"> q2 </td>
+   <td style="text-align:left;"> You talk to your pet as a friend </td>
+   <td style="text-align:left;"> almost always, often, sometimes, almost never </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> pet_3 </td>
+   <td style="text-align:left;"> q3 </td>
+   <td style="text-align:left;"> You show photos of your pet to friends </td>
+   <td style="text-align:left;"> almost always, often, sometimes, almost never </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> pet_4 </td>
+   <td style="text-align:left;"> q4 </td>
+   <td style="text-align:left;"> You buy presents for your pet </td>
+   <td style="text-align:left;"> almost always, often, sometimes, almost never </td>
+  </tr>
+</tbody>
+</table>
+<p>Now that we know what our raw data looks like, and we have our data dictionary to guide us, we can begin to make our transformations.</p>
+<p>Let&rsquo;s first call the packages we need, and read in our data and our data dictionary.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(readxl)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(labelled)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>survey <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">read_csv</span>(<span style="color:#d14">&#34;survey_raw.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dict <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">read_excel</span>(<span style="color:#d14">&#34;data-dictionary.xlsx&#34;</span>)
+</span></span></code></pre></div><p><strong>1. Drop variables</strong></p>
+<p>There are many reasons you may want to drop variables from your raw data. One could be that you need to remove PII (personally identifiable information), such as name or email. Another reason might be that your data collection platform adds additional metadata to your export that is irrelevant to your research study, such as duration or date. In our scenario, I would like to remove <code>extra_var1</code> and <code>extra_var</code>, as well as <code>identifying_var</code>. I know that I want to remove these columns because within my data dictionary, I have named all of these variables &ldquo;drop&rdquo; in my <code>new_name</code> column.</p>
+<p>Typically in order to drop variables I would list all of the variables I want to remove or keep in a <code>dplyr::select()</code> statement. But now we can use our data dictionary to drop/keep variables for us.</p>
+<p>We first create a character vector of all variables we wish to drop using our data dictionary.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>drop_vars <span style="color:#000;font-weight:bold">&lt;-</span> dict <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">filter</span>(new_name <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;drop&#34;</span>) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">pull</span>(old_name)
+</span></span></code></pre></div><p>And then use this vector in our select statement. We use <code>all_of()</code> to denote that we are using an external vector.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>survey <span style="color:#000;font-weight:bold">&lt;-</span> survey <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">select</span>(<span style="color:#000;font-weight:bold">-</span><span style="color:#900;font-weight:bold">all_of</span>(drop_vars))
+</span></span></code></pre></div><p><strong>2. Rename variables</strong></p>
+<p>In this scenario our data has come to us with very vague variable names and we want to name them something more identifiable. Again, I would normally rename my variables manually using something like <code>purrr::set_names()</code> or <code>dplyr::rename()</code>. However, now we can use our data dictionary in these functions, removing the need to manually type all of these names.</p>
+<p>We first need to create a <strong>named</strong> character vector of our variable names using our data dictionary. It is important that the new variable names are selected first and the old variable names are selected second in this process.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>dict_names <span style="color:#000;font-weight:bold">&lt;-</span> dict <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">select</span>(new_name, old_name) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">filter</span>(<span style="color:#000;font-weight:bold">!</span>new_name <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;drop&#34;</span>) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">deframe</span>()
+</span></span></code></pre></div><p>We can then rename all variables using that named character vector.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>survey <span style="color:#000;font-weight:bold">&lt;-</span> survey <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">rename</span>(<span style="color:#900;font-weight:bold">all_of</span>(dict_names))
+</span></span></code></pre></div><p><strong>3. Reorder variables</strong></p>
+<p>It can be really nice for your data to be in the same variable order as your data dictionary. It makes reviewing the two products together much clearer. Currently our variables are not in the same order as our data dictionary.</p>
+<p>In order to reorder our variables using our data dictionary we again create a character vector of our variables (which are currently in the correct order in our data dictionary).</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>var_order <span style="color:#000;font-weight:bold">&lt;-</span> dict <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">filter</span>(<span style="color:#000;font-weight:bold">!</span>new_name <span style="color:#000;font-weight:bold">==</span> <span style="color:#d14">&#34;drop&#34;</span>) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">pull</span>(new_name)
+</span></span></code></pre></div><p>And then use this vector to reorder our variables.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>survey <span style="color:#000;font-weight:bold">&lt;-</span> survey <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">relocate</span>(<span style="color:#900;font-weight:bold">all_of</span>(var_order))
+</span></span></code></pre></div><p><strong>4. Add variable labels</strong></p>
+<p>Adding metadata to data in the form of variable labels is not always a necessary part of data cleaning but it be a very helpful step. Without ever having to open your data dictionary, adding metadata, such as variable labels can allow you to view the details of each variable when viewing your data. In her blog post about labelled data, 
+<a href="https://www.pipinghotdata.com/posts/2022-09-13-the-case-for-variable-labels-in-r/" target="_blank" rel="noopener">Shannon Pileggi</a> talks about additional benefits of working with labelled data, such as using metadata within data products such as tables or figures.</p>
+<p>There are many ways to add metadata in R, but I am personally a big fan of using the <code>labelled</code> package. As someone who often works with education researchers who work with data in programs such as SPSS and SAS, the <code>labelled</code> package and the way it assigns metadata, integrates well with other programs outside of R.</p>
+<p>The <code>labelled::set_variable_labels()</code> function works with lists so we first create a named list of our variable labels using our data dictionary.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>dict_labels <span style="color:#000;font-weight:bold">&lt;-</span> dict <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">select</span>(new_name , label) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">deframe</span>() <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">as.list</span>()
+</span></span></code></pre></div><p>We then can use this list to apply labels to our variables. We can add the argument <em>.strict = FALSE</em> to denote that it is okay if there are more variables in our data dictionary than are represented in our data.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>survey <span style="color:#000;font-weight:bold">&lt;-</span> survey <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">set_variable_labels</span>(.labels <span style="color:#000;font-weight:bold">=</span> dict_labels, .strict <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">FALSE</span>)
+</span></span></code></pre></div>
+
+
+
+<h3 id="review-our-data">Review our data
+  <a href="#review-our-data"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Now that we have done 4 transformations to our data using our data dictionary, we can view our final dataset.</p>
+<p><img src="img/final.PNG" alt=""></p>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">November 27, 2022</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">7 minute read, 1323 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/tags/rstats">rstats</a>  <a href="https://cghlewis.com/tags/data-cleaning">data cleaning</a>  <a href="https://cghlewis.com/tags/documentation">documentation</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_dictionary/">Using a data dictionary as your roadmap to quality data</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_mgmt_resources/">A Curated Collection of Data Management Resources</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://cghlewis.com/blog/survey_data/">How to export analysis-ready survey data &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="Cghlewis/crystal_site"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2022 Crystal Lewis
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/Cghlewis" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/Cghlewis" title="twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/crystal-lewis-922b4193/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://fosstodon.org/@cghlewis" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

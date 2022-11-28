@@ -113,7 +113,7 @@ dict <- read_excel("data-dictionary.xlsx")
 
 **1. Drop variables**
 
-There are many reasons you may want to drop variables from your raw data. One could be that you need to remove PII (personally identifiable information), such as name or email. Another reason might be that your data collection platform adds additional metadata to your export that is irrelevant to your research study, such as duration or date. In our scenario, I would like to remove `extra_var1` and `extra_var`, as well as `identifying_var`. I know that I want to remove these columns because within my data dictionary, I have named all of these variables "drop" in my `new_name` column. 
+There are many reasons you may want to drop variables from your raw data. One could be that you need to remove PII (personally identifiable information), such as name or email. Another reason might be that your data collection platform adds additional metadata to your export that is irrelevant to your research study, such as duration or date. In our scenario, I would like to remove `extra_var1` and `extra_var2`, as well as `identifying_var`. I know that I want to remove these columns because within my data dictionary, I have named all of these variables "drop" in my `new_name` column. 
 
 Typically in order to drop variables I would list all of the variables I want to remove or keep in a `dplyr::select()` statement. But now we can use our data dictionary to drop/keep variables for us.
 

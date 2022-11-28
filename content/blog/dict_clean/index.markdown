@@ -26,7 +26,7 @@ This blog post will cover four simple ways to integrate your data dictionary int
 1. To drop variables
 2. To rename variables
 3. To relocate variables
-4. To add variable labels (metadata)
+4. To embed variable labels (metadata)
 
 And why would we want to use our data dictionary to automate these four processes?
 
@@ -206,9 +206,9 @@ survey <- survey %>%
   relocate(all_of(var_order))
 ```
 
-**4. Add variable labels**
+**4. Embed variable labels**
 
-Adding metadata to data in the form of variable labels is not always a necessary part of data cleaning but it be a very helpful step. Without ever having to open your data dictionary, adding metadata, such as variable labels can allow you to view the details of each variable when viewing your data. In her blog post about labelled data, [Shannon Pileggi](https://www.pipinghotdata.com/posts/2022-09-13-the-case-for-variable-labels-in-r/) talks about additional benefits of working with labelled data, such as using metadata within data products such as tables or figures.
+Embedding metadata in your data in the form of variable labels is not always a necessary part of data cleaning but it be a very helpful step. Without ever having to open your data dictionary, embedded metadata such as variable labels allows you to better understand the meaning of the columns in your data. In her blog post about labelled data, [Shannon Pileggi](https://www.pipinghotdata.com/posts/2022-09-13-the-case-for-variable-labels-in-r/) talks about additional benefits of working with labelled data, such as using metadata within data products such as tables or figures.
 
 There are many ways to add metadata in R, but I am personally a big fan of using the `labelled` package. As someone who often works with education researchers who work with data in programs such as SPSS and SAS, the `labelled` package and the way it assigns metadata, integrates well with other programs outside of R.
 

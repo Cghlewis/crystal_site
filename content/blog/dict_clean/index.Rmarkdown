@@ -194,7 +194,7 @@ The `labelled::set_variable_labels()` function works with lists so we first crea
 ```{r}
 
 dict_labels <- dict %>%
-  select(new_name , label) %>%
+  select(new_name, label) %>%
   deframe() %>%
   as.list()
 

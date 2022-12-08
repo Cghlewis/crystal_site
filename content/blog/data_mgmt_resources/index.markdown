@@ -30,7 +30,7 @@ tags:
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2022/10/28* 
+*Resources were last updated on 2022/12/08* 
 
 ### Guides 
 
@@ -232,6 +232,10 @@ These are other types of resources ranging from blog posts to podcasts, that als
   <tr>
    <td style="text-align:left;"> Podcast </td>
    <td style="text-align:left;"> <a href="https://podcasts.apple.com/us/podcast/within-between/id1517310439">Within &amp; Between</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Podcast </td>
+   <td style="text-align:left;"> <a href="https://anchor.fm/datalibs/episodes/005---A-Targeted-Approach-to-Outreach-and-Instruction-at-UC-Berkeley---Sackmann--Smith---Neeser-e1mek11?%24web_only=true&amp;_branch_match_id=1128746294660517070&amp;utm_source=web&amp;utm_campaign=web-share&amp;utm_medium=sharing&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXLy7IL8lMq0zMS87IL9ItT03SSywo0MvJzMvWT9V3MTXJ90%2B1zDEpSQIA16lMVTAAAAA%3D">IDEA: Improving Data Engagement and Advocacy</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Syllabus </td>

@@ -44,9 +44,9 @@
     
     
   <meta itemprop="name" content="Four simple ways to integrate your data dictionary into your data cleaning process">
-<meta itemprop="description" content="In an earlier blog post I argued that data dictionaries are one of the most important pieces of documentation you can keep for a project and I spoke about the three purposes of a data dictionary. One of those purposes being that they can be used in your data cleaning process. And when I say &ldquo;used&rdquo;, I meant that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also meant it in a very literal sense."><meta itemprop="datePublished" content="2022-11-27T00:00:00+00:00" />
+<meta itemprop="description" content="In an earlier blog post I argued that data dictionaries are one of the most important pieces of documentation you can keep for a project and I spoke about the four purposes of a data dictionary. One of those purposes being that they can be integrated in your data cleaning process. And when I say &ldquo;integrated&rdquo;, I mean that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also mean it in a very literal sense."><meta itemprop="datePublished" content="2022-11-27T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-11-27T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1311"><meta itemprop="image" content="https://cghlewis.com/blog/dict_clean/featured.PNG">
+<meta itemprop="wordCount" content="1310"><meta itemprop="image" content="https://cghlewis.com/blog/dict_clean/featured.PNG">
 <meta itemprop="keywords" content="rstats,data cleaning,documentation," />
   
   
@@ -118,7 +118,7 @@
         <script src="https://cghlewis.com/blog/dict_clean/index_files/kePrint/kePrint.js"></script>
 <link href="https://cghlewis.com/blog/dict_clean/index_files/lightable/lightable.css" rel="stylesheet" />
 <p>In an earlier blog post I argued that 
-<a href="https://cghlewis.com/blog/data_dictionary/" target="_blank" rel="noopener">data dictionaries</a> are one of the most important pieces of documentation you can keep for a project and I spoke about the three purposes of a data dictionary. One of those purposes being that they can be used in your data cleaning process. And when I say &ldquo;used&rdquo;, I meant that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also meant it in a very literal sense. You can actually integrate your data dictionary into your cleaning script and use it in functions.</p>
+<a href="https://cghlewis.com/blog/data_dictionary/" target="_blank" rel="noopener">data dictionaries</a> are one of the most important pieces of documentation you can keep for a project and I spoke about the four purposes of a data dictionary. One of those purposes being that they can be integrated in your data cleaning process. And when I say &ldquo;integrated&rdquo;, I mean that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also mean it in a very literal sense. You can actually integrate your data dictionary into your cleaning script and use it in functions.</p>
 
 
 
@@ -134,7 +134,7 @@
 <li>To drop variables</li>
 <li>To rename variables</li>
 <li>To relocate variables</li>
-<li>To add variable labels (metadata)</li>
+<li>To embed variable labels (metadata)</li>
 </ol>
 <p>And why would we want to use our data dictionary to automate these four processes?</p>
 <ol>
@@ -142,7 +142,7 @@
 <p>It&rsquo;s faster. Imagine if you have to rename 40 variables. Would you rather write out all 40 new names in a naming function or use your data dictionary to do the renaming for you?</p>
 </li>
 <li>
-<p>It&rsquo;s more reproducible. How many times have you chosen a name for a variable and then later decided that was a bad name and wanted to rename it again. That is totally okay, but now you not only have to rename it in your data cleaning syntax, you <strong>ALSO</strong> have to rename it in your data dictionary. 😟 But if you use your data dictionary to rename your variables, your only have to update in one location!</p>
+<p>It&rsquo;s more reproducible. How many times have you chosen a name for a variable and then later decided that was a bad name and wanted to rename it again? That is totally okay, but now you not only have to rename it in your data cleaning syntax, you <strong>ALSO</strong> have to rename it in your data dictionary. 😟 But if you use your data dictionary to rename your variables, you only have to update in one location!</p>
 </li>
 <li>
 <p>It reduces errors. We are all human and we create typos. Reducing the amount of times we have to type out variable names or write variable labels reduces the amount of errors we may introduce into our data.</p>
@@ -249,7 +249,7 @@
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>dict <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">read_excel</span>(<span style="color:#d14">&#34;data-dictionary.xlsx&#34;</span>)
 </span></span></code></pre></div><p><strong>1. Drop variables</strong></p>
-<p>There are many reasons you may want to drop variables from your raw data. One could be that you need to remove PII (personally identifiable information), such as name or email. Another reason might be that your data collection platform adds additional metadata to your export that is irrelevant to your research study, such as duration or date. In our scenario, I would like to remove <code>extra_var1</code> and <code>extra_var</code>, as well as <code>identifying_var</code>. I know that I want to remove these columns because within my data dictionary, I have named all of these variables &ldquo;drop&rdquo; in my <code>new_name</code> column.</p>
+<p>There are many reasons you may want to drop variables from your raw data. One could be that you need to remove PII (personally identifiable information), such as name or email. Another reason might be that your data collection platform adds additional metadata to your export that is irrelevant to your research study, such as duration or date. In our scenario, I would like to remove <code>extra_var1</code> and <code>extra_var2</code>, as well as <code>identifying_var</code>. I know that I want to remove these columns because within my data dictionary, I have named all of these variables &ldquo;drop&rdquo; in my <code>new_name</code> column.</p>
 <p>Typically in order to drop variables I would list all of the variables I want to remove or keep in a <code>dplyr::select()</code> statement. But now we can use our data dictionary to drop/keep variables for us.</p>
 <p>We first create a character vector of all variables we wish to drop using our data dictionary.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>drop_vars <span style="color:#000;font-weight:bold">&lt;-</span> dict <span style="color:#000;font-weight:bold">%&gt;%</span>
@@ -277,13 +277,13 @@
 </span></span></code></pre></div><p>And then use this vector to reorder our variables.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>survey <span style="color:#000;font-weight:bold">&lt;-</span> survey <span style="color:#000;font-weight:bold">%&gt;%</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">relocate</span>(<span style="color:#900;font-weight:bold">all_of</span>(var_order))
-</span></span></code></pre></div><p><strong>4. Add variable labels</strong></p>
-<p>Adding metadata to data in the form of variable labels is not always a necessary part of data cleaning but it be a very helpful step. Without ever having to open your data dictionary, adding metadata, such as variable labels can allow you to view the details of each variable when viewing your data. In her blog post about labelled data, 
+</span></span></code></pre></div><p><strong>4. Embed variable labels</strong></p>
+<p>Embedding metadata in your data in the form of variable labels is not always a necessary part of data cleaning but it be a very helpful step. Without ever having to open your data dictionary, embedded metadata such as variable labels allows you to better understand the meaning of the columns in your data. In her blog post about labelled data, 
 <a href="https://www.pipinghotdata.com/posts/2022-09-13-the-case-for-variable-labels-in-r/" target="_blank" rel="noopener">Shannon Pileggi</a> talks about additional benefits of working with labelled data, such as using metadata within data products such as tables or figures.</p>
 <p>There are many ways to add metadata in R, but I am personally a big fan of using the <code>labelled</code> package. As someone who often works with education researchers who work with data in programs such as SPSS and SAS, the <code>labelled</code> package and the way it assigns metadata, integrates well with other programs outside of R.</p>
 <p>The <code>labelled::set_variable_labels()</code> function works with lists so we first create a named list of our variable labels using our data dictionary.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>dict_labels <span style="color:#000;font-weight:bold">&lt;-</span> dict <span style="color:#000;font-weight:bold">%&gt;%</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">select</span>(new_name , label) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">select</span>(new_name, label) <span style="color:#000;font-weight:bold">%&gt;%</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">deframe</span>() <span style="color:#000;font-weight:bold">%&gt;%</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">as.list</span>()
 </span></span></code></pre></div><p>We then can use this list to apply labels to our variables. We can add the argument <em>.strict = FALSE</em> to denote that it is okay if there are more variables in our data dictionary than are represented in our data.</p>
@@ -310,7 +310,7 @@
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">7 minute read, 1311 words</dd>
+    <dd class="fw5 ml0">7 minute read, 1310 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">

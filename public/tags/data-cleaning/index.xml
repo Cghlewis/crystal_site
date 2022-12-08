@@ -13,7 +13,7 @@
       <pubDate>Sun, 27 Nov 2022 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/blog/dict_clean/</guid>
-      <description>In an earlier blog post I argued that data dictionaries are one of the most important pieces of documentation you can keep for a project and I spoke about the three purposes of a data dictionary. One of those purposes being that they can be used in your data cleaning process. And when I say &amp;ldquo;used&amp;rdquo;, I meant that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also meant it in a very literal sense.</description>
+      <description>In an earlier blog post I argued that data dictionaries are one of the most important pieces of documentation you can keep for a project and I spoke about the four purposes of a data dictionary. One of those purposes being that they can be integrated in your data cleaning process. And when I say &amp;ldquo;integrated&amp;rdquo;, I mean that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also mean it in a very literal sense.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       
       <guid>https://cghlewis.com/blog/data_mgmt_resources/</guid>
       <description>Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
-Resources were last updated on 2022/10/28</description>
+Resources were last updated on 2022/12/08</description>
     </item>
     
   </channel>

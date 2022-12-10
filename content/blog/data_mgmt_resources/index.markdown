@@ -11,7 +11,7 @@ categories:
 - resources
 tags:
 - data management
-- data cleaning
+- data cleaning 
 ---
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
@@ -30,7 +30,7 @@ tags:
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2022/12/08* 
+*Resources were last updated on 2022/12/09* 
 
 ### Guides 
 

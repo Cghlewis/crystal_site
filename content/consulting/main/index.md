@@ -35,6 +35,11 @@ I also provide hands-on workshops in Data Wrangling with R and RStudio. These wo
 Read what previous participants have learned in my workshops:
 <br>
 <br>
+<i><small>I learned all about the data management process which has never been explicitly taught to me in the way in which they were today. It helped seeing the steps clearly defined and then the nuanced details of each step. 
+<br>
+&emsp;- Anonymous Data Management Workflows for Education Research training participant</small></i>
+<br>
+<br>
 <i><small>I took part in Crystal’s workshops for data management and R coding for data cleaning. Crystal is a great instructor. She has a very good pace in teaching and explains things very clearly. Before taking these workshops, I had a hard time when cleaning data with R, but now I feel very comfortable with using R for data cleaning. Besides being knowledgeable, Crystal was also very approachable and patiently helped trainees with the coding issues they struggled with. Overall, I really enjoyed the workshops with Crystal and would definitely recommend them to others.
 <br>
 &emsp;- Anonymous Data Management and Data Cleaning in R training participant</small></i>

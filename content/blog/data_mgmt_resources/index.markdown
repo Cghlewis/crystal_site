@@ -11,7 +11,7 @@ categories:
 - resources
 tags:
 - data management
-- data cleaning 
+- data cleaning
 ---
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
@@ -30,7 +30,7 @@ tags:
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2022/12/09* 
+*Resources were last updated on 2023/02/10* 
 
 ### Guides 
 
@@ -63,6 +63,10 @@ These are guides that are helpful for understanding data management in the conte
   <tr>
    <td style="text-align:left;"> Institute of Education Sciences </td>
    <td style="text-align:left;"> <a href="https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf">Sharing Study Data: A Guide for Education Researchers</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Johns Hopkins Institute for Clinical and Translational Research (ICTR) </td>
+   <td style="text-align:left;"> <a href="https://ictrweb.johnshopkins.edu/ictr/dmig/Best_Practice/home.html?v=65849">Best Practices for Research Data Management</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Reynolds, T., Schatschneider, C. &amp; Logan, J. </td>
@@ -102,6 +106,11 @@ These are papers written about research data management practices and workflows.
    <td style="text-align:left;"> Borghi, J., &amp; Van Gulick, A. </td>
    <td style="text-align:right;"> 2022 </td>
    <td style="text-align:left;"> <a href="https://hdsr.mitpress.mit.edu/pub/72kcw990/release/1">Promoting Open Science Through Research Data Management</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Borghi, J., Abrams, S., Lowenberg, D., Simms, S. &amp; Chodacki, J. </td>
+   <td style="text-align:right;"> 2018 </td>
+   <td style="text-align:left;"> <a href="https://doi.org/10.3897/rio.4.e26439">Promoting Open Science Through Research Data Management</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Borycz, J. </td>

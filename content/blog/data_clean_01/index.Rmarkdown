@@ -212,8 +212,8 @@ So to wrap this post up, what should we expect from clean data for the purposes 
 3. The data should be de-identified
     - If de-identification is a requirement of our IRB/consent, then there should be no remaining PII in our data
       - Note that we did not talk about more involved de-identification methods for the purpose of public data sharing here. That requires a deeper conversation. But you can read more about those methods [here](https://cghlewis.github.io/mpsi-data-training/training_5.html#What_data_to_share).
-4. The data should be human and machine-readable
-    - In a rectangular format with well named variables (and metadata added if possible)
+4. The data should be in a human and machine-readable, analyzable format
+    - In a rectangular format with well-named variables (and metadata added if possible)
 5. And last, the data should be accurate to the best of our knowledge
 
 With all of this said, this set of standards and data cleaning steps are still my opinion and are based on my personal experiences. Having been a data manager for almost 10 years now, what I have outlined provides a general overview of what I personally consider for every single dataset that I clean. And as a data manager, I never have a specific analysis in mind. My goal is to make a general dataset that can be shared with any future user. I always welcome opinions and/or ideas of things that should be added to or removed from this list. Please share your thoughts in the comments below! You can also read more about other ideas around data cleaning here:

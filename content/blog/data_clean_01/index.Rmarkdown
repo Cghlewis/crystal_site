@@ -171,7 +171,7 @@ knitr::include_graphics("img/recode.PNG")
 14. Data validation
     - At minimum this step should be added to the end of your data cleaning process, but at best, you should add this step to the beginning of your file, and also sprinkle it throughout your process, checking and validating every one of your transformations along the way.
       - Why do I say it should be added to the beginning of a script? Because validating your raw data can actually help confirm that the data is coming in as you expected it to. This is especially useful for longitudinal data cleaning where you have a script that you expect to run consistently each wave of data collection. But what if raw data changes unexpectedly? Your process is no longer working as expected but will you catch that?
-      - At minimum, look for these issues during your data validation process:
+      - At minimum, look for these issues during your data validation process (using your data dictionary as your source of truth):
         1. Values out of range
         2. Variable types not as expected
         3. Missing columns
@@ -181,7 +181,8 @@ knitr::include_graphics("img/recode.PNG")
             - Ex: Compare age and grade level
         7. Cross checks for consistency
             - Ex: Grade level in one file and grade level in another file
-      - If during your validation process you find values that are inaccurate or out of range, you will need to make a personal decision on how to deal with those. Just make sure your decisions are documented.
+      - If during your validation process you find errors that were caused by your cleaning process, correct the errors and re-run your validation to ensure errors were corrected
+      - If you find true values that are inaccurate or out of range, you will need to make a personal decision on how to deal with those. Just make sure your decisions are documented.
         - For instance, you could leave the data as is, make a note of the out of range values in documentation, and allow future researchers to deal with those values during the analysis process. 
         - Or you could choose a value (ex: -90 = inaccurate value) to recode those values to.
         - Or if you find inconsistencies across different sources, you could choose one form as your source of truth and recode values based on that form.

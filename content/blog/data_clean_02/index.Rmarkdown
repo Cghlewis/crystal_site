@@ -19,9 +19,9 @@ tags:
 
 ## Data cleaning workflow
 
-Data cleaning is the process of organizing and transforming raw data into a format that can be easily accessed and analyzed. In education research, we are often cleaning data collected in the field from methods such as surveys, assessments, tests, or forms. 
+Data cleaning is the process of organizing and transforming raw data into a format that can be easily interpreted and analyzed. In education research, we are often cleaning data collected in the field from methods such as surveys, assessments, tests, or forms. 
 
-Even despite our best efforts to collect organized data, there is most likely at least **some** cleaning that is needed before you have a dataset that is ready to be shared within or outside of your team. And oftentimes, we want our cleaning process to be standardized, reproducible, and reliable. Yet, despite our best intentions, many times we (myself included) end up cleaning data in a somewhat haphazard way, leading to more work after the cleaning process, having to organize our messy work so that others can understand what we did. So how do we create data cleaning workflows that are standardized, reproducible, and produce reliable data? I have a few ideas that can help and I will share those ideas in this post.
+Even if we collect data with the most well-designed collection tools, there is most likely at least **some** cleaning that is needed before you have a dataset that is ready to be shared within or outside of your team. And oftentimes, we want our cleaning process to be standardized, reproducible, and reliable. Yet, despite our best intentions, many times we (myself included) end up cleaning data in a somewhat haphazard way, leading to more work after the cleaning process, having to organize our messy work so that others can understand what we did. So how do we create data cleaning workflows that are standardized, reproducible, and produce reliable data? I have a few ideas that can help and I will share those ideas in this post.
 
 ## Preliminary steps for standardization
 
@@ -30,8 +30,8 @@ Before you dive into data cleaning, there are several preliminary steps you need
 1. Have your data dictionary created  
     - Have your variables named and coded according to your style guide  
 2. Have your data cleaning plan written  
-    - Review the plan with your team  
-3. Review any readme files that have been provided to you  
+    - Review the plan with your team before you start your cleaning process
+3. Review any readme files that have been provided for you  
     - Incorporate those into your data cleaning plan  
 4. Have your folder structures set up according to your style guide  
 5. Have your file names set up according to your style guide  
@@ -40,7 +40,7 @@ So let's briefly review the documents mentioned in these steps.
 
 ### Data dictionary
 
-A [data dictionary](https://datamgmtinedresearch.com/documentation.html#data-dictionary) is a rectangular format collection of names, definitions, and attributes about variables in a dataset and it is the document where you lay out exactly how you expect your data to be structured. This document should tell you what values variables are allowed to have, their assigned variable names, allowable variable types and more. It will inform your entire data cleaning process.
+A [data dictionary](https://datamgmtinedresearch.com/documentation.html#data-dictionary) is a rectangular format collection of names, definitions, and attributes about variables in a dataset and it is the document where you lay out exactly how you expect your data to be structured. This document should tell you allowable variable values, assigned variable names, allowable variable types, and more. It will inform your entire data cleaning process.
 
 ### Data cleaning plan
 
@@ -48,12 +48,12 @@ I have written a lot about data cleaning plans in many other [places](https://da
 
 You may be wondering at this point, what cleaning steps should I write into my data cleaning plan then? Of course, that is going to depend on the actual data you are working with. The first thing you should do before writing a data cleaning plan is:
 
-1. Export sample raw data
+1. Export sample raw data from your data collection/data entry tool
     - You need to see what variables exist, how they are named, what format they are in, what values are exported  
 2. Compare the raw data to your data dictionary
-    - Remember from a previous [blog post](https://cghlewis.com/blog/survey_data/), hopefully you designed your data collection instrument according to your data dictionary. If you did, very little transformation should be required. However, if you did not, start to compare the differences between what you expect your variables to look like and what the actual raw data looks like. This will be the foundation for writing your data cleaning plan.
+    - As I mentioned in a previous [blog post](https://cghlewis.com/blog/survey_data/), hopefully you designed your data collection instrument according to your data dictionary. If you did, very little transformation should be required. However, if you did not, start to compare the differences between what you expect your variables to look like and what the actual raw data looks like. This will be the foundation for writing your data cleaning plan.
   
-After this, you can then use the standardized [data cleaning checklist]() we discussed in the previous post, to guide you as you think through what transformations are required to create a clean dataset for the purposes of general data sharing. Add the steps that are relevant to your data and remove the steps that are not relevant. Remember, the order of the steps are fluid and can be reorganized as needed.
+After this, you can then use the standardized [data cleaning checklist](https://cghlewis.com/blog/data_clean_01/) we discussed in the previous post, to guide you as you think through what transformations are required to create a clean dataset for the purposes of general data sharing. Add the steps that are relevant to your data and remove the steps that are not relevant. Remember, the order of the steps are fluid and can be reorganized as needed.
 
 ### Readme files
 
@@ -61,7 +61,7 @@ After this, you can then use the standardized [data cleaning checklist]() we dis
 
 ### Style guide
 
-Last, a [style guide](https://cghlewis.github.io/mpsi-data-training/training_3.html) is a set of standards for how your team should organize data for your project. This document should tell you exactly how to structure project folders and name project files in a way that promotes reproducibility in your work. Naming files and folders in a consistent way allows your process to be more reproducible. For example, always naming raw files with the suffix "_raw" and clean files with the suffix "_clean" allows you to programmatically grab files based on file metadata.
+Last, a [style guide](https://cghlewis.github.io/mpsi-data-training/training_3.html) is a set of standards for how your team should organize data for your project. This document should tell you exactly how to structure project folders and name project files in a way that promotes standardization in your work. Naming files and folders consistently, with metadata always provided in the same order, with the same naming structure, allows your process to be more reproducible.
 
 This guide also informs how you name and code variables and will be used as you construct your data dictionary.
 

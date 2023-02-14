@@ -80,7 +80,7 @@ While the order of the steps are fluid and can be moved around as needed, the on
 1. Add metadata as needed
 1. Validate data
 1. Merge and/or append data as needed
-1. Transform data as needed
+1. Transform data as needed 
 
 Let's review each step above.
 
@@ -93,7 +93,7 @@ First, you are going to access your raw data. If you use code to clean your data
       - Does the number of variables in your data dictionary match the number of variables in your dataset?
       - Are the variable types and values as expected?
 
-![](img/review.PNG)
+![](img/review2.PNG)
 
 2. Adjust number of cases
     - Remove duplicate cases

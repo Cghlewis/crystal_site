@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.101.0" />
+<title>Data cleaning for data sharing | Crystal Lewis</title>
+
+
+<meta property="twitter:site" content="@cghlewis">
+<meta property="twitter:creator" content="@cghlewis">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Part 1 in a series on creating a data cleaning workflow">
+
+
+<meta property="og:site_name" content="Crystal Lewis">
+<meta property="og:title" content="Data cleaning for data sharing | Crystal Lewis">
+<meta property="og:description" content="Part 1 in a series on creating a data cleaning workflow" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://cghlewis.com/blog/data_clean_01/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://cghlewis.com/blog/data_clean_01/featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://cghlewis.com/blog/data_clean_01/featured.jpg" >
+    
+    
+  <meta itemprop="name" content="Data cleaning for data sharing">
+<meta itemprop="description" content="Through various conversations over the last several months, a recurring question I keep hearing is, what makes a clean dataset? What steps do we expect someone to take before handing off a dataset that is considered &ldquo;clean&rdquo;? And I will tell you right now, there is no standard answer for this question. Even within fields, within projects, or within teams, you will get different answers depending on who you talk to, their role in the research cycle, and their past experiences and/or training with data."><meta itemprop="datePublished" content="2023-02-14T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-02-14T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2604"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_01/featured.jpg">
+<meta itemprop="keywords" content="data cleaning,rstats,data management,data sharing," />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.36233a39979933db8877785b1879dd1ee29d2f4bf092a7566e716b04552caf2c.css" integrity="sha256-NiM6OZeZM9uId3hbGHndHuKdL0vwkqdWbnFrBFUsryw=" media="screen">
+  
+  
+  <script src="/panelset.min.dca42702d7daf6fd31dc352efd2bcf0e4ac8c05ccaa58d9293f6177462de5d5f.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.6003fae4f0a991c47f3ebffd1d7c0c5d116b39c00d67970ca34464bf62cd2e7a.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://cghlewis.com/" title="Home">
+      <img src="/img/flower2.png" class="dib db-l h2 w-auto" alt="Crystal Lewis">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/consulting/" title="Consulting Work">Consulting</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/projects/" title="Projects">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact Form">Contact</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Data cleaning for data sharing</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Crystal Lewis in <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </p>
+        <p class="f7 db mv0 ttu">February 14, 2023</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <p>Through various conversations over the last several months, a recurring question I keep hearing is, <strong>what makes a clean dataset?</strong> What steps do we expect someone to take before handing off a dataset that is considered &ldquo;clean&rdquo;? And I will tell you right now, there is no standard answer for this question. Even within fields, within projects, or within teams, you will get different answers depending on who you talk to, their role in the research cycle, and their past experiences and/or training with data.</p>
+<p>This prompted me to write this blog post series. There are currently no standards for what constitutes a clean dataset, but as we move more towards 
+<a href="https://www.whitehouse.gov/ostp/news-updates/2022/08/25/ostp-issues-guidance-to-make-federally-funded-research-freely-available-without-delay/" target="_blank" rel="noopener">openly sharing research study data</a>, it seems important that researchers, at least within fields, are cleaning data in a similar way for both consistency and usability.</p>
+<p>In this post I hope to lay out some ideas for standardzing the data cleaning process for the purposes of <strong>general data sharing</strong>, specifically within the field of education research. I think it is important to differentiate between a dataset cleaned for general purposes and a dataset cleaned for a specific analysis. The former means that the dataset is still in its truest, raw form, but has been minimally altered to allow the data to be correctly interpreted. A dataset cleaned for general data sharing means that it includes the entire study sample (no one is removed), all missing data is still labelled as missing (no imputation is done), and no analysis-specific variables have been calculated. Any further cleaning is taken care of in another phase of cleaning during analyses.</p>
+<p>So you can think of these as three unique data files:</p>
+<ol>
+<li>True raw data
+<ul>
+<li>This is the untouched raw file that comes directly from your data collection source.</li>
+<li>If your data is collected on paper, this is the data that has been entered into a machine-readable format.</li>
+</ul>
+</li>
+<li>The general clean study data
+<ul>
+<li>This is the data we will be discussing in this post</li>
+</ul>
+</li>
+<li>Your analytic data
+<ul>
+<li>This dataset is created from the clean dataset above, but is further altered for a specific analysis used in a publication</li>
+</ul>
+</li>
+</ol>
+<p>In this three part series I hope to cover the following things:</p>
+<ol>
+<li>In this first post, I hope to start the conversation about what alterations should be considered in every data cleaning process.</li>
+<li>In the second post I will discuss what steps are important in developing a data cleaning workflow and what documents are helpful in guiding that process.</li>
+<li>In the last post, using the workflow laid out in the second post, I hope to work through a sample education dataset to show what this process might look like in the real world.</li>
+</ol>
+
+
+
+
+<h2 id="data-cleaning-standards">Data cleaning standards
+  <a href="#data-cleaning-standards"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>A good starting point for thinking about standards comes from an article written by 
+<a href="https://towardsdatascience.com/the-ultimate-guide-to-data-cleaning-3969843991d4" target="_blank" rel="noopener">Omar Elgabry</a>. He writes about five data quality indicators (originally found on Wikipedia) that should be considered when you review your data. The way I interpret these indicators for education research data cleaning are as follows.</p>
+<ol>
+<li>Complete - All forms that you collected have been entered and/or retrieved. You should also not have extraneous data that doesn&rsquo;t belong (duplicates, participants who aren&rsquo;t consented, etc.). Your 
+<a href="https://cghlewis.github.io/mpsi-data-training/training_2.html#Participant_Database" target="_blank" rel="noopener">participant tracking database</a> should be used to confirm the completeness of your data.</li>
+<li>Valid - Variables conform to the constraints that you have laid out in your 
+<a href="https://datamgmtinedresearch.com/documentation.html#data-dictionary" target="_blank" rel="noopener">data dictionary</a>. Remember from my previous 
+<a href="https://cghlewis.com/blog/data_dictionary/" target="_blank" rel="noopener">post</a>, your data dictionary lays out your expected variable names, types, ranges, categories, and more.</li>
+<li>Accurate - This is not always possible to know in the data cleaning process (whether a value is true or not), but you can sometimes assess the accuracy of your values based on things such as your existing knowledge of that specific participant or case.</li>
+<li>Consistent - Values align across sources. For example date of birth collected from a student survey should match date of birth collected from a school district.</li>
+<li>Uniform - Your data is standardized across forms and time. For example, free/reduced price lunch status is always provided as a numeric variable with the same value representation, or school name is consistently spelled the same way throughout your data.</li>
+</ol>
+<p>And I&rsquo;ll add a few more indicators to this list.</p>
+<ol start="6">
+<li>De-identified: All 
+<a href="https://medium.com/@searchbug/personally-identifiable-information-pii-your-guide-to-pii-compliance-3156874818a4" target="_blank" rel="noopener">personally identifiable information (PII)</a> is scrubbed from the data to protect participant confidentiality (if required by your IRB/consent process).</li>
+<li>Interpretable: Data have human and machine-readable variable names (see 
+<a href="https://cghlewis.github.io/mpsi-data-training/training_3.html" target="_blank" rel="noopener">style guide</a>), as well as variable and value labels added as needed to aid in interpretation.</li>
+<li>Analyzable: By this I mean that our data is in a rectangular (rows and columns), machine-readable format.</li>
+</ol>
+<img src="img/rowcol.PNG" width="70%" style="display: block; margin: auto;" />
+
+
+
+
+<h2 id="data-cleaning-checklist">Data cleaning checklist
+  <a href="#data-cleaning-checklist"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Based on the standards above, I think there are several steps that can be added to a checklist to guide researchers in their data cleaning process. These steps, although very general here, once elaborated on for your specific data can help you produce data that is cleaned in a consistent and standardized manner within and across projects, and even across the field. Many of these steps come from a basic understanding of 
+<a href="https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules" target="_blank" rel="noopener">data structure</a>, including rules your data should adhere to in order to be analyzable.</p>
+<p>While the order of the steps are fluid and can be moved around as needed, the one step that should never be rearranged is step #1. Without reviewing your data first, you may possibly waste hours of time cleaning data only to learn later that participants are missing, your data is not organized as expected, or possibly that you are even working with the wrong data.</p>
+<ol>
+<li>Review data</li>
+<li>Adjust number of cases</li>
+<li>De-identify data</li>
+<li>Drop any irrelevant columns</li>
+<li>Split columns as needed</li>
+<li>Rename variables</li>
+<li>Transform/normalize variables</li>
+<li>Standardize variables</li>
+<li>Update any variable types as needed</li>
+<li>Recode variables</li>
+<li>Construct any necessary variables</li>
+<li>Add missing values as needed</li>
+<li>Add metadata as needed</li>
+<li>Validate data</li>
+<li>Merge and/or append data as needed</li>
+<li>Transform data as needed</li>
+</ol>
+<p>Let&rsquo;s review each step above.</p>
+<p>First, you are going to access your raw data. If you use code to clean your data, this may look like reading one, or multiple files, into a statistical program. If you manually clean your data, you should make a copy of the raw data file, never alter the raw data itself. Next:</p>
+<ol>
+<li>Review your raw data
+<ul>
+<li>Check your number of cases (rows) against your participant tracking database
+<ul>
+<li>Does the N in your participant tracking database match the N in your dataset?</li>
+</ul>
+</li>
+<li>Check your number of variables (columns) against your data dictionary?
+<ul>
+<li>Does the number of variables in your data dictionary match the number of variables in your dataset?</li>
+<li>Are the variable types and values as expected?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="img/review.PNG" alt=""></p>
+<ol start="2">
+<li>Adjust number of cases
+<ul>
+<li>Remove duplicate cases
+<ul>
+<li>First, make sure your duplicates are true duplicates (not incorrectly assigned names or IDs)</li>
+<li>If you have true duplicates (participants who completed a form more than once or their data was entered more than once), duplicates will need to be removed
+<ul>
+<li>Follow the decisions made in your 
+<a href="https://datamgmtinedresearch.com/documentation.html#research-protocol" target="_blank" rel="noopener">protocol</a> to ensure you are removing duplicates consistently</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Add missing cases
+<ul>
+<li>If cases are marked as complete in your tracking database but data is missing, search for missing forms and add them to your data</li>
+</ul>
+</li>
+<li>Remove participants who are not part of your study/not consented</li>
+</ul>
+</li>
+<li>De-identify data
+<ul>
+<li>If your data does not already contain your assigned study IDs, replace all PII in your data with study IDs using a roster from your participant tracking database</li>
+</ul>
+</li>
+</ol>
+<p><img src="img/de-identify.PNG" alt=""></p>
+<ol start="4">
+<li>Drop any irrelevant columns not included in your data dictionary
+<ul>
+<li>Here you can think of examples such as the metadata collected by Qualtrics. These columns may be completely irrelevant to your study and unnecessary for data sharing.</li>
+</ul>
+</li>
+<li>Split columns as needed
+<ul>
+<li>As discussed in the paper 
+<a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989" target="_blank" rel="noopener">&ldquo;Data Organization in Spreadsheets&rdquo;</a>, this refers to the data organization rule of &ldquo;put just one thing in a cell&rdquo;.</li>
+</ul>
+</li>
+</ol>
+<img src="img/split.PNG" width="50%" style="display: block; margin: auto;" />
+<ol start="6">
+<li>Rename variables
+<ul>
+<li>Rename variables to correspond with the names provided in your data dictionary</li>
+</ul>
+</li>
+<li>Transform/normalize variables
+<ul>
+<li>Compare the variable types in your raw data to the variable types you expected in your data dictionary. Do they align? If no, why? It may be that you need to remove any unexpected characters such as <code>$</code> or <code>%</code> that are preventing your variables from being a numeric type. Or it could be accidentally inserted white space or letters into your variable.</li>
+</ul>
+</li>
+</ol>
+<img src="img/normalize.PNG" width="35%" style="display: block; margin: auto;" />
+<ol start="8">
+<li>Standardize variables
+<ul>
+<li>Make sure all of your variables are measured the same way within your dataset and the same way across time</li>
+<li>This may involve rescaling variables
+<ul>
+<li>Ex: age measured in months in wave 1 and age measured in years in wave 2 would need to be rescaled</li>
+</ul>
+</li>
+<li>Or it may mean collapsing open-ended categories of variables</li>
+</ul>
+</li>
+</ol>
+<img src="img/standard.PNG" width="35%" style="display: block; margin: auto;" />
+<ol start="9">
+<li>Update any variable types as needed
+<ul>
+<li>After normalizing and standardizing variables above, you can now convert variable types as needed (for example convert a string to numeric)</li>
+</ul>
+</li>
+<li>Recode variables
+<ul>
+<li>If your categorical values are not coded as expected or if your categorical variables are not coded consistently across time, you can recode those here</li>
+<li>This also includes 
+<a href="https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules" target="_blank" rel="noopener">recoding implict values, explicitly</a>
+<ul>
+<li>For example if an NA value is implied to be 0, recode them to 0</li>
+</ul>
+</li>
+<li>You can also recode any variables as planned in your data dictionary (for example a reverse coded item)</li>
+</ul>
+</li>
+</ol>
+<img src="img/recode.PNG" width="35%" style="display: block; margin: auto;" />
+<ol start="11">
+<li>Construct any necessary variables
+<ul>
+<li>This is not the time to construct one-off analysis specific variables. This is the time to create/calculate variables that should always be a part of the core study dataset. This includes things such as:
+<ul>
+<li>cohort</li>
+<li>time</li>
+<li>treatment</li>
+<li>variables calculated to remove identifiers (ex: age calculated so that date of birth can be removed)</li>
+<li>any measure summary scores that you prefer are added to the study data</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Add missing values as needed
+<ul>
+<li>You hopefully have a missing data schema already created and added to documents such as your style guide and your data dictionary. Assign missing data values consistently to all variables based on your documentation
+<ul>
+<li>Ex: -99 = skipped, -98 = not applicable</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Add metadata as needed
+<ul>
+<li>While interoperable file types such as .csv files are highly recommended, I still think it can be extremely helpful to create another copy of your clean data in a format that allows for embedded metadata, such as .sav files. These file types allow you to embed variable and value labels that can be very handy for a data user. This can be especially helpful if you plan to export your variables with numeric values (ex: numeric values (1/0), rather than text values (yes/no)). In this case, rather than having to flip back and forth between a file and a data dictionary to interpret values, users can review information about the variables within the file itself.</li>
+</ul>
+</li>
+<li>Data validation
+<ul>
+<li>At minimum this step should be added to the end of your data cleaning process, but at best, you should add this step to the beginning of your file, and also sprinkle it throughout your process, checking and validating every one of your transformations along the way.
+<ul>
+<li>Why do I say it should be added to the beginning of a script? Because validating your raw data can actually help confirm that the data is coming in as you expected it to. This is especially useful for longitudinal data cleaning where you have a script that you expect to run consistently each wave of data collection. But what if raw data changes unexpectedly? Your process is no longer working as expected but will you catch that?</li>
+<li>At minimum, look for these issues during your data validation process:
+<ol>
+<li>Values out of range</li>
+<li>Variable types not as expected</li>
+<li>Missing columns</li>
+<li>Duplicate cases/missing cases</li>
+<li>Invalid study IDs</li>
+<li>Cross checks for impossible values
+<ul>
+<li>Ex: Compare age and grade level</li>
+</ul>
+</li>
+<li>Cross checks for consistency
+<ul>
+<li>Ex: Grade level in one file and grade level in another file</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>If during your validation process you find values that are inaccurate or out of range, you will need to make a personal decision on how to deal with those. Just make sure your decisions are documented.
+<ul>
+<li>For instance, you could leave the data as is, make a note of the out of range values in documentation, and allow future researchers to deal with those values during the analysis process.</li>
+<li>Or you could choose a value (ex: -90 = inaccurate value) to recode those values to.</li>
+<li>Or if you find inconsistencies across different sources, you could choose one form as your source of truth and recode values based on that form.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>These last two steps are not necessarily data cleaning steps, but are additional transformations that can be performed to allow you to structure your data for more user-friendly data sharing.</p>
+<ol start="14">
+<li>Merge and/or append data as needed
+<ul>
+<li>In this step you can merge or append forms within or across time</li>
+<li>Merging is joining forms horizontally (linking by a unique identifier). Appending is joining forms vertically, stacking forms on one another, joined by unique variable names.</li>
+<li>Again do validation checks here
+<ul>
+<li>Do you have the correct number of rows and columns after the merge/append?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Transform data as needed
+<ul>
+<li>There are various reasons to store data in 
+<a href="https://datamgmtinedresearch.com/data-structure.html#structure" target="_blank" rel="noopener">long format or wide format</a>. Here you can restructure data as needed.</li>
+</ul>
+</li>
+</ol>
+<p><img src="img/restructure.PNG" alt=""></p>
+<p>The last step of your cleaning process will be to export your clean data. How you export your data and the file type you export to is up to the researcher. As I mentioned above, it can be helfpul to export to more than one file type (for example a .csv and a .sav file). You can even export the .csv using the text response values (ex: yes/no) while exporting the .sav using the numeric values (1/0) with embedded metadata. No matter how you export, it is crucial to always include documentation alongside your data to allow users to correctly interpret the information.</p>
+
+
+
+
+<h2 id="review">Review
+  <a href="#review"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>So to wrap this post up, what should we expect from clean data for the purposes of general data sharing?</p>
+<ol>
+<li>We should expect the data to be complete
+<ul>
+<li>No missing cases, no additional cases. Only study sample cases.</li>
+</ul>
+</li>
+<li>We should expect that the information in our data should align with the information in our data dictionary.
+<ul>
+<li>This means that we have the same number of variables across both files and that variable types, ranges, and categories match across both files</li>
+<li>Those variables should be structured uniformly and consistently</li>
+</ul>
+</li>
+<li>The data should be de-identified
+<ul>
+<li>If de-identification is a requirement of our IRB/consent, then there should be no remaining PII in our data
+<ul>
+<li>Note that we did not talk about more involved de-identification methods for the purpose of public data sharing here. That requires a deeper conversation. But you can read more about those methods 
+<a href="https://cghlewis.github.io/mpsi-data-training/training_5.html#What_data_to_share" target="_blank" rel="noopener">here</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The data should be human and machine-readable
+<ul>
+<li>In a rectangular format with well named variables (and metadata added if possible)</li>
+</ul>
+</li>
+<li>And last, the data should be accurate to the best of our knowledge</li>
+</ol>
+<p>With all of this said, this set of standards and data cleaning steps are still my opinion and are based on my personal experiences. Having been a data manager for almost 10 years now, what I have outlined provides a general overview of what I personally consider for every single dataset that I clean. And as a data manager, I never have a specific analysis in mind. My goal is to make a general dataset that can be shared with any future user. I always welcome opinions and/or ideas of things that should be added to or removed from this list. Please share your thoughts in the comments below! You can also read more about other ideas around data cleaning here:</p>
+<ul>
+<li>
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7518408/" target="_blank" rel="noopener">How to Share Data for Collaboration</a></li>
+<li>
+<a href="https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1" target="_blank" rel="noopener">The Basics of Data Management</a></li>
+<li>
+<a href="http://evalu-ate.org/blog/hubbard-sep2016/" target="_blank" rel="noopener">Six Data Cleaning Checks</a></li>
+<li>
+<a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989" target="_blank" rel="noopener">Data Organization in Spreadsheets</a></li>
+</ul>
+<p>In the next post we will dive into my next question, how do we integrate these standards into a data cleaning workflow?</p>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">February 14, 2023</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">13 minute read, 2604 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/tags/data-cleaning">data cleaning</a>  <a href="https://cghlewis.com/tags/rstats">rstats</a>  <a href="https://cghlewis.com/tags/data-management">data management</a>  <a href="https://cghlewis.com/tags/data-sharing">data sharing</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/dict_clean/">Four simple ways to integrate your data dictionary into your data cleaning process</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/survey_data/">How to export analysis-ready survey data</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_dictionary/">Using a data dictionary as your roadmap to quality data</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://cghlewis.com/blog/dict_clean/">Four simple ways to integrate your data dictionary into your data cleaning process &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="Cghlewis/crystal_site"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2023 Crystal Lewis
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/Cghlewis" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/Cghlewis" title="twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/crystal-lewis-922b4193/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://fosstodon.org/@cghlewis" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

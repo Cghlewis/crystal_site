@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data sharing on Crystal Lewis</title>
+    <link>https://cghlewis.com/tags/data-sharing/</link>
+    <description>Recent content in data sharing on Crystal Lewis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 14 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/tags/data-sharing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data cleaning for data sharing</title>
+      <link>https://cghlewis.com/blog/data_clean_01/</link>
+      <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/data_clean_01/</guid>
+      <description>Through various conversations over the last several months, a recurring question I keep hearing is, what makes a clean dataset? What steps do we expect someone to take before handing off a dataset that is considered &amp;ldquo;clean&amp;rdquo;? And I will tell you right now, there is no standard answer for this question. Even within fields, within projects, or within teams, you will get different answers depending on who you talk to, their role in the research cycle, and their past experiences and/or training with data.</description>
+    </item>
+    
+  </channel>
+</rss>

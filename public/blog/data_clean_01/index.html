@@ -46,7 +46,7 @@
   <meta itemprop="name" content="Data cleaning for data sharing">
 <meta itemprop="description" content="Through various conversations over the last several months, a recurring question I keep hearing is, what makes a clean dataset? What steps do we expect someone to take before handing off a dataset that is considered &ldquo;clean&rdquo;? And I will tell you right now, there is no standard answer for this question. Even within fields, within projects, or within teams, you will get different answers depending on who you talk to, their role in the research cycle, and their past experiences and/or training with data."><meta itemprop="datePublished" content="2023-02-14T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-02-14T00:00:00+00:00" />
-<meta itemprop="wordCount" content="2604"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_01/featured.jpg">
+<meta itemprop="wordCount" content="2587"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_01/featured.jpg">
 <meta itemprop="keywords" content="data cleaning,rstats,data management,data sharing," />
   
   
@@ -172,7 +172,8 @@
 <a href="https://medium.com/@searchbug/personally-identifiable-information-pii-your-guide-to-pii-compliance-3156874818a4" target="_blank" rel="noopener">personally identifiable information (PII)</a> is scrubbed from the data to protect participant confidentiality (if required by your IRB/consent process).</li>
 <li>Interpretable: Data have human and machine-readable variable names (see 
 <a href="https://cghlewis.github.io/mpsi-data-training/training_3.html" target="_blank" rel="noopener">style guide</a>), as well as variable and value labels added as needed to aid in interpretation.</li>
-<li>Analyzable: By this I mean that our data is in a rectangular (rows and columns), machine-readable format.</li>
+<li>Analyzable: By this I mean that our data is in a rectangular (rows and columns), machine-readable format and adheres to basic 
+<a href="https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules" target="_blank" rel="noopener">data structure rules</a>.</li>
 </ol>
 <img src="img/rowcol.PNG" width="70%" style="display: block; margin: auto;" />
 
@@ -185,8 +186,7 @@
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h2>
-<p>Based on the standards above, I think there are several steps that can be added to a checklist to guide researchers in their data cleaning process. These steps, although very general here, once elaborated on for your specific data can help you produce data that is cleaned in a consistent and standardized manner within and across projects, and even across the field. Many of these steps come from a basic understanding of 
-<a href="https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules" target="_blank" rel="noopener">data structure</a>, including rules your data should adhere to in order to be analyzable.</p>
+<p>Based on the standards above, I think there are several steps that can be added to a checklist to guide researchers in their data cleaning process. These steps, although very general here, once elaborated on for your specific data can help you produce data that is cleaned in a consistent and standardized manner within and across projects, and even across the field.</p>
 <p>While the order of the steps are fluid and can be moved around as needed, the one step that should never be rearranged is step #1. Without reviewing your data first, you may possibly waste hours of time cleaning data only to learn later that participants are missing, your data is not organized as expected, or possibly that you are even working with the wrong data.</p>
 <ol>
 <li>Review data</li>
@@ -463,7 +463,7 @@
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">13 minute read, 2604 words</dd>
+    <dd class="fw5 ml0">13 minute read, 2587 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">

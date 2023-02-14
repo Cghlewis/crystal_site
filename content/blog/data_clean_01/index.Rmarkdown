@@ -51,7 +51,7 @@ And I'll add a few more indicators to this list.
 
 6. De-identified: All [personally identifiable information (PII)](https://medium.com/@searchbug/personally-identifiable-information-pii-your-guide-to-pii-compliance-3156874818a4) is scrubbed from the data to protect participant confidentiality (if required by your IRB/consent process).
 7. Interpretable: Data have human and machine-readable variable names (see [style guide](https://cghlewis.github.io/mpsi-data-training/training_3.html)), as well as variable and value labels added as needed to aid in interpretation.
-8. Analyzable: By this I mean that our data is in a rectangular (rows and columns), machine-readable format.
+8. Analyzable: By this I mean that our data is in a rectangular (rows and columns), machine-readable format and adheres to basic [data structure rules](https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules).
 
 ```{r echo=FALSE, fig.align= "center", out.width = "70%"}
 
@@ -61,7 +61,7 @@ knitr::include_graphics("img/rowcol.PNG")
 
 ## Data cleaning checklist
 
-Based on the standards above, I think there are several steps that can be added to a checklist to guide researchers in their data cleaning process. These steps, although very general here, once elaborated on for your specific data can help you produce data that is cleaned in a consistent and standardized manner within and across projects, and even across the field. Many of these steps come from a basic understanding of [data structure](https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules), including rules your data should adhere to in order to be analyzable.
+Based on the standards above, I think there are several steps that can be added to a checklist to guide researchers in their data cleaning process. These steps, although very general here, once elaborated on for your specific data can help you produce data that is cleaned in a consistent and standardized manner within and across projects, and even across the field.
 
 While the order of the steps are fluid and can be moved around as needed, the one step that should never be rearranged is step #1. Without reviewing your data first, you may possibly waste hours of time cleaning data only to learn later that participants are missing, your data is not organized as expected, or possibly that you are even working with the wrong data.
 

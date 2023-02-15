@@ -89,7 +89,7 @@ Once you are ready to begin actually cleaning your data, there are several steps
 3. Follow a coding style guide
     - Creating a [code style guide](http://adv-r.had.co.nz/Style.html) for your team/project ensures that all team members are setting up their files in a consistent manner. This reduces the variation across code files and allows your code to be more usable by others. It is even possible to create code [templates](https://timfarewell.co.uk/my-r-script-header-template/) that team members can use to create even more standardization.
 4. Use relative file paths
-    - Setting [absolute file paths](https://r4ds.had.co.nz/workflow-projects.html) in our syntax reduces the reproducibility of our code because future may have different file paths than us. Set your file paths relative the directory you are working in.
+    - Setting [absolute file paths](https://r4ds.had.co.nz/workflow-projects.html) in our syntax reduces the reproducibility of our code because future users may have different file paths than us. Set your file paths relative the directory you are working in.
 
 
 ```r

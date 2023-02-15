@@ -149,9 +149,8 @@ First, you are going to access your raw data. If you use code to clean your data
 13. Add metadata as needed
     - While interoperable file types such as .csv files are highly recommended, I still think it can be extremely helpful to create another copy of your clean data in a format that allows for embedded metadata, such as .sav files. These file types allow you to embed variable and value labels that can be very handy for a data user. This can be especially helpful if you plan to export your variables with numeric values (ex: numeric values (1/0), rather than text values (yes/no)). In this case, rather than having to flip back and forth between a file and a data dictionary to interpret values, users can review information about the variables within the file itself.
 14. Data validation
-    - At minimum this step should be added to the end of your data cleaning process, but at best, you should add this step to the beginning of your file, and also sprinkle it throughout your process, checking and validating every one of your transformations along the way.
-      - Why do I say it should be added to the beginning of a script? Because validating your raw data can actually help confirm that the data is coming in as you expected it to. This is especially useful for longitudinal data cleaning where you have a script that you expect to run consistently each wave of data collection. But what if raw data changes unexpectedly? Your process is no longer working as expected but will you catch that?
-      - At minimum, look for these issues during your data validation process (using your data dictionary as your source of truth):
+    - At minimum this step should be added to the end of your data cleaning process, but at best, you should be checking and validating every one of your transformations along the way as well.
+      - Below is a sampling of checks you should complete during your validation process (using your data dictionary as your source of truth):
         1. Values out of range
         2. Variable types not as expected
         3. Missing columns
@@ -192,16 +191,17 @@ So to wrap this post up, what should we expect from clean data for the purposes 
     - Those variables should be structured uniformly and consistently
 3. The data should be de-identified
     - If de-identification is a requirement of our IRB/consent, then there should be no remaining PII in our data
-      - Note that we did not talk about more involved de-identification methods for the purpose of public data sharing here. That requires a deeper conversation. But you can read more about those methods [here](https://cghlewis.github.io/mpsi-data-training/training_5.html#What_data_to_share).
+      - Note that we did not talk about more involved de-identification methods for the purpose of public data sharing here. That requires a deeper conversation. But you can read more about those methods [here](https://www.povertyactionlab.org/sites/default/files/research-resources/J-PAL-guide-to-deidentifying-data.pdf).
 4. The data should be in a human and machine-readable, analyzable format
     - In a rectangular format with well-named variables (and metadata added if possible)
 5. And last, the data should be accurate to the best of our knowledge
 
 With all of this said, this set of standards and data cleaning steps are still my opinion and are based on my personal experiences. Having been a data manager for almost 10 years now, what I have outlined provides a general overview of what I personally consider for every single dataset that I clean. And as a data manager, I never have a specific analysis in mind. My goal is to make a general dataset that can be shared with any future user. I always welcome opinions and/or ideas of things that should be added to or removed from this list. Please share your thoughts in the comments below! You can also read more about other ideas around data cleaning here:
 
-- [How to Share Data for Collaboration](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7518408/)
-- [The Basics of Data Management](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1)
-- [Six Data Cleaning Checks](http://evalu-ate.org/blog/hubbard-sep2016/)
-- [Data Organization in Spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)
+- [How to Share Data for Collaboration](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7518408/)  
+- [The Basics of Data Management](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/1)  
+- [Six Data Cleaning Checks](http://evalu-ate.org/blog/hubbard-sep2016/)  
+- [Data Organization in Spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)  
+- [Data Cleaning Principles](https://kbroman.org/Talk_DataCleaning/data_cleaning_notes.pdf)  
 
 In the next post we will dive into my next question, how do we integrate these standards into a data cleaning workflow?

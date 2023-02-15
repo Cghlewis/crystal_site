@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.101.0" />
+<title>Creating a data cleaning workflow | Crystal Lewis</title>
+
+
+<meta property="twitter:site" content="@cghlewis">
+<meta property="twitter:creator" content="@cghlewis">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Part 2 in a series on creating a data cleaning workflow">
+
+
+<meta property="og:site_name" content="Crystal Lewis">
+<meta property="og:title" content="Creating a data cleaning workflow | Crystal Lewis">
+<meta property="og:description" content="Part 2 in a series on creating a data cleaning workflow" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://cghlewis.com/blog/data_clean_02/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://cghlewis.com/blog/data_clean_02/featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://cghlewis.com/blog/data_clean_02/featured.jpg" >
+    
+    
+  <meta itemprop="name" content="Creating a data cleaning workflow">
+<meta itemprop="description" content="Data cleaning workflow Data cleaning is the process of organizing and transforming raw data into a format that can be easily interpreted and analyzed. In education research, we are often cleaning data collected in the field from methods such as surveys, assessments, tests, or forms.
+Even if we collect data with the most well-designed collection tools, there is most likely at least some cleaning that is needed before you have a dataset that is ready to be shared within or outside of your team."><meta itemprop="datePublished" content="2023-02-15T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-02-15T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2531"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_02/featured.jpg">
+<meta itemprop="keywords" content="data cleaning,rstats,data management,data sharing," />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.36233a39979933db8877785b1879dd1ee29d2f4bf092a7566e716b04552caf2c.css" integrity="sha256-NiM6OZeZM9uId3hbGHndHuKdL0vwkqdWbnFrBFUsryw=" media="screen">
+  
+  
+  <script src="/panelset.min.dca42702d7daf6fd31dc352efd2bcf0e4ac8c05ccaa58d9293f6177462de5d5f.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.6003fae4f0a991c47f3ebffd1d7c0c5d116b39c00d67970ca34464bf62cd2e7a.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://cghlewis.com/" title="Home">
+      <img src="/img/flower2.png" class="dib db-l h2 w-auto" alt="Crystal Lewis">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/consulting/" title="Consulting Work">Consulting</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/projects/" title="Projects">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact Form">Contact</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Creating a data cleaning workflow</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Crystal Lewis in <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </p>
+        <p class="f7 db mv0 ttu">February 15, 2023</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+
+<h2 id="data-cleaning-workflow">Data cleaning workflow
+  <a href="#data-cleaning-workflow"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Data cleaning is the process of organizing and transforming raw data into a format that can be easily interpreted and analyzed. In education research, we are often cleaning data collected in the field from methods such as surveys, assessments, tests, or forms.</p>
+<p>Even if we collect data with the most well-designed collection tools, there is most likely at least <strong>some</strong> cleaning that is needed before you have a dataset that is ready to be shared within or outside of your team. And oftentimes, we want our cleaning process to be standardized, reproducible, and reliable. Yet, despite our best intentions, many times we (myself included) end up cleaning data in a somewhat haphazard way, leading to more work after the cleaning process, having to organize our messy work so that others can understand what we did. So how do we create data cleaning workflows that are standardized, reproducible, and produce reliable data? In this second post of the data cleaning workflow series, I share some of my ideas.</p>
+
+
+
+
+<h2 id="preliminary-data-cleaning-steps">Preliminary data cleaning steps
+  <a href="#preliminary-data-cleaning-steps"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<img src="img/data.PNG" width="40%" style="display: block; margin: auto;" />
+<p>Before you dive into data cleaning, there are several preliminary steps you need to take. All of these steps will help standardize your process as well as your outputs, reducing the chaos sometimes created through haphazard data cleaning. Those steps are as follows:</p>
+<ol>
+<li>Have your data dictionary created
+<ul>
+<li>Have your variables named and coded according to your style guide</li>
+</ul>
+</li>
+<li>Have your data cleaning plan written
+<ul>
+<li>Review the plan with your team before you start your cleaning process</li>
+</ul>
+</li>
+<li>Review any readme files that have been provided for you
+<ul>
+<li>Incorporate those into your data cleaning plan</li>
+</ul>
+</li>
+<li>Have your participant tracking database up to date and accessible</li>
+<li>Have your folder structures set up according to your style guide</li>
+<li>Have your files named according to your style guide</li>
+</ol>
+<p>Before I start cleaning data, I always have the first four files open and ready to be referenced as I clean my data. So let&rsquo;s briefly review the documents mentioned in these steps.</p>
+
+
+
+
+<h3 id="data-dictionary">Data dictionary
+  <a href="#data-dictionary"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>A 
+<a href="https://datamgmtinedresearch.com/documentation.html#data-dictionary" target="_blank" rel="noopener">data dictionary</a> is a rectangular format collection of names, definitions, and attributes about variables in a dataset and it is the document where you lay out exactly how you expect your data to be structured. This document should tell you allowable variable values, assigned variable names, allowable variable types, and more. It will inform your entire data cleaning process.</p>
+
+
+
+
+<h3 id="data-cleaning-plan">Data cleaning plan
+  <a href="#data-cleaning-plan"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>I have written a lot about data cleaning plans in many other 
+<a href="https://datamgmtinedresearch.com/documentation.html#data-cleaning-plan" target="_blank" rel="noopener">places</a>, but in a nutshell, this is a written proposal outlining how you plan to transform your raw data into clean, usable data. This document contains no code and is not technical skills dependent. It is helpful to create these before you clean your data so that you can share these with collaborators and get consensus on planned transformations.</p>
+<p>The steps you write into your data cleaning plan are going to be dependent on your actual data. If you are able to export sample data from your data collection tool you can start creating this plan early on. If not, you will most likely not be able to start this data cleaning plan until you are able to actually access your raw data file.</p>
+<p>To create your plan begin comparing the raw data to your data dictionary. As I mentioned in a previous 
+<a href="https://cghlewis.com/blog/survey_data/" target="_blank" rel="noopener">blog post</a>, hopefully you designed your data collection instrument according to your data dictionary. If you did, very little transformation should be required. However, if you did not, start to compare the differences between what you expect your variables to look like and what the actual raw data looks like. This will be the foundation for writing your data cleaning plan.</p>
+<p>After doing some comparison, you can then use the standardized 
+<a href="https://cghlewis.com/blog/data_clean_01/" target="_blank" rel="noopener">data cleaning checklist</a> we discussed in the previous post, to guide you as you think through what transformations are required to create a clean dataset for the purposes of general data sharing. Add the steps that are relevant to your data and remove the steps that are not relevant. Remember, the order of the steps are fluid and can be reorganized as needed.</p>
+<p>The last important thing to remember is, this is a living document. As you begin cleaning your data you may find more necessary transformation that you did not catch at first. You can continue to update this document throughout your cleaning process.</p>
+
+
+
+
+<h3 id="readme-files">Readme files
+  <a href="#readme-files"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>
+<a href="https://datamgmtinedresearch.com/documentation.html#readme" target="_blank" rel="noopener">Readme files</a> are also plain text files that collaborators may store in a folder, alongside a raw data file. These files contain notes that may be relevant to your data cleaning process. Maybe there was an error that occurred during data collection that a collaborator needs you to fix in the cleaning process. For instance, a project coordinator may note that &ldquo;ID 1234 should actually be ID 1235&rdquo;.</p>
+
+
+
+
+<h3 id="participant-tracking-database">Participant tracking database
+  <a href="#participant-tracking-database"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>This 
+<a href="https://cghlewis.github.io/mpsi-data-training/training_2.html#Participant_Database" target="_blank" rel="noopener">database</a> houses all linking information about your participants (identifying information along with study IDs), as well as all tracking information about data that has been collected on participants. Assuming that someone, such as a project coordinator, has kept this database up to date, you should be able to use this database as a way to confirm the sample size should be for all of your datasets. Having tracked completion status for all participants during data collection, this database is one way to identify if any forms are missing (or duplicated). If you do not have direct access to this database, at minimum work with the owner of the database to retrieve completion numbers for comparison.</p>
+
+
+
+
+<h3 id="style-guide">Style guide
+  <a href="#style-guide"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Last, a 
+<a href="https://cghlewis.github.io/mpsi-data-training/training_3.html" target="_blank" rel="noopener">style guide</a> is a set of standards for how your team should organize data for your project. This document should provide rules for how to structure project folders and name project files in a way that promotes standardization in your work. Naming files and folders consistently, with metadata always provided in the same order, with the same naming structure, allows your process to be more reproducible.</p>
+<p>This guide also informs how you name and code variables and will be used as you construct your data dictionary.</p>
+
+
+
+
+<h2 id="cleaning-data-using-reproducible-practices">Cleaning data using reproducible practices
+  <a href="#cleaning-data-using-reproducible-practices"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<img src="img/reproduce.PNG" width="60%" style="display: block; margin: auto;" />
+<p>Once you are ready to begin actually cleaning your data, there are several steps you can take to improve the reproducibility of your work.</p>
+<ol>
+<li>Use code
+<ul>
+<li>While you <strong>can</strong> clean data through a point and click method in a program like SPSS or Excel, cleaning data manually is typically not reproducible, leads to errors, and is time consuming.</li>
+<li>My recommendation is to clean your data, no matter how small the task, with syntax. Don&rsquo;t do <strong>any</strong> transformations outside of code (even if you think it is something insignificant). Once you do, your chain of processing is lost and your process is no longer reproducible.</li>
+<li>Syntax files allow you to have a record of every transformation you make from the raw data to your clean data. While writing syntax may seem time consuming up front, it helps you to be more thoughtful in your data cleaning process and it can save you an enormous amount of time in the future if you plan to clean data for the same form multiple times (in say a longitudinal study).</li>
+<li>While I am personally an R user, choose any program that works for you, there are many options.</li>
+</ul>
+</li>
+<li>Use comments
+<ul>
+<li>Code comments help you to organize and communicate your thought process. While your syntax may seem intuitive to you, it is not necessarily clear to others. As you clean your data according to your data cleaning plan, comment every step in your syntax, explaining what that specific line of code is doing.</li>
+</ul>
+</li>
+<li>Follow a coding style guide
+<ul>
+<li>Creating a 
+<a href="http://adv-r.had.co.nz/Style.html" target="_blank" rel="noopener">code style guide</a> for your team/project ensures that all team members are setting up their files in a consistent manner. This reduces the variation across code files and allows your code to be more usable by others. It is even possible to create code 
+<a href="https://timfarewell.co.uk/my-r-script-header-template/" target="_blank" rel="noopener">templates</a> that team members can use to create even more standardization.</li>
+</ul>
+</li>
+<li>Use relative file paths
+<ul>
+<li>Setting 
+<a href="https://r4ds.had.co.nz/workflow-projects.html" target="_blank" rel="noopener">absolute file paths</a> in our syntax reduces the reproducibility of our code because future may have different file paths than us. Set your file paths relative the directory you are working in.</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Absolute file path</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svy <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">read_csv</span>(<span style="color:#d14">&#34;C:/Users/Crystal/projecta/data/w1_proja_stu_svy_raw.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Relative file path</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svy <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">read_csv</span>(<span style="color:#d14">&#34;data/w1_proja_stu_svy_raw.csv&#34;</span>)
+</span></span></code></pre></div><ol start="5">
+<li>Don&rsquo;t do anything random
+<ul>
+<li>Everything in your syntax must be replicable. Yet, there are a few scenarios where, without much thought, you could be producing different results each time you run your code.
+<ol>
+<li>If you randomly generate any numbers in your data (like study IDs) then you need to set a seed. For instance, in R, adding the <code>set.seed()</code> function in your syntax means when you or someone else runs your syntax again, they will get the same set of random numbers. Otherwise, you will get a new random set of IDs each time your syntax is run.</li>
+<li>Another example is when you are removing duplicates. Be purposeful about how you remove those duplicates and order your data in a specific way before dropping cases. If someone at some point shuffles your raw data around and you re-run your syntax, you may end up dropping a different duplicate if you did not arrange your data first.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Record your session info
+<ul>
+<li>In a program like R, you can record your session information in your syntax, or into a plain text file, so that future users can review the requirements needed for running your code. Information about package versions and operating system used are recorded. If users run into errors running your code, this information may help them troubleshoot.</li>
+</ul>
+</li>
+</ol>
+
+
+
+
+<h2 id="cleaning-data-using-reliable-practices">Cleaning data using reliable practices
+  <a href="#cleaning-data-using-reliable-practices"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<img src="img/sanity.PNG" width="60%" style="display: block; margin: auto;" />
+<p>There are several practices you can implement that will also help you have more confidence in your data cleaning process.</p>
+<ol>
+<li>Review your data upon import
+<ul>
+<li>As briefly discussed in the previous 
+<a href="https://cghlewis.com/blog/data_clean_01/" target="_blank" rel="noopener">post</a>, it is imperative that you review your data before beginning to clean your data to ensure you have a thorough understanding of what is happening in your data.</li>
+<li>This review process can be manual if the data is small. Or if you have a large amount of variables to review, build in automated checks at the beginning of your code that writes out an error message when your checks fail.</li>
+<li>This review process can become even more relevant if you are reusing a syntax to clean data collected multiple times (for instance, in a longitudinal study). I&rsquo;ve been a part of many studies where I expected my syntax to run without a hitch every wave of data collection, assuming that forms did not change over time. Yet I learned hard lessons when I made those assumptions and found out later on in the cleaning process that items had been added, variable names changed, or even the allowable values had shifted.</li>
+<li>It&rsquo;s best to find this out before you start the cleaning process so you can adjust your data cleaning plan and your code as needed. Otherwise you may be running a script that is incorrectly cleaning your data.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Very simple example of automating checks of your raw data</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Read in my raw data</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svy <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">read_csv</span>(<span style="color:#d14">&#34;data/w1_proja_stu_svy_raw.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Check to see if my raw data still contains 432 variables</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">if </span>(<span style="color:#900;font-weight:bold">ncol</span>(svy) <span style="color:#000;font-weight:bold">!=</span> <span style="color:#099">432</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">print </span>(<span style="color:#d14">&#34;Survey has changed!&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="2">
+<li>Write functions for repeatable tasks
+<ul>
+<li>As the sayings go, &ldquo;Don&rsquo;t repeat yourself&rdquo; or &ldquo;Never write the same code twice&rdquo;. This can be a really difficult habit to break, especially for people who are fairly new to code writing. But once you are comfortable with writing some basic functions, there are good reasons to move that 10 lines of code that you repeat multiple times, into a one line function that you can call throughout your script.</li>
+<li>Not only does it make your script more readable, but it reduces the errors that might be created through things like copy and paste.</li>
+<li>Similarly, find ways to automate some of your tasks. Rather than renaming all of your variables by hand, use your data dictionary to 
+<a href="https://cghlewis.com/blog/dict_clean/" target="_blank" rel="noopener">automate tasks</a> like this. This not only increases efficiency but also reduces mistakes you might make when typing out variable names.</li>
+</ul>
+</li>
+<li>Check each transformation
+<ul>
+<li>Check your work along the way, don&rsquo;t just wait until the end of your script. For each transformation in your data:
+<ol>
+<li>Review your data/variables before and after the transformations</li>
+<li>Review all errors/warning codes
+<ul>
+<li>Some warnings may be innocuous (just messages)</li>
+<li>Some errors are telling you that your code did not run, you need to fix something</li>
+<li>Other warnings are telling you that your code <strong>did</strong> run but it did not run as you expected it to. These are the scariest to me. If you don&rsquo;t pay attention to these warnings, you may end up with unexpected results. See the example below where I never noticed that one value in my <code>score</code> variable has TWO decimal places. When I converted <code>score</code> to numeric, R did not know how to convert this value so it became <code>NA</code>.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Example of a useful warning message</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Convert `score` to a numeric variable type</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Check - review before transformation</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svy
+</span></span></code></pre></div><pre tabindex="0"><code># A tibble: 2 x 2
+     id score
+  &lt;dbl&gt; &lt;chr&gt;
+1   102 25.1 
+2   103 22..3
+</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Transform `score` to numeric</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svy <span style="color:#000;font-weight:bold">&lt;-</span> svy <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">mutate</span>(score <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">as.numeric</span>(score))
+</span></span></code></pre></div><pre tabindex="0"><code>Warning in mask$eval_all_mutate(quo): NAs introduced by coercion
+</code></pre><div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Check - review after transformation</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svy
+</span></span></code></pre></div><pre tabindex="0"><code># A tibble: 2 x 2
+     id score
+  &lt;dbl&gt; &lt;dbl&gt;
+1   102  25.1
+2   103  NA  
+</code></pre><ol start="4">
+<li>Validate your data before exporting
+<ul>
+<li>As we discussed in the previous 
+<a href="https://cghlewis.com/blog/data_clean_01/" target="_blank" rel="noopener">post</a>, this is when you will want to run through your final list of sanity checks to make sure no mistakes exist in the data before you export it.</li>
+</ul>
+</li>
+<li>Version your data AND code and keep change logs
+<ul>
+<li>It is inevitable that at some point you will find an error in your data and/or your code. However, once you&rsquo;ve shared your data and code with others, it will be imperative that you do not save over existing versions of those files. Versioning your files and keeping track of those different versions in a 
+<a href="https://datamgmtinedresearch.com/documentation.html#changelog" target="_blank" rel="noopener">changelog</a> allows you to track data lineage, helping users understand where the data originated as well as all transformations made to the data.</li>
+</ul>
+</li>
+<li>Do code review
+<ul>
+<li>If you have the luxury of having more than one person on your team who understands code, I highly recommend to incorporate 
+<a href="https://github.com/tgerke/r-code-review-checklist" target="_blank" rel="noopener">code review</a> into your workflow. This is the process of having someone other than yourself, review your code for things such as the readability, usability, and efficiency. Through code review it&rsquo;s possible to create more usable and readable code, as well as catch errors you were not aware of.</li>
+</ul>
+</li>
+</ol>
+<p>Similar to what I mentioned in the previous post, this is not a catch-all list of practices. These are practices that I have found, through my own work and by learning from others, has helped me improve my data cleaning workflow in a way that produces data in a more standardized, reproducible, reliable way. As always, I am open to comments and feedback! In the last post of this series, we will use the lessons from these last two posts to implement a data cleaning workflow for an example education research dataset to see what these practices might look like in a real scenario.</p>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">February 15, 2023</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">12 minute read, 2531 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/tags/data-cleaning">data cleaning</a>  <a href="https://cghlewis.com/tags/rstats">rstats</a>  <a href="https://cghlewis.com/tags/data-management">data management</a>  <a href="https://cghlewis.com/tags/data-sharing">data sharing</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_clean_01/">Data cleaning for data sharing</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/dict_clean/">Four simple ways to integrate your data dictionary into your data cleaning process</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/survey_data/">How to export analysis-ready survey data</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://cghlewis.com/blog/data_clean_01/">Data cleaning for data sharing &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="Cghlewis/crystal_site"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2023 Crystal Lewis
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/Cghlewis" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/Cghlewis" title="twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/crystal-lewis-922b4193/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://fosstodon.org/@cghlewis" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

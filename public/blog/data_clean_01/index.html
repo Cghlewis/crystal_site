@@ -46,7 +46,7 @@
   <meta itemprop="name" content="Data cleaning for data sharing">
 <meta itemprop="description" content="Through various conversations over the last several months, a recurring question I keep hearing is, what makes a clean dataset? What steps do we expect someone to take before handing off a dataset that is considered &ldquo;clean&rdquo;? And I will tell you right now, there is no standard answer for this question. Even within fields, within projects, or within teams, you will get different answers depending on who you talk to, their role in the research cycle, and their past experiences and/or training with data."><meta itemprop="datePublished" content="2023-02-14T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-02-14T00:00:00+00:00" />
-<meta itemprop="wordCount" content="2623"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_01/featured.jpg">
+<meta itemprop="wordCount" content="2537"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_01/featured.jpg">
 <meta itemprop="keywords" content="data cleaning,rstats,data management,data sharing," />
   
   
@@ -346,10 +346,9 @@
 </li>
 <li>Data validation
 <ul>
-<li>At minimum this step should be added to the end of your data cleaning process, but at best, you should add this step to the beginning of your file, and also sprinkle it throughout your process, checking and validating every one of your transformations along the way.
+<li>At minimum this step should be added to the end of your data cleaning process, but at best, you should be checking and validating every one of your transformations along the way as well.
 <ul>
-<li>Why do I say it should be added to the beginning of a script? Because validating your raw data can actually help confirm that the data is coming in as you expected it to. This is especially useful for longitudinal data cleaning where you have a script that you expect to run consistently each wave of data collection. But what if raw data changes unexpectedly? Your process is no longer working as expected but will you catch that?</li>
-<li>At minimum, look for these issues during your data validation process (using your data dictionary as your source of truth):
+<li>Below is a sampling of checks you should complete during your validation process (using your data dictionary as your source of truth):
 <ol>
 <li>Values out of range</li>
 <li>Variable types not as expected</li>
@@ -431,7 +430,7 @@
 <li>If de-identification is a requirement of our IRB/consent, then there should be no remaining PII in our data
 <ul>
 <li>Note that we did not talk about more involved de-identification methods for the purpose of public data sharing here. That requires a deeper conversation. But you can read more about those methods 
-<a href="https://cghlewis.github.io/mpsi-data-training/training_5.html#What_data_to_share" target="_blank" rel="noopener">here</a>.</li>
+<a href="https://www.povertyactionlab.org/sites/default/files/research-resources/J-PAL-guide-to-deidentifying-data.pdf" target="_blank" rel="noopener">here</a>.</li>
 </ul>
 </li>
 </ul>
@@ -453,6 +452,8 @@
 <a href="http://evalu-ate.org/blog/hubbard-sep2016/" target="_blank" rel="noopener">Six Data Cleaning Checks</a></li>
 <li>
 <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989" target="_blank" rel="noopener">Data Organization in Spreadsheets</a></li>
+<li>
+<a href="https://kbroman.org/Talk_DataCleaning/data_cleaning_notes.pdf" target="_blank" rel="noopener">Data Cleaning Principles</a></li>
 </ul>
 <p>In the next post we will dive into my next question, how do we integrate these standards into a data cleaning workflow?</p>
 
@@ -464,7 +465,7 @@
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">13 minute read, 2623 words</dd>
+    <dd class="fw5 ml0">12 minute read, 2537 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -482,11 +483,11 @@
   <dl class="f6 lh-copy">
     <dt class="fw7">See Also:</dt>
     
+    <dd class="fw5 ml0"><a href="/blog/data_clean_02/">Creating a data cleaning workflow</a></dd>
+    
     <dd class="fw5 ml0"><a href="/blog/dict_clean/">Four simple ways to integrate your data dictionary into your data cleaning process</a></dd>
     
     <dd class="fw5 ml0"><a href="/blog/survey_data/">How to export analysis-ready survey data</a></dd>
-    
-    <dd class="fw5 ml0"><a href="/blog/data_dictionary/">Using a data dictionary as your roadmap to quality data</a></dd>
     
   </dl>
 </details>
@@ -495,6 +496,9 @@
       <footer class="post-footer">
         <div class="post-pagination dt w-100 mt4 mb2">
   
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://cghlewis.com/blog/data_clean_02/">&larr; Creating a data cleaning workflow</a>
   
   
   

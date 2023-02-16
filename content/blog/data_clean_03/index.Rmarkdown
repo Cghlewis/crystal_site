@@ -4,7 +4,7 @@ subtitle:
 excerpt: "Part 3 in a series on creating a data cleaning workflow"
 author: "Crystal Lewis"
 date: "2023-02-16"
-draft: true
+draft: false
 # layout options: single, single-sidebar
 layout: single
 categories:

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.101.0" />
+<title>Cleaning sample data in standardized way | Crystal Lewis</title>
+
+
+<meta property="twitter:site" content="@cghlewis">
+<meta property="twitter:creator" content="@cghlewis">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Part 3 in a series on creating a data cleaning workflow">
+
+
+<meta property="og:site_name" content="Crystal Lewis">
+<meta property="og:title" content="Cleaning sample data in standardized way | Crystal Lewis">
+<meta property="og:description" content="Part 3 in a series on creating a data cleaning workflow" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://cghlewis.com/blog/data_clean_03/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://cghlewis.com/blog/data_clean_03/featured.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://cghlewis.com/blog/data_clean_03/featured.jpg" >
+    
+    
+  <meta itemprop="name" content="Cleaning sample data in standardized way">
+<meta itemprop="description" content="In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process, as well as practices we can implement to make our workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, &ldquo;What does this data standardized workflow look like when implemented in the real world?&rdquo;. To tackle this question I created a very simple sample dataset based on the following fictional scenario:"><meta itemprop="datePublished" content="2023-02-16T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-02-16T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1762"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_03/featured.jpg">
+<meta itemprop="keywords" content="data cleaning,rstats,data management,data sharing," />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.36233a39979933db8877785b1879dd1ee29d2f4bf092a7566e716b04552caf2c.css" integrity="sha256-NiM6OZeZM9uId3hbGHndHuKdL0vwkqdWbnFrBFUsryw=" media="screen">
+  
+  
+  <script src="/panelset.min.dca42702d7daf6fd31dc352efd2bcf0e4ac8c05ccaa58d9293f6177462de5d5f.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.6003fae4f0a991c47f3ebffd1d7c0c5d116b39c00d67970ca34464bf62cd2e7a.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://cghlewis.com/" title="Home">
+      <img src="/img/flower2.png" class="dib db-l h2 w-auto" alt="Crystal Lewis">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/consulting/" title="Consulting Work">Consulting</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/projects/" title="Projects">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact Form">Contact</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Cleaning sample data in standardized way</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Crystal Lewis in <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </p>
+        <p class="f7 db mv0 ttu">February 16, 2023</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <p>In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process, as well as practices we can implement to make our workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, &ldquo;What does this data standardized workflow look like when implemented in the real world?&rdquo;. To tackle this question I created a very simple sample dataset based on the following fictional scenario:</p>
+<p><em>I am managing data for a longitudinal randomized controlled trial (RCT) study. For this RCT, schools are randomized to either a treatment or control group. Students who are in a treatment school receive a program to boost their math self-efficacy. For this fictitious study, data is collected on students in two waves (wave 1 is in the fall of a school year, and wave 2 is collected in the spring). At this point in time, we have collected wave 1 of our student survey on a paper form and we set up a data entry database for staff to enter the information into. Data has been 
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0747563211000707" target="_blank" rel="noopener">double-entered</a>, checked for entry errors, and has been exported in a csv format (&ldquo;w1_mathproj_stu_svy_raw.csv&rdquo;) to a folder (called &ldquo;data&rdquo;) where it is waiting to be cleaned.</em></p>
+
+
+
+
+<h2 id="doing-the-prep-work">Doing the prep work
+  <a href="#doing-the-prep-work"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>As we learned in the previous 
+<a href="https://cghlewis.com/blog/data_clean_02/" target="_blank" rel="noopener">post</a> there are several steps I need to take before I begin cleaning my data.</p>
+<ol>
+<li>My team has created a style guide. This guide lays out how my team should structure our directories, name files and folders, as well as name and code variables.</li>
+<li>My team has set up a folder structure following the directions in our style guide and we have named files based on the style guide as well.</li>
+<li>My data dictionary is created and in the dictionary we have named variables and coded values according to the rules laid out in our style guide.</li>
+<li>My data cleaning plan has been created (using our standardized checklist from 
+<a href="https://cghlewis.com/blog/data_clean_01/" target="_blank" rel="noopener">post 1</a> as a guide) and my team has approved the transformations I plan to make.</li>
+<li>I have checked the data folder for any readme files and I have found that there is one readme to review.</li>
+<li>And last, my team has been updating our participant tracking database throughout data collection, so I can open this database to confirm that all completed forms are accounted for in my raw data.</li>
+</ol>
+<p>So let&rsquo;s review all of our documents.</p>
+<p><strong>Data dictionary</strong></p>
+<p><img src="img/dict.PNG" alt=""></p>
+<p><strong>Data cleaning plan</strong></p>
+<img src="img/data_cleaning_plan.PNG" width="70%" style="display: block; margin: auto;" />
+<p><strong>Readme</strong></p>
+<img src="img/readme.PNG" width="50%" style="display: block; margin: auto;" />
+<p><strong>Participant tracking</strong></p>
+<img src="img/tracking.PNG" width="25%" style="display: block; margin: auto;" />
+<p>It looks like I have all of the documents I need and I am ready to start the data cleaning process!</p>
+
+
+
+
+<h2 id="data-cleaning-process">Data cleaning process
+  <a href="#data-cleaning-process"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>The remainder of this post will provide an overview of how I would clean this data, integrating the steps we spoke about in the previous blog post that help ensure that our data is reproducible and reliable. Following the steps laid out in my data cleaning plan, I can start the process.</p>
+<p>Our raw data, along with a sampling of our data cleaning syntax are seen below. The actual example data and the full example syntax can be accessed in this 
+<a href="https://github.com/Cghlewis/sample_math_proj" target="_blank" rel="noopener">GitHub</a> repository.</p>
+<p><strong>Our raw data</strong></p>
+<pre tabindex="0"><code># A tibble: 6 x 7
+  stu_id svy_date  grade_level math1 math2 math3 math4
+   &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;
+1   1347 10/1/2022           9     2 &#34;1&#34;       3     3
+2   1368 10/1/2022          10     3 &#34;2&#34;       2     2
+3   1377 10/1/2022           9     4 &#34;\n4&#34;     4     4
+4   1387 10/2/2022          11     3 &#34;3&#34;      NA    NA
+5   1347 10/2/2022           9     2 &#34;2&#34;       4     2
+6   1399 10/1/2022          12     4 &#34;1&#34;       3     1
+</code></pre><p><strong>A sample of the beginning of our data cleaning syntax</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic">## Data cleaning date: 2023-02-15</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">## Cleaned by: Crystal Lewis</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">## Project: Math intervention project</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">## Wave: Wave 1</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">## Data: Student Survey Data</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">## libraries ##</span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(tidyverse)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(janitor)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(stringr)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(labelled)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(readxl)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(pointblank)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(haven)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Read in the data ----</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svy <span style="color:#000;font-weight:bold">&lt;-</span> <span style="color:#900;font-weight:bold">read_csv</span>(<span style="color:#d14">&#34;data/w1_mathproj_stu_svy_raw.csv&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># (01) Review the data ----</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">glimpse</span>(svy)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># (02) Adjust cases as needed ----</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">## Check for duplicates - 1347 is duplicated</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svy <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">get_dupes</span>(stu_id)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">## Remove duplicates</span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">## Both surveys are complete - arrange by `svy_date` ascending</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svy <span style="color:#000;font-weight:bold">&lt;-</span> svy <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">arrange</span>(svy_date) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">distinct</span>(stu_id, .keep_all <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">## Check - Review data after dropping the duplicates</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># (03) De-identify data ----</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Drop `svy_date`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>svy <span style="color:#000;font-weight:bold">&lt;-</span> svy <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">select</span>(<span style="color:#000;font-weight:bold">-</span>svy_date)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Check - Review after drop</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">names</span>(svy)
+</span></span></code></pre></div><p>When reviewing this syntax sample, you can see that I have integrated several actions that were mentioned in the previous 
+<a href="https://cghlewis.com/blog/data_clean_02/" target="_blank" rel="noopener">blog post</a>.</p>
+<ol>
+<li>I am cleaning data using code (in this case R code) to help make my process more reproducible.</li>
+<li>I am using a very simple code template that helps standardize the information that is provided in each data cleaning script (such as who cleaned the date and the date the cleaning occurred).</li>
+<li>I am using a relative file path to read in my data, ensuring that my code is more reproducible.</li>
+<li>I am reviewing my data as soon as I import it. Using the <code>glimpse()</code> function provides me summary information about my data such as the number of rows and columns, my variable names, and my variable types.
+<ul>
+<li>I can begin to see that my cases are not matching my participant tracking database. I have 6 cases in my data, but my participant tracking database says only 5 students completed the survey.</li>
+<li>I can also see that my variable type for <code>math2</code> is not as expected. The variable is character and I expected it to be numeric. There&rsquo;s something funky going on in this variable.</li>
+</ul>
+</li>
+<li>I am using code comments to explain every step of my data cleaning process.</li>
+<li>I am following rules laid out in our team coding style guide to ensure my code is consistent, easy to read, and aligned with how other teammates are writing code.</li>
+<li>As I begin doing transformations, I am making sure that none of my code produces random results. When I drop my duplicates, I make sure to arrange my data to drop my duplicates consistently and in the manner that I have previously laid out in my study protocol (in this case our rule is to keep the first, complete instance of a survey).</li>
+<li>After each transformation is completed, I am checking the outputs to ensure that my code is working as expected.</li>
+<li>And last, although you cannot see it on this code snippet (see full code in 
+<a href="https://github.com/Cghlewis/sample_math_proj" target="_blank" rel="noopener">GitHub</a>), I am integrating some automation to reduce manual mistakes. In step (13) when I add metadata, I add variable labels through an automated process using our existing data dictionary, rather than writing out all labels manually in our code.</li>
+</ol>
+<p><strong>A sample of the end of our data cleaning syntax</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># (14) Validate data ----</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Validate data using the `pointblank` package</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">create_agent</span>(svy) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">rows_distinct</span>(columns <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">vars</span>(stu_id)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">col_vals_between</span>(columns <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(stu_id), 
+</span></span><span style="display:flex;"><span>                   left <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1300</span>, right <span style="color:#000;font-weight:bold">=</span> <span style="color:#099">1400</span>, na_pass <span style="color:#000;font-weight:bold">=</span> <span style="color:#000;font-weight:bold">TRUE</span>) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">col_vals_in_set</span>(columns <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(grade_level), 
+</span></span><span style="display:flex;"><span>                  set <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">9</span>, <span style="color:#099">10</span>, <span style="color:#099">11</span>, <span style="color:#099">12</span>, <span style="color:#000;font-weight:bold">NA</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">col_vals_in_set</span>(columns <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(int),
+</span></span><span style="display:flex;"><span>                  set <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">0</span>, <span style="color:#099">1</span>, <span style="color:#000;font-weight:bold">NA</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">col_vals_in_set</span>(columns <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(math1<span style="color:#000;font-weight:bold">:</span>math4),
+</span></span><span style="display:flex;"><span>                  set <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">1</span>, <span style="color:#099">2</span>, <span style="color:#099">3</span>, <span style="color:#099">4</span>, <span style="color:#099">-99</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">interrogate</span>()
+</span></span></code></pre></div><p>As we get to the end of our syntax, you can see that I have added some data validation code. This code (using the 
+<a href="https://rich-iannone.github.io/pointblank/" target="_blank" rel="noopener">pointblank</a> package here), creates a report that shows me if my data are meeting my expected criteria. Using my data dictionary as a reference, I added several checks:</p>
+<ol>
+<li>Are my cases all distinct? Do I still have duplicate student IDs?</li>
+<li>Are my student IDs all valid (fall within my expected range)?</li>
+<li>Do my <code>grade_level</code>, <code>int</code> and <code>math</code> variables all have values that fall within my expected set of values?</li>
+</ol>
+<p>For the sake of brevity, I did not add more criteria here, but in a real situation, there are many more checks that should be done.</p>
+<p>After running this code, I get a report that looks like this. In this particular case, no test failed so I can confidently move on to exporting my data.</p>
+<p><img src="img/validate.PNG" alt=""></p>
+<p><strong>A sample of the export process</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Export our clean data</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">write_sav</span>(svy, <span style="color:#d14">&#34;data/w1_mathproj_stu_svy_clean.sav&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic"># Write session information</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">sessionInfo</span>()
+</span></span></code></pre></div><p>After exporting my data I retrieve our session information. I can either copy and paste that back into our syntax to keep all information in one place, or I can write it to a separate .txt file and store it alongside my syntax.</p>
+<img src="img/session.PNG" width="70%" style="display: block; margin: auto;" />
+
+
+
+
+<h2 id="additional-steps">Additional steps
+  <a href="#additional-steps"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>At this point, my data cleaning process is complete. However, there are still additional practices I can implement.</p>
+<ol>
+<li>I can have a team member review my code for improvements.</li>
+<li>I can (and should) version and record any future updates to my code and data in my changelog.</li>
+<li>And last, I know for this fictitious study, that I will be collecting this same data again in the spring. After I clean my spring data, I may want to merge both my fall and spring data into a long or wide formatted dataset.
+<ul>
+<li>If I want to merge into wide format, I will need to add a prefix or suffix that makes all of my variable names unique (ex: <code>math1_w1</code> and <code>math1_w2</code>). If I want to append my data in long format, I will need to add a new variable to both datasets (such as <code>time</code>) with values of either &ldquo;wave1&rdquo; or &ldquo;wave2&rdquo; to denote the period of collection.</li>
+<li>No matter how I plan to combine my data, after combining, I will need to conduct another round of checks to ensure I still have the correct number of rows and columns.</li>
+</ul>
+</li>
+</ol>
+
+
+
+
+<h2 id="wrapping-it-up">Wrapping it up
+  <a href="#wrapping-it-up"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>This example scenario used a very simplistic dataset and cleaning process. Chances are your data will require a much more involved process in a real scenario.</p>
+<p>This post is just an example of how you might clean your data. The tools I use to clean my data, how I write my code, the functions I choose to use, or the way I organize my cleaning steps may be entirely different compared to how someone else cleans their data. And that is okay, as we are all implementing similar practices.</p>
+<p>I hope this series has been helpful, or at minimum, has sparked some interest in the topic and has helped you to begin thinking about what we should expect from &ldquo;clean&rdquo; data, and ways we can begin standardizing data cleaning steps and implement reproducible and reliable practices that ensure we are all producing similar data products, particularly in the field of education research.</p>
+<p>As an aside: If you are interested in learning more about data cleaning in R, you can visit this 
+<a href="https://github.com/Cghlewis/data-wrangling-functions/wiki" target="_blank" rel="noopener">wiki</a> to review examples of functions I commonly use in my data wrangling code.</p>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">February 16, 2023</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">9 minute read, 1762 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/tags/data-cleaning">data cleaning</a>  <a href="https://cghlewis.com/tags/rstats">rstats</a>  <a href="https://cghlewis.com/tags/data-management">data management</a>  <a href="https://cghlewis.com/tags/data-sharing">data sharing</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_clean_02/">Creating a data cleaning workflow</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_clean_01/">Data cleaning for data sharing</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/dict_clean/">Four simple ways to integrate your data dictionary into your data cleaning process</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://cghlewis.com/blog/data_clean_02/">Creating a data cleaning workflow &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="Cghlewis/crystal_site"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2023 Crystal Lewis
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/Cghlewis" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/Cghlewis" title="twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/crystal-lewis-922b4193/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://fosstodon.org/@cghlewis" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

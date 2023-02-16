@@ -1,5 +1,5 @@
 ---
-title: "Cleaning sample data using R"
+title: "Cleaning sample data in standardized way"
 subtitle: 
 excerpt: "Part 3 in a series on creating a data cleaning workflow"
 author: "Crystal Lewis"
@@ -16,21 +16,20 @@ tags:
 - data sharing
 ---
 
-In this final post of the series, I attempt to answer the question, "What does this data workflow look like when implemented in the real world?". To tackle this question I created a very simple sample dataset based on the following fictional scenario:
+In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process, as well as practices we can implement to make our workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, "What does this data standardized workflow look like when implemented in the real world?". To tackle this question I created a very simple sample dataset based on the following fictional scenario:
 
-I am managing data for a longitudinal RCT. For this RCT, schools are randomized to either a treatment or control group where students receive additional services to help improve math comprehension. For this fictitious study, data is collected in two waves (wave 1 is in the fall of the 2022-23 school year, and wave 2 is collected in the spring). At this point in time, we have collected wave 1 of our student survey on a paper form and we set up a data entry form for staff to enter the information into. Data has been [double-entered], checked for entry errors, and has been exported to a folder where it is waiting to be cleaned.
-
-Let me be the first to say here, I am NOT a math person. I did not study math, nor do I have any understanding of specific math interventions. I simply picked a subject and created some completely fictional data for the purposes of demonstrating some data cleaning techniques. So please do not take this scenario, or the data, too seriously. :)
+_I am managing data for a longitudinal randomized controlled trial (RCT) study. For this RCT, schools are randomized to either a treatment or control group. Students who are in a treatment school receive a program to boost their math self-efficacy. For this fictitious study, data is collected on students in two waves (wave 1 is in the fall of a school year, and wave 2 is collected in the spring). At this point in time, we have collected wave 1 of our student survey on a paper form and we set up a data entry database for staff to enter the information into. Data has been [double-entered](https://www.sciencedirect.com/science/article/abs/pii/S0747563211000707), checked for entry errors, and has been exported in a csv format ("w1_mathproj_stu_svy_raw.csv") to a folder (called "data") where it is waiting to be cleaned._
 
 ## Doing the prep work
 
-As we learned in the previous [post]() there are several steps I need to take before I begin cleaning my data.
+As we learned in the previous [post](https://cghlewis.com/blog/data_clean_02/) there are several steps I need to take before I begin cleaning my data.
 
 1. My team has created a style guide. This guide lays out how my team should structure our directories, name files and folders, as well as name and code variables.
 2. My team has set up a folder structure following the directions in our style guide and we have named files based on the style guide as well.
-3. My data dictionary is created and it also follows any rules laid out in our style guide.
-4. My data cleaning plan has been created and my team has approved the transformations I plan to make.
-5. Last, I have checked the data folder for any readme files and I have found that there is one readme to review.
+3. My data dictionary is created and in the dictionary we have named variables and coded values according to the rules laid out in our style guide.
+4. My data cleaning plan has been created (using our standardized checklist from [post 1](https://cghlewis.com/blog/data_clean_01/) as a guide) and my team has approved the transformations I plan to make.
+5. I have checked the data folder for any readme files and I have found that there is one readme to review.
+6. And last, my team has been updating our participant tracking database throughout data collection, so I can open this database to confirm that all completed forms are accounted for in my raw data.
 
 So let's review all of our documents.
 
@@ -54,31 +53,38 @@ knitr::include_graphics("img/readme.PNG")
 
 ```
 
+**Participant tracking**
+
+```{r echo=FALSE, fig.align= "center", out.width = "25%"}
+
+knitr::include_graphics("img/tracking.PNG")
+
+```
+
 It looks like I have all of the documents I need and I am ready to start the data cleaning process!
 
 ## Data cleaning process
 
-The remainder of this post will provide an overview of how I would clean this data writing code using the R programming language, integrating the steps we spoke about in the previous blog post that help ensure that our data is reproducible and reliable. Following the steps laid out in my data cleaning plan, I can start the process.
+The remainder of this post will provide an overview of how I would clean this data, integrating the steps we spoke about in the previous blog post that help ensure that our data is reproducible and reliable. Following the steps laid out in my data cleaning plan, I can start the process.
 
-A sample of our raw data, along with a sampling of our data cleaning syntax are seen below. The actual sample data and the full sample syntax can be accessed in this GitHub repository.
+Our raw data, along with a sampling of our data cleaning syntax are seen below. The actual example data and the full example syntax can be accessed in this [GitHub](https://github.com/Cghlewis/sample_math_proj) repository.
+
 
 **Our raw data**
 
-```{r, echo = FALSE, message = FALSE, warning= FALSE}
+```{r, echo = FALSE, message = FALSE, warning= FALSE, comment = NA}
 
 library(tidyverse)
 
-readr::read_csv("data/w1_mathproj_stu_svy_raw.csv") %>%
-  knitr::kable()
+readr::read_csv("data/w1_mathproj_stu_svy_raw.csv")
 
 ```
 
-
-**A sample of our data cleaning syntax**
+**A sample of the beginning of our data cleaning syntax**
 
 ```{r message = FALSE, warning = FALSE, eval = FALSE}
 
-## Data cleaning date: 2023-02-14
+## Data cleaning date: 2023-02-15
 ## Cleaned by: Crystal Lewis
 ## Project: Math intervention project
 ## Wave: Wave 1
@@ -87,18 +93,17 @@ readr::read_csv("data/w1_mathproj_stu_svy_raw.csv") %>%
 ## libraries ##
 library(tidyverse)
 library(janitor)
-library(lubridate)
 library(stringr)
+library(labelled)
+library(readxl)
+library(pointblank)
+library(haven)
 
 # Read in the data ----
 
 svy <- read_csv("data/w1_mathproj_stu_svy_raw.csv")
 
 # (01) Review the data ----
-
-## I have 6 rows and 13 columns
-## After checking our participant tracking, I see that only 5 students completed the student survey in wave 1
-## I also see that the variable types for `study` and for `math2` do not match my data dictionary. My data cleaning plan accounts for the errors in `study` but the errors in `math2` are new. I will need to add this to my data cleaning plan.
 
 glimpse(svy)
 
@@ -109,12 +114,8 @@ glimpse(svy)
 svy %>%
   get_dupes(stu_id)
 
-## Check - Are both surveys complete? - Yes
-
-svy %>%
-  filter(stu_id == 1347 & !is.na(math4))
-
-## Remove duplicates - `distinct()` keeps the first instance of an identifier
+## Remove duplicates
+## Both surveys are complete - arrange by `svy_date` ascending
 
 svy <- svy %>%
   arrange(svy_date) %>%
@@ -124,102 +125,105 @@ svy <- svy %>%
 
 svy
 
-# (07) Normalize variables ----
+# (03) De-identify data ----
 
-### Fix `study`
-
-## Check - Review before
-
-svy %>%
-  tabyl(study)
-
-## Remove %
+# Drop `svy_date`
 
 svy <- svy %>%
-  mutate(study = str_remove(study, "%"))
+  select(-svy_date)
 
-## Check - Review after
+# Check - Review after drop
 
-svy %>%
-  tabyl(study)
-
-### Fix `math2`
-
-## Check - Review before - there is a return in one value
-
-svy %>%
-  tabyl(math2)
-
-## Remove "\n"
-
-svy <- svy %>%
-  mutate(math2 = str_remove(math2, "\n"))
-
-## Check - Review after
-
-svy %>%
-  tabyl(math2)
-
-# (08) Standardize variables ----
-
-## Recode `school` with consistent spellings
-
-## Check - Review before
-
-svy %>%
-  tabyl(school)
-
-# Recode `school`
-
-svy <- svy %>%
-  mutate(school = str_to_lower(school),
-         school = case_when(
-    str_detect(school, "hickman") ~ "Hickman High",
-    str_detect(school, "rock|rbs") ~ "Rockbridge High"
-  ))
-
-## Check - Review after
-
-# (09) Update variable types ----
-
-## Update both `study` and `math2` to numeric
-
-## Check - Review before
-
-svy %>%
-  select(study, math2) %>%
-  map(class)
-
-# Change variable types - pay close attention to warnings here - if warnings are thrown there may still be characters in the variable
-
-svy <- svy %>%
-  mutate(across(c(study, math2), as.numeric))
-
-## Check - Review after
-
-svy %>%
-  select(study, math2) %>%
-  map(class)
+names(svy)
 
 ```
 
+When reviewing this syntax sample, you can see that I have integrated several actions that were mentioned in the previous [blog post](https://cghlewis.com/blog/data_clean_02/).
 
-1. I start with a coding template that helps standardize the information that is provided in each data cleaning script. Then I will read in my data. My data is housed in a folder called "data" and it is named "w1_mathproj_stu_svy_raw.csv". I read in my data using a relative path.
+1. I am cleaning data using code (in this case R code) to help make my process more reproducible.
+2. I am using a very simple code template that helps standardize the information that is provided in each data cleaning script (such as who cleaned the date and the date the cleaning occurred).
+3. I am using a relative file path to read in my data, ensuring that my code is more reproducible.
+4. I am reviewing my data as soon as I import it. Using the `glimpse()` function provides me summary information about my data such as the number of rows and columns, my variable names, and my variable types. 
+    - I can begin to see that my cases are not matching my participant tracking database. I have 6 cases in my data, but my participant tracking database says only 5 students completed the survey.
+    - I can also see that my variable type for `math2` is not as expected. The variable is character and I expected it to be numeric. There's something funky going on in this variable. 
+5. I am using code comments to explain every step of my data cleaning process.
+6. I am following rules laid out in our team coding style guide to ensure my code is consistent, easy to read, and aligned with how other teammates are writing code.
+7. As I begin doing transformations, I am making sure that none of my code produces random results. When I drop my duplicates, I make sure to arrange my data to drop my duplicates consistently and in the manner that I have previously laid out in my study protocol (in this case our rule is to keep the first, complete instance of a survey).
+8. After each transformation is completed, I am checking the outputs to ensure that my code is working as expected.
+9. And last, although you cannot see it on this code snippet (see full code in [GitHub](https://github.com/Cghlewis/sample_math_proj)), I am integrating some automation to reduce manual mistakes. In step (13) when I add metadata, I add variable labels through an automated process using our existing data dictionary, rather than writing out all labels manually in our code.
 
-2. I will review my data.
+**A sample of the end of our data cleaning syntax**
 
-I have 6 rows and 13 columns. I already know that I potentially have duplicate rows because my `readme` told me to expect that. When I review our project `participant tracking database`, I can see that 5 students are tracked as having completed the wave 1 survey, so I know that I will need to fix this in my next step.
+```{r message = FALSE, warning = FALSE, eval = FALSE}
 
-When I compare my number of columns to those in my data dictionary I see that my dictionary has 16 variables, but 3 of them are "calculated" so this information adds up for me. All variable names are already correct.
+# (14) Validate data ----
 
-I start to compare my variable types and everything is making sense except my `study` variable and my `math2` variables are not my expected variable type. I was prepared for the `study` variable and already made plans to correct this later in my process. However, I was not prepared to correct `math2` so I will need to add this correction to my data cleaning plan.
+# Validate data using the `pointblank` package
 
-3. Next I need to adjust cases
+create_agent(svy) %>%
+  rows_distinct(columns = vars(stu_id)) %>%
+  col_vals_between(columns = c(stu_id), 
+                   left = 1300, right = 1400, na_pass = TRUE) %>%
+  col_vals_in_set(columns = c(grade_level), 
+                  set = c(9, 10, 11, 12, NA)) %>%
+  col_vals_in_set(columns = c(int),
+                  set = c(0, 1, NA)) %>%
+  col_vals_in_set(columns = c(math1:math4),
+                  set = c(1, 2, 3, 4, -99)) %>%
+  interrogate()
 
-I see that ID 1347 occurs twice in our data, as the `readme` informed me. Next, I would go to my `study protocol` to see what our rule is for removing duplicates. In this case, our rule is to keep the first, complete case of a form. So I will drop my duplicates accordingly. **Remember**, never drop your duplicates randomly. Make sure your data is arranged first before dropping cases.
+```
 
+As we get to the end of our syntax, you can see that I have added some data validation code. This code (using the [pointblank](https://rich-iannone.github.io/pointblank/) package here), creates a report that shows me if my data are meeting my expected criteria. Using my data dictionary as a reference, I added several checks:
 
-3. Next I plan to transform my `study` variable.
+1. Are my cases all distinct? Do I still have duplicate student IDs?
+2. Are my student IDs all valid (fall within my expected range)?
+3. Do my `grade_level`, `int` and `math` variables all have values that fall within my expected set of values?
 
+For the sake of brevity, I did not add more criteria here, but in a real situation, there are many more checks that should be done.
 
+After running this code, I get a report that looks like this. In this particular case, no test failed so I can confidently move on to exporting my data.
 
+![](img/validate.PNG)
+
+**A sample of the export process**
+
+```{r message = FALSE, warning = FALSE, eval = FALSE}
+
+# Export our clean data
+
+write_sav(svy, "data/w1_mathproj_stu_svy_clean.sav")
+
+# Write session information
+
+sessionInfo()
+
+```
+
+After exporting my data I retrieve our session information. I can either copy and paste that back into our syntax to keep all information in one place, or I can write it to a separate .txt file and store it alongside my syntax.
+
+```{r echo=FALSE, fig.align= "center", out.width = "70%"}
+
+knitr::include_graphics("img/session.PNG")
+
+```
+
+## Additional steps
+
+At this point, my data cleaning process is complete. However, there are still additional practices I can implement.
+
+1. I can have a team member review my code for improvements.
+2. I can (and should) version and record any future updates to my code and data in my changelog.
+3. And last, I know for this fictitious study, that I will be collecting this same data again in the spring. After I clean my spring data, I may want to merge both my fall and spring data into a long or wide formatted dataset. 
+    - If I want to merge into wide format, I will need to add a prefix or suffix that makes all of my variable names unique (ex: `math1_w1` and `math1_w2`). If I want to append my data in long format, I will need to add a new variable to both datasets (such as `time`) with values of either "wave1" or "wave2" to denote the period of collection. 
+    - No matter how I plan to combine my data, after combining, I will need to conduct another round of checks to ensure I still have the correct number of rows and columns.
+
+## Wrapping it up
+
+This example scenario used a very simplistic dataset and cleaning process. Chances are your data will require a much more involved process in a real scenario. 
+
+This post is just an example of how you might clean your data. The tools I use to clean my data, how I write my code, the functions I choose to use, or the way I organize my cleaning steps may be entirely different compared to how someone else cleans their data. And that is okay, as we are all implementing similar practices.
+
+I hope this series has been helpful, or at minimum, has sparked some interest in the topic and has helped you to begin thinking about what we should expect from "clean" data, and ways we can begin standardizing data cleaning steps and implement reproducible and reliable practices that ensure we are all producing similar data products, particularly in the field of education research. 
+
+As an aside: If you are interested in learning more about data cleaning in R, you can visit this [wiki](https://github.com/Cghlewis/data-wrangling-functions/wiki) to review examples of functions I commonly use in my data wrangling code.

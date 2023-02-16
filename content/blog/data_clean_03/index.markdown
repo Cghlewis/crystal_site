@@ -208,7 +208,7 @@ At this point, my data cleaning process is complete. However, there are still ad
 
 This example scenario used a very simplistic dataset and cleaning process. Chances are your data will require a much more involved process in a real scenario. 
 
-This post is just an example of how you might clean your data. The tools I use to clean my data, how I write my code, the functions I choose to use, or the way I organize my cleaning steps may be entirely different compared to how someone else cleans their data. And that is okay, as we are all implementing similar practices.
+This post is just an example of how you might clean your data. The tools I use to clean my data, how I write my code, the functions I choose to use, or the way I organize my cleaning steps may be entirely different compared to how someone else cleans their data. And that is okay, as long as we are all implementing similar practices.
 
 I hope this series has been helpful, or at minimum, has sparked some interest in the topic and has helped you to begin thinking about what we should expect from "clean" data, and ways we can begin standardizing data cleaning steps and implement reproducible and reliable practices that ensure we are all producing similar data products, particularly in the field of education research. 
 

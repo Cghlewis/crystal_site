@@ -117,9 +117,9 @@ svy <- read_csv("data/w1_proja_stu_svy_raw.csv")
 There are several practices you can implement that will also help you have more confidence in your data cleaning process.
 
 1. Review your data upon import
-    - As briefly discussed in the previous [post](https://cghlewis.com/blog/data_clean_01/), it is imperative that you review your data before beginning to clean your data to ensure you have a thorough understanding of what is happening in your data. 
+    - As briefly discussed in the previous [post](https://cghlewis.com/blog/data_clean_01/), it is imperative that you review your data before beginning to clean it to ensure you have a thorough understanding of what is happening in your data. 
     - This review process can be manual if the data is small. Or if you have a large amount of variables to review, build in automated checks at the beginning of your code that writes out an error message when your checks fail.
-    - This review process can become even more relevant if you are reusing a syntax to clean data collected multiple times (for instance, in a longitudinal study). I've been a part of many studies where I expected my syntax to run without a hitch every wave of data collection, assuming that forms did not change over time. Yet I learned hard lessons when I made those assumptions and found out later on in the cleaning process that items had been added, variable names changed, or even the allowable values had shifted. 
+    - This review process can become even more relevant if you are reusing a syntax to clean data collected multiple times (for instance, in a longitudinal study). I've been a part of many studies where I expected my syntax to run without a hitch every wave of data collection, assuming that forms did not change over time. Yet I learned hard lessons when I found out later on in the cleaning process that items had been added, variable names changed, or even the allowable values had shifted. 
     - It's best to find this out before you start the cleaning process so you can adjust your data cleaning plan and your code as needed. Otherwise you may be running a script that is incorrectly cleaning your data.
     
 **Very simple example of automating checks of your raw data**
@@ -140,7 +140,7 @@ if (ncol(svy) != 432) {
 2. Write functions for repeatable tasks
     - As the sayings go, "Don't repeat yourself" or "Never write the same code twice". This can be a really difficult habit to break, especially for people who are fairly new to code writing. But once you are comfortable with writing some basic functions, there are good reasons to move that 10 lines of code that you repeat multiple times, into a one line function that you can call throughout your script.
     - Not only does it make your script more readable, but it reduces the errors that might be created through things like copy and paste.
-    - Similarly, find ways to automate some of your tasks. Rather than renaming all of your variables by hand, use your data dictionary to [automate tasks](https://cghlewis.com/blog/dict_clean/) like this. This not only increases efficiency but also reduces mistakes you might make when typing out variable names.
+    - Similarly, find ways to automate some of your tasks. For instance, rather than renaming all of your variables by hand, use your data dictionary to [automate tasks](https://cghlewis.com/blog/dict_clean/) like this. This not only increases efficiency but also reduces mistakes you might make when typing out variable names.
 3. Check each transformation
     - Check your work along the way, don't just wait until the end of your script. For each transformation in your data:
       1. Review your data/variables before and after the transformations

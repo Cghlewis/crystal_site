@@ -16,7 +16,7 @@ tags:
 - data sharing
 ---
 
-In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process, as well as practices we can implement to make our workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, "What does this data cleaning standardized workflow look like when implemented in the real world?". To tackle this question I created a very simple sample dataset based on the following fictitious scenario:
+In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process to produce consistent datasets across the field of education research, as well as practices we can implement to make our data cleaning workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, "What does this process look like when implemented in the real world?". To tackle this question I created a very simple sample dataset based on the following fictitious scenario:
 
 _I am managing data for a longitudinal randomized controlled trial (RCT) study. For this RCT, schools are randomized to either a treatment or control group. Students who are in a treatment school receive a program to boost their math self-efficacy. Data is collected on all students in two waves (wave 1 is in the fall of a school year, and wave 2 is collected in the spring). At this point in time, we have collected wave 1 of our student survey on a paper form and we set up a data entry database for staff to enter the information into. Data has been [double-entered](https://www.sciencedirect.com/science/article/abs/pii/S0747563211000707), checked for entry errors, and has been exported in a csv format ("w1_mathproj_stu_svy_raw.csv") to a folder (called "data") where it is waiting to be cleaned._
 
@@ -135,9 +135,10 @@ When reviewing this syntax sample, you can see that I have integrated several ac
 1. I am cleaning data using code (in this case R code) to help make my process more reproducible.
 2. I am using a very simple code template that helps standardize the information that is provided in each data cleaning script (such as who cleaned the date and the date the cleaning occurred).
 3. I am using a relative file path to read in my data, ensuring that my code is more reproducible.
+    - If you aren't working in an environment that sets a consistent working directory for you (like [R projects](https://epirhandbook.com/en/r-projects.html) for instance which sets your working directory as the project's root folder), then you will want to check (and possibly even set) your [working directory](https://r4ds.had.co.nz/workflow-projects.html) before using your relative file path to ensure your script is pointing to the correct directory. Just make sure to not permanently set your working directory in your script, again reducing reproducibility.
 4. I am reviewing my data as soon as I import it. Using the `glimpse()` function provides me summary information about my data such as the number of rows and columns, my variable names, and my variable types. 
     - I can begin to see that my cases are not matching my participant tracking database. I have 6 cases in my data, but my participant tracking database says only 5 students completed the survey.
-    - I can also see that my variable type for `math2` is not as expected. The variable is character and I expected it to be numeric. There's something funky going on in this variable. 
+    - I can also see that my variable type for `math2` is not as expected. The variable is character and I expected it to be numeric. There's something funky going on in this variable. Note that in a real (non-fictitious scenario), this mistake **should** have been caught and fixed in our double-entry checking process above. But for demonstration purposes, I left this mistake in. :)
 5. I am using code comments to explain every step of my data cleaning process.
 6. I am following rules laid out in our team coding style guide to ensure my code is consistent, easy to read, and aligned with how other teammates are writing code.
 7. As I begin doing transformations, I am making sure that none of my code produces random results. When I drop my duplicates, I make sure to arrange my data to drop my duplicates consistently and in the manner that I have previously laid out in my study protocol (in this case our rule is to keep the first, complete instance of a survey).
@@ -161,7 +162,7 @@ create_agent(svy) %>%
   col_vals_in_set(columns = c(int),
                   set = c(0, 1, NA)) %>%
   col_vals_in_set(columns = c(math1:math4),
-                  set = c(1, 2, 3, 4, -99)) %>%
+                  set = c(1, 2, 3, 4, NA)) %>%
   interrogate()
 ```
 
@@ -193,6 +194,33 @@ sessionInfo()
 After exporting my data I retrieve our session information. I can either copy and paste that back into our syntax to keep all information in one place, or I can write it to a separate .txt file and store it alongside my syntax.
 
 <img src="img/session.PNG" width="70%" style="display: block; margin: auto;" />
+
+Ultimately, I export this clean dataset for the purpose of general data sharing, which meets all of the expectations we laid out in our [first post](https://cghlewis.com/blog/data_clean_01/). 
+
+
+```
+  stu_id grade_level math1 math2 math3 math4 int
+1   1347           9     2     1     3     3   1
+2   1368          10     3     2     2     2   1
+3   1377           9     4     4     4     4   0
+4   1387          11     3     3   -99   -99   1
+5   1399          12     4     1     3     1   0
+```
+
+You can see here what the embedded metadata looks like in this dataset as well. Note that our R classes for our labelled variables are now labelled numeric. 
+
+
+```
+# A tibble: 5 x 7
+  stu_id grade_level       math1       math2         math3         math4     int
+   <dbl>       <dbl>  <hvn_lbl_>  <hvn_lbl_>    <hvn_lbl_>    <hvn_lbl_> <dbl+l>
+1   1347           9 2 [disagre~ 1 [strongl~   3 [agree]     3 [agree]   1 [tre~
+2   1368          10 3 [agree]   2 [disagre~   2 [disagre~   2 [disagre~ 1 [tre~
+3   1377           9 4 [strongl~ 4 [strongl~   4 [strongl~   4 [strongl~ 0 [con~
+4   1387          11 3 [agree]   3 [agree]   -99 (NA)      -99 (NA)      1 [tre~
+5   1399          12 4 [strongl~ 1 [strongl~   3 [agree]     1 [strongl~ 0 [con~
+```
+
 
 ## Additional steps
 

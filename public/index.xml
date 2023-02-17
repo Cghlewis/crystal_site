@@ -92,7 +92,7 @@ My content section is: collection My layout is: single-series part 2! does this 
       <pubDate>Thu, 16 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/blog/data_clean_03/</guid>
-      <description>In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process, as well as practices we can implement to make our workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, &amp;ldquo;What does this data cleaning standardized workflow look like when implemented in the real world?&amp;rdquo;. To tackle this question I created a very simple sample dataset based on the following fictitious scenario:</description>
+      <description>In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process to produce consistent datasets across the field of education research, as well as practices we can implement to make our data cleaning workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, &amp;ldquo;What does this process look like when implemented in the real world?</description>
     </item>
     
     <item>

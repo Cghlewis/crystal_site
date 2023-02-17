@@ -44,9 +44,9 @@
     
     
   <meta itemprop="name" content="Cleaning sample data in standardized way">
-<meta itemprop="description" content="In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process, as well as practices we can implement to make our workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, &ldquo;What does this data cleaning standardized workflow look like when implemented in the real world?&rdquo;. To tackle this question I created a very simple sample dataset based on the following fictitious scenario:"><meta itemprop="datePublished" content="2023-02-16T00:00:00+00:00" />
+<meta itemprop="description" content="In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process to produce consistent datasets across the field of education research, as well as practices we can implement to make our data cleaning workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, &ldquo;What does this process look like when implemented in the real world?"><meta itemprop="datePublished" content="2023-02-16T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-02-16T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1762"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_03/featured.jpg">
+<meta itemprop="wordCount" content="2063"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_03/featured.jpg">
 <meta itemprop="keywords" content="data cleaning,rstats,data management,data sharing," />
   
   
@@ -115,7 +115,7 @@
 
       </header>
       <section class="post-body pt5 pb4">
-        <p>In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process, as well as practices we can implement to make our workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, &ldquo;What does this data cleaning standardized workflow look like when implemented in the real world?&rdquo;. To tackle this question I created a very simple sample dataset based on the following fictitious scenario:</p>
+        <p>In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process to produce consistent datasets across the field of education research, as well as practices we can implement to make our data cleaning workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, &ldquo;What does this process look like when implemented in the real world?&rdquo;. To tackle this question I created a very simple sample dataset based on the following fictitious scenario:</p>
 <p><em>I am managing data for a longitudinal randomized controlled trial (RCT) study. For this RCT, schools are randomized to either a treatment or control group. Students who are in a treatment school receive a program to boost their math self-efficacy. Data is collected on all students in two waves (wave 1 is in the fall of a school year, and wave 2 is collected in the spring). At this point in time, we have collected wave 1 of our student survey on a paper form and we set up a data entry database for staff to enter the information into. Data has been 
 <a href="https://www.sciencedirect.com/science/article/abs/pii/S0747563211000707" target="_blank" rel="noopener">double-entered</a>, checked for entry errors, and has been exported in a csv format (&ldquo;w1_mathproj_stu_svy_raw.csv&rdquo;) to a folder (called &ldquo;data&rdquo;) where it is waiting to be cleaned.</em></p>
 
@@ -229,11 +229,17 @@
 <ol>
 <li>I am cleaning data using code (in this case R code) to help make my process more reproducible.</li>
 <li>I am using a very simple code template that helps standardize the information that is provided in each data cleaning script (such as who cleaned the date and the date the cleaning occurred).</li>
-<li>I am using a relative file path to read in my data, ensuring that my code is more reproducible.</li>
+<li>I am using a relative file path to read in my data, ensuring that my code is more reproducible.
+<ul>
+<li>If you aren&rsquo;t working in an environment that sets a consistent working directory for you (like 
+<a href="https://epirhandbook.com/en/r-projects.html" target="_blank" rel="noopener">R projects</a> for instance which sets your working directory as the project&rsquo;s root folder), then you will want to check (and possibly even set) your 
+<a href="https://r4ds.had.co.nz/workflow-projects.html" target="_blank" rel="noopener">working directory</a> before using your relative file path to ensure your script is pointing to the correct directory. Just make sure to not permanently set your working directory in your script, again reducing reproducibility.</li>
+</ul>
+</li>
 <li>I am reviewing my data as soon as I import it. Using the <code>glimpse()</code> function provides me summary information about my data such as the number of rows and columns, my variable names, and my variable types.
 <ul>
 <li>I can begin to see that my cases are not matching my participant tracking database. I have 6 cases in my data, but my participant tracking database says only 5 students completed the survey.</li>
-<li>I can also see that my variable type for <code>math2</code> is not as expected. The variable is character and I expected it to be numeric. There&rsquo;s something funky going on in this variable.</li>
+<li>I can also see that my variable type for <code>math2</code> is not as expected. The variable is character and I expected it to be numeric. There&rsquo;s something funky going on in this variable. Note that in a real (non-fictitious scenario), this mistake <strong>should</strong> have been caught and fixed in our double-entry checking process above. But for demonstration purposes, I left this mistake in. :)</li>
 </ul>
 </li>
 <li>I am using code comments to explain every step of my data cleaning process.</li>
@@ -257,7 +263,7 @@
 </span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">col_vals_in_set</span>(columns <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(int),
 </span></span><span style="display:flex;"><span>                  set <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">0</span>, <span style="color:#099">1</span>, <span style="color:#000;font-weight:bold">NA</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">col_vals_in_set</span>(columns <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(math1<span style="color:#000;font-weight:bold">:</span>math4),
-</span></span><span style="display:flex;"><span>                  set <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">1</span>, <span style="color:#099">2</span>, <span style="color:#099">3</span>, <span style="color:#099">4</span>, <span style="color:#099">-99</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>                  set <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#099">1</span>, <span style="color:#099">2</span>, <span style="color:#099">3</span>, <span style="color:#099">4</span>, <span style="color:#000;font-weight:bold">NA</span>)) <span style="color:#000;font-weight:bold">%&gt;%</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">interrogate</span>()
 </span></span></code></pre></div><p>As we get to the end of our syntax, you can see that I have added some data validation code. This code (using the 
 <a href="https://rich-iannone.github.io/pointblank/" target="_blank" rel="noopener">pointblank</a> package here), creates a report that shows me if my data are meeting my expected criteria. Using my data dictionary as a reference, I added several checks:</p>
@@ -279,7 +285,24 @@
 </span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">sessionInfo</span>()
 </span></span></code></pre></div><p>After exporting my data I retrieve our session information. I can either copy and paste that back into our syntax to keep all information in one place, or I can write it to a separate .txt file and store it alongside my syntax.</p>
 <img src="img/session.PNG" width="70%" style="display: block; margin: auto;" />
-
+<p>Ultimately, I export this clean dataset for the purpose of general data sharing, which meets all of the expectations we laid out in our 
+<a href="https://cghlewis.com/blog/data_clean_01/" target="_blank" rel="noopener">first post</a>.</p>
+<pre tabindex="0"><code>  stu_id grade_level math1 math2 math3 math4 int
+1   1347           9     2     1     3     3   1
+2   1368          10     3     2     2     2   1
+3   1377           9     4     4     4     4   0
+4   1387          11     3     3   -99   -99   1
+5   1399          12     4     1     3     1   0
+</code></pre><p>You can see here what the embedded metadata looks like in this dataset as well. Note that our R classes for our labelled variables are now labelled numeric.</p>
+<pre tabindex="0"><code># A tibble: 5 x 7
+  stu_id grade_level       math1       math2         math3         math4     int
+   &lt;dbl&gt;       &lt;dbl&gt;  &lt;hvn_lbl_&gt;  &lt;hvn_lbl_&gt;    &lt;hvn_lbl_&gt;    &lt;hvn_lbl_&gt; &lt;dbl+l&gt;
+1   1347           9 2 [disagre~ 1 [strongl~   3 [agree]     3 [agree]   1 [tre~
+2   1368          10 3 [agree]   2 [disagre~   2 [disagre~   2 [disagre~ 1 [tre~
+3   1377           9 4 [strongl~ 4 [strongl~   4 [strongl~   4 [strongl~ 0 [con~
+4   1387          11 3 [agree]   3 [agree]   -99 (NA)      -99 (NA)      1 [tre~
+5   1399          12 4 [strongl~ 1 [strongl~   3 [agree]     1 [strongl~ 0 [con~
+</code></pre>
 
 
 
@@ -324,7 +347,7 @@
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">9 minute read, 1762 words</dd>
+    <dd class="fw5 ml0">10 minute read, 2063 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">

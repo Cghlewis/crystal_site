@@ -11,7 +11,7 @@ categories:
 - resources
 tags:
 - data management
-- data cleaning 
+- data cleaning
 ---
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />

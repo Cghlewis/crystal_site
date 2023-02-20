@@ -48,7 +48,7 @@ Before I start cleaning data, I always have the first four files open and ready 
 
 ### Data dictionary
 
-A [data dictionary](https://datamgmtinedresearch.com/documentation.html#data-dictionary) is a rectangular format collection of names, definitions, and attributes about variables in a dataset and it is the document where you lay out exactly how you expect your data to be structured. This document should tell you allowable variable values, assigned variable names, allowable variable formats, and more. It will inform your entire data cleaning process.
+A [data dictionary](https://datamgmtinedresearch.com/documentation.html#data-dictionary) is a rectangular format collection of names, definitions, and attributes about variables in a dataset and it is the document where you lay out exactly how you expect your data to be structured. This document should tell you allowable variable values, assigned variable names, allowable variable types, and more. It will inform your entire data cleaning process.
 
 ### Data cleaning plan
 

@@ -110,7 +110,7 @@ svy <- read_csv("data/w1_proja_stu_svy_raw.csv")
 6. Record your session info
     - In a program like R, you can record your session information in your syntax, or into a plain text file, so that future users can review the requirements needed for running your code. Information about package versions and operating system used are recorded. If users run into errors running your code, this information may help them troubleshoot. 
     
-## Cleaning data using reliable practices
+## Cleaning data using reliable practices 
 
 <img src="img/sanity.PNG" width="60%" style="display: block; margin: auto;" />
 

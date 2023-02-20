@@ -138,15 +138,16 @@ names(svy)
 
 ```
 
-When reviewing this syntax sample, you can see that I have integrated several actions that were mentioned in the previous [blog post](https://cghlewis.com/blog/data_clean_02/).
+When reviewing this syntax sample, you can see that I have integrated several actions that were mentioned in the previous [blog post](https://cghlewis.com/blog/data_clean_02/). 
 
 1. I am cleaning data using code (in this case R code) to help make my process more reproducible.
 2. I am using a very simple code template that helps standardize the information that is provided in each data cleaning script (such as who cleaned the date and the date the cleaning occurred).
 3. I am using a relative file path to read in my data, ensuring that my code is more reproducible.
     - If you aren't working in an environment that sets a consistent working directory for you (like [R projects](https://epirhandbook.com/en/r-projects.html) for instance which sets your working directory as the project's root folder), then you will want to check (and possibly even set) your [working directory](https://r4ds.had.co.nz/workflow-projects.html) before using your relative file path to ensure your script is pointing to the correct directory. Just make sure to not permanently set your working directory in your script, again reducing reproducibility.
-4. I am reviewing my data as soon as I import it. Using the `glimpse()` function provides me summary information about my data such as the number of rows and columns, my variable names, and my variable types. 
-    - I can begin to see that my cases are not matching my participant tracking database. I have 6 cases in my data, but my participant tracking database says only 5 students completed the survey.
-    - I can also see that my variable type for `math2` is not as expected. The variable is character and I expected it to be numeric. There's something funky going on in this variable. Note that in a real (non-fictitious scenario), this mistake **should** have been caught and fixed in our double-entry checking process above. But for demonstration purposes, I left this mistake in. :)
+4. I am reviewing my data as soon as I import it. Using the `glimpse()` function provides me summary information about my data such as the number of rows and columns, my variable names, and my variable formats.
+    - I am happy to see that the number of variables in my data match what I see in my data dictionary (7 primary variables) and the formats are all as expected.
+    - However, I can begin to see that my cases are not matching my participant tracking database. I have 6 cases in my data, but my participant tracking database says only 5 students completed the survey.
+    - I can also see that my variable format for `math2` is not as expected. The variable is character and I expected it to be numeric. There's something funky going on in this variable. Note that in a real (non-fictitious scenario), this mistake **should** have been caught and fixed in our double-entry checking process above. But for demonstration purposes, I left this mistake in. :)
 5. I am using code comments to explain every step of my data cleaning process.
 6. I am following rules laid out in our team coding style guide to ensure my code is consistent, easy to read, and aligned with how other teammates are writing code.
 7. As I begin doing transformations, I am making sure that none of my code produces random results. When I drop my duplicates, I make sure to arrange my data to drop my duplicates consistently and in the manner that I have previously laid out in my study protocol (in this case our rule is to keep the first, complete instance of a survey).

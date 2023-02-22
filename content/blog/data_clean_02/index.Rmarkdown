@@ -72,7 +72,7 @@ This [database](https://cghlewis.github.io/mpsi-data-training/training_2.html#Pa
 
 ### Style guide
 
-Last, a [style guide](https://cghlewis.github.io/mpsi-data-training/training_3.html) is a set of standards for how your team should organize data for your project. This document should provide rules for how to structure project folders and name project files in a way that promotes standardization in your work. Naming files and folders consistently, with metadata always provided in the same order, with the same naming structure, allows your process to be more reproducible.
+Last, a [style guide](https://datamgmtinedresearch.com/style.html) is a set of standards for how your team should organize data for your project. This document should provide rules for how to structure project folders and name project files in a way that promotes standardization in your work. Naming files and folders consistently, with metadata always provided in the same order, with the same naming structure, allows your process to be more reproducible.
 
 This guide also informs how you name and code variables and will be used as you construct your data dictionary.
 

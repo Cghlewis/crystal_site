@@ -46,7 +46,7 @@
   <meta itemprop="name" content="Cleaning sample data in standardized way">
 <meta itemprop="description" content="In the previous two posts of this series we reviewed how to standardize the steps in our data cleaning process to produce consistent datasets across the field of education research, as well as practices we can implement to make our data cleaning workflow more reproducible and reliable. In this final post of the series, I attempt to answer the question, &ldquo;What does this process look like when implemented in the real world?"><meta itemprop="datePublished" content="2023-02-16T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-02-16T00:00:00+00:00" />
-<meta itemprop="wordCount" content="2063"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_03/featured.jpg">
+<meta itemprop="wordCount" content="2095"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_03/featured.jpg">
 <meta itemprop="keywords" content="data cleaning,rstats,data management,data sharing," />
   
   
@@ -238,7 +238,8 @@
 </li>
 <li>I am reviewing my data as soon as I import it. Using the <code>glimpse()</code> function provides me summary information about my data such as the number of rows and columns, my variable names, and my variable types.
 <ul>
-<li>I can begin to see that my cases are not matching my participant tracking database. I have 6 cases in my data, but my participant tracking database says only 5 students completed the survey.</li>
+<li>I am happy to see that the number of variables in my data match what I see in my data dictionary (7 primary variables) and the types are all as expected.</li>
+<li>However, I can begin to see that my cases are not matching my participant tracking database. I have 6 cases in my data, but my participant tracking database says only 5 students completed the survey.</li>
 <li>I can also see that my variable type for <code>math2</code> is not as expected. The variable is character and I expected it to be numeric. There&rsquo;s something funky going on in this variable. Note that in a real (non-fictitious scenario), this mistake <strong>should</strong> have been caught and fixed in our double-entry checking process above. But for demonstration purposes, I left this mistake in. :)</li>
 </ul>
 </li>
@@ -347,7 +348,7 @@
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">10 minute read, 2063 words</dd>
+    <dd class="fw5 ml0">10 minute read, 2095 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">

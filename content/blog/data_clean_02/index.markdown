@@ -64,7 +64,7 @@ The last important thing to remember is, this is a living document. As you begin
 
 ### Participant tracking database
 
-This [database](https://cghlewis.github.io/mpsi-data-training/training_2.html#Participant_Database) houses all linking information about your participants (identifying information along with study IDs), as well as all tracking information about data that has been collected on participants. Assuming that someone, such as a project coordinator, has kept this database up to date, you should be able to use this database as a way to confirm the sample size should be for all of your datasets. Having tracked completion status for all participants during data collection, this database is one way to identify if any forms are missing (or duplicated). If you do not have direct access to this database, at minimum work with the owner of the database to retrieve completion numbers for comparison.
+This [database](https://datamgmtinedresearch.com/track.html) houses all linking information about your participants (identifying information along with study IDs), as well as all tracking information about data that has been collected on participants. Assuming that someone, such as a project coordinator, has kept this database up to date, you should be able to use this database as a way to confirm the sample size should be for all of your datasets. Having tracked completion status for all participants during data collection, this database is one way to identify if any forms are missing (or duplicated). If you do not have direct access to this database, at minimum work with the owner of the database to retrieve completion numbers for comparison.
 
 ### Style guide
 
@@ -81,7 +81,7 @@ Once you are ready to begin actually cleaning your data, there are several steps
 
 1. Use code
     - While you **can** clean data through a point and click method in a program like SPSS or Excel, cleaning data manually is typically not reproducible, leads to errors, and is time consuming. 
-    - My recommendation is to clean your data, no matter how small the task, with syntax. Don't do **any** transformations outside of code (even if you think it is something insignificant). Once you do, your chain of processing is lost and your process is no longer reproducible.
+    - My recommendation is to clean your data, no matter how small the task, with syntax. Don't do **any** transformations outside of code (even if you think it is something insignificant). Once you do, your [chain of processing](https://www.teaguehenry.com/strings-not-factors/2021/2/21/eight-principles-of-good-data-management) is lost and your process is no longer reproducible.
     - Syntax files allow you to have a record of every transformation you make from the raw data to your clean data. While writing syntax may seem time consuming up front, it helps you to be more thoughtful in your data cleaning process and it can save you an enormous amount of time in the future if you plan to clean data for the same form multiple times (in say a longitudinal study).
     - While I am personally an R user, choose any program that works for you, there are many options.
 2. Use comments

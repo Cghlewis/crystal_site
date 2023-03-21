@@ -30,6 +30,6 @@ categories:
   - rstats
 ---
 
-These are materials for a 5 minute lightning talk I gave to R-Ladies NYC. The topic was comparing 4 R packages that can be used to create codebooks for data documentation.
+These are materials for a 5 minute lightning talk I gave to R-Ladies NYC. The topic was comparing 4 R packages that can be used to create codebooks to document your data.
 
-*Note: One 2022-12-12 I made a small update to the slides. I discovered that the `codebookr::codebook()` function did not create 2 of the summary statistics I originally thought it did. So the slides now reflect this finding.
+*Note: On 2022-12-12 I made a small update to the slides. I discovered that the `codebookr::codebook()` function did not create 2 of the summary statistics I originally thought it did. So the slides now reflect this finding. 

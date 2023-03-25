@@ -1,8 +1,8 @@
 ---
 title: Essential Data Management Best Practices and Tools for NIH Compliance
 author: 
-date: "2023-093-2128T12:00:00"
-date_end: "2022-09-28T13:00:00"
+date: "2023-03-21T12:00:00"
+date_end: "2023-03-21T13:00:00"
 publishDate: "2023-02-24"
 time: false
 draft: false

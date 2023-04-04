@@ -20,13 +20,14 @@ Through various conversations over the last several months, a recurring question
 
 This prompted me to write this blog post series. There are currently no standards for what constitutes a clean dataset, but as we move more towards [openly sharing research study data](https://www.whitehouse.gov/ostp/news-updates/2022/08/25/ostp-issues-guidance-to-make-federally-funded-research-freely-available-without-delay/), it seems important that researchers, at least within fields, are cleaning data in a similar way for both consistency and usability. 
 
-In this post I hope to lay out some ideas for standardzing the data cleaning process for the purposes of **general data sharing**, specifically within the field of education research. I think it is important to differentiate between a dataset cleaned for general purposes and a dataset cleaned for a specific analysis. The former means that the dataset is still in its truest, raw form, but has been minimally altered to allow the data to be correctly interpreted. A dataset cleaned for general data sharing means that it includes the entire study sample (no one is removed), all missing data is still labelled as missing (no imputation is done), and no analysis-specific variables have been calculated. Any further cleaning is taken care of in another phase of cleaning during analyses. 
+In this post I hope to lay out some ideas for standardizing the data cleaning process for the purposes of **general data sharing**, specifically within the field of education research. I think it is important to differentiate between a dataset cleaned for general purposes and a dataset cleaned for a specific analysis. The former means that the dataset is still in its truest, raw form, but has been minimally altered to allow the data to be correctly interpreted. A dataset cleaned for general data sharing means that it includes the entire study sample (no one is removed), all missing data is still labelled as missing (no imputation is done), and no analysis-specific variables have been calculated. Any further cleaning is taken care of in another phase of cleaning during analyses. 
 
 So you can think of these as three unique data files: 
 
 1. True raw data
     - This is the untouched raw file that comes directly from your data collection source.
     - If your data is collected on paper, this is the data that has been entered into a machine-readable format.
+    - In education research this data is typically not shared outside of the research team as it usually contains identifiable information and often needs further wrangling to be decipherable by a end user.
 2. The general clean study data
     - This is the data we will be discussing in this post
 3. Your analytic data

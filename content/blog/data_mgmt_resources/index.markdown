@@ -11,7 +11,7 @@ categories:
 - resources
 tags:
 - data management
-- data cleaning
+- data cleaning 
 ---
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
@@ -359,7 +359,7 @@ Oftentimes people are interested in resources specific to developing good data c
    <td style="text-align:left;"> <a href="https://povertyaction.github.io/guides/cleaning/readme/">Cleaning Guide</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> J-Pal </td>
+   <td style="text-align:left;"> J-Pal* </td>
    <td style="text-align:left;"> <a href="https://www.povertyactionlab.org/resource/data-cleaning-and-management">Data cleaning and management</a> </td>
   </tr>
   <tr>

@@ -11,7 +11,7 @@ categories:
 - resources
 tags:
 - data management
-- data cleaning 
+- data cleaning
 ---
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
@@ -114,7 +114,7 @@ These are papers written about research data management practices and workflows.
   <tr>
    <td style="text-align:left;"> Borghi, J., Abrams, S., Lowenberg, D., Simms, S. &amp; Chodacki, J. </td>
    <td style="text-align:right;"> 2018 </td>
-   <td style="text-align:left;"> <a href="https://doi.org/10.3897/rio.4.e26439">Promoting Open Science Through Research Data Management</a> </td>
+   <td style="text-align:left;"> <a href="https://doi.org/10.3897/rio.4.e26439">Support Your Data: A Research Data Management Guide for Researchers</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Borycz, J. </td>

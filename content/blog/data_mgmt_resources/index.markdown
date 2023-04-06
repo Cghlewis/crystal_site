@@ -11,7 +11,7 @@ categories:
 - resources
 tags:
 - data management
-- data cleaning
+- data cleaning 
 ---
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
@@ -30,7 +30,7 @@ tags:
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2023/02/19* 
+*Resources were last updated on 2023/04/06* 
 
 ### Guides 
 
@@ -337,6 +337,10 @@ Oftentimes people are interested in resources specific to developing good data c
   <tr>
    <td style="text-align:left;"> Crystal Lewis* </td>
    <td style="text-align:left;"> <a href="https://cghlewis.github.io/mpsi-data-training/training_4.html">Data Cleaning Plan</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Dupriez, O., Sanchez Castro, M. &amp;  Revision, M. </td>
+   <td style="text-align:left;"> <a href="https://guide-for-data-archivists.readthedocs.io/en/latest/introduction.html">Guide for Data Archivists</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Ellis, S. &amp; Leek, J. </td>

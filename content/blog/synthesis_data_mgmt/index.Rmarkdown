@@ -35,13 +35,13 @@ Oscar Garcia Hinde provided another example of a dataset with multiple issues wi
 
 While standardization in some instances can be tricky (ex: multiple users creating data, software issues, ongoing data updates), there are some very simple measures that can be taken to ensure your data is more accessible including:
 1.	Consistent variable naming across files and time
-2.	Versioning of variable names
-a.	If a state test is now scored differently than previous years, it should be given a new variable name to reduce confusion
-3.	Standardization of data categories across files and time
-a.	If the IDEA category was a 2 digit numeric variable last year, it should not be a 4 letter character variable this year
-b.	If a date format is YYYY-MM-DD one year, keep it the same format across time
-4.	Standardization of data format across time
-a.	Same file format, headers, and number of columns (unless new data is collected) across time
+2.	Versioning of variable names 
+    - If a state test is now scored differently than previous years, it should be given a new variable name to reduce confusion
+3.	Standardization of data categories across files and time  
+    - If the IDEA category was a 2 digit numeric variable last year, it should not be a 4 letter character variable this year
+    - If a date format is YYYY-MM-DD one year, keep it the same format across time
+4.	Standardization of data format across time 
+    - Same file format, headers, and number of columns (unless new data is collected) across time 
 
 ### Interoperability
 

@@ -52,7 +52,7 @@ So knowing that the information is eventually parsed out anyway, my thoughts are
 
 My biggest concern with method #2 in an educational research study is movement. While method #2 might work great for a cross-sectional study with one time point, I begin to worry about using this method for a longitudinal study. I personally have been a part of studies where students move to other teachers within the study or teachers move to other schools within the study, and this makes the information in the participant identifier no longer accurate. There needs to be a way to track changes in a study, while keeping your primary identifiers constant throughout a study and method #1 makes the most sense to me in these scenarios.
 
-Here is an example where student `1207` switched to another study teacher in wave 2 of data collection, and this teacher also happens to be a "control" condition teacher, which is different compared to the wave 1 teacher. If method #2 was used to assign student ID, I'm not sure how we would account for these differences.
+Here is an example where student `1206` switched to another study teacher in wave 2 of data collection, and this teacher also happens to be a "control" condition teacher, which is different compared to the wave 1 teacher. If method #2 was used to assign student ID, I'm not sure how we would account for these differences.
 
 ![](img/changes.PNG)
 

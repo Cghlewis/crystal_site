@@ -1,7 +1,7 @@
 ---
 title: "Creating unique participant study identifiers"
 subtitle: 
-excerpt: "A review of varying ways to assign unique participant identifiers"
+excerpt: "A review of varying ways to assign unique participant identifiers in educational research studies"
 author: "Crystal Lewis"
 date: "2023-06-26"
 draft: false
@@ -44,13 +44,13 @@ In this second scenario, the information contained in a dataset is identical to 
 
 ![](img/schema2.PNG)
 
-From what I gathered from those who shared their methods with me, is that this method is particularly helpful to people who gather data from paper forms in the field. By adding a combination of information, it is easier to track the form. Ultimately though, what I felt I heard is that when it comes to merging and clustering, this ID was eventually parsed out into the individual units (teacher ID, school ID, student ID, etc.). There were mentions of using [regex](https://cran.r-project.org/web/packages/stringr/vignettes/regular-expressions.html) to do this. Oftentimes people even added underscores between pieces of information in the identifier variable to make the parsing process much easier to do.
+From what I gathered from those who shared their methods with me, is that this method is particularly helpful to people who gather data from paper forms in the field. By adding a combination of information, it is easier to track the form. Ultimately though, what I felt I heard is that when it comes to merging and clustering data, this ID was eventually parsed out into the individual units (teacher ID, school ID, student ID, etc.). There were mentions of using [regex](https://cran.r-project.org/web/packages/stringr/vignettes/regular-expressions.html) to do this. Oftentimes people even added underscores between pieces of information in the identifier variable to make the parsing process much easier to do.
 
 So knowing that the information is eventually parsed out anyway, my thoughts are that it might still be best to use method #1 and then add additional identifiers to forms to track information.
 
 ![](img/instrument.PNG)
 
-My biggest concern with method #2 is movement. While method #2 might work great for a cross-sectional study with one time point, I begin to worry about using this method for a longitudinal study.  I personally have been a part of studies where students move to other teachers within the study or teachers move to other schools within the study, and this makes the information in the participant identifier no longer accurate. There needs to be a way to track changes in a study, while keeping your primary identifiers constant throughout a study and method #1 makes the most sense to me in these scenarios.
+My biggest concern with method #2 in an educational research study is movement. While method #2 might work great for a cross-sectional study with one time point, I begin to worry about using this method for a longitudinal study. I personally have been a part of studies where students move to other teachers within the study or teachers move to other schools within the study, and this makes the information in the participant identifier no longer accurate. There needs to be a way to track changes in a study, while keeping your primary identifiers constant throughout a study and method #1 makes the most sense to me in these scenarios.
 
 Here is an example where student `1207` switched to another study teacher in wave 2 of data collection, and this teacher also happens to be a "control" condition teacher, which is different compared to the wave 1 teacher. If method #2 was used to assign student ID, I'm not sure how we would account for these differences.
 

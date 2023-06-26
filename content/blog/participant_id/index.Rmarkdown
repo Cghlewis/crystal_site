@@ -65,7 +65,7 @@ This method is identical to method #2, however within entities, IDs are reused. 
 
 Again, while I think this method may be fine for cross-sectional studies, I would be worried to use this method for longitudinal studies where information may change. It seems both safer, and less time consuming to build the information into separate variables.
 
-The additional concern I have with this method, is that *if* you do need to parse out information from the ID variable in this situation, you will end up with duplicate student identifiers, causing great confusion.
+The additional concern I have with this method, is that *if* you do need to parse out information from the ID variable in this situation, you will end up with duplicate student identifiers, causing great confusion. Therefore, it's probably best to always use unique identifiers within entities.
 
 ### Method 4: IDs made up of a combination of study information with time related information included
 
@@ -73,7 +73,7 @@ This last method is identical to method #2 but would also contain time related i
 
 ![](img/schema4.PNG)
 
-What I've heard from people is, similar to method #2, it can be helpful to keep track of data collection waves or session on forms in the field. While I absolutely get this, I think again, this problem can be remedied by adding data collection wave to the paper form and then entering it as a separate variable in your data (or attaching time to your variable names if merging in wide format).
+What I've heard from people is, similar to method #2, is that it can be helpful to keep track of data collection waves or session on forms in the field. While I absolutely get this, I think again, this problem can be remedied by adding data collection wave to the paper form and then entering it as a separate variable in your data (or attaching time to your variable names if merging in wide format).
 
 |Long format             |  Wide format |
 |:--------------------------:|:-----------:|

@@ -83,8 +83,8 @@ What I've heard from people is, similar to method #2, is that it can be helpful 
 
 The last thing that I didn't really discuss much is the consideration for participant privacy. When it comes down to it, I think there probably isn't much difference in terms of privacy across the four methods, as long identifiers are completely randomly assigned within entities (e.g., within students, within teachers) and not associated with identifying information.
 
-- Don't order by name alphabetically or by DOB ascending or descending before assigning identifiers
-- Don't include personal information such as initials in identifiers
+- For example, don't order by name alphabetically or by DOB ascending or descending before assigning identifiers
+- For example, don't include personal information such as initials in identifiers
 
 In the Twitter thread some people expressed concern about embedding other identifiers within a participant ID (e.g., including the school ID within a teacher ID). There were concerns this could make it easier to identify participants when there is a school with only one teacher for instance. This is possible and something to consider.
 

@@ -34,11 +34,9 @@ Even with this general schema assigned, I have learned that there are several di
 
 ### Method 1: Completely random IDs, unique within and across entities and independent of any information
 
-In this first scenario, the student identifier (`stu_id`) is simply randomly chosen from the stu_id range of 1200-1300. No other identifying information is included in that ID and the ID is not associated with any other information (e.g., name, teacher, grade level, age, cohort, treatment). The same scenario would happen for both teacher and school identifiers. Using this method, your student dataset might look something like this. Using this method you can merge student data across `stu_id` and you can also merge in information from either a teacher level or school level dataset using `tch_id` or `sch_id`. I can also cluster based on any of my identifier variables as needed.
+In this first scenario, the student identifier (`stu_id`) is simply randomly chosen from the stu_id range of 1200-1300. No other identifying information is included in that ID and the ID is not associated with any other information (e.g., name, teacher, grade level, age, cohort, treatment). The same scenario would happen for both teacher and school identifiers. Using this method, your student dataset might look something like this. Using this method you can merge student data across `stu_id` and you can also merge in information from either a teacher level or school level dataset using `tch_id` or `sch_id`. I can also cluster based on any of my identifier variables as needed. 
 
 ![](img/schema1.PNG)
-
-If someone switches to another study teacher at a another wave in the study, this information can be easily tracked.
 
 ### Method 2: IDs made up of a combination of study information
 

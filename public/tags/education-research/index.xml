@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>education research on Crystal Lewis</title>
+    <link>https://cghlewis.com/tags/education-research/</link>
+    <description>Recent content in education research on Crystal Lewis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 26 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/tags/education-research/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creating unique participant study identifiers</title>
+      <link>https://cghlewis.com/blog/participant_id/</link>
+      <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/participant_id/</guid>
+      <description>I recently had a discussion with a colleague about how they assign unique participant identifiers in their study. In that discussion, I described my opinion on how identifiers should be created, which happened to be very different from how this colleague was assigning identifiers. This discussion then prompted me to question my assumptions about how I manage data (which I appreciate)! :)
+For about two hours I scoured the internet for any advice, research, or opinions on how participant identifiers should be assigned.</description>
+    </item>
+    
+  </channel>
+</rss>

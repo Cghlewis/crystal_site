@@ -46,7 +46,7 @@
   <meta itemprop="name" content="Data cleaning for data sharing">
 <meta itemprop="description" content="Through various conversations over the last several months, a recurring question I keep hearing is, what makes a clean dataset? What steps do we expect someone to take before handing off a dataset that is considered &ldquo;clean&rdquo;? And I will tell you right now, there is no standard answer for this question. Even within fields, within projects, or within teams, you will get different answers depending on who you talk to, their role in the research cycle, and their past experiences and/or training with data."><meta itemprop="datePublished" content="2023-02-14T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-02-14T00:00:00+00:00" />
-<meta itemprop="wordCount" content="2537"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_01/featured.jpg">
+<meta itemprop="wordCount" content="2622"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_01/featured.jpg">
 <meta itemprop="keywords" content="data cleaning,rstats,data management,data sharing," />
   
   
@@ -118,13 +118,14 @@
         <p>Through various conversations over the last several months, a recurring question I keep hearing is, <strong>what makes a clean dataset?</strong> What steps do we expect someone to take before handing off a dataset that is considered &ldquo;clean&rdquo;? And I will tell you right now, there is no standard answer for this question. Even within fields, within projects, or within teams, you will get different answers depending on who you talk to, their role in the research cycle, and their past experiences and/or training with data.</p>
 <p>This prompted me to write this blog post series. There are currently no standards for what constitutes a clean dataset, but as we move more towards 
 <a href="https://www.whitehouse.gov/ostp/news-updates/2022/08/25/ostp-issues-guidance-to-make-federally-funded-research-freely-available-without-delay/" target="_blank" rel="noopener">openly sharing research study data</a>, it seems important that researchers, at least within fields, are cleaning data in a similar way for both consistency and usability.</p>
-<p>In this post I hope to lay out some ideas for standardzing the data cleaning process for the purposes of <strong>general data sharing</strong>, specifically within the field of education research. I think it is important to differentiate between a dataset cleaned for general purposes and a dataset cleaned for a specific analysis. The former means that the dataset is still in its truest, raw form, but has been minimally altered to allow the data to be correctly interpreted. A dataset cleaned for general data sharing means that it includes the entire study sample (no one is removed), all missing data is still labelled as missing (no imputation is done), and no analysis-specific variables have been calculated. Any further cleaning is taken care of in another phase of cleaning during analyses.</p>
+<p>In this post I hope to lay out some ideas for standardizing the data cleaning process for the purposes of <strong>general data sharing</strong>, specifically within the field of education research. I think it is important to differentiate between a dataset cleaned for general purposes and a dataset cleaned for a specific analysis. The former means that the dataset is still in its truest, raw form, but has been minimally altered to allow the data to be correctly interpreted. A dataset cleaned for general data sharing means that it includes the entire study sample (no one is removed), all missing data is still labelled as missing (no imputation is done), and no analysis-specific variables have been calculated. Any further cleaning is taken care of in another phase of cleaning during analyses.</p>
 <p>So you can think of these as three unique data files:</p>
 <ol>
 <li>True raw data
 <ul>
 <li>This is the untouched raw file that comes directly from your data collection source.</li>
 <li>If your data is collected on paper, this is the data that has been entered into a machine-readable format.</li>
+<li>In education research this data is typically not shared outside of the research team as it usually contains identifiable information and often needs further wrangling to be decipherable by a end user.</li>
 </ul>
 </li>
 <li>The general clean study data
@@ -401,7 +402,21 @@
 </li>
 </ol>
 <p><img src="img/restructure.PNG" alt=""></p>
-<p>The last step of your cleaning process will be to export your clean data. How you export your data and the file type you export to is up to the researcher. As I mentioned above, it can be helfpul to export to more than one file type (for example a .csv and a .sav file). You can even export the .csv using the text response values (ex: yes/no) while exporting the .sav using the numeric values (1/0) with embedded metadata. No matter how you export, it is crucial to always include documentation alongside your data to allow users to correctly interpret the information.</p>
+<p>The final step of your cleaning process will be to export or save your clean data. As I mentioned above, it can be helpful to export/save to more than one file type (for example a .csv and a .sav file). You can even export the .csv using the text response values (ex: yes/no) while exporting the .sav using the numeric values (1/0) with embedded metadata.</p>
+<p>Last, when you are ready to share your clean data, it is crucial to always include documentation alongside your data to allow users to correctly interpret the information. The bare minimum documentation to share should include:</p>
+<ol>
+<li>
+<a href="https://datamgmtinedresearch.com/document.html#research-protocol" target="_blank" rel="noopener">Project level documentation</a> (contextual information about why and how your data was collected)
+<ul>
+<li>If sharing data in a repository, including 
+<a href="https://datamgmtinedresearch.com/document.html#metadata" target="_blank" rel="noopener">project-level metadata</a> can also be very helpful for searchability</li>
+</ul>
+</li>
+<li>A 
+<a href="https://datamgmtinedresearch.com/document.html#data-dictionary" target="_blank" rel="noopener">data dictionary</a> that describes all relevant variable level information</li>
+<li>A 
+<a href="https://datamgmtinedresearch.com/document.html#readme" target="_blank" rel="noopener">readme</a> that quickly explains what all of your files are and how they are related</li>
+</ol>
 
 
 
@@ -465,7 +480,7 @@
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">12 minute read, 2537 words</dd>
+    <dd class="fw5 ml0">13 minute read, 2622 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -483,11 +498,11 @@
   <dl class="f6 lh-copy">
     <dt class="fw7">See Also:</dt>
     
+    <dd class="fw5 ml0"><a href="/blog/participant_id/">Creating unique participant study identifiers</a></dd>
+    
     <dd class="fw5 ml0"><a href="/blog/data_clean_03/">Cleaning sample data in standardized way</a></dd>
     
     <dd class="fw5 ml0"><a href="/blog/data_clean_02/">Creating a data cleaning workflow</a></dd>
-    
-    <dd class="fw5 ml0"><a href="/blog/dict_clean/">Four simple ways to integrate your data dictionary into your data cleaning process</a></dd>
     
   </dl>
 </details>

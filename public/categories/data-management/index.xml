@@ -6,7 +6,16 @@
     <description>Recent content in data management on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Sep 2022 12:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Mar 2023 12:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Essential Data Management Best Practices and Tools for NIH Compliance</title>
+      <link>https://cghlewis.com/talk/cos_nih/</link>
+      <pubDate>Tue, 21 Mar 2023 12:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/cos_nih/</guid>
+      <description>This webinar features a panel discussion on how research teams can implement best-practice data management, with particular emphasis on the NIH’s Data Management and Sharing Policy requirements.</description>
+    </item>
+    
     <item>
       <title>Ten Common Data Management Mistakes</title>
       <link>https://cghlewis.com/talk/sssp_ecf/</link>

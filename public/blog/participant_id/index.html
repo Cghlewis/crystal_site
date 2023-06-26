@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.101.0" />
+<title>Creating unique participant study identifiers | Crystal Lewis</title>
+
+
+<meta property="twitter:site" content="@cghlewis">
+<meta property="twitter:creator" content="@cghlewis">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="A review of varying ways to assign unique participant identifiers">
+
+
+<meta property="og:site_name" content="Crystal Lewis">
+<meta property="og:title" content="Creating unique participant study identifiers | Crystal Lewis">
+<meta property="og:description" content="A review of varying ways to assign unique participant identifiers" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://cghlewis.com/blog/participant_id/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://cghlewis.com/blog/participant_id/featured.PNG" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://cghlewis.com/blog/participant_id/featured.PNG" >
+    
+    
+  <meta itemprop="name" content="Creating unique participant study identifiers">
+<meta itemprop="description" content="I recently had a discussion with a colleague about how they assign unique participant identifiers in their study. In that discussion, I described my opinion on how identifiers should be created, which happened to be very different from how this colleague was assigning identifiers. This discussion then prompted me to question my assumptions about how I manage data (which I appreciate)! :)
+For about two hours I scoured the internet for any advice, research, or opinions on how participant identifiers should be assigned."><meta itemprop="datePublished" content="2023-06-26T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-06-26T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2135"><meta itemprop="image" content="https://cghlewis.com/blog/participant_id/featured.PNG">
+<meta itemprop="keywords" content="data management,education research," />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.36233a39979933db8877785b1879dd1ee29d2f4bf092a7566e716b04552caf2c.css" integrity="sha256-NiM6OZeZM9uId3hbGHndHuKdL0vwkqdWbnFrBFUsryw=" media="screen">
+  
+  
+  <script src="/panelset.min.dca42702d7daf6fd31dc352efd2bcf0e4ac8c05ccaa58d9293f6177462de5d5f.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.6003fae4f0a991c47f3ebffd1d7c0c5d116b39c00d67970ca34464bf62cd2e7a.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://cghlewis.com/" title="Home">
+      <img src="/img/flower2.png" class="dib db-l h2 w-auto" alt="Crystal Lewis">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/consulting/" title="Consulting Work">Consulting</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/projects/" title="Projects">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talk/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/contact/" title="Contact Form">Contact</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Creating unique participant study identifiers</h1>
+        
+        <p class="f6 measure lh-copy mv1">By Crystal Lewis in <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </p>
+        <p class="f7 db mv0 ttu">June 26, 2023</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        <p>I recently had a discussion with a colleague about how they assign unique participant identifiers in their study. In that discussion, I described my opinion on how identifiers should be created, which happened to be very different from how this colleague was assigning identifiers. This discussion then prompted me to question my assumptions about how I manage data (which I appreciate)! :)</p>
+<p>For about two hours I scoured the internet for any advice, research, or opinions on how participant identifiers <em>should</em> be assigned. For the most part I came up empty handed. The only helpful information I found were codebooks and user guides describing how other people were assigning participant identifiers (e.g., 
+<a href="https://nces.ed.gov/pubs2015/2015074.pdf" target="_blank" rel="noopener">ECLS-K:2011</a>), but no documents explaining why a specific schema was the most appropriate way to assign identifiers. So I decided to crowdsource information on Twitter. I am grateful for everyone who shared their methods for assigning identifiers. While the responses did not necessarily give me a definitive answer to how we should assign participant identifiers, it did give me insight into people&rsquo;s rationales and it allowed me to better articulate my opinion. For the last several months I have been writing about both 
+<a href="https://datamgmtinedresearch.com/track.html#ids" target="_blank" rel="noopener">how to assign unique study identifiers</a>, as well as 
+<a href="https://datamgmtinedresearch.com/collect.html#identifiers" target="_blank" rel="noopener">why they are necessary</a>, and it is important to me to share good information.</p>
+
+
+
+
+<h2 id="what-are-unique-participant-identifiers">What are unique participant identifiers
+  <a href="#what-are-unique-participant-identifiers"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Before diving in to how to assign identifiers, I very quickly want to review what I mean by identifiers and why they are important. Participant unique identifiers are numeric or alphanumeric values and typically range from 2-10 digits. Using these identifiers, and removing all personally identifying information from a study dataset (e.g., name), is an important part of ensuring the protection of the privacy of human participants. These identifiers also allow you to link data, either across time or across forms (e.g., think of merging wave 1 of a student survey with wave 2). The reason these identifiers are so great for linking data is because they do NOT change. They stay constant for a participant for the entire study. Even if a participant starts off in cohort 1 and is then re-recruited back again in cohort 3, the participant ID should stay the same. This allows you to always know who that participant is, and it provides the added benefit of helping to measure dosage.</p>
+<p>These identifiers are assigned in the beginning of your study, during recruitment, and kept in a secure storage location along with participant identifying information. This 
+<a href="https://datamgmtinedresearch.com/track.html" target="_blank" rel="noopener">roster of participants</a> is your only linking key between a participant&rsquo;s true identity and their study identifier.</p>
+
+
+
+
+<h2 id="the-various-ways-that-people-assign-unique-identifiers">The various ways that people assign unique identifiers
+  <a href="#the-various-ways-that-people-assign-unique-identifiers"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>Imagine this scenario. You have a research study where you collect data from students and teachers. For this study you have developed this general schema for the ranges of your study IDs.</p>
+<p><img src="img/schema.PNG" alt=""></p>
+<p>Even with this general schema assigned, I have learned that there are several different ways that people build a unique participant identifiers. I am going to share 4 ways that I have learned that people build IDs and I will talk about what I see as the benefits and limitations of each.</p>
+
+
+
+
+<h3 id="method-1-completely-random-ids-unique-within-and-across-entities-and-independent-of-any-information">Method 1: Completely random IDs, unique within and across entities and independent of any information
+  <a href="#method-1-completely-random-ids-unique-within-and-across-entities-and-independent-of-any-information"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>In this first scenario, the student identifier (<code>stu_id</code>) is simply randomly chosen from the stu_id range of 1200-1300. No other identifying information is included in that ID and the ID is not associated with any other information (e.g., name, teacher, grade level, age, cohort, treatment). The same scenario would happen for both teacher and school identifiers. Using this method, your student dataset might look something like this. Using this method you can merge student data across <code>stu_id</code> and you can also merge in information from either a teacher level or school level dataset using <code>tch_id</code> or <code>sch_id</code>. I can also cluster based on any of my identifier variables as needed.</p>
+<p><img src="img/schema1.PNG" alt=""></p>
+<p>If someone switches to another study teacher at a another wave in the study, this information can be easily tracked.</p>
+
+
+
+
+<h3 id="method-2-ids-made-up-of-a-combination-of-study-information">Method 2: IDs made up of a combination of study information
+  <a href="#method-2-ids-made-up-of-a-combination-of-study-information"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>In this second scenario, the information contained in a dataset is identical to the information above. However, the identifier variables now contain other information embedded in the identifier variable, rather than separated out. So an example would be to create a <code>stu_id</code> variable that consists of project+cohort+school+teacher+student. In the data it would look something like this.</p>
+<p><img src="img/schema2.PNG" alt=""></p>
+<p>From what I gathered from those who shared their methods with me, is that this method is particularly helpful to people who gather data from paper forms in the field. By adding a combination of information, it is easier to track the form. Ultimately though, what I felt I heard is that when it comes to merging and clustering, this ID was eventually parsed out into the individual units (teacher ID, school ID, student ID, etc.). There were mentions of using 
+<a href="https://cran.r-project.org/web/packages/stringr/vignettes/regular-expressions.html" target="_blank" rel="noopener">regex</a> to do this. Oftentimes people even added underscores between pieces of information in the identifier variable to make the parsing process much easier to do.</p>
+<p>So knowing that the information is eventually parsed out anyway, my thoughts are that it might still be best to use method #1 and then add additional identifiers to forms to track information.</p>
+<p><img src="img/instrument.PNG" alt=""></p>
+<p>My biggest concern with method #2 is movement. While method #2 might work great for a cross-sectional study with one time point, I begin to worry about using this method for a longitudinal study.  I personally have been a part of studies where students move to other teachers within the study or teachers move to other schools within the study, and this makes the information in the participant identifier no longer accurate. There needs to be a way to track changes in a study, while keeping your primary identifiers constant throughout a study and method #1 makes the most sense to me in these scenarios.</p>
+<p>Here is an example where student <code>1207</code> switched to another study teacher in wave 2 of data collection, and this teacher also happens to be a &ldquo;control&rdquo; condition teacher, which is different compared to the wave 1 teacher. If method #2 was used to assign student ID, I&rsquo;m not sure how we would account for these differences.</p>
+<p><img src="img/changes.PNG" alt=""></p>
+
+
+
+
+<h3 id="method-3-ids-made-up-of-a-combination-of-study-information-but-identifiers-are-reused-within-entities">Method 3: IDs made up of a combination of study information but identifiers are reused within entities
+  <a href="#method-3-ids-made-up-of-a-combination-of-study-information-but-identifiers-are-reused-within-entities"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>This method is identical to method #2, however within entities, IDs are reused. So this might mean that student IDs are only unique within teachers or schools, and then they are reused. Below is an example where you can see that the student ID portion of the participant ID is reused across teachers.</p>
+<p><img src="img/schema3.PNG" alt=""></p>
+<p>Again, while I think this method may be fine for cross-sectional studies, I would be worried to use this method for longitudinal studies where information may change. It seems both safer, and less time consuming to build the information into separate variables.</p>
+<p>The additional concern I have with this method, is that <em>if</em> you do need to parse out information from the ID variable in this situation, you will end up with duplicate student identifiers, causing great confusion.</p>
+
+
+
+
+<h3 id="method-4-ids-made-up-of-a-combination-of-study-information-with-time-related-information-included">Method 4: IDs made up of a combination of study information with time related information included
+  <a href="#method-4-ids-made-up-of-a-combination-of-study-information-with-time-related-information-included"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>This last method is identical to method #2 but would also contain time related information as well (e.g., wave, session, year). This one might be the most problematic to me because this method guarantees that participant identifiers do not stay constant (they will change each wave). This makes it not only difficult to track participants, but also difficult to merge data across time. With this method you would most certainly need to parse out pieces of your variable in order to merge data.</p>
+<p><img src="img/schema4.PNG" alt=""></p>
+<p>What I&rsquo;ve heard from people is, similar to method #2, it can be helpful to keep track of data collection waves or session on forms in the field. While I absolutely get this, I think again, this problem can be remedied by adding data collection wave to the paper form and then entering it as a separate variable in your data (or attaching time to your variable names if merging in wide format).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Long format</th>
+<th style="text-align:center">Wide format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="img/long.PNG" alt=""></td>
+<td style="text-align:center"><img src="img/wide.PNG" alt=""></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h2 id="conclusion">Conclusion
+  <a href="#conclusion"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>The last thing that I didn&rsquo;t really discuss much is the consideration for participant privacy. When it comes down to it, I think there probably isn&rsquo;t much difference in terms of privacy across the four methods, as long identifiers are completely randomly assigned within entities (e.g., within students, within teachers) and not associated with identifying information.</p>
+<ul>
+<li>Don&rsquo;t order by name alphabetically or by DOB ascending or descending before assigning identifiers</li>
+<li>Don&rsquo;t include personal information such as initials in identifiers</li>
+</ul>
+<p>In the Twitter thread some people expressed concern about embedding other identifiers within a participant ID (e.g., including the school ID within a teacher ID). There were concerns this could make it easier to identify participants when there is a school with only one teacher for instance. This is possible and something to consider.</p>
+<p>However, I am not sure that this concern is much different from people who use method #1 because often within datasets we include other relevant IDs (e.g. teacher and school ID within a student dataset, or a school ID for a teacher dataset). So this information will be available in either method. The only benefit to method #1 is that you could easily choose to remove those other identifiers if you wanted to (although they are often relevant for clustering or linking information).</p>
+
+
+
+
+<h3 id="which-method-is-best">Which method is best?
+  <a href="#which-method-is-best"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>I am definitely not here to say that there is one correct way to assign identifiers. Especially across disciplines, there is a ton of variation in how identifiers are assigned and I understand the necessity of that. The way we collect and use information across disciplines is not necessarily the same.</p>
+<p>But I will say after reviewing all of the information above, method #1 definitely still makes the most sense to me for the field of education research. In this field I believe it provides the following benefits over the other methods:</p>
+<ol>
+<li>Removes the need to parse information at a later point. Each piece of information is stored uniquely within your dataset. This way you can easily link, cluster by, or even remove an individual piece of information easily at any time.</li>
+<li>Keeps your identifiers constant. As mentioned above, if your study is longitudinal, it is very possible that information changes for participants. Associated schools, teachers, treatment, cohorts, and more can change throughout the study and you don&rsquo;t want to keep changing your participant ID every time this information changes. This makes it extremely difficult to both link data and track participants over time.</li>
+<li>It can potentially keep your data more secure. As mentioned above, all 4 methods are fairly similar in terms of security but at least method #1 gives you the option to remove grouping identifiers if necessary.</li>
+<li>Concerns about keeping track of forms in the field can be easily remedied for method #1</li>
+<li>Last, this wasn&rsquo;t mentioned, but it may be a concern to people: Merging using multiple fields. Say your study is designed to recruit students in both math and reading classes and you expect students to appear in your data more than once (once with a reading teacher and once with a math teacher), that&rsquo;s okay. You don&rsquo;t need to have that information combined. You can still keep that information separate in a dataset and combine as needed. In most software you can concatenate variables as needed OR you can merge on multiple variables (so if you need to merge wave 1 data with wave 2 data, you can merge using both the student ID and the teacher ID). Below is an example of of how you might do this in R.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>svy_wave1 <span style="color:#000;font-weight:bold">%&gt;%</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">left_join</span>(svy_wave2, by <span style="color:#000;font-weight:bold">=</span> <span style="color:#900;font-weight:bold">c</span>(<span style="color:#d14">&#34;stu_id&#34;</span>, <span style="color:#d14">&#34;tch_id&#34;</span>))
+</span></span></code></pre></div><p>Last, there were a few things that I felt we did all come to consensus on!</p>
+<ol>
+<li>Identifiers should be stored as character variables. Even if an ID variable is all numbers, it should be stored as character type. This helps prevent people from inappropriately working with ID variables (i.e., taking a mean of an ID variable).</li>
+<li>It is important to keep identifiers distinct across entities. Use different ranges for students, teachers, and schools to reduce confusion on who a data point belongs to.</li>
+<li>If you are running multiple projects at once, especially using the same forms, find a way to denote differences across projects. That could be assigning a project ID that is added as a variable or embedded in participant IDs. Or you can choose ID ranges that are different across projects (e.g., Project A stu_id is 1000-2000, Project B stu_id is 5000-6000).</li>
+</ol>
+<p>Thank you for reading! I am always open to feedback, arguing for or against any method, so please share your thoughts with me any time!</p>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">June 26, 2023</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">11 minute read, 2135 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/categories/tutorials">tutorials</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://cghlewis.com/tags/data-management">data management</a>  <a href="https://cghlewis.com/tags/education-research">education research</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_clean_03/">Cleaning sample data in standardized way</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_clean_02/">Creating a data cleaning workflow</a></dd>
+    
+    <dd class="fw5 ml0"><a href="/blog/data_clean_01/">Data cleaning for data sharing</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://cghlewis.com/blog/data_clean_03/">Cleaning sample data in standardized way &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="Cghlewis/crystal_site"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2023 Crystal Lewis
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/Cghlewis" title="github" target="_blank" rel="me noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/Cghlewis" title="twitter" target="_blank" rel="me noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.linkedin.com/in/crystal-lewis-922b4193/" title="linkedin-in" target="_blank" rel="me noopener">
+      <i class="fab fa-linkedin-in fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://fosstodon.org/@cghlewis" title="mastodon" target="_blank" rel="me noopener">
+      <i class="fab fa-mastodon fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

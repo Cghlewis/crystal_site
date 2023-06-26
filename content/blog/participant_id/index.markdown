@@ -76,7 +76,7 @@ What I've heard from people is, similar to method #2, is that it can be helpful 
 
 |    Long format    |    Wide format    |
 |:-----------------:|:-----------------:|
-| ![](img/long.PNG) | ![](img/wide.PNG) |
+| ![](img/long2.PNG) | ![](img/wide2.PNG) |
 
 ## Conclusion
 

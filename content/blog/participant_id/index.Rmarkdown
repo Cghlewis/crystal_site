@@ -14,19 +14,19 @@ tags:
 - education research 
 ---
 
-I recently had a discussion with a colleague about assigning unique participant identifiers in their study. In that discussion I learned that my opinion on how identifiers should be created happened to be very different from how this colleague was assigning identifiers. This discussion then prompted me to question my assumptions about how I manage data (which I appreciate)! :)  
+I recently had a discussion with a colleague about assigning unique participant identifiers in their study. In that discussion I learned that my opinion on how identifiers should be created happened to be very different from how this colleague was assigning identifiers. This discussion then prompted me to question my assumptions about how I manage data (which I appreciate)! :)
 
 For about two hours after this discussion I scoured the internet for any advice, research, or opinions on how participant identifiers *should* be assigned. For the most part I came up empty handed. The only helpful information I found were codebooks and user guides describing how other people were assigning participant identifiers (e.g., [ECLS-K:2011](https://nces.ed.gov/pubs2015/2015074.pdf)), but no documents explaining why a specific schema was the most appropriate way to assign identifiers. So I decided to crowdsource information on Twitter. I am grateful for everyone who shared their methods for assigning identifiers. While the responses did not necessarily give me a definitive answer to how we should assign participant identifiers, it did give me insight into people's rationales and it allowed me to better articulate my opinion. For the last several months I have been writing about both [how to assign unique study identifiers](https://datamgmtinedresearch.com/track.html#ids), as well as [why they are necessary](https://datamgmtinedresearch.com/collect.html#identifiers), and it is important to me to share good information.
 
 ## What are unique participant identifiers
 
-Before diving in to how to assign identifiers, I very quickly want to review what I mean by identifiers and why they are important. Participant unique identifiers are numeric or alphanumeric values and typically range from 2-10 digits. Using these identifiers, and removing all personally identifying information from a study dataset (e.g., name), is an important part of protecting the privacy of human participants. These identifiers also allow you to link data, either across time or across forms (e.g., think of merging wave 1 of a student survey with wave 2). The reason these identifiers are so great for linking data is because they do NOT change. They stay constant for a participant for the entire study. Even if a participant starts off in cohort 1 and is then re-recruited back again in cohort 3, the participant ID should stay the same. This allows you to always know who that participant is, and it provides the added benefit of helping to measure dosage. 
+Before diving in to how to assign identifiers, I very quickly want to review what I mean by identifiers and why they are important. Participant unique identifiers are numeric or alphanumeric values and typically range from 2-10 digits. Using these identifiers, and removing all personally identifying information from a study dataset (e.g., name), is an important part of protecting the privacy of human participants. These identifiers also allow you to link data, either across time or across forms (e.g., think of merging wave 1 of a student survey with wave 2). The reason these identifiers are so great for linking data is because they do NOT change. They stay constant for a participant for the entire study. Even if a participant starts off in cohort 1 and is then re-recruited back again in cohort 3, the participant ID should stay the same. This allows you to always know who that participant is, and it provides the added benefit of helping to measure dosage.
 
-These identifiers are assigned in the beginning of your study, during recruitment, and kept in a secure storage location along with participant identifying information. This [roster of participants](https://datamgmtinedresearch.com/track.html) is your only linking key between a participant's true identity and their study identifier. 
+These identifiers are assigned in the beginning of your study, during recruitment, and kept in a secure storage location along with participant identifying information. This [roster of participants](https://datamgmtinedresearch.com/track.html) is your only linking key between a participant's true identity and their study identifier.
 
-## The various ways that people assign unique identifiers 
+## The various ways that people assign unique identifiers
 
-Imagine this scenario. You have a research study where you collect data from students and teachers. For this study you have developed this general schema for the ranges of your study IDs. 
+Imagine this scenario. You have a research study where you collect data from students and teachers. For this study you have developed this general schema for the ranges of your study IDs.
 
 ![](img/schema.PNG)
 
@@ -34,7 +34,7 @@ Even with this general schema assigned, I have learned that there are several di
 
 ### Method 1: Completely random IDs, unique within and across entities and independent of any information
 
-In this first scenario, the student identifier (`stu_id`) is simply randomly chosen from the stu_id range of 1200-1300. No other identifying information is included in that ID and the ID is not associated with any other information (e.g., name, teacher, grade level, age, cohort, treatment). The same scenario would happen for both teacher and school identifiers. Using this method, your student dataset might look something like this. Using this method you can merge student data across `stu_id` and you can also merge in information from either a teacher level or school level dataset using `tch_id` or `sch_id`. You can also cluster based on any of my identifier variables as needed. 
+In this first scenario, the student identifier (`stu_id`) is simply randomly chosen from the stu_id range of 1200-1300. No other identifying information is included in that ID and the ID is not associated with any other information (e.g., name, teacher, grade level, age, cohort, treatment). The same scenario would happen for both teacher and school identifiers. Using this method, your student dataset might look something like this. Using this method you can merge student data across `stu_id` and you can also merge in information from either a teacher level or school level dataset using `tch_id` or `sch_id`. You can also cluster based on any of your identifier variables as needed.
 
 ![](img/schema1.PNG)
 
@@ -56,7 +56,6 @@ Here is an example where student `1206` switched to another study teacher in wav
 
 ![](img/changes.PNG)
 
-
 ### Method 3: IDs made up of a combination of study information but identifiers are reused within entities
 
 This method is identical to method #2, however within entities, IDs are reused. So this might mean that student IDs are only unique within teachers or schools, and then they are reused. Below is an example where you can see that the student ID portion of the participant ID is reused across teachers.
@@ -75,16 +74,16 @@ This last method is identical to method #2 but would also contain time related i
 
 What I've heard from people is, similar to method #2, is that it can be helpful to keep track of data collection waves or session on forms in the field. While I absolutely get this, I think again, this problem can be remedied by adding data collection wave to the paper form and then entering it as a separate variable in your data (or attaching time to your variable names if merging in wide format).
 
-|Long format             |  Wide format |
-|:--------------------------:|:-----------:|
-|![](img/long.PNG )| ![](img/wide.PNG)|
+|    Long format    |    Wide format    |
+|:-----------------:|:-----------------:|
+| ![](img/long.PNG) | ![](img/wide.PNG) |
 
 ## Conclusion
 
 The last thing that I didn't really discuss much is the consideration for participant privacy. When it comes down to it, I think there probably isn't much difference in terms of privacy across the four methods, as long identifiers are completely randomly assigned within entities (e.g., within students, within teachers) and not associated with identifying information.
 
-- For example, don't order by name alphabetically or by DOB ascending or descending before assigning identifiers
-- For example, don't include personal information such as initials in identifiers
+-   For example, don't order by name alphabetically or by DOB ascending or descending before assigning identifiers
+-   For example, don't include personal information such as initials in identifiers
 
 In the Twitter thread some people expressed concern about embedding other identifiers within a participant ID (e.g., including the school ID within a teacher ID). There were concerns this could make it easier to identify participants when there is a school with only one teacher for instance. This is possible and something to consider.
 
@@ -92,15 +91,15 @@ However, I am not sure that this concern is much different from people who use m
 
 ### Which method is best?
 
-I am definitely not here to say that there is one correct way to assign identifiers. Especially across disciplines, there is a ton of variation in how identifiers are assigned and I understand the necessity of that. The way we collect and use information across disciplines is not necessarily the same. 
+I am definitely not here to say that there is one correct way to assign identifiers. Especially across disciplines, there is a ton of variation in how identifiers are assigned and I understand the necessity of that. The way we collect and use information across disciplines is not necessarily the same.
 
 But I will say after reviewing all of the information above, method #1 definitely still makes the most sense to me for the field of education research. In this field I believe it provides the following benefits over the other methods:
 
-1. Removes the need to parse information at a later point. Each piece of information is stored uniquely within your dataset. This way you can easily link, cluster by, or even remove an individual piece of information easily at any time.
-2. Keeps your identifiers constant. As mentioned above, if your study is longitudinal, it is very possible that information changes for participants. Associated schools, teachers, treatment, cohorts, and more can change throughout the study and you don't want to keep changing your participant ID every time this information changes. This makes it extremely difficult to both link data and track participants over time.
-3. It can potentially keep your data more secure. As mentioned above, all 4 methods are fairly similar in terms of security but at least method #1 gives you the option to remove grouping identifiers if necessary.
-4. Concerns about keeping track of forms in the field can be easily remedied for method #1 
-5. Last, this wasn't mentioned, but it may be a concern to people: Merging using multiple fields. Say your study is designed to recruit students in both math and reading classes and you expect students to appear in your data more than once (once with a reading teacher and once with a math teacher), that's okay. You don't need to have that information combined. You can still keep that information separate in a dataset and combine as needed. In most software you can concatenate variables as needed OR you can merge on multiple variables (so if you need to merge wave 1 data with wave 2 data, you can merge using both the student ID and the teacher ID). Below is an example of of how you might do this in R.
+1.  Removes the need to parse information at a later point. Each piece of information is stored uniquely within your dataset. This way you can easily link, cluster by, or even remove an individual piece of information easily at any time.
+2.  Keeps your identifiers constant. As mentioned above, if your study is longitudinal, it is very possible that information changes for participants. Associated schools, teachers, treatment, cohorts, and more can change throughout the study and you don't want to keep changing your participant ID every time this information changes. This makes it extremely difficult to both link data and track participants over time.
+3.  It can potentially keep your data more secure. As mentioned above, all 4 methods are fairly similar in terms of security but at least method #1 gives you the option to remove grouping identifiers if necessary.
+4.  Concerns about keeping track of forms in the field can be easily remedied for method #1
+5.  Last, this wasn't mentioned, but it may be a concern to people: Merging using multiple fields. Say your study is designed to recruit students in both math and reading classes and you expect students to appear in your data more than once (once with a reading teacher and once with a math teacher), that's okay. You don't need to have that information combined. You can still keep that information separate in a dataset and combine as needed. In most software you can concatenate variables as needed OR you can merge on multiple variables (so if you need to merge wave 1 data with wave 2 data, you can merge using both the student ID and the teacher ID). Below is an example of of how you might do this in R.
 
 ```{r eval= FALSE}
 
@@ -111,11 +110,8 @@ svy_wave1 %>%
 
 Last, there were a few things that I felt we did all come to consensus on!
 
-1. Identifiers should be stored as character variables. Even if an ID variable is all numbers, it should be stored as character type. This helps prevent people from inappropriately working with ID variables (i.e., taking a mean of an ID variable). 
-2. It is important to keep identifiers distinct across entities. Use different ranges for students, teachers, and schools to reduce confusion on who a data point belongs to.
-3. If you are running multiple projects at once, especially using the same forms, find a way to denote differences across projects. That could be assigning a project ID that is added as a variable or embedded in participant IDs. Or you can choose ID ranges that are different across projects (e.g., Project A stu_id is 1000-2000, Project B stu_id is 5000-6000).
+1.  Identifiers should be stored as character variables. Even if an ID variable is all numbers, it should be stored as character type. This helps prevent people from inappropriately working with ID variables (i.e., taking a mean of an ID variable).
+2.  It is important to keep identifiers distinct across entities. Use different ranges for students, teachers, and schools to reduce confusion on who a data point belongs to.
+3.  If you are running multiple projects at once, especially using the same forms, find a way to denote differences across projects. That could be assigning a project ID that is added as a variable or embedded in participant IDs. Or you can choose ID ranges that are different across projects (e.g., Project A stu_id is 1000-2000, Project B stu_id is 5000-6000).
 
 Thank you for reading! I am always open to feedback, arguing for or against any method, so please share your thoughts with me any time!
-
-
-

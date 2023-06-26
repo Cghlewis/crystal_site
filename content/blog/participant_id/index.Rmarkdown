@@ -38,8 +38,6 @@ In this first scenario, the student identifier (`stu_id`) is simply randomly cho
 
 ![](img/schema1.PNG)
 
-If someone switches to another study teacher at a another wave in the study, this information can be easily tracked.
-
 ### Method 2: IDs made up of a combination of study information
 
 In this second scenario, the information contained in a dataset is identical to the information above. However, the identifier variables now contain other information embedded in the identifier variable, rather than separated out. So an example would be to create a `stu_id` variable that consists of project+cohort+school+teacher+student. In the data it would look something like this.

@@ -24,7 +24,7 @@ Before diving in to how to assign identifiers, I very quickly want to review wha
 
 These identifiers are assigned in the beginning of your study, during recruitment, and kept in a secure storage location along with participant identifying information. This [roster of participants](https://datamgmtinedresearch.com/track.html) is your only linking key between a participant's true identity and their study identifier. 
 
-## The various ways that people assign unique identifiers
+## The various ways that people assign unique identifiers 
 
 Imagine this scenario. You have a research study where you collect data from students and teachers. For this study you have developed this general schema for the ranges of your study IDs. 
 

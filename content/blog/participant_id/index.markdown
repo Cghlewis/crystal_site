@@ -80,7 +80,7 @@ What I've heard from people is, similar to method #2, is that it can be helpful 
 
 ## Conclusion
 
-The last thing that I didn't really discuss much is the consideration for participant privacy. When it comes down to it, I think there probably isn't much difference in terms of privacy across the four methods, as long identifiers are completely randomly assigned within entities (e.g., within students, within teachers) and not associated with identifying information.
+The last thing that I didn't really discuss much is the consideration for participant privacy. When it comes down to it, I think there probably isn't much difference in terms of privacy across the four methods, as long as identifiers are completely randomly assigned within entities (e.g., within students, within teachers) and not associated with identifying information.
 
 -   For example, don't order by name alphabetically or by DOB ascending or descending before assigning identifiers
 -   For example, don't include personal information such as initials in identifiers

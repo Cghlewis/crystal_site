@@ -14,7 +14,7 @@ tags:
 - education research 
 ---
 
-I recently had a discussion with a colleague about assigning unique participant identifiers in their study. In that discussion I learned that my opinion on how identifiers should be created happened to be very different from how this colleague was assigning identifiers. This discussion then prompted me to question my assumptions about how I manage data (which I appreciate)! :)
+I recently had a discussion with a colleague about assigning unique participant identifiers in their study. In that discussion I learned that my opinion on how researchers should assign identifiers happened to be very different from how this colleague was assigning identifiers. This discussion then prompted me to question my assumptions about how I manage data (which I appreciate)! :)
 
 For about two hours after this discussion I scoured the internet for any advice, research, or opinions on how participant identifiers *should* be assigned. For the most part I came up empty handed. The only helpful information I found were codebooks and user guides describing how other people were assigning participant identifiers (e.g., [ECLS-K:2011](https://nces.ed.gov/pubs2015/2015074.pdf)), but no documents explaining why a specific schema was the most appropriate way to assign identifiers. So I decided to crowdsource information on [Twitter](https://twitter.com/Cghlewis/status/1673023024017072128). I am grateful for everyone who shared their methods for assigning identifiers. While the responses did not necessarily give me a definitive answer to how we should assign participant identifiers, it did give me insight into people's rationales and it allowed me to better articulate my opinion. For the last several months I have been writing about both [how to assign unique study identifiers](https://datamgmtinedresearch.com/track.html#ids), as well as [why they are necessary](https://datamgmtinedresearch.com/collect.html#identifiers), and it is important to me to share good information.
 
@@ -24,13 +24,13 @@ Before diving in to how to assign identifiers, I very quickly want to review wha
 
 These identifiers are assigned in the beginning of your study, during recruitment, and kept in a secure storage location along with participant identifying information. This [roster of participants](https://datamgmtinedresearch.com/track.html) is your only linking key between a participant's true identity and their study identifier.
 
-## The various ways that people assign unique identifiers
+## The various ways that researchers assign unique identifiers
 
 Imagine this scenario. You have a research study where you collect data from students and teachers. For this study you have developed this general schema for the ranges of your study IDs.
 
 ![](img/schema.PNG)
 
-Even with this general schema assigned, I have learned that there are several different ways that people build a unique participant identifiers. I am going to share 4 ways that I have learned that people build IDs and I will talk about what I see as the benefits and limitations of each.
+Even with this general schema assigned, I have learned that there are several different ways that people build unique participant identifiers. I am going to share 4 ways that I have learned that people build IDs and I will talk about what I see as the benefits and limitations of each.
 
 ### Method 1: Completely random IDs, unique within and across entities and independent of any information
 

@@ -24,12 +24,12 @@ In fields such as education research, it becomes more common for other team memb
 
 **Data management takes expertise.**
 
-In a [2019 blog post](https://openworking.wordpress.com/2019/02/19/take-research-data-management-seriously-and-organize-discipline-specific-support/) on finding data management support, Professor Bas Teusink was quoted as saying
+In a [2019 blog post](https://openworking.wordpress.com/2019/02/19/take-research-data-management-seriously-and-organize-discipline-specific-support/) on finding research data management (RDM) support, Professor Bas Teusink was quoted as saying
 > As a Principal Investigator, I have no idea how to instruct my students in RDM. I’m not an expert. So I needed support. I needed somebody who actually has the time to look up what tools are available and who can translate general policies and general infrastructure into daily practical solutions that fit our local needs. There’s a huge gap between policy and implementation for people doing the daily work. We need discipline-specific support and we need hands-on help.
 
 **Data management takes time.**
 
-It is common to find that when working on an analysis, data wrangling typically takes at least [half of the project's time](https://know.anaconda.com/rs/387-XNW-688/images/Anaconda-SODS-Report-2020-Final.pdf).
+It is common to find that when working on an analysis, data wrangling takes at least [half of the project's time](https://know.anaconda.com/rs/387-XNW-688/images/Anaconda-SODS-Report-2020-Final.pdf).
 
 Not only does data wrangling take time, but so do all the activities surrounding collecting, documenting, and sharing that data.
 
@@ -37,13 +37,13 @@ Not only does data wrangling take time, but so do all the activities surrounding
 
 In [Season 4 Episode 7](https://www.buzzsprout.com/639103/11552832-s4e07-the-quanti-house-of-horror) of the Quantitude podcast, the hosts bring up a common theme around data management, and that is that people don't like managing data. 
 
-In talking about teaching data management, the hosts say
+In talking about perceptions around teaching data management, the hosts say
 > And a lot of people look down on that. Well, that's just a mechanical kind of thing.
 
-Data management is often considered monotonous and boring. Data managers are often diamonds in the rough because they actually *enjoy* data management. They enjoy organizing and describing data and find joy in producing excellent data products.
+Data management is often considered monotonous and boring; a task many people dread doing. Yet, data managers are often diamonds in the rough because they actually *enjoy* data management. They enjoy organizing and describing data and take pride in producing excellent data products.
 
 
-### What is a data manager
+### What is a data manager?
 
 A data manager is someone responsible for overseeing the integrity and security of data throughout the life cycle of a research project. While the roles may vary, the term data manager can be somewhat synonymous with many other terms.
 
@@ -62,7 +62,7 @@ While you can often find very helpful research data management services through 
 Common tasks often associated with a data manager role include:
 
 - Writing or contributing to data management and sharing plans
-- Creating project level documentation (e.g., data dictionaries, protocols)
+- Creating project and dataset level documentation (e.g., data dictionaries, protocols)
 - Building data collection and tracking tools
 - Creating reproducible data cleaning and validation pipelines
   - Note: Here, the goal of a data manager isn't necessarily to create datasets for specific analyses, but rather to create [datasets for general data sharing/archival purposes](https://cghlewis.com/blog/data_clean_01/)

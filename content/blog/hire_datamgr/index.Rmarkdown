@@ -121,7 +121,7 @@ A second consideration is what do data managers need from us? While data manager
 - Offer ongoing training
   - Data management requirements are constantly evolving. Providing resources for data managers to stay up to date on both changes in technology as well as updates to funder requirements is absolutely necessary for a data manager to be effective.
 - Integrate them into the decision-making team
-  - **Data managers cannot be effective if data-related decisions are made without them in the room**. Giving data managers a voice at the highest level in the organization and allowing them to provide feedback on plans helps to reduce data curation debt.
+  - Data managers cannot be effective if data-related decisions are made without them in the room. Giving data managers a voice at the highest level in the organization and allowing them to provide feedback on plans helps to reduce data curation debt.
 - Encourage the formation of support groups as part of their paid work
   - While data managers are part of research teams, the work they do is often siloed making it very difficult to get feedback, learn, or grow in a position. Depending on the size of your organization, support can come in many ways
     - If you are a small team, this may mean encouraging your data manager to simply join existing groups of other data managers. One example of this is joining the Providing Opportunities to Women in Education Research (POWER) [Issues in Data Management in Education Research Hub](https://www.womeninedresearch.com/hubs.html) or it could be meeting up with other data managers in your university, even across disciplines.

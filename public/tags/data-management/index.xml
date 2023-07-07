@@ -13,8 +13,8 @@
       <pubDate>Mon, 26 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/blog/participant_id/</guid>
-      <description>I recently had a discussion with a colleague about how they assign unique participant identifiers in their study. In that discussion, I described my opinion on how identifiers should be created, which happened to be very different from how this colleague was assigning identifiers. This discussion then prompted me to question my assumptions about how I manage data (which I appreciate)! :)
-For about two hours I scoured the internet for any advice, research, or opinions on how participant identifiers should be assigned.</description>
+      <description>I recently had a discussion with a colleague about assigning unique participant identifiers in their study. In that discussion I learned that my opinion on how researchers should assign identifiers happened to be very different from how this colleague was assigning identifiers. This discussion then prompted me to question my assumptions about how I manage data (which I appreciate)! :)
+For several hours after this discussion I scoured the internet for any advice, research, or opinions on how participant identifiers should be assigned.</description>
     </item>
     
     <item>
@@ -73,6 +73,17 @@ There are many issues with this data, ranging from unclear and inconsistent valu
       <guid>https://cghlewis.com/blog/data_mgmt_resources/</guid>
       <description>Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 Resources were last updated on 2023/04/06</description>
+    </item>
+    
+    <item>
+      <title>Hire a data manager</title>
+      <link>https://cghlewis.com/blog/hire_datamgr/</link>
+      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/hire_datamgr/</guid>
+      <description>If you were struck by lightning, would other people be able to access and understand your data? - Sarah Arena
+Even with the growing open science movement, the expanding requirements for publicly sharing sharing federally funded data, and the ongoing news about data falsification motivating us to produce more accurate, documented, and reproducible data, many researchers are still not able to confidently say &amp;ldquo;yes&amp;rdquo; to this question.
+One solution to this problem is to hire a data manager.</description>
     </item>
     
     <item>

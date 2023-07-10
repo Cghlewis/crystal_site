@@ -115,21 +115,21 @@ While budgeting for a full-time data manager may seem like a big investment, it'
 
 If you are able to budget for and hire a data manager, the next consideration is how can supervisors support data managers? What do data managers need in order to be successful in their role? A few ideas are provided below. 
 
-- A [professional status](https://doi.org/10.1093/ije/dyaa087)
+- [Professional status](https://doi.org/10.1093/ije/dyaa087)
   - As mentioned at the [DBFest in 2022](https://twitter.com/Cat_Davies/status/1541707717546500096?s=20), "Recognising and rewarding technical staff is at the heart of ensuring high-quality, reproducible research".
   - Data managers often live in a fuzzy area between academics and professional staff. They may miss out on opportunities such as recognition, awards, and promotions. Recognizing data curation as an essential research activity, [paying data managers well](https://www.glassdoor.com/Salaries/research-data-manager-salary-SRCH_KO0,21.htm), providing career progression opportunities, and finding ways to recognize the contributions of data managers can help both recruit and maintain top talent.
-- Offer ongoing training
+- Ongoing training
   - Data management requirements are constantly evolving. Providing resources for data managers to stay up to date on both changes in technology as well as updates to funder requirements is absolutely necessary for a data manager to be effective.
 - Integrate them into the decision-making team
   - Data managers cannot be effective if data-related decisions are made without them in the room. Giving data managers a voice at the highest level in the organization and allowing them to provide feedback on plans helps to reduce data curation debt.
 - Encourage the formation of support groups as part of their paid work
-  - While data managers are part of research teams, the work they do is often siloed making it very difficult to get feedback, learn, or grow in a position. Depending on the size of your organization, support can come in many ways
-    - If you are a small team, this may mean encouraging your data manager to simply join existing groups of other data managers. One example of this is joining the Providing Opportunities to Women in Education Research (POWER) [Issues in Data Management in Education Research Hub](https://www.womeninedresearch.com/hubs.html) or it could be meeting up with other data managers in your university, even across disciplines.
-    - If you are a larger organization, creating a data core can be an excellent way for data managers across different units to share ideas and develop standardized practices
+  - While data managers are part of research teams, the work they do is often siloed, making it very difficult to get feedback, learn, or grow in a position. Depending on the size of your organization, support can come in many ways
+    - If you are a small team, this may mean encouraging your data manager to simply join existing groups of other data managers. One example of this is joining the Providing Opportunities for Women in Education Research (POWER) [Issues in Data Management in Education Research Hub](https://www.womeninedresearch.com/hubs.html) or it could be meeting up with other data managers in your university, even across disciplines.
+    - If you are a larger organization, creating a Data Core can be an excellent way for data managers across different units to share ideas and develop standardized practices
   
 ---
 
-To wrap this up, hiring a data manager is a worthwhile investment if you are able to make it work. I completely recognize that it is not in everyone's budget to do this and that for some, it may be more practical to have other staff members take on these responsibilities for a project. Yet, maybe after reading this post, you can see all that is possible with a data manager role, and may consider hiring this important role on your team in the future.
+In summary, hiring a data manager is a worthwhile investment if you are able to make it work. I absolutely recognize that it is not in everyone's budget to do this and that, for some, it may be more practical to have other team members take on these responsibilities for a project. Teams can still successfully manage data for a project without a data manager, especially if the team members managing project data are implementing [best practices](https://datamgmtinedresearch.com/). Yet, maybe after reading this post, you can see all that is possible with a data manager role, and you may consider hiring this important role on your team in the future.
 
 If you are reading this and you either are a data manager or have hired a data manager and you have your own tips (e.g., other ways you've funded a data manager), I'd love to hear from you! Please share your comments below!
 

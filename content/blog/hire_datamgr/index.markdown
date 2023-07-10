@@ -29,18 +29,18 @@ In a [2019 blog post](https://openworking.wordpress.com/2019/02/19/take-research
 
 **Data management takes time.**
 
-It is common to find that when working on an analysis, data wrangling takes at least [half of the project's time](https://know.anaconda.com/rs/387-XNW-688/images/Anaconda-SODS-Report-2020-Final.pdf).
+When working on an analysis, it is common for data wrangling to take at least [half of the project's time](https://know.anaconda.com/rs/387-XNW-688/images/Anaconda-SODS-Report-2020-Final.pdf).
 
 Not only does data wrangling take time, but so do all the activities surrounding collecting, documenting, and sharing that data.
 
 **Data management takes interest.**
 
-In [Season 4 Episode 7](https://www.buzzsprout.com/639103/11552832-s4e07-the-quanti-house-of-horror) of the Quantitude podcast, the hosts bring up a common theme around data management, and that is that people don't like managing data. 
+In [Season 4 Episode 7](https://www.buzzsprout.com/639103/11552832-s4e07-the-quanti-house-of-horror) of the Quantitude podcast, the hosts bring up a common theme around data management, and that is that most people don't like managing data. 
 
 In talking about perceptions around teaching data management, the hosts say
-> And a lot of people look down on that. Well, that's just a mechanical kind of thing.
+> And a lot of people look down on that......that's just a mechanical kind of thing.
 
-Data management is often considered monotonous and boring; a task many people dread doing. Yet, data managers are often diamonds in the rough because they actually *enjoy* data management. They enjoy organizing and describing data and take pride in producing excellent data products.
+Data management is often considered monotonous and boring; a task many people want to quickly finish so they can begin analyzing data. Yet, for data managers, data management is not a means to an end, it **is** the end. They appreciate the process of organizing and describing data and take pride in producing well-curated data products.
 
 
 ### What is a data manager?

@@ -74,7 +74,7 @@ Yet, a data manager can also help build a data culture in your organization:
 - Create team level documentation (e.g., data governance documents, style guides, templates)
 - Train other staff in data management skills (e.g., onboarding, coding skills, best practices)
 - Help investigate and vet new data tools
-- Integrate equity into [data practices](https://www.urban.org/sites/default/files/publication/102346/principles-for-advancing-equitable-data-practice_0.pdf)
+- Promote [equitable data practices](https://www.urban.org/sites/default/files/publication/102346/principles-for-advancing-equitable-data-practice_0.pdf)
 - Oversee all data policies (e.g., ownership, licensing, confidentiality)
 - Ensure standardization of practices across projects
 - Act as a data champion, guiding and inspiring team members to care about data management
@@ -90,13 +90,14 @@ The skills needed to be a data manager can range. Education levels can be anywhe
 - Technical skills
   - These skills will vary based on the technology used by the lab and the types of data collected, but the general skills that can be helpful include:
     - Understanding of [database structure](https://datamgmtinedresearch.com/structure.html) (i.e., how datasets are organized)
-    - Experience building data cleaning pipelines
+    - Experience building reproducible data cleaning pipelines
     - Coding experience in the tool preferred by the lab (e.g., R, Stata)
     - Specific software/tool experience (e.g., REDCap, Qualtrics)
 - Domain skills
   - It will be invaluable to have domain skills in addition to technical skills. In education research you may look for someone who has worked with education data, understands typical variables that may be collected in education research, how those variables are analyzed, as well as a general understanding of data privacy issues (e.g. HIPAA and FERPA).
 - Experience
   - If you are looking to hire someone who can manage data for a study that collects original data, it can be very helpful to hire someone who has been involved in original data collection before (e.g., either as a data collector, a project coordinator, or data manager). Understanding the complexity of collecting real-world original data can help a data manager understand how to create better data processes.
+  - Some knowledge of data sharing best practices (e.g., [metadata standards](https://pitt.libguides.com/metadatadiscovery/metadata-standards), [FAIR principles](https://www.go-fair.org/fair-principles/)) can also be very beneficial
 - Interpersonal skills
   - For lack of a better term here, I'm calling this section interpersonal skills. This includes things such as
     - Communication skills

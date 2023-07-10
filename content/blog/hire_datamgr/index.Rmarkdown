@@ -96,7 +96,7 @@ The skills needed to be a data manager can range. Education levels can be anywhe
 - Domain skills
   - It will be invaluable to have domain skills in addition to technical skills. In education research you may look for someone who has worked with education data, understands typical variables that may be collected in education research, how those variables are analyzed, as well as a general understanding of data privacy issues (e.g. HIPAA and FERPA).
 - Experience
-  - If you are looking to hire someone who can manage data for a study that collects original data, it can be very helpful to hire someone who has been involved in original data collection before (e.g., either as a data collector, a project coordinator, or data manager). Understanding the complexity of collecting real-world original data can help a data manager understand how to create better data processes.
+  - If you are looking for someone who can manage data for a study that collects original data, it can be very helpful to hire someone who has been involved in original data collection before (e.g., either as a data collector, a project coordinator, or data manager). Understanding the complexity of collecting real-world original data can help a data manager understand how to create better data processes.
   - Some knowledge of data sharing best practices (e.g., [metadata standards](https://pitt.libguides.com/metadatadiscovery/metadata-standards), [FAIR principles](https://www.go-fair.org/fair-principles/)) can also be very beneficial
 - Interpersonal skills
   - For lack of a better term here, I'm calling this section interpersonal skills. This includes things such as

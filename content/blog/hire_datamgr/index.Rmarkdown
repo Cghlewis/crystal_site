@@ -134,4 +134,4 @@ In summary, hiring a data manager is a worthwhile investment if you are able to 
 
 If you are reading this and you either are a data manager or have hired a data manager and you have your own tips (e.g., other ways you've funded a data manager), I'd love to hear from you! Please share your comments below!
 
-
+*Special thank you to Rebekah Jacob and Tara Reynolds for their feedback on this post.*

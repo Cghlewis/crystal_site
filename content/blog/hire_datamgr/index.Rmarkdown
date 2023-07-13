@@ -27,6 +27,10 @@ In fields such as education research, it becomes more common for other team memb
 In a [2019 blog post](https://openworking.wordpress.com/2019/02/19/take-research-data-management-seriously-and-organize-discipline-specific-support/) on finding research data management (RDM) support, Professor Bas Teusink was quoted as saying
 > As a Principal Investigator, I have no idea how to instruct my students in RDM. I’m not an expert. So I needed support. I needed somebody who actually has the time to look up what tools are available and who can translate general policies and general infrastructure into daily practical solutions that fit our local needs. There’s a huge gap between policy and implementation for people doing the daily work. We need discipline-specific support and we need hands-on help.
 
+In[Season 2 Episode 13](https://podcasters.spotify.com/pod/show/withinandbetween/episodes/S2E13-Data-management-Episode-I-ercftk/a-a4qb7mp), the hosts of the Within & Between podcast remind us
+
+> That is an area of expertise you can have......you can be an expert in the idea of taking a question that gets asked to a human being on paper, and turning that into data in a spreadsheet somewhere. 
+
 **Data management takes time.**
 
 When working on an analysis, it is common for data wrangling to take at least [half of the project's time](https://know.anaconda.com/rs/387-XNW-688/images/Anaconda-SODS-Report-2020-Final.pdf).

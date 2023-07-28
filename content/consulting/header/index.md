@@ -12,4 +12,4 @@ I know education data. I've personally collected data through classroom observat
 I currently provide a variety of data management services as a freelance consultant. If you are looking for help in any of the areas below, contact me to learn about rates and availability. I look forward to hearing from you!
 <br>
 <br>
-You can review my experience and qualifications in my [resume](https://github.com/Cghlewis/simple-resume/blob/main/simple_resume_cl/simple_resume_cl.pdf).
+You can review my experience and qualifications in my [resume](https://github.com/Cghlewis/simple-resume/blob/main/simple_resume_cl.pdf).

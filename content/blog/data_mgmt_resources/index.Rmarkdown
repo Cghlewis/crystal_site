@@ -82,6 +82,22 @@ data %>%
 
 ```
 
+### Equity in Data Management 
+
+These are guides on how to manage data while considering data equity and ethics.
+
+```{r echo = FALSE, message=FALSE, warning=FALSE}
+
+library(tidyverse)
+
+data <- readxl::read_excel("resources.xlsx", sheet = "equity")
+
+data %>%
+  knitr::kable("html", escape = FALSE) %>%
+  kableExtra::kable_styling("striped", full_width=T)
+
+```
+
 ### Other Resources
 
 These are other types of resources ranging from blog posts to podcasts, that also provide excellent data management content.

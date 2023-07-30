@@ -27,10 +27,12 @@ tags:
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2023/04/06* 
+*Resources were last updated on 2023/07/30* 
 
 ### Guides 
 
@@ -170,7 +172,7 @@ Thesea are checklists to help researchers plan for the data management process t
 <tbody>
   <tr>
    <td style="text-align:left;"> Crystal Lewis </td>
-   <td style="text-align:left;"> <a href="https://cghlewis.github.io/mpsi-data-training/training_6.html#Checklists">Checklists</a> </td>
+   <td style="text-align:left;"> <a href="https://drive.google.com/drive/folders/1lRKEx_uMhbzcLeVZZBPX6_amde5uYuvf">Checklists</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Harvard Longwood Research Data Management </td>
@@ -204,6 +206,14 @@ These are slides from presentations on the research data management life cycle a
  </thead>
 <tbody>
   <tr>
+   <td style="text-align:left;"> Lewis, C. </td>
+   <td style="text-align:left;"> <a href="https://cghlewis.com/talk/uhcl/">Data Management Workflows for Education Research Studies</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lewis, C. </td>
+   <td style="text-align:left;"> <a href="https://cghlewis.com/talk/sssp_ecf/">10 Common Data Management Mistakes</a> </td>
+  </tr>
+  <tr>
    <td style="text-align:left;"> Logan, J. </td>
    <td style="text-align:left;"> <a href="https://figshare.com/articles/presentation/Data_Management_and_Data_Management_Plans/7890827">Data Management and Data Management Plans</a> </td>
   </tr>
@@ -214,6 +224,41 @@ These are slides from presentations on the research data management life cycle a
   <tr>
    <td style="text-align:left;"> All slides available from Kristin Briney </td>
    <td style="text-align:left;"> <a href="https://www.slideshare.net/kbriney?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideview">Kristin Briney Slide Share</a> </td>
+  </tr>
+</tbody>
+</table>
+
+### Equity in Data Management 
+
+These are guides on how to manage data while considering data equity and ethics.
+
+<table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Author </th>
+   <th style="text-align:left;"> Title </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> Chicago Beyond </td>
+   <td style="text-align:left;"> <a href="https://chicagobeyond.org/wp-content/uploads/2019/05/ChicagoBeyond_2019Guidebook.pdf">Why am I always being researched?</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Mathematica </td>
+   <td style="text-align:left;"> <a href="https://www.mathematica.org/features/tips-for-conducting-equitable-and-culturally-responsive-evaluation">Tips for conducting equitable and culturally responsive evaluation</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Poverty Action Lab </td>
+   <td style="text-align:left;"> <a href="https://www.povertyactionlab.org/resource/ethical-conduct-randomized-evaluations">Ethical conduct of randomized evaluations</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Urban Institute </td>
+   <td style="text-align:left;"> <a href="https://www.urban.org/research/publication/do-no-harm-guide-applying-equity-awareness-data-privacy-methods">Do No Harm Guide: Applying Equity Awareness In Data Privacy Methods </a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Urban Institute </td>
+   <td style="text-align:left;"> <a href="https://www.urban.org/sites/default/files/publication/102346/principles-for-advancing-equitable-data-practice_0.pdf">Principles for advancing equitable data practice</a> </td>
   </tr>
 </tbody>
 </table>
@@ -337,6 +382,10 @@ Oftentimes people are interested in resources specific to developing good data c
   <tr>
    <td style="text-align:left;"> Crystal Lewis* </td>
    <td style="text-align:left;"> <a href="https://cghlewis.github.io/mpsi-data-training/training_4.html">Data Cleaning Plan</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Crystal Lewis </td>
+   <td style="text-align:left;"> <a href="https://cghlewis.com/blog/data_clean_01/">Data Cleaning for Data Sharing</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Dupriez, O., Sanchez Castro, M. &amp;  Revision, M. </td>

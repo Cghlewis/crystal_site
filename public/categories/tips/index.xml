@@ -6,11 +6,20 @@
     <description>Recent content in tips on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/tips/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bare Necessities of Data Management</title>
+      <link>https://cghlewis.com/blog/project_beginning/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/project_beginning/</guid>
+      <description>This summer I&amp;rsquo;ve been consulting on some early phase education research projects. These are projects that have recently been funded and are going into their first year of data collection. The people I consult with have reached out because they really want to set up good data management practices early on, saving them from potentially having to clean up data disasters later on. Coming in as a consultant, rather than a full-time employee, I find that my role is really to narrow in on what are the core priorities.</description>
+    </item>
+    
     <item>
       <title>Hire a data manager</title>
       <link>https://cghlewis.com/blog/hire_datamgr/</link>
-      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/blog/hire_datamgr/</guid>
       <description>If you were struck by lightning, would other people be able to access and understand your data? - Sarah Arena

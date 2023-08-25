@@ -6,7 +6,7 @@
     <description>Recent content on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 26 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netlify</title>
       <link>https://cghlewis.com/collection/day02/01-netlify/</link>
@@ -84,6 +84,26 @@ Clone GitHub repo usethis::create_from_github(&amp;quot;https://github.com/apres
       <description> Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
 Here I am: content/collection\day02\03-blogdown\index.md To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
 My content section is: collection My layout is: single-series part 2! does this work? now for some very cool things more get ready! </description>
+    </item>
+    
+    <item>
+      <title>Bare Necessities of Data Management</title>
+      <link>https://cghlewis.com/blog/project_beginning/</link>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/project_beginning/</guid>
+      <description>This summer I&amp;rsquo;ve been consulting on some early phase education research projects. These are projects that have recently been funded and are going into their first year of data collection. The people I consult with have reached out because they really want to set up good data management practices early on, saving them from potentially having to clean up data disasters later on. Coming in as a consultant, rather than a full-time employee, I find that my role is really to narrow in on what are the core priorities.</description>
+    </item>
+    
+    <item>
+      <title>Hire a data manager</title>
+      <link>https://cghlewis.com/blog/hire_datamgr/</link>
+      <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/hire_datamgr/</guid>
+      <description>If you were struck by lightning, would other people be able to access and understand your data? - Sarah Arena
+Even with the growing open science movement, the expanding requirements for publicly sharing sharing federally funded data, and the ongoing news about data falsification motivating us to produce more accurate, documented, and reproducible data, many researchers are still not able to confidently say &amp;ldquo;yes&amp;rdquo; to this question.
+One solution to this problem is to hire a data manager.</description>
     </item>
     
     <item>
@@ -197,7 +217,7 @@ There are many issues with this data, ranging from unclear and inconsistent valu
       
       <guid>https://cghlewis.com/blog/data_mgmt_resources/</guid>
       <description>Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
-Resources were last updated on 2023/04/06</description>
+Resources were last updated on 2023/07/30</description>
     </item>
     
     <item>
@@ -235,17 +255,6 @@ Name Label Type Values (if categorical) Value labels (if categorical) NA values 
       
       <guid>https://cghlewis.com/projects/flexdashboard/</guid>
       <description>About the dashboard This R Flexdashboard pulled data daily from Google Trends to display 7 day school closure trends across the U.S.</description>
-    </item>
-    
-    <item>
-      <title>Hire a data manager</title>
-      <link>https://cghlewis.com/blog/hire_datamgr/</link>
-      <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/blog/hire_datamgr/</guid>
-      <description>If you were struck by lightning, would other people be able to access and understand your data? - Sarah Arena
-Even with the growing open science movement, the expanding requirements for publicly sharing sharing federally funded data, and the ongoing news about data falsification motivating us to produce more accurate, documented, and reproducible data, many researchers are still not able to confidently say &amp;ldquo;yes&amp;rdquo; to this question.
-One solution to this problem is to hire a data manager.</description>
     </item>
     
     <item>

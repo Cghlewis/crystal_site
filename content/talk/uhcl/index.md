@@ -15,7 +15,7 @@ links:
 - icon: tv
   icon_pack: fas
   name: Slides
-  url: https://docs.google.com/presentation/d/1OYi3E0C3DoB3aBPDErJZiUh9WL1kUgWbvoNtXWe47qM/edit?usp=sharing
+  url: https://docs.google.com/presentation/d/1OYi3E0C3DoB3aBPDErJZiUh9WL1kUgWbvoNtXWe47qM
 location: virtual
 show_post_time: false
 categories:

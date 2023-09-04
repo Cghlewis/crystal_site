@@ -62,13 +62,19 @@
     <loc>https://cghlewis.com/categories/tutorials/</loc>
     <lastmod>2023-06-26T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://cghlewis.com/talk/rmed/</loc>
+    <lastmod>2023-06-06T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cghlewis.com/categories/rstats/</loc>
+    <lastmod>2023-06-06T10:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cghlewis.com/talk/</loc>
+    <lastmod>2023-06-06T10:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://cghlewis.com/categories/data-management/</loc>
     <lastmod>2023-03-21T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/talk/cos_nih/</loc>
-    <lastmod>2023-03-21T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cghlewis.com/talk/</loc>
     <lastmod>2023-03-21T12:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/blog/data_clean_03/</loc>
@@ -94,12 +100,6 @@
   </url><url>
     <loc>https://cghlewis.com/blog/dict_clean/</loc>
     <lastmod>2022-11-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cghlewis.com/talk/uhcl/</loc>
-    <lastmod>2022-11-21T09:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://cghlewis.com/categories/rstats/</loc>
-    <lastmod>2022-11-21T09:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cghlewis.com/tags/data-collection/</loc>
     <lastmod>2022-10-31T00:00:00+00:00</lastmod>

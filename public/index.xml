@@ -117,6 +117,15 @@ For several hours after this discussion I scoured the internet for any advice, r
     </item>
     
     <item>
+      <title>Cleaning Medical Data in R</title>
+      <link>https://cghlewis.com/talk/rmed/</link>
+      <pubDate>Tue, 06 Jun 2023 10:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/rmed/</guid>
+      <description>Slides from a workshop given at the R/Medicine 2023 Conference. My co-presenters included Shannon Pileggi and Peter Higgins.</description>
+    </item>
+    
+    <item>
       <title>Essential Data Management Best Practices and Tools for NIH Compliance</title>
       <link>https://cghlewis.com/talk/cos_nih/</link>
       <pubDate>Tue, 21 Mar 2023 12:00:00 +0000</pubDate>
@@ -160,15 +169,6 @@ Even if we collect data with the most well-designed collection tools, there is m
       
       <guid>https://cghlewis.com/blog/dict_clean/</guid>
       <description>In an earlier blog post I argued that data dictionaries are one of the most important pieces of documentation you can keep for a project and I spoke about the four purposes of a data dictionary. One of those purposes being that they can be integrated in your data cleaning process. And when I say &amp;ldquo;integrated&amp;rdquo;, I mean that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also mean it in a very literal sense.</description>
-    </item>
-    
-    <item>
-      <title>Data Management Workflows for Education Research Studies</title>
-      <link>https://cghlewis.com/talk/uhcl/</link>
-      <pubDate>Mon, 21 Nov 2022 09:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/talk/uhcl/</guid>
-      <description>These are slides from a guest lecture presentation for a graduate research methods class at the UHCL. The talk was on how to create data management workflows for education research studies.</description>
     </item>
     
     <item>

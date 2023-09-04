@@ -6,14 +6,14 @@
     <description>Recent content in rstats on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 21 Nov 2022 09:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jun 2023 10:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Data Management Workflows for Education Research Studies</title>
-      <link>https://cghlewis.com/talk/uhcl/</link>
-      <pubDate>Mon, 21 Nov 2022 09:00:00 +0000</pubDate>
+      <title>Cleaning Medical Data in R</title>
+      <link>https://cghlewis.com/talk/rmed/</link>
+      <pubDate>Tue, 06 Jun 2023 10:00:00 +0000</pubDate>
       
-      <guid>https://cghlewis.com/talk/uhcl/</guid>
-      <description>These are slides from a guest lecture presentation for a graduate research methods class at the UHCL. The talk was on how to create data management workflows for education research studies.</description>
+      <guid>https://cghlewis.com/talk/rmed/</guid>
+      <description>Slides from a workshop given at the R/Medicine 2023 Conference. My co-presenters included Shannon Pileggi and Peter Higgins.</description>
     </item>
     
     <item>

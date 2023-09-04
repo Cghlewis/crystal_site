@@ -4,7 +4,7 @@ subtitle:
 excerpt: "The data management priorities in the early phases of an education research project"
 author: "Crystal Lewis"
 date: "2023-08-16"
-draft: false
+draft: true
 # layout options: single, single-sidebar
 layout: single
 categories:

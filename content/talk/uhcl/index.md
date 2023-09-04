@@ -5,7 +5,7 @@ date: "2022-11-21T09:00:00"
 date_end: "2022-11-21T12:00:00"
 publishDate: "2022-11-18"
 time: false
-draft: true
+draft: false
 event: 
 event_url:
 excerpt: Slides from a guest lecture given to a graduate research methods class at the University of Houston-Clear Lake.

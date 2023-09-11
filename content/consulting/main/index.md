@@ -7,7 +7,7 @@ show_intro: true
 intro: "<h1> <i class='fas fa-comment-dots'></i>  Data Management Consulting</h1>
 
 
-I provide both short and long-term data management planning for every phase of the research life cycle. I can help your team set up an efficient and reproducible process for just one phase of data management, such as data entry or data sharing, or help your team plan an entire data management workflow for your center or project.
+I provide both short and long-term data management planning for every phase of the research life cycle. I can help your team set up an efficient and reproducible process for just one phase of data management, such as data collection or data entry, or help your team plan an entire data management workflow for your center or project. I also provide data curation consultation, including reviewing your existing data sources and helping prepare them for public data sharing.
 <br>
 <br>
 My process is to meet with you and your core team to learn more about your project/s, your goals, and any existing work that has been completed so far and then I develop and present a plan for what services I can provide to support your team.
@@ -18,7 +18,7 @@ My process is to meet with you and your core team to learn more about your proje
 <h1> <i class='fas fa-laptop-code'></i>  Direct Services</h1>
 
 
-I also provide direct services such as data cleaning, documentation, database design, or creation of other data management or collection tools. I have proficiency with the following tools: R and RStudio, Microsoft Access and Excel, and Qualtrics. If you use other database, data collection, or data wrangling tools, let's connect! We may still be able to find ways to work together. 
+I also provide direct services such as data cleaning, documentation, database design, or creation of other data management or collection tools. I have proficiency with the following tools: R and RStudio, SPSS, Microsoft Access and Excel, REDCap, FileMaker, and Qualtrics. If you use other database, data collection, or data wrangling tools, let's connect! We may still be able to find ways to work together. 
 
 
 

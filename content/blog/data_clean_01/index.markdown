@@ -131,7 +131,7 @@ First, you are going to access your raw data. If you use code to clean your data
     - After normalizing and standardizing variables above, you can now convert variable types as needed (for example convert a string to numeric)
 10. Recode variables
     - If your categorical values are not coded as expected or if your categorical variables are not coded consistently across time, you can recode those here
-    - This also includes [recoding implict values, explicitly](https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules)
+    - This also includes [recoding implicit values, explicitly](https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules)
       - For example if an NA value is implied to be 0, recode them to 0
     - You can also recode any variables as planned in your data dictionary (for example a reverse coded item)
 
@@ -169,12 +169,12 @@ First, you are going to access your raw data. If you use code to clean your data
 
 These last two steps are not necessarily data cleaning steps, but are additional transformations that can be performed to allow you to structure your data for more user-friendly data sharing.  
 
-14. Merge and/or append data as needed
+15. Merge and/or append data as needed
     - In this step you can merge or append forms within or across time
     - Merging is joining forms horizontally (linking by a unique identifier). Appending is joining forms vertically, stacking forms on one another, joined by unique variable names.
     - Again do validation checks here
       - Do you have the correct number of rows and columns after the merge/append?
-15. Transform data as needed
+16. Transform data as needed
     - There are various reasons to store data in [long format or wide format](https://datamgmtinedresearch.com/data-structure.html#structure). Here you can restructure data as needed.
 
 ![](img/restructure.PNG)

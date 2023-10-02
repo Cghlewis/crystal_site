@@ -12,11 +12,7 @@ categories:
   - rstats
   - data wrangling
 layout: single
-links:
-- icon: tv
-  icon_pack: fas
-  name: Dashboard
-  url: "https://gtrends-school.streamlinedatascience.io/"
+links: 
 - icon: github
   icon_pack: fab
   name: Code

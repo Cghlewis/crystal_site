@@ -52,7 +52,7 @@ And I'll add a few more indicators to this list.
 
 6. De-identified: All [personally identifiable information (PII)](https://medium.com/@searchbug/personally-identifiable-information-pii-your-guide-to-pii-compliance-3156874818a4) is scrubbed from the data to protect participant confidentiality (if required by your IRB/consent process).
 7. Interpretable: Data have human and machine-readable variable names (see [style guide](https://datamgmtinedresearch.com/style.html)), as well as variable and value labels added as needed to aid in interpretation.
-8. Analyzable: By this I mean that our data is in a rectangular (rows and columns), machine-readable format and adheres to basic [data structure rules](https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules).
+8. Analyzable: By this I mean that our data is in a rectangular (rows and columns), machine-readable format and adheres to basic [data structure rules](https://datamgmtinedresearch.com/structure).
 
 <img src="img/rowcol.PNG" width="70%" style="display: block; margin: auto;" />
 

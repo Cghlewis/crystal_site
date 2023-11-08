@@ -195,7 +195,7 @@ These last two steps are not necessarily data cleaning steps, but are additional
     - Again do validation checks here
       - Do you have the correct number of rows and columns after the merge/append?
 16. Transform data as needed
-    - There are various reasons to store data in [long format or wide format](https://datamgmtinedresearch.com/data-structure.html#structure). Here you can restructure data as needed.
+    - There are various reasons to store data in [long format or wide format](https://datamgmtinedresearch.com/structure#structure-datastructure). Here you can restructure data as needed.
 
 ![](img/restructure.PNG)
 

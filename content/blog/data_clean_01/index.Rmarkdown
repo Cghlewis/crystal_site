@@ -202,10 +202,10 @@ These last two steps are not necessarily data cleaning steps, but are additional
 The final step of your cleaning process will be to export or save your clean data. As I mentioned above, it can be helpful to export/save to more than one file type (for example a .csv and a .sav file). You can even export the .csv using the text response values (ex: yes/no) while exporting the .sav using the numeric values (1/0) with embedded metadata. 
 
 Last, when you are ready to share your clean data, it is crucial to always include documentation alongside your data to allow users to correctly interpret the information. The bare minimum documentation to share should include:
-  1. [Project level documentation](https://datamgmtinedresearch.com/document.html#research-protocol) (contextual information about why and how your data was collected)
+  1. [Project-level documentation](https://datamgmtinedresearch.com/document#document-protocol) (contextual information about why and how your data was collected)
       - If sharing data in a repository, including [project-level metadata](https://datamgmtinedresearch.com/document.html#metadata) can also be very helpful for searchability
-  2. A [data dictionary](https://datamgmtinedresearch.com/document.html#data-dictionary) that describes all relevant variable level information
-  3. A [readme](https://datamgmtinedresearch.com/document.html#readme) that quickly explains what all of your files are and how they are related
+  2. A [data dictionary](https://datamgmtinedresearch.com/document#document-dictionary) that describes all relevant variable level information
+  3. A [README](https://datamgmtinedresearch.com/document.html#readme) that quickly explains what all of your files are and how they are related
 
 ## Review
 

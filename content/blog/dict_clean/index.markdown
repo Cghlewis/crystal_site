@@ -16,6 +16,8 @@ tags:
 ---
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
 In an earlier blog post I argued that [data dictionaries](https://cghlewis.com/blog/data_dictionary/) are one of the most important pieces of documentation you can keep for a project and I spoke about the four purposes of a data dictionary. One of those purposes being that they can be integrated in your data cleaning process. And when I say "integrated", I mean that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also mean it in a very literal sense. You can actually integrate your data dictionary into your cleaning script and use it in functions.
 
@@ -235,4 +237,154 @@ survey <- survey %>%
 Now that we have done 4 transformations to our data using our data dictionary, we can view our final dataset.
 
 ![](img/final.PNG)
+
+### Update variable types (2023-11-21)
+
+After sharing this post, someone suggested using a data dictionary to update variable types so I thought I might as well as that as a 5th use for your data dictionary.
+
+In order to do this, you will need one additional column in your data dictionary, which we will call "type".
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
+ <thead>
+  <tr>
+   <th style="text-align:left;"> new_name </th>
+   <th style="text-align:left;"> old_name </th>
+   <th style="text-align:left;"> label </th>
+   <th style="text-align:left;"> value </th>
+   <th style="text-align:left;"> type </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> drop </td>
+   <td style="text-align:left;"> extra_var1 </td>
+   <td style="text-align:left;"> Identifier provided by survey platform </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> drop </td>
+   <td style="text-align:left;"> extra_var2 </td>
+   <td style="text-align:left;"> Survey time provided by survey platform </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> drop </td>
+   <td style="text-align:left;"> identifying_var </td>
+   <td style="text-align:left;"> Respondent email </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> participant_id </td>
+   <td style="text-align:left;"> id </td>
+   <td style="text-align:left;"> Respondent study ID </td>
+   <td style="text-align:left;"> 1-100 </td>
+   <td style="text-align:left;"> character </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> pet_type </td>
+   <td style="text-align:left;"> q5 </td>
+   <td style="text-align:left;"> What type of pet do you have </td>
+   <td style="text-align:left;"> dog, cat </td>
+   <td style="text-align:left;"> character </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> age </td>
+   <td style="text-align:left;"> q6 </td>
+   <td style="text-align:left;"> Respondent age </td>
+   <td style="text-align:left;"> 10-18 </td>
+   <td style="text-align:left;"> numeric </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> pet_1 </td>
+   <td style="text-align:left;"> q1 </td>
+   <td style="text-align:left;"> In your family, your pet likes you best </td>
+   <td style="text-align:left;"> almost always, often, sometimes, almost never </td>
+   <td style="text-align:left;"> character </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> pet_2 </td>
+   <td style="text-align:left;"> q2 </td>
+   <td style="text-align:left;"> You talk to your pet as a friend </td>
+   <td style="text-align:left;"> almost always, often, sometimes, almost never </td>
+   <td style="text-align:left;"> character </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> pet_3 </td>
+   <td style="text-align:left;"> q3 </td>
+   <td style="text-align:left;"> You show photos of your pet to friends </td>
+   <td style="text-align:left;"> almost always, often, sometimes, almost never </td>
+   <td style="text-align:left;"> character </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> pet_4 </td>
+   <td style="text-align:left;"> q4 </td>
+   <td style="text-align:left;"> You buy presents for your pet </td>
+   <td style="text-align:left;"> almost always, often, sometimes, almost never </td>
+   <td style="text-align:left;"> character </td>
+  </tr>
+</tbody>
+</table>
+
+**5. Update variable types**
+
+Picking up where we left off in step #4, let's see what our current variable types are.
+
+
+```r
+glimpse(survey)
+```
+
+```
+Rows: 6
+Columns: 7
+$ participant_id <dbl> 10, 22, 13, 18, 25, 30
+$ pet_type       <chr> "dog", "cat", "dog", "cat", "cat", "dog"
+$ age            <dbl> 11, 13, 11, 10, 14, 12
+$ pet_1          <chr> "sometimes", "sometimes", "almost always", "never", "al~
+$ pet_2          <chr> "almost never", "sometimes", "almost always", "sometime~
+$ pet_3          <chr> "almost always", "often", "sometimes", "never", "often"~
+$ pet_4          <chr> "sometimes", "sometimes", "sometimes", "never", "someti~
+```
+
+Our variable types look good except for `participant_id` (it is currently numeric but should be character). If we wanted to use our data dictionary to update variable types, we could do something similar to **reorder** and pull a vector of variables we want to change the type for.
+
+Here we will pull all variables that should be character type.
+
+
+```r
+var_char <- dict %>%
+  filter(type == "character") %>%
+  pull(new_name)
+```
+
+And then use this vector to update the type of multiple variables.
+
+
+```r
+survey <- survey %>%
+  mutate(across(all_of(var_char), as.character))
+```
+
+Now we can check our variable types again. We see that `participant_id` is now character.
+
+
+```r
+glimpse(survey)
+```
+
+```
+Rows: 6
+Columns: 7
+$ participant_id <chr> "10", "22", "13", "18", "25", "30"
+$ pet_type       <chr> "dog", "cat", "dog", "cat", "cat", "dog"
+$ age            <dbl> 11, 13, 11, 10, 14, 12
+$ pet_1          <chr> "sometimes", "sometimes", "almost always", "never", "al~
+$ pet_2          <chr> "almost never", "sometimes", "almost always", "sometime~
+$ pet_3          <chr> "almost always", "often", "sometimes", "never", "often"~
+$ pet_4          <chr> "sometimes", "sometimes", "sometimes", "never", "someti~
+```
+
 

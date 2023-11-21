@@ -215,3 +215,73 @@ Now that we have done 4 transformations to our data using our data dictionary, w
 
 ![](img/final.PNG)
 
+### Update variable types (2023-11-21)
+
+After sharing this post, someone suggested using a data dictionary to update variable types so I thought I might as well as that as a 5th use for your data dictionary.
+
+In order to do this, you will need one additional column in your data dictionary, which we will call "type".
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+
+library(tidyverse)
+library(kableExtra)
+library(knitr)
+library(labelled)
+
+dict <- tibble::tribble(
+  ~new_name, ~old_name, ~label, ~value, ~type,
+  "drop", "extra_var1", "Identifier provided by survey platform", NA, NA,
+  "drop", "extra_var2", "Survey time provided by survey platform", NA, NA,
+  "drop", "identifying_var", "Respondent email", NA, NA,
+  "participant_id", "id", "Respondent study ID", "1-100", "character",
+  "pet_type", "q5", "What type of pet do you have", "dog, cat", "character", 
+  "age", "q6", "Respondent age", "10-18", "numeric",
+  "pet_1", "q1", "In your family, your pet likes you best", "almost always, often, sometimes, almost never", "character",
+  "pet_2", "q2", "You talk to your pet as a friend", "almost always, often, sometimes, almost never", "character",
+  "pet_3", "q3", "You show photos of your pet to friends", "almost always, often, sometimes, almost never", "character",
+  "pet_4", "q4", "You buy presents for your pet", "almost always, often, sometimes, almost never", "character")
+
+kbl(dict) %>%
+  kable_styling()
+
+```
+
+**5. Update variable types**
+
+Picking up where we left off in step #4, let's see what our current variable types are.
+
+```{r comment = NA}
+
+glimpse(survey)
+
+```
+
+Our variable types look good except for `participant_id` (it is currently numeric but should be character). If we wanted to use our data dictionary to update variable types, we could do something similar to **reorder** and pull a vector of variables we want to change the type for.
+
+Here we will pull all variables that should be character type.
+
+```{r}
+
+var_char <- dict %>%
+  filter(type == "character") %>%
+  pull(new_name)
+
+```
+
+And then use this vector to update the type of multiple variables.
+
+```{r}
+
+survey <- survey %>%
+  mutate(across(all_of(var_char), as.character))
+```
+
+Now we can check our variable types again. We see that `participant_id` is now character.
+
+```{r comment = NA}
+
+glimpse(survey)
+
+```
+
+

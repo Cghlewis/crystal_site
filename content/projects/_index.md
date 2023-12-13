@@ -2,7 +2,7 @@
 title: Projects
 description: "This section contains information about active/completed projects that I have worked on in the areas of data management, data wrangling, or programming in R. In addition to viewing my solo projects you can read more about the organizations I work with by clicking the links below.
 
-- I am an organizer of the [POWER Issues in Education Data Management Research Hub](https://osf.io/ap3tk/) 
+- I am a co-organizer of the [POWER Issues in Data Management in Education Research Hub](https://osf.io/ap3tk/)  
 
 - I am a co-organizer of [R-Ladies St. Louis](https://www.meetup.com/rladies-st-louis/)" 
 

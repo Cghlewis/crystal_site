@@ -24,20 +24,28 @@ I also provide direct services such as data cleaning, documentation, database de
 
 <h1> <i class='fas fa-chalkboard-teacher'></i>  Training</h1>
 
-I provide personalized trainings in the Data Management life cycle. These can be overviews of the entire research data management workflow or training on specific processes. Trainings can be tailored to the needs and the experience of your team and can be short 1-2 hour trainings or longer full day or recurring workshops as needed.
+I currently provide two types of data management training for research teams. 
 <br>
 <br>
-I also provide hands-on workshops in Data Wrangling with R and RStudio. These workshops can be tailored to beginners, such as those transitioning from another software like Excel or SPSS, or can be developed for people who currently work in R but want to learn more efficient and reproducible practices. I teach with a <a href=\"https://www.tidyverse.org\">Tidyverse</a> focus and I cover functions and practices that help participants leave feeling confident in tackling common challenges in education data wrangling. 
-
-<br>
-<br>
-
-Read what previous participants have learned in my workshops:
+1. I provide a 4-5 hour training on how to implement data management best practices into your workflows across the research life cycle. See what previous attendees of this training have said:
 <br>
 <br>
 <i><small>I learned all about the data management process which has never been explicitly taught to me in the way in which they were today. It helped seeing the steps clearly defined and then the nuanced details of each step. 
 <br>
 &emsp;- Anonymous Data Management Workflows for Education Research training participant</small></i>
+<br>
+<br>
+2. I also provide a series of hands-on workshops in Data Wrangling with R and RStudio. The goal of the workshop series is to give your team a consistent set of criteria for assessing the quality of a dataset, as well as equip them with skills to create a clean and shareable data product. This a la carte series is designed to meet the needs of your team, no matter their level of experience. 
+<br>
+<br>
+&emsp;- The first workshop in the series is an introduction to R, designed for beginners, such as those transitioning from another software like Excel or SPSS. 
+<br>
+&emsp;- The second workshop provides attendees with a standardized data cleaning checklist and then introduces team members to a series of functions that are commonly used when wrangling education data. 
+<br>
+&emsp;- The last workshop in the series reviews more advanced topics such as restructuring and joining data and is beneficial for people who currently work in R but want to learn more efficient and reproducible practices. 
+<br>
+<br>
+I teach with a <a href=\"https://www.tidyverse.org\">Tidyverse</a> focus and I cover functions and practices that help participants leave feeling confident in tackling common challenges in education data wrangling. Read what previous participants have learned in my workshops:
 <br>
 <br>
 <i><small>I took part in Crystal’s workshops for data management and R coding for data cleaning. Crystal is a great instructor. She has a very good pace in teaching and explains things very clearly. Before taking these workshops, I had a hard time when cleaning data with R, but now I feel very comfortable with using R for data cleaning. Besides being knowledgeable, Crystal was also very approachable and patiently helped trainees with the coding issues they struggled with. Overall, I really enjoyed the workshops with Crystal and would definitely recommend them to others.

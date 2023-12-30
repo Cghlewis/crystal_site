@@ -15,7 +15,7 @@ links:
 - icon: tv
   icon_pack: fas
   name: Slides
-  url: https://docs.google.com/presentation/d/1pzOmdbwQzGcDDpyFvYgkqbxm-BbEM-RBqI3pE9iJq-c/edit?usp=sharing
+  url: https://docs.google.com/presentation/d/1pzOmdbwQzGcDDpyFvYgkqbxm-BbEM-RBqI3pE9iJq-c
 - icon: play-circle
   icon_pack: fas
   name: recording
@@ -26,4 +26,6 @@ categories:
   - data management
 ---
 
-These are materials for a presentation given to the Society for the Study of School Psychology Early Career Forum
+These are materials for a presentation given to the Society for the Study of School Psychology Early Career Forum.
+
+This same talk was also given to the University of Washington, SMART Center on 2022-11-09.

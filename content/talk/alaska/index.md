@@ -22,4 +22,4 @@ categories:
   - data management
 ---
 
-These are materials for a presentation given to the Alaska Region of Fish and Wildlife Service.
+These are materials for a presentation given to the Alaska Region of Fish and Wildlife Service for Data Week.

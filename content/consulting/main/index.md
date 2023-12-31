@@ -27,7 +27,7 @@ I also provide direct services such as data cleaning, documentation, database de
 I currently provide two types of data management training for research teams. 
 <br>
 <br>
-1. I provide a 4-5 hour training on how to implement data management best practices into your workflows across the research life cycle. See what previous attendees of this training have said:
+1. I provide a half-day overview of data management best practices. Using the research life cycle to guide our discussion, this training reviews data management best practices at every phase, as well as how to integrate those practices into a personalized workflow that meets the needs of your specific project/s. See what previous attendees of this training have said: 
 <br>
 <br>
 <i><small>I learned all about the data management process which has never been explicitly taught to me in the way in which they were today. It helped seeing the steps clearly defined and then the nuanced details of each step. 

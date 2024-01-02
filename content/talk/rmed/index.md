@@ -8,7 +8,7 @@ time: false
 draft: false
 event: 
 event_url: 
-excerpt: Slides from a workshop given at the R/Medicine 2023 Conference.
+excerpt: Materials from a workshop given at the R/Medicine 2023 Conference.
 featured: true
 layout: single
 links:
@@ -23,7 +23,7 @@ links:
 location: virtual
 show_post_time: false
 categories:
-  - rstats 
+  - rstats
 ---
 
-Slides from a workshop given at the R/Medicine 2023 Conference. My co-presenters included Shannon Pileggi and Peter Higgins.
+Materials from a workshop given at the R/Medicine 2023 Conference. My co-presenters included Shannon Pileggi and Peter Higgins.

@@ -16,10 +16,14 @@ links:
   icon_pack: fas
   name: Slides
   url: https://shannonpileggi.github.io/rmedicine-data-cleaning-2023/slidespage.html
+- icon: play-circle
+  icon_pack: fas
+  name: recording
+  url: https://www.youtube.com/watch?v=6wFYAMwYzM4&list=PL4IzsxWztPdlpR3NqGzUI01M4_jqzIWqo&index=32
 location: virtual
 show_post_time: false
 categories:
-  - rstats
+  - rstats 
 ---
 
 Slides from a workshop given at the R/Medicine 2023 Conference. My co-presenters included Shannon Pileggi and Peter Higgins.

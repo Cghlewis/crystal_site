@@ -15,7 +15,7 @@ tags:
 - data organization 
 ---
 
-Working with data would be so much simpler if we always only had one dataset to work with. However, in the world of research, we often have multiple datasets, collected from different instruments, participants, or time periods, and our analyses typically require these data to be linked in some way. This blog post reviews the various ways we may consider combining our data. 
+Working with data would be so much simpler if we always only had one dataset to work with. However, in the world of research, we often have multiple datasets, collected from different instruments, participants, or time periods, and our research questions typically require these data to be linked in some way. This blog post reviews the various ways we may consider combining our data. 
 
 ## Types of joins
 

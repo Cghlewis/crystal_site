@@ -549,7 +549,7 @@ bind_rows(tch_svy_w1w2_c1, tch_svy_w1w2_c2)
 
 ```
 
-**But**, we don't have to combine data this way. We could also change the order of how we join data (i.e., append cohorts first, then horizontally join waves), or we could change the structure of the data completely (e.g., append waves in long format, as well as append cohorts, creating a very long dataset).
+**Note** We don't have to combine data this way. We could change the order of how we join data (i.e., append cohorts first, then horizontally join waves), or we could change the structure of the data completely (e.g., append waves in long format, as well as append cohorts, creating a very long dataset).
 
 ---
 
@@ -630,7 +630,7 @@ sch_svy
 
 3\. Then left join teacher data with school data.
 
-Notice that because we have longitudinal data appended in long format, I have to use a concatenated primary key to join our data.
+**Note** Notice that because we have longitudinal data appended in long format, I have to use a concatenated primary key to join our data.
 
 ```{r comment = NA}
 
@@ -642,7 +642,7 @@ tch_svy |>
 
 ## Additional resources
 
-This blog post is just a primer to get you started thinking about joins. There are many more joins, as well as many more combinations of joins that can be used! In the end, it all depends on what is useful for your project and your purposes (read [here](https://datamgmtinedresearch.com/structure#structure-datastructure)) for more information). Also, but just because you can join data, doesn't mean you need to rush into it. Datasets can be easily stored separately until it becomes necessary for you to join them. I usually think this is the best method because it allows you to more easily update individual files as needed, and it prevents you from potentially merging in a way that is ultimately not necessary or not aligned with what is needed (more information can be found [here](https://datamgmtinedresearch.com/style#style-time)). 
+This blog post is just a primer to get you started thinking about joins. There are many more joins, as well as many more combinations of joins that can be used! In the end, it all depends on what is useful for your project and your purposes (read [here](https://datamgmtinedresearch.com/structure#structure-datastructure) for more information). Also, just because you can join data, doesn't mean you need to rush into it. Datasets can be easily stored separately until it becomes necessary for you to join them. I usually think this is the best method because it allows you to more easily update individual files as needed, and it prevents you from potentially joining in a way that is ultimately not necessary or not aligned with what is needed (more information can be found [here](https://datamgmtinedresearch.com/style#style-time)). 
 
 For further learning, check out these additional very helpful resources!
 

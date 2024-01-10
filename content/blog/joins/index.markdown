@@ -239,17 +239,16 @@ stu_svy_post <- stu_svy_post |>
 # Then join data
 
 stu_svy_pre |>
-  full_join(stu_svy_post, by = "stu_id")
+  inner_join(stu_svy_post, by = "stu_id")
 ```
 
 ```
-# A tibble: 4 x 7
+# A tibble: 3 x 7
   stu_id pre_item1 pre_item2 pre_item3 post_item1 post_item2 post_item3
    <dbl>     <dbl>     <dbl>     <dbl>      <dbl>      <dbl>      <dbl>
 1  20056         4         5         4          5          1          2
 2  20134         5         1         3          5          0          3
-3  20149         3         2         3         NA         NA         NA
-4  20159         3         0         1          4          0          3
+3  20159         3         0         1          4          0          3
 ```
 
 **Note** Inner joins are not only for longitudinal data, they can be used for any other other scenarios we discussed. Similarly, longitudinal data can also be joined using any of the other methods we discussed.

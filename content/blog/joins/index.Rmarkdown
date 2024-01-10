@@ -293,7 +293,7 @@ stu_svy_post <- stu_svy_post |>
 # Then join data
 
 stu_svy_pre |>
-  full_join(stu_svy_post, by = "stu_id")
+  inner_join(stu_svy_post, by = "stu_id")
 
 ```
 

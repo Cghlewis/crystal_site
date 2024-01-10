@@ -25,7 +25,7 @@ In general, there are two ways to link our data, horizontally or vertically. Whe
 ### Horizontal joins
 
 Joining data horizontally, also called merging, can be used in a variety of scenarios. A few examples include:
-1. Linking data across forms (a student survey + a student assessment)
+1. Linking data across instruments (a student survey + a student assessment)
 2. Linking data across time (a student survey in the fall + a student survey in the spring)
 3. Linking data across participants (a student assessment + a teacher survey)
 4. Linking for de-identification purposes (a student survey with name + a student roster with study ID)
@@ -33,10 +33,10 @@ Joining data horizontally, also called merging, can be used in a variety of scen
 There are several different types of horizontal joins you can perform. In this post we are going to discuss mutating joins that increase the size of your dataset, as opposed to horizontal joins used for filtering data (learn more [here](https://r4ds.hadley.nz/joins.html#sec-mutating-joins)). The joins we will discuss include:
 
 1. Left join
-    - In a left join, all cases in the dataset on the left (or our first selected dataset) are maintained. Any cases from the dataset on the left side are joined with any matching data that exists in the file on the right (or our second selected dataset). If additional, non-matching, cases exist in our right dataset, they will not be carried over.
+    - In a left join, all cases in the dataset on the left (or our first selected dataset) are maintained. Any cases from the dataset on the left side are joined with any matching data that exists in the dataset on the right (or our second selected dataset). If additional, non-matching, cases exist in our right dataset, they will not be carried over.
     - Here we typically expect that the combined dataset will have the same number of rows as our original left side dataset.
 2. Right join
-    - In a right join, all cases in the dataset on the right (or our second selected dataset) are maintained. Any cases from the dataset on the right side are joined with any matching data that exists in the file on the left (or our first selected dataset). If additional, non-matching, cases exist in our left dataset, they will not be carried over.
+    - In a right join, all cases in the dataset on the right (or our second selected dataset) are maintained. Any cases from the dataset on the right side are joined with any matching data that exists in the dataset on the left (or our first selected dataset). If additional, non-matching, cases exist in our left dataset, they will not be carried over.
     - Here we typically expect that the combined dataset will have the same number of rows as our original right side dataset.
 3. Full join
     - In a full join, cases from both datasets are maintained. Any cases that exist in one dataset but not the other will be maintained in the final combined dataset.
@@ -51,7 +51,7 @@ There are several different types of horizontal joins you can perform. In this p
 There are two important rules when performing horizontal joins.
 
 1. Variable names cannot repeat.
-    - This means if a variable is named `gender` in your student survey dataset and a variable is also named `gender` in your district demographics dataset, those names will need to be edited (e.g., district gender can be renamed to `d_gender`). You can learn more about variable naming [here](https://datamgmtinedresearch.com/style#style-varname).
+    - This means if a variable is named `gender` in your student survey dataset and a variable is also named `gender` in your district records demographics dataset, those names will need to be edited (e.g., district gender can be renamed to `d_gender`). You can learn more about variable naming [here](https://datamgmtinedresearch.com/style#style-varname).
     - This rule does not apply to your linking keys (e.g., study ID), which are often named identically across datasets.
 2. Each dataset must contain a key.
     - There are two types of keys that allow you to link data files---primary and foreign keys. Every dataset should include a primary key that uniquely identifies rows in a dataset. Datasets may also include foreign keys which contain values associated with a primary key in another table. While primary keys cannot include missing or duplicated values, these values are allowed with foreign keys.
@@ -159,12 +159,12 @@ tch_svy |>
 
 #### Full join
 
-Full joins are very common in research. Imagine a scenario where you are collecting multiple forms on participants, or you are collecting the same form on participants over multiple time points. In those cases, you may have missing data for some forms for some participants, but you still want any data that you have to appear in your combined dataset.
+Full joins are very common in research. Imagine a scenario where you are collecting multiple instruments on participants, or you are collecting the same instrument on participants over multiple time points. In those cases, you may have missing data for some participants (i.e., a participant was absent for one of those data collections), but you still want any data that you were able to collect to appear in your combined dataset.
 
 Let's say you have a student questionnaire + a student assessment. In this case we want all data from both forms to exist in our combined dataset.
 
 <div class="figure" style="text-align: center">
-<img src="img/fig4.PNG" alt="Example datasets" width="594" />
+<img src="img/fig4.PNG" alt="Example datasets" width="606" />
 <p class="caption">Figure 6: Example datasets</p>
 </div>
 
@@ -201,7 +201,7 @@ stu_svy |>
 
 #### Inner join
 
-Our last join type is one that I personally use less often, but there are certainly many scenarios where this will be useful. Let's take, for instance, the case of a pre and post survey. In this case, we may only want cases in our combined data where a participant has both pre and post data. This is when an inner join can be very useful. 
+Our last horizontal join type is one that I personally use less often, but there are certainly many scenarios where this will be useful. Let's take, for instance, the case of a pre and post survey. In this case, we may only want cases in our combined data where a participant has both pre and post data. This is when an inner join can be very useful. 
 
 Let's take a look at our example pre questionnaire + post questionnaire.
 
@@ -218,7 +218,7 @@ Using an inner join we can merge data using our `stu_id` key again. However, in 
 <p class="caption">Figure 9: Inner join using data from Figure 8</p>
 </div>
 
-We see that our combined dataset only shows three cases because those are the only cases with both pre and post data available. However, if there had been a an empty row for `stud_id` = 20149 in the post questionnaire data, that case would have been pulled into the combined dataset. 
+We see that our combined dataset only shows three cases because those are the only cases with both pre and post data available. However, if there had been an empty row for `stud_id` = 20149 in the post questionnaire data, that case would have been pulled into the combined dataset. 
 
 Let's see what an inner join looks like in R. 
 
@@ -256,9 +256,9 @@ stu_svy_pre |>
 
 ### Many relationships
 
-Until now we have discussed scenarios that are considered one-to-one merges. In these cases, we only expect one participant in a dataset to be joined to one instance of that same participant in the other dataset.
+Until now we have discussed scenarios that are considered _one-to-one_ merges. In these cases, we only expect one participant in a dataset to be joined to one instance of that same participant in the other dataset.
 
-However, there are scenarios where this will not be the case. Take for instance a case where we are merging information across participant groups (e.g., merging student data with teacher data, or merging teacher data with school data). In these cases, one teacher is often associated with multiple students and one school is often associated with multiple teachers. When we merge data like this, we are working with a one-to-many or a many-to-one merge, depending on which dataset is first or second. In this scenario, we would expect to see repeating data in our combined dataset.
+However, there are scenarios where this will not be the case. Take for instance a case where we are merging information across participant groups (e.g., merging student data with teacher data, or merging teacher data with school data). In these cases, one teacher is often associated with multiple students and one school is often associated with multiple teachers. When we merge data like this, we are working with a _one-to-many_ or a _many-to-one_ merge, depending on which dataset is first or second. In this scenario, we would expect to see repeating data in our combined dataset.
 
 As one example, let's say we have a student questionnaire + a teacher questionnaire.
 
@@ -267,18 +267,18 @@ As one example, let's say we have a student questionnaire + a teacher questionna
 <p class="caption">Figure 10: Example datasets</p>
 </div>
 
-We can combine this data using the `tch_id` variable which exists in both datasets. However, when we join it will be a one-to-many or a many-to-one join depending on the order of the datasets and which type of join we use.
+We can combine this data using the `tch_id` variable which exists in both datasets. However, when we join it will be a _one-to-many_ or a _many-to-one_ join depending on the order of the datasets and which type of join we use.
 
-Let's say for example, we use a left join, with the student questionnaire dataset on the left and the teacher questionnaire dataset on the right. Here we will be doing a _many-to-one_ join, where each student student is associated multiple teachers, two students will be linked with `tch_id` = 406 and two students will be linked with `tch_id` = 407.
+Let's say for example, we use a left join, with the student questionnaire dataset on the left and the teacher questionnaire dataset on the right. Here we will be doing a _many-to-one_ join, where each student student is associated with multiple teachers---two students will be linked with `tch_id` = 406 and two students will be linked with `tch_id` = 407.
 
 <div class="figure" style="text-align: center">
 <img src="img/fig9.PNG" alt="Many-to-one left join using data from Figure 10" width="476" />
 <p class="caption">Figure 11: Many-to-one left join using data from Figure 10</p>
 </div>
 
-After combining data we see that we have 4 cases in our data, as we expect from using a left join, but the teacher information we merged in now repeats (twice for each `tch_id`). 
+After combining data we see that we have four cases in our data, as we expect from using a left join, but the teacher information we merged in now repeats (twice for each `tch_id`). 
 
-**Note** The typical rules of a left or right join do not apply when doing a _one-to-many_ join though. Say for example we moved our teacher dataset to the left and performed a left join, this would now be a _one-to-many_ join with one teacher being associated with many students. In this case, the final row number in your combined dataset will not match the count of rows in your original left dataset. Instead it will match the count of the **_many_ dataset** (i.e., the teacher level dataset will become a student level dataset). So instead of 2, the final row final row count would be 4. 
+**Note** The typical rules of a left or right join do not apply when doing a _one-to-many_ join though. Say for example we moved our teacher dataset to the left and performed a left join, this would now be a _one-to-many_ join with one teacher being associated with many students. In this case, the final row number in your combined dataset will not match the count of rows in your original left dataset. Instead it will match the count of the **_many_ dataset** (i.e., the teacher level dataset will become a student level dataset). So instead of two, the final row final row count would be four. 
 
 Let's perform a _many-to-one_ left join using R, with our student data on the left and our teacher data on the right.
 
@@ -393,14 +393,14 @@ bind_rows(svy_w1, svy_w2) |>
 
 ## Combining joins
 
-In large research studies, it is common to combine horizontal and vertical joins. Take for instance a study that collects two waves of a teacher questionnaire, across two time points, for two cohorts. This data can be combined in many ways depending on your needs (e.g., storage needs, sharing needs, analysis needs). 
+In large research studies, it is common to combine horizontal and vertical joins. Take for instance a study that collects two waves of a teacher questionnaire, for two cohorts. 
 
 <div class="figure" style="text-align: center">
 <img src="img/fig13.PNG" alt="Example datasets" width="660" />
 <p class="caption">Figure 14: Example datasets</p>
 </div>
 
-One way we could combine this data might be
+This data can be combined in many ways depending on your needs. One way we could combine this data might be
 - First, horizontally join within cohort. Here I am choosing to do a full join.
 - Then, append the cohorts.
 
@@ -434,16 +434,15 @@ tch_svy_w1w2_c1
 ```
 
 ```
-# A tibble: 4 x 6
+# A tibble: 3 x 6
   tch_id cohort w1_item1 w1_item2 w2_item1 w2_item2
    <dbl>  <dbl>    <dbl>    <dbl>    <dbl>    <dbl>
 1    406      1        4        5        5        1
 2    407      1        5        1        5        0
 3    408      1        4        4       NA       NA
-4    409     NA       NA       NA        2        2
 ```
 
-2\. Next let's join Cohort 2.
+2\. Next let's join cohort 2.
 
 
 ```r
@@ -483,23 +482,22 @@ bind_rows(tch_svy_w1w2_c1, tch_svy_w1w2_c2)
 ```
 
 ```
-# A tibble: 7 x 6
+# A tibble: 6 x 6
   tch_id cohort w1_item1 w1_item2 w2_item1 w2_item2
    <dbl>  <dbl>    <dbl>    <dbl>    <dbl>    <dbl>
 1    406      1        4        5        5        1
 2    407      1        5        1        5        0
 3    408      1        4        4       NA       NA
-4    409     NA       NA       NA        2        2
-5    415      2        4        3        5        3
-6    418      2        4        1        4        0
-7    419      2        3        2       NA       NA
+4    415      2        4        3        5        3
+5    418      2        4        1        4        0
+6    419      2        3        2       NA       NA
 ```
 
-**But**, we don't have to combine data this way. We could also change the order of how we join data (i.e., append cohorts first, then horizontally join waves), or we could change the structure of the data completely (e.g., append waves in long format, as well as append cohorts, creating a very long dataset), or .
+**But**, we don't have to combine data this way. We could also change the order of how we join data (i.e., append cohorts first, then horizontally join waves), or we could change the structure of the data completely (e.g., append waves in long format, as well as append cohorts, creating a very long dataset).
 
 ---
 
-Let's look at one more scenario where we are combining joins. In this case we have two teacher questionnaires, collected across two waves, and we have school level demographic data, also collected across two waves. 
+Let's look at one more scenario where we are combining joins. In this case we have a teacher questionnaire collected across two waves, and we have school-level demographic data, also collected across two waves. 
 
 <div class="figure" style="text-align: center">
 <img src="img/fig14.PNG" alt="Example datasets" width="648" />
@@ -508,7 +506,7 @@ Let's look at one more scenario where we are combining joins. In this case we ha
 
 Again, we could combine this data in multiple ways, but here we are going to append the two waves of data into long format, and then horizontally join the school data using a left join.
 
-1\. Append within teacher data
+1\. Append within teacher data.
 
 
 
@@ -542,7 +540,7 @@ tch_svy
 6    408     2     24     3     2
 ```
 
-2\. Append within school data
+2\. Append within school data.
 
 
 ```r
@@ -572,7 +570,7 @@ sch_svy
 4     24     2   430    90
 ```
 
-3\. Then left join teacher data with school data
+3\. Then left join teacher data with school data.
 
 Notice that because we have longitudinal data appended in long format, I have to use a concatenated primary key to join our data.
 
@@ -597,7 +595,7 @@ tch_svy |>
 
 ## Additional resources
 
-This blog post is just a primer to get you started thinking about joins. There are many more joins, as well as many more combinations of joins that can be used! In the end, it all depends on what is useful for your project and your purposes (read [here]([here](https://datamgmtinedresearch.com/structure#structure-datastructure)) for more information). Also, but just because you can join data, doesn't mean you need to rush into it. Datasets can be easily stored separately until it becomes necessary for you to join them. I usually think this is the best method because it allows you to more easily update individual files as needed, and it prevents you from potentially merging in a way that is ultimately not necessary or not aligned with what is needed (more information can be found [here](https://datamgmtinedresearch.com/style#style-time)). 
+This blog post is just a primer to get you started thinking about joins. There are many more joins, as well as many more combinations of joins that can be used! In the end, it all depends on what is useful for your project and your purposes (read [here](https://datamgmtinedresearch.com/structure#structure-datastructure)) for more information). Also, but just because you can join data, doesn't mean you need to rush into it. Datasets can be easily stored separately until it becomes necessary for you to join them. I usually think this is the best method because it allows you to more easily update individual files as needed, and it prevents you from potentially merging in a way that is ultimately not necessary or not aligned with what is needed (more information can be found [here](https://datamgmtinedresearch.com/style#style-time)). 
 
 For further learning, check out these additional very helpful resources!
 

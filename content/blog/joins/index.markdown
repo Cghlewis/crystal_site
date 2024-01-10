@@ -268,7 +268,7 @@ As one example, let's say we have a student questionnaire + a teacher questionna
 
 We can combine this data using the `tch_id` variable which exists in both datasets. However, when we join it will be a _one-to-many_ or a _many-to-one_ join depending on the order of the datasets and which type of join we use.
 
-Let's say for example, we use a left join, with the student questionnaire dataset on the left and the teacher questionnaire dataset on the right. Here we will be doing a _many-to-one_ join, where each student student is associated with multiple teachers---two students will be linked with `tch_id` = 406 and two students will be linked with `tch_id` = 407.
+Let's say for example, we use a left join, with the student questionnaire dataset on the left and the teacher questionnaire dataset on the right. Here we will be doing a _many-to-one_ join, where each student is associated with multiple teachers---two students will be linked with `tch_id` = 406 and two students will be linked with `tch_id` = 407.
 
 <div class="figure" style="text-align: center">
 <img src="img/fig9.PNG" alt="Many-to-one left join using data from Figure 10" width="476" />

@@ -503,7 +503,9 @@ Let's look at one more scenario where we are combining joins. In this case we ha
 <p class="caption">Figure 15: Example datasets</p>
 </div>
 
-Again, we could combine this data in multiple ways, but here we are going to append the two waves of data into long format, and then horizontally join the school data using a left join.
+Again, we could combine this data in multiple ways, but here we are going to
+- First, append the two waves of data into long format.
+- Then, horizontally join the school data using a left join.
 
 1\. Append within teacher data.
 

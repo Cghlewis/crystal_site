@@ -561,7 +561,9 @@ knitr::include_graphics("img/fig14.PNG")
 
 ```
 
-Again, we could combine this data in multiple ways, but here we are going to append the two waves of data into long format, and then horizontally join the school data using a left join.
+Again, we could combine this data in multiple ways, but here we are going to
+- First, append the two waves of data into long format.
+- Then, horizontally join the school data using a left join.
 
 1\. Append within teacher data.
 

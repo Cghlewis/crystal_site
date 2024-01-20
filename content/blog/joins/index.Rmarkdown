@@ -356,7 +356,7 @@ stu_svy |>
 
 ### Vertical joins
 
-Similar to horizontal joins, there are many use cases for joining data horizontally, also called appending data. Some examples include:
+Similar to horizontal joins, there are many use cases for joining data vertically, also called appending data. Some examples include:
 
 1. Combining similar data across cohorts
 2. Combining similar data collected from different sites or links

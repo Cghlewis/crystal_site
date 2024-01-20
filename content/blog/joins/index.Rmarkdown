@@ -30,7 +30,7 @@ Joining data horizontally, also called merging, can be used in a variety of scen
 3. Linking data across participants (a student assessment + a teacher survey)
 4. Linking for de-identification purposes (a student survey with name + a student roster with study ID)
 
-There are several different types of horizontal joins you can perform. In this post we are going to discuss mutating joins that increase the size of your dataset, as opposed to horizontal joins used for filtering data (learn more [here](https://r4ds.hadley.nz/joins.html#sec-mutating-joins)). The joins we will discuss include:
+There are several different types of horizontal joins you can perform. In this post we are going to discuss mutating joins that increase the size of your dataset, as opposed to horizontal joins used for filtering data (learn more [here](https://r4ds.hadley.nz/joins.html#sec-mutating-joins)). While there are more, we will cover these four commonly used joins:
 
 1. Left join
     - In a left join, all cases in the dataset on the left (or our first selected dataset) are maintained. Any cases from the dataset on the left side are joined with any matching data that exists in the dataset on the right (or our second selected dataset). If additional, non-matching, cases exist in our right dataset, they will not be carried over.

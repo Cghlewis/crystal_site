@@ -598,10 +598,12 @@ tch_svy |>
 
 ## Additional resources
 
-This blog post is just a primer to get you started thinking about joins. There are more types of joins, as well as more combinations of joins that can be used! In the end, it all depends on what is useful for your project and your purposes (read [here](https://datamgmtinedresearch.com/structure#structure-datastructure) for more information). Also, just because you can join data, doesn't mean you need to rush into it. The flat file datasets typically used in education research (e.g., CSV files) can be easily stored separately until it becomes necessary for you to join them. I usually think this is the best method because it allows you to more easily update individual files as needed, and it prevents you from potentially joining in a way that is ultimately not necessary or not aligned with what is needed (more information can be found [here](https://datamgmtinedresearch.com/style#style-time)). 
+This blog post is just a primer to get you started thinking about joins. There are more types of joins, as well as more combinations of joins that can be used! In the end, it all depends on what is useful for your project and your purposes (read [here](https://datamgmtinedresearch.com/structure#structure-datastructure) for more information). Also, just because you can join data, doesn't mean you need to rush into it. The flat file format datasets often used in research (e.g., CSV files) can be easily stored separately until it becomes necessary for you to join them. I usually think this is the best method because it allows you to more easily update individual files as needed, and it prevents you from potentially joining in a way that is ultimately not necessary or not aligned with what is needed (more information can be found [here](https://datamgmtinedresearch.com/style#style-time)).
 
 For further learning, check out these additional very helpful resources!
 
 - [R for Data Science (2e)](https://r4ds.hadley.nz/joins.html#introduction)  
 - [Data Carpentry: Joining Tables](https://tavareshugo.github.io/r-intro-tidyverse-gapminder/08-joins/index.html)  
 - [R for HR](https://rforhr.com/join.html)  
+
+Post updated _2024-01-21_

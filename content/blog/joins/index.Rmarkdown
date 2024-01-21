@@ -30,14 +30,14 @@ Joining data horizontally, also called merging, can be used in a variety of scen
 3. Linking data across participants (a student assessment + a teacher survey)
 4. Linking for de-identification purposes (a student survey with name + a student roster with study ID)
 
-There are several different types of horizontal joins you can perform. In this post we are going to discuss mutating joins that increase the size of your dataset, as opposed to horizontal joins used for filtering data (learn more [here](https://r4ds.hadley.nz/joins.html#sec-mutating-joins)). While there are more, we will cover these four commonly used joins:
+There are several different types of horizontal joins you can perform. In this post we are going to discuss mutating joins that increase the size of your dataset, as opposed to horizontal joins used for filtering data (learn more [here](https://r4ds.hadley.nz/joins.html#sec-mutating-joins)). The four types of joins we will cover include:
 
 1. Left join
     - In a left join, all cases in the dataset on the left (or our first selected dataset) are maintained. Any cases from the dataset on the left side are joined with any matching data that exists in the dataset on the right (or our second selected dataset). If additional, non-matching, cases exist in our right dataset, they will not be carried over.
-    - Here we typically expect that the combined dataset will have the same number of rows as our original left side dataset.
+    - Here we *typically* expect that the combined dataset will have the same number of rows as our original left side dataset.
 2. Right join
     - In a right join, all cases in the dataset on the right (or our second selected dataset) are maintained. Any cases from the dataset on the right side are joined with any matching data that exists in the dataset on the left (or our first selected dataset). If additional, non-matching, cases exist in our left dataset, they will not be carried over.
-    - Here we typically expect that the combined dataset will have the same number of rows as our original right side dataset.
+    - Here we *typically* expect that the combined dataset will have the same number of rows as our original right side dataset.
 3. Full join
     - In a full join, cases from both datasets are maintained. Any cases that exist in one dataset but not the other will be maintained in the final combined dataset.
 4. Inner join
@@ -354,9 +354,11 @@ stu_svy |>
 
 ```
 
+**Note** In `dplyr` version 1.1.0 or higher, an additional argument was added *relationship*. By adding this argument to your join, and specifying the correct type (e.g. "one-to-many", "many-to-one", "one-to-one"), you will receive an error if the join violates the constraints of the relationship. Read more [here](https://www.tidyverse.org/blog/2023/03/dplyr-1-1-1/).
+
 ### Vertical joins
 
-Similar to horizontal joins, there are many use cases for joining data vertically, also called appending data. Some examples include:
+Similar to horizontal joins, there are many use cases for joining data vertically, also called appending data (or Union in SQL). Some examples include:
 
 1. Combining similar data across cohorts
 2. Combining similar data collected from different sites or links
@@ -644,7 +646,7 @@ tch_svy |>
 
 ## Additional resources
 
-This blog post is just a primer to get you started thinking about joins. There are many more joins, as well as many more combinations of joins that can be used! In the end, it all depends on what is useful for your project and your purposes (read [here](https://datamgmtinedresearch.com/structure#structure-datastructure) for more information). Also, just because you can join data, doesn't mean you need to rush into it. Datasets can be easily stored separately until it becomes necessary for you to join them. I usually think this is the best method because it allows you to more easily update individual files as needed, and it prevents you from potentially joining in a way that is ultimately not necessary or not aligned with what is needed (more information can be found [here](https://datamgmtinedresearch.com/style#style-time)). 
+This blog post is just a primer to get you started thinking about joins. There are more types of joins, as well as more combinations of joins that can be used! In the end, it all depends on what is useful for your project and your purposes (read [here](https://datamgmtinedresearch.com/structure#structure-datastructure) for more information). Also, just because you can join data, doesn't mean you need to rush into it. The flat file datasets typically used in education research (e.g., CSV files) can be easily stored separately until it becomes necessary for you to join them. I usually think this is the best method because it allows you to more easily update individual files as needed, and it prevents you from potentially joining in a way that is ultimately not necessary or not aligned with what is needed (more information can be found [here](https://datamgmtinedresearch.com/style#style-time)). 
 
 For further learning, check out these additional very helpful resources!
 

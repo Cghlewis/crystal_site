@@ -74,7 +74,7 @@ Left joins are probably one of the most common types of joins. While it can be u
 Here we want to add our study ID (`tch_id`) to our questionnaire. In order to do this, we can join our questionnaire file with a roster file using a combined primary key (`f_name` and `l_name`). This works great as long as names are spelled identically across files. 😉  
 
 <div class="figure" style="text-align: center">
-<img src="img/fig2.PNG" alt="Left join using data from Figure 3" width="406" />
+<img src="img/fig2.PNG" alt="Left join using data from Figure 3" width="422" />
 <p class="caption">Figure 4: Left join using data from Figure 3</p>
 </div>
 
@@ -130,7 +130,7 @@ tch_svy |>
 What if, however, we wanted a dataset with our full study sample in it and we did not care whether or not there was missing data for cases? In this case, we could use the same scenario as Figure 2, but instead do a right join (note that we could also just change the order of the datasets and use a left join again). Now when you join your datasets on your compound key, you will end up with four cases in your data.
 
 <div class="figure" style="text-align: center">
-<img src="img/fig3.PNG" alt="Right join using data from Figure 3" width="397" />
+<img src="img/fig3.PNG" alt="Right join using data from Figure 3" width="431" />
 <p class="caption">Figure 5: Right join using data from Figure 3</p>
 </div>
 
@@ -605,5 +605,6 @@ For further learning, check out these additional very helpful resources!
 - [R for Data Science (2e)](https://r4ds.hadley.nz/joins.html#introduction)  
 - [Data Carpentry: Joining Tables](https://tavareshugo.github.io/r-intro-tidyverse-gapminder/08-joins/index.html)  
 - [R for HR](https://rforhr.com/join.html)  
+- [Tidy Animated Verbs](https://github.com/gadenbuie/tidyexplain)
 
-Post updated _2024-01-21_
+Post updated _2024-01-22_

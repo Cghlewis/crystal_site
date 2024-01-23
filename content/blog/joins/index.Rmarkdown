@@ -358,7 +358,7 @@ stu_svy |>
 
 ### Vertical joins
 
-**Note 2024-01-23** I want to thank the several people who have pointed out that the term "vertical join" is not standard terminology and may be confusing to readers. I acknowledge that stacking data vertically is not technically considered a join (defined by adding new columns by matching datasets by a common field/key). So if you are reading this for the first time, please understand that in this section, I use the term "join" simply as a way to provide a unifying framework for the different ways you can combine data. However, when you are doing "vertical joins", more appropriate terms to use would include append, stack, or union data.
+**Note 2024-01-23** I want to thank the several people who have pointed out that the term "vertical join" is not standard terminology and may be confusing to readers. I acknowledge that stacking data vertically is not technically considered a join (defined as adding new columns by matching datasets by a common field/key). So if you are reading this for the first time, please understand that, in this section, I use the term "join" simply as a way to provide a unifying framework for the different ways you can combine data. However, when you are doing "vertical joins", more appropriate terms to use would include append, stack, or union data.
 
 ---
 

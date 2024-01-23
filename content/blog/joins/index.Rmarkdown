@@ -372,7 +372,7 @@ However, there are some fundamental differences between horizontal and vertical 
 1. Rather than joining data on keys, columns are matched by variable names.
 2. In this case you do not want unique variable names. Here, it is imperative that variables are named and formatted identically across datasets. 
 
-**Note** Not all functions/statements match on column names. Some match on column order. Make sure to understand the program you are working with before performing vertical joins.
+**Note** Not all functions/statements match on column names. Some match on column order. Make sure to understand the program you are working with before appending data.
 
 Let's take an example where we have a questionnaire collected across two cohorts of teachers. We can append these data, creating a longer dataset. The inclusion of the cohort variable allows users to know which data is associated with which cohort in the combined data.
 

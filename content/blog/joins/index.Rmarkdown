@@ -19,7 +19,7 @@ Working with data would be so much simpler if we always only had one dataset to 
 
 ## Types of joins
 
-In general, there are two ways to link our data, horizontally or vertically. When linking or joining data horizontally we are matching rows by one or more variables (i.e., keys), making a wider dataset. When joining vertically, column names are matched and datasets are stacked on top of each other, making a longer dataset. Joins can be done in many different programs (e.g., SQL, R, Stata, SAS). Most of this post will be applicable to any language, but examples in R will be provided.
+In general, there are two ways to combine our data, horizontally or vertically. When linking or joining data horizontally we are matching rows by one or more variables (i.e., keys), making a wider dataset (adding more columns). When joining vertically, column names are matched and datasets are stacked on top of each other, making a longer dataset (adding more rows). Joins can be done in many different programs (e.g., SQL, R, Stata, SAS). Most of this post will be applicable to any language, but examples in R will be provided.
 
 
 ### Horizontal joins
@@ -358,7 +358,11 @@ stu_svy |>
 
 ### Vertical joins
 
-Similar to horizontal joins, there are many use cases for joining data vertically, also called appending data (or Union in SQL). Some examples include:
+**Note 2024-01-23** I want to thank the several people who have pointed out that the term "vertical join" is not standard terminology and may be confusing to readers. I acknowledge that stacking data vertically is not technically considered a join (defined by adding new columns by matching datasets by a common field/key). So if you are reading this for the first time, please understand that in this section, I use the term "join" simply as a way to provide a unifying framework for the different ways you can combine data. However, when you are doing "vertical joins", more appropriate terms to use would include append, stack, or union data.
+
+---
+
+Similar to horizontal joins, there are many use cases for joining data vertically, also called appending data (or union in SQL). Some examples include:
 
 1. Combining similar data across cohorts
 2. Combining similar data collected from different sites or links
@@ -367,6 +371,8 @@ Similar to horizontal joins, there are many use cases for joining data verticall
 However, there are some fundamental differences between horizontal and vertical joins.
 1. Rather than joining data on keys, columns are matched by variable names.
 2. In this case you do not want unique variable names. Here, it is imperative that variables are named and formatted identically across datasets. 
+
+**Note** Not all functions/statements match on column names. Some match on column order. Make sure to understand the program you are working with before performing vertical joins.
 
 Let's take an example where we have a questionnaire collected across two cohorts of teachers. We can append these data, creating a longer dataset. The inclusion of the cohort variable allows users to know which data is associated with which cohort in the combined data.
 
@@ -405,7 +411,7 @@ bind_rows(svy_c1, svy_c2)
 
 You can also append longitudinal data. For example, if your repeated measures analysis requires data to be in long format, rather than wide (as seen with horizontal joins), longitudinal data can be vertically joined. In this case, rather than concatenating a time component to your time varying variables, a time variable is added to the data to delineate which rows belong to which time period. How a time component is assigned is completely up to you. Here I chose to add a variable named `wave` and assign numeric values to my time points (read [here](https://datamgmtinedresearch.com/style#style-time) for more information).
 
-**Note** Even if one dataset contains variables that do not exist in the other (e.g., a variable was added to the questionnaire at a later time), appending will still work.
+**Note** Even if one dataset contains variables that do not exist in the other (e.g., a variable was added to the questionnaire at a later time), appending will still work when using `bind_rows()`. This may not be true for other binding functions/statements.
 
 ```{r echo = FALSE, fig.align= "center", fig.cap = "Appending data across time"}
 
@@ -655,4 +661,4 @@ For further learning, check out these additional very helpful resources!
 - [R for HR](https://rforhr.com/join.html)  
 - [Tidy Animated Verbs](https://github.com/gadenbuie/tidyexplain)
 
-Post updated _2024-01-22_
+Post updated _2024-01-23_

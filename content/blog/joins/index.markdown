@@ -19,7 +19,7 @@ Working with data would be so much simpler if we always only had one dataset to 
 
 ## Types of joins
 
-In general, there are two ways to combine our data, horizontally or vertically. When linking or joining data horizontally we are matching rows by one or more variables (i.e., keys), making a wider dataset (adding more columns). When joining vertically, column names are matched and datasets are stacked on top of each other, making a longer dataset (adding more rows). Joins can be done in many different programs (e.g., SQL, R, Stata, SAS). Most of this post will be applicable to any language, but examples in R will be provided.
+In general, there are two ways to combine our data, horizontally or vertically. When linking or joining data horizontally we are matching rows by one or more variables (i.e., keys), making a wider dataset (adding columns). When joining vertically, column names are matched and datasets are stacked on top of each other, making a longer dataset (adding rows). Joins can be done in many different programs (e.g., SQL, R, Stata, SAS). Most of this post will be applicable to any language, but examples in R will be provided.
 
 
 ### Horizontal joins
@@ -305,7 +305,7 @@ stu_svy |>
 
 ### Vertical joins
 
-**Note 2024-01-23** I want to thank the several people who have pointed out that the term "vertical join" is not standard terminology and may be confusing to readers. I acknowledge that stacking data vertically is not technically considered a join (defined as adding new columns by matching datasets by a common field/key). So if you are reading this for the first time, please understand that, in this section, I use the term "join" simply as a way to provide a unifying framework for the different ways you can combine data. However, when you are doing "vertical joins", more appropriate terms to use would include append, stack, or union data.
+**Note 2024-01-23** I want to thank the several people who have pointed out that the term "vertical join" is not standard terminology and may be confusing to readers. I acknowledge that stacking data vertically is not technically considered a join ([defined](https://www.w3schools.com/sql/sql_join.asp) as matching dataset rows by a common field/key). So if you are reading this for the first time, please understand that, in this section, I loosely use the term "join" to provide a unifying framework for the different ways you can combine data. However, when you are doing "vertical joins", more appropriate terms to use would include append, stack, or union data.
 
 ---
 

@@ -332,6 +332,26 @@ Let's see what this type of join would look like in R. As a reminder, across the
 
 
 
+First, let's check that the variable types are identical across datasets.
+
+
+```r
+library(janitor)
+
+compare_df_cols(svy_c1, svy_c2)
+```
+
+```
+  column_name  svy_c1  svy_c2
+1      cohort numeric numeric
+2       item1 numeric numeric
+3       item2 numeric numeric
+4       item3 numeric numeric
+5      tch_id numeric numeric
+```
+
+Our column types are identical so we are good to go.
+
 
 ```r
 library(dplyr)
@@ -613,4 +633,4 @@ For further learning, check out these additional very helpful resources!
 - [R for HR](https://rforhr.com/join.html)  
 - [Tidy Animated Verbs](https://github.com/gadenbuie/tidyexplain)
 
-Post updated _2024-01-23_
+Post updated _2024-02-05_

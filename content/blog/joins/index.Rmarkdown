@@ -401,6 +401,18 @@ svy_c2 <- tribble(~tch_id, ~cohort, ~item1, ~item2, ~item3,
 
 ```
 
+First, let's check that the variable types are identical across datasets.
+
+```{r comment=NA, message=FALSE}
+
+library(janitor)
+
+compare_df_cols(svy_c1, svy_c2)
+
+```
+
+Our column types are identical so we are good to go.
+
 ```{r comment=NA}
 
 library(dplyr)
@@ -661,4 +673,4 @@ For further learning, check out these additional very helpful resources!
 - [R for HR](https://rforhr.com/join.html)  
 - [Tidy Animated Verbs](https://github.com/gadenbuie/tidyexplain)
 
-Post updated _2024-01-23_
+Post updated _2024-02-05_

@@ -23,7 +23,7 @@ Imagine you have the luxury of starting here – creating a data dictionary befo
 
 So what documents do you need to collect in order to start creating your data dictionary?
 
-1. Your Style Guide: If you are new to style guides, it is a set of standards for how your team should organize data for your project. Style guide rules can apply to many aspects of your project, but for the sake of a data dictionary, I am particularly focusing on rules for naming variables and coding response values. If you want to read more about creating a style guide for your project and learn best practices for variable naming and value coding, you can review this [resource](https://cghlewis.github.io/mpsi-data-training/training_3.html#Variable_Naming).
+1. Your Style Guide: If you are new to style guides, it is a set of standards for how your team should organize data for your project. Style guide rules can apply to many aspects of your project, but for the sake of a data dictionary, I am particularly focusing on rules for naming variables and coding response values. If you want to read more about creating a style guide for your project and learn best practices for variable naming and value coding, you can review this [book chapter](https://datamgmtinedresearch.com/style).
 2. The other piece of information you will need are the actual measures you plan to collect. This may look like technical documents from an assessment company, or instruments attached to publications. Whatever format you are gathering your measures from, you will want your documents to provide information such as:
    - What items make up the measures/scales? What is the exact wording of items?
    - How are items coded?
@@ -117,9 +117,18 @@ Again, once this data dictionary is created, you can pick up at step 2 – using
 
 If you would like to learn more about data dictionaries, here are some resources for further reading!
 
+- [Data Dictionary Template](https://osf.io/ynqcu)
+- [Data Managment in Large-Scale Research: Data Documentation Chapter](https://datamgmtinedresearch.com/document)
 - [OSF: How to Make a Data Dictionary](https://help.osf.io/article/217-how-to-make-a-data-dictionary)
 - [Getting Started Creating Data Dictionaries: How to Create a Shareable Data Set](https://journals.sagepub.com/doi/full/10.1177/2515245920928007)
-- [USDA Data Dictionary Purpose](https://data.nal.usda.gov/data-dictionary-purpose)
-- [Johns Hopkins Data Dictionary Best Practice](https://ictrweb.johnshopkins.edu/ictr/dmig/Best_Practice/a8376318-ebd6-421f-be63-acf8c88376a1_6342a1c3-1a5d-4287-a46e-374824e3780e.html?v=65849&ip=hpdkvlttuiyioooqhw)
 - [USGS Data Dictionaries](https://www.usgs.gov/data-management/data-dictionaries#what)
-- [Data Managment in Large-Scale Research: Data Documentation Module](https://cghlewis.github.io/mpsi-data-training/training_1.html#Data_Dictionary)
+
+### Measures used as examples in this post
+
+1. [Pearson SAT 10](https://www.pearsonassessments.com/store/usassessments/en/Store/Professional-Assessments/Academic-Learning/Stanford-Achievement-Test-Series-%7C-Tenth-Edition/p/100000415.html)
+2. [Teacher Observation of Child Adaptation- Revised (Toca-R)](https://psycnet.apa.org/doi/10.1037/t76065-000)
+1. [Generalized Anxiety Disorder (GAD-7)](https://pubmed.ncbi.nlm.nih.gov/16717171/)
+3. [Patterns of Adaptive Learning Scales (PALS)](https://public.websites.umich.edu/~pals/PALS%202000_V13Word97.pdf)
+
+
+Resources in this post updated _2024-02-18_

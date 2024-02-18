@@ -118,7 +118,7 @@ Again, once this data dictionary is created, you can pick up at step 2 – using
 If you would like to learn more about data dictionaries, here are some resources for further reading!
 
 - [Data Dictionary Template](https://osf.io/ynqcu)
-- [Data Managment in Large-Scale Research: Data Documentation Chapter](https://datamgmtinedresearch.com/document)
+- [Data Managment in Large-Scale Research: Data Documentation Chapter](https://datamgmtinedresearch.com/document#document-dictionary)
 - [OSF: How to Make a Data Dictionary](https://help.osf.io/article/217-how-to-make-a-data-dictionary)
 - [Getting Started Creating Data Dictionaries: How to Create a Shareable Data Set](https://journals.sagepub.com/doi/full/10.1177/2515245920928007)
 - [USGS Data Dictionaries](https://www.usgs.gov/data-management/data-dictionaries#what)

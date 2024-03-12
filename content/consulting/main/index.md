@@ -27,7 +27,7 @@ I also provide direct services such as data cleaning, documentation, database de
 I currently provide two types of data management training for research teams. 
 <br>
 <br>
-1. I provide a full or half-day overview of data management best practices. Using the research life cycle to guide our discussion, this training reviews data management best practices at every phase, as well as how to integrate those practices into a personalized workflow that meets the needs of your specific project/s. See what previous attendees of this training have said: 
+1. I provide a full or half-day overview of data management best practices. Using the research life cycle to guide our discussion, these trainings review data management best practices at different phases of a project, as well as how to integrate those practices into a personalized workflow that meets the needs of your specific project/s. See what previous attendees of this training have said: 
 <br>
 <br>
 <i><small>I learned all about the data management process which has never been explicitly taught to me in the way in which they were today. It helped seeing the steps clearly defined and then the nuanced details of each step.</i> 
@@ -39,7 +39,7 @@ I currently provide two types of data management training for research teams.
 <ul>
   <li>The first workshop in the series is an introduction to R, designed for beginners, such as those transitioning from another software like Excel or SPSS.</li>
   <li>The second workshop provides attendees with a standardized data cleaning checklist and then introduces team members to a series of functions that are commonly used when wrangling education data. This workshop is an excellent overview for those new to R but is also beneficial for people who currently work in R but want to learn more efficient and reproducible practices.</li>
-  <li>The last workshop in the series reviews more advanced topics such as restructuring and joining data and also reviews the process of validating the quality of your data..</li>
+  <li>The last workshop in the series reviews more advanced topics such as restructuring and joining data and also reviews the process of validating the quality of your data.</li>
 </ul>
 I teach with a <a href=\"https://www.tidyverse.org\">Tidyverse</a> focus and I cover functions and practices that help participants leave feeling confident in tackling common challenges in education data wrangling. Read what previous participants have learned in my workshops:
 <br>

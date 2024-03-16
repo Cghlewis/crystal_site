@@ -319,7 +319,7 @@ However, there are some fundamental differences between horizontal and vertical 
 1. Rather than joining data on keys, columns are matched by variable names.
 2. In this case you do not want unique variable names. Here, it is imperative that variables are named and formatted identically across datasets. 
 
-**Note** Not all functions/statements match on column names. Some match on column order. Make sure to understand the program you are working with before appending data.
+**Note** Not all functions/statements match on column names. Some match on column order. Make sure to understand the program you are working with before appending data. Similarly, not all functions will require that your variable types (e.g., numeric, character) be identical across datasets. However, it is still good practice, no matter which function you use, to keep types consistent across datasets that you plan to append.
 
 Let's take an example where we have a questionnaire collected across two cohorts of teachers. We can append these data, creating a longer dataset. The inclusion of the cohort variable allows users to know which data is associated with which cohort in the combined data.
 
@@ -328,11 +328,11 @@ Let's take an example where we have a questionnaire collected across two cohorts
 <p class="caption">Figure 12: Appending data across cohorts</p>
 </div>
 
-Let's see what this type of join would look like in R. As a reminder, across the two datasets, if any of these variables are not identically named and formatted (e.g., numeric type, character type), you will get an error.
+Let's see what this type of join would look like in R. 
 
 
 
-First, let's check that the variable types are identical across datasets.
+First, let's check that the variable names and types are identical across datasets. 
 
 
 ```r
@@ -350,7 +350,9 @@ compare_df_cols(svy_c1, svy_c2)
 5      tch_id numeric numeric
 ```
 
-Our column types are identical so we are good to go.
+Our column names and types are identical so we are good to go.
+
+**Note** When using `dplyr::bind_rows()` to append files, if any variables are not identically named and formatted across datasets, you will get an error.
 
 
 ```r
@@ -633,4 +635,4 @@ For further learning, check out these additional very helpful resources!
 - [R for HR](https://rforhr.com/join.html)  
 - [Tidy Animated Verbs](https://github.com/gadenbuie/tidyexplain)
 
-Post updated _2024-02-05_
+Post updated _2024-03-16_

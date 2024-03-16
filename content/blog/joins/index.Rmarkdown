@@ -413,8 +413,6 @@ compare_df_cols(svy_c1, svy_c2)
 
 Our column names and types are identical so we are good to go.
 
-**Note** When using `dplyr::bind_rows()` to append files, if any variables are not identically named and formatted across datasets, you will get an error.
-
 ```{r comment=NA}
 
 library(dplyr)
@@ -422,6 +420,8 @@ library(dplyr)
 bind_rows(svy_c1, svy_c2)
 
 ```
+
+**Note** When using `bind_rows()`, if any variables are not identically named and formatted across datasets, you will get an error.
 
 You can also append longitudinal data. For example, if your repeated measures analysis requires data to be in long format, rather than wide (as seen with horizontal joins), longitudinal data can be vertically joined. In this case, rather than concatenating a time component to your time varying variables, a time variable is added to the data to delineate which rows belong to which time period. How a time component is assigned is completely up to you. Here I chose to add a variable named `wave` and assign numeric values to my time points (read [here](https://datamgmtinedresearch.com/style#style-time) for more information).
 

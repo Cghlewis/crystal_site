@@ -30,9 +30,9 @@ I currently provide two types of data management training for research teams.
 1. I provide a full or half-day overview of data management best practices. Using the research life cycle to guide our discussion, these trainings review data management best practices at different phases of a project, as well as how to integrate those practices into a personalized workflow that meets the needs of your specific project/s. See what previous attendees of this training have said: 
 <br>
 <br>
-<i><small>I learned all about the data management process which has never been explicitly taught to me in the way in which they were today. It helped seeing the steps clearly defined and then the nuanced details of each step.</i> 
+<i><small>I can’t overstate how valuable this training was. Crystal provided my team with important information and plans of action that I know will improve our ability to produce good work. My lab and I highly recommend this training!</i> 
 <br>
-&emsp;- Anonymous Data Management Workflows for Education Research training participant</small>
+&emsp;- Dr. Leigh McLean, Center for Research on Educational and Social Policy, University of Delaware</small>
 <br>
 <br>
 2. I also provide a series of hands-on workshops in Data Wrangling with R and RStudio. The goal of the workshop series is to give your team a consistent set of criteria for assessing the quality of a dataset, as well as equip them with skills to create a clean and shareable data product. This a la carte series is designed to meet the needs of your team, no matter their level of experience. 

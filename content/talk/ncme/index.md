@@ -16,13 +16,11 @@ links:
   icon_pack: fas
   name: Slides
   url: https://cghlewis.github.io/ncme-data-cleaning-workshop/slides.html
-- icon: play-circle
-  icon_pack: fas
-location: virtual
+location: Philadelphia, PA 
 show_post_time: false
 categories:
   - rstats
   - data cleaning
 ---
 
-Materials from a half-day professional development workshop given at the 2024 NCME Annual Meeting. This half-day workshop provided a foundational understanding of how to organize data for the purpose of data sharing.
+Materials from a half-day professional development workshop given at the 2024 NCME Annual Meeting. This workshop provided a foundational understanding of how to organize data for the purpose of data sharing.

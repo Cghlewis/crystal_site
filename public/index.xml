@@ -6,7 +6,7 @@
     <description>Recent content on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Apr 2024 08:45:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netlify</title>
       <link>https://cghlewis.com/collection/day02/01-netlify/</link>
@@ -87,6 +87,42 @@ My content section is: collection My layout is: single-series part 2! does this 
     </item>
     
     <item>
+      <title>Data Cleaning for Data Sharing Using R</title>
+      <link>https://cghlewis.com/talk/ncme/</link>
+      <pubDate>Thu, 11 Apr 2024 08:45:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/ncme/</guid>
+      <description>Materials from a half-day professional development workshop given at the 2024 NCME Annual Meeting. This workshop provided a foundational understanding of how to organize data for the purpose of data sharing.</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s talk about joins</title>
+      <link>https://cghlewis.com/blog/joins/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/joins/</guid>
+      <description>Working with data would be so much simpler if we always only had one dataset to work with. However, in the world of research, we often have multiple datasets, collected from different instruments, participants, or time periods, and our research questions typically require these data to be linked in some way. Yet, before combining data, it&amp;rsquo;s important to consider what type of join makes the most sense for our specific purposes, as well as how to correctly perform those joins.</description>
+    </item>
+    
+    <item>
+      <title>Data Management in Large-Scale Education Research</title>
+      <link>https://cghlewis.com/projects/book/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/projects/book/</guid>
+      <description>About the Book The modules and book are a compilation of lessons I have learned in my personal experiences as a data manager, knowledge collected from existing books, sites and blogs (many written by librarians or those involved in the open science movement), as well as advice and stories collected through interviews with other researchers who work with data. I cover best practices throughout the research data management life cycle that education researchers and research staff can implement into their workflow.</description>
+    </item>
+    
+    <item>
+      <title>Ten Common Data Management Mistakes</title>
+      <link>https://cghlewis.com/talk/alaska/</link>
+      <pubDate>Mon, 16 Oct 2023 13:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/alaska/</guid>
+      <description>These are materials for a presentation given to the Alaska Region of Fish and Wildlife Service for Data Week.</description>
+    </item>
+    
+    <item>
       <title>Hire a data manager</title>
       <link>https://cghlewis.com/blog/hire_datamgr/</link>
       <pubDate>Fri, 07 Jul 2023 00:00:00 +0000</pubDate>
@@ -95,6 +131,15 @@ My content section is: collection My layout is: single-series part 2! does this 
       <description>If you were struck by lightning, would other people be able to access and understand your data? - Sarah Arena
 Even with the growing open science movement, the expanding requirements for publicly sharing sharing federally funded data, and the ongoing news about data falsification motivating us to produce more accurate, documented, and reproducible data, many researchers are still not able to confidently say &amp;ldquo;yes&amp;rdquo; to this question.
 One solution to this problem is to hire a data manager.</description>
+    </item>
+    
+    <item>
+      <title>Templates featured in Nature article</title>
+      <link>https://cghlewis.com/projects/nature/</link>
+      <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/projects/nature/</guid>
+      <description>About the article Several documentation templates, including a data dictionary, README, and project summary template, are linked in this Nature article.</description>
     </item>
     
     <item>
@@ -113,7 +158,7 @@ For several hours after this discussion I scoured the internet for any advice, r
       <pubDate>Tue, 06 Jun 2023 10:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/talk/rmed/</guid>
-      <description>Slides from a workshop given at the R/Medicine 2023 Conference. My co-presenters included Shannon Pileggi and Peter Higgins.</description>
+      <description>Materials from a workshop given at the R/Medicine 2023 Conference. My co-presenters included Shannon Pileggi and Peter Higgins.</description>
     </item>
     
     <item>
@@ -197,7 +242,8 @@ There are many issues with this data, ranging from unclear and inconsistent valu
       <pubDate>Wed, 28 Sep 2022 12:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/talk/sssp_ecf/</guid>
-      <description>These are materials for a presentation given to the Society for the Study of School Psychology Early Career Forum</description>
+      <description>These are materials for a presentation given to the Society for the Study of School Psychology Early Career Forum.
+This same talk was also given to the University of Washington, SMART Center on 2022-11-09.</description>
     </item>
     
     <item>
@@ -218,15 +264,6 @@ There are many issues with this data, ranging from unclear and inconsistent valu
       <guid>https://cghlewis.com/blog/data_mgmt_resources/</guid>
       <description>Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 Resources were last updated on 2023/07/30</description>
-    </item>
-    
-    <item>
-      <title>Data Management in Large-Scale Education Research</title>
-      <link>https://cghlewis.com/projects/book/</link>
-      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/projects/book/</guid>
-      <description>About the Book The modules and book are a compilation of lessons I have learned in my personal experiences as a data manager, knowledge collected from existing books, sites and blogs (many written by librarians or those involved in the open science movement), as well as advice and stories collected through interviews with other researchers who work with data. I cover best practices throughout the research data management life cycle that education researchers and research staff can implement into their workflow.</description>
     </item>
     
     <item>
@@ -255,15 +292,6 @@ Name Label Type Values (if categorical) Value labels (if categorical) NA values 
       
       <guid>https://cghlewis.com/projects/flexdashboard/</guid>
       <description>About the dashboard This R Flexdashboard pulled data daily from Google Trends to display 7 day school closure trends across the U.S.</description>
-    </item>
-    
-    <item>
-      <title>Data Management Overview</title>
-      <link>https://cghlewis.com/talk/schoen_res/</link>
-      <pubDate>Thu, 26 May 2022 12:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/talk/schoen_res/</guid>
-      <description>The slides are from a 6 part workshop series given to the Schoen Research Team at Florida State University. Parts 1 &amp;amp; 2 cover best practices throughout the research data managment life cycle. Parts 3-6 cover an introduction to R and RStudio and data wrangling in the Tidyverse.</description>
     </item>
     
     <item>

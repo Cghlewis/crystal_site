@@ -6,14 +6,23 @@
     <description>Recent content in rstats on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Jun 2023 10:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Apr 2024 08:45:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Cleaning for Data Sharing Using R</title>
+      <link>https://cghlewis.com/talk/ncme/</link>
+      <pubDate>Thu, 11 Apr 2024 08:45:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/ncme/</guid>
+      <description>Materials from a half-day professional development workshop given at the 2024 NCME Annual Meeting. This workshop provided a foundational understanding of how to organize data for the purpose of data sharing.</description>
+    </item>
+    
     <item>
       <title>Cleaning Medical Data in R</title>
       <link>https://cghlewis.com/talk/rmed/</link>
       <pubDate>Tue, 06 Jun 2023 10:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/talk/rmed/</guid>
-      <description>Slides from a workshop given at the R/Medicine 2023 Conference. My co-presenters included Shannon Pileggi and Peter Higgins.</description>
+      <description>Materials from a workshop given at the R/Medicine 2023 Conference. My co-presenters included Shannon Pileggi and Peter Higgins.</description>
     </item>
     
     <item>
@@ -61,15 +70,6 @@ Name Label Type Values (if categorical) Value labels (if categorical) NA values 
       
       <guid>https://cghlewis.com/projects/flexdashboard/</guid>
       <description>About the dashboard This R Flexdashboard pulled data daily from Google Trends to display 7 day school closure trends across the U.S.</description>
-    </item>
-    
-    <item>
-      <title>Data Management Overview</title>
-      <link>https://cghlewis.com/talk/schoen_res/</link>
-      <pubDate>Thu, 26 May 2022 12:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/talk/schoen_res/</guid>
-      <description>The slides are from a 6 part workshop series given to the Schoen Research Team at Florida State University. Parts 1 &amp;amp; 2 cover best practices throughout the research data managment life cycle. Parts 3-6 cover an introduction to R and RStudio and data wrangling in the Tidyverse.</description>
     </item>
     
   </channel>

@@ -4,7 +4,7 @@ author:
 date: "2022-05-26T12:00:00"
 date_end: "2022-07-14T12:00:00"
 time: false
-draft: false
+draft: true 
 event: 
 event_url: 
 excerpt: Slides from a workshop series given to Schoen Research at Florida State University on data management and data wrangling in R.

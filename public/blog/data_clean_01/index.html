@@ -46,7 +46,7 @@
   <meta itemprop="name" content="Data cleaning for data sharing">
 <meta itemprop="description" content="Through various conversations over the last several months, a recurring question I keep hearing is, what makes a clean dataset? What steps do we expect someone to take before handing off a dataset that is considered &ldquo;clean&rdquo;? And I will tell you right now, there is no standard answer for this question. Even within fields, within projects, or within teams, you will get different answers depending on who you talk to, their role in the research cycle, and their past experiences and/or training with data."><meta itemprop="datePublished" content="2023-02-14T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-02-14T00:00:00+00:00" />
-<meta itemprop="wordCount" content="2622"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_01/featured.jpg">
+<meta itemprop="wordCount" content="2621"><meta itemprop="image" content="https://cghlewis.com/blog/data_clean_01/featured.jpg">
 <meta itemprop="keywords" content="data cleaning,rstats,data management,data sharing," />
   
   
@@ -174,7 +174,7 @@
 <li>Interpretable: Data have human and machine-readable variable names (see 
 <a href="https://datamgmtinedresearch.com/style.html" target="_blank" rel="noopener">style guide</a>), as well as variable and value labels added as needed to aid in interpretation.</li>
 <li>Analyzable: By this I mean that our data is in a rectangular (rows and columns), machine-readable format and adheres to basic 
-<a href="https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules" target="_blank" rel="noopener">data structure rules</a>.</li>
+<a href="https://datamgmtinedresearch.com/structure" target="_blank" rel="noopener">data structure rules</a>.</li>
 </ol>
 <img src="img/rowcol.PNG" width="70%" style="display: block; margin: auto;" />
 
@@ -307,7 +307,7 @@
 <ul>
 <li>If your categorical values are not coded as expected or if your categorical variables are not coded consistently across time, you can recode those here</li>
 <li>This also includes 
-<a href="https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules" target="_blank" rel="noopener">recoding implict values, explicitly</a>
+<a href="https://datamgmtinedresearch.com/data-structure.html#dataset-organization-rules" target="_blank" rel="noopener">recoding implicit values, explicitly</a>
 <ul>
 <li>For example if an NA value is implied to be 0, recode them to 0</li>
 </ul>
@@ -382,7 +382,7 @@
 </li>
 </ol>
 <p>These last two steps are not necessarily data cleaning steps, but are additional transformations that can be performed to allow you to structure your data for more user-friendly data sharing.</p>
-<ol start="14">
+<ol start="15">
 <li>Merge and/or append data as needed
 <ul>
 <li>In this step you can merge or append forms within or across time</li>
@@ -397,7 +397,7 @@
 <li>Transform data as needed
 <ul>
 <li>There are various reasons to store data in 
-<a href="https://datamgmtinedresearch.com/data-structure.html#structure" target="_blank" rel="noopener">long format or wide format</a>. Here you can restructure data as needed.</li>
+<a href="https://datamgmtinedresearch.com/structure#structure-datastructure" target="_blank" rel="noopener">long format or wide format</a>. Here you can restructure data as needed.</li>
 </ul>
 </li>
 </ol>
@@ -406,16 +406,16 @@
 <p>Last, when you are ready to share your clean data, it is crucial to always include documentation alongside your data to allow users to correctly interpret the information. The bare minimum documentation to share should include:</p>
 <ol>
 <li>
-<a href="https://datamgmtinedresearch.com/document.html#research-protocol" target="_blank" rel="noopener">Project level documentation</a> (contextual information about why and how your data was collected)
+<a href="https://datamgmtinedresearch.com/document#document-protocol" target="_blank" rel="noopener">Project-level documentation</a> (contextual information about why and how your data was collected)
 <ul>
 <li>If sharing data in a repository, including 
 <a href="https://datamgmtinedresearch.com/document.html#metadata" target="_blank" rel="noopener">project-level metadata</a> can also be very helpful for searchability</li>
 </ul>
 </li>
 <li>A 
-<a href="https://datamgmtinedresearch.com/document.html#data-dictionary" target="_blank" rel="noopener">data dictionary</a> that describes all relevant variable level information</li>
+<a href="https://datamgmtinedresearch.com/document#document-dictionary" target="_blank" rel="noopener">data dictionary</a> that describes all relevant variable level information</li>
 <li>A 
-<a href="https://datamgmtinedresearch.com/document.html#readme" target="_blank" rel="noopener">readme</a> that quickly explains what all of your files are and how they are related</li>
+<a href="https://datamgmtinedresearch.com/document.html#readme" target="_blank" rel="noopener">README</a> that quickly explains what all of your files are and how they are related</li>
 </ol>
 
 
@@ -480,7 +480,7 @@
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">13 minute read, 2622 words</dd>
+    <dd class="fw5 ml0">13 minute read, 2621 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -498,11 +498,11 @@
   <dl class="f6 lh-copy">
     <dt class="fw7">See Also:</dt>
     
+    <dd class="fw5 ml0"><a href="/blog/joins/">Let&#39;s talk about joins</a></dd>
+    
     <dd class="fw5 ml0"><a href="/blog/hire_datamgr/">Hire a data manager</a></dd>
     
     <dd class="fw5 ml0"><a href="/blog/participant_id/">Creating unique participant study identifiers</a></dd>
-    
-    <dd class="fw5 ml0"><a href="/blog/data_clean_03/">Cleaning sample data in standardized way</a></dd>
     
   </dl>
 </details>
@@ -546,7 +546,7 @@
 <footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
   <nav class="db dt-l w-100">
     <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
-      &copy; 2023 Crystal Lewis
+      &copy; 2024 Crystal Lewis
       <span class="middot-divider"></span>
       Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
       <br />

@@ -6,14 +6,32 @@
     <description>Recent content in Talks &amp; Workshops on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Jun 2023 10:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/talk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Apr 2024 08:45:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/talk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Cleaning for Data Sharing Using R</title>
+      <link>https://cghlewis.com/talk/ncme/</link>
+      <pubDate>Thu, 11 Apr 2024 08:45:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/ncme/</guid>
+      <description>Materials from a half-day professional development workshop given at the 2024 NCME Annual Meeting. This workshop provided a foundational understanding of how to organize data for the purpose of data sharing.</description>
+    </item>
+    
+    <item>
+      <title>Ten Common Data Management Mistakes</title>
+      <link>https://cghlewis.com/talk/alaska/</link>
+      <pubDate>Mon, 16 Oct 2023 13:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/alaska/</guid>
+      <description>These are materials for a presentation given to the Alaska Region of Fish and Wildlife Service for Data Week.</description>
+    </item>
+    
     <item>
       <title>Cleaning Medical Data in R</title>
       <link>https://cghlewis.com/talk/rmed/</link>
       <pubDate>Tue, 06 Jun 2023 10:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/talk/rmed/</guid>
-      <description>Slides from a workshop given at the R/Medicine 2023 Conference. My co-presenters included Shannon Pileggi and Peter Higgins.</description>
+      <description>Materials from a workshop given at the R/Medicine 2023 Conference. My co-presenters included Shannon Pileggi and Peter Higgins.</description>
     </item>
     
     <item>
@@ -40,7 +58,8 @@
       <pubDate>Wed, 28 Sep 2022 12:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/talk/sssp_ecf/</guid>
-      <description>These are materials for a presentation given to the Society for the Study of School Psychology Early Career Forum</description>
+      <description>These are materials for a presentation given to the Society for the Study of School Psychology Early Career Forum.
+This same talk was also given to the University of Washington, SMART Center on 2022-11-09.</description>
     </item>
     
     <item>
@@ -51,15 +70,6 @@
       <guid>https://cghlewis.com/talk/rladies_nyc/</guid>
       <description>These are materials for a 5 minute lightning talk I gave to R-Ladies NYC. The topic was comparing 4 R packages that can be used to create codebooks to document your data.
 *Note: On 2022-12-12 I made a small update to the slides. I discovered that the codebookr::codebook() function did not create 2 of the summary statistics I originally thought it did. So the slides now reflect this finding.</description>
-    </item>
-    
-    <item>
-      <title>Data Management Overview</title>
-      <link>https://cghlewis.com/talk/schoen_res/</link>
-      <pubDate>Thu, 26 May 2022 12:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/talk/schoen_res/</guid>
-      <description>The slides are from a 6 part workshop series given to the Schoen Research Team at Florida State University. Parts 1 &amp;amp; 2 cover best practices throughout the research data managment life cycle. Parts 3-6 cover an introduction to R and RStudio and data wrangling in the Tidyverse.</description>
     </item>
     
     <item>

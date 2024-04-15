@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data organization on Crystal Lewis</title>
+    <link>https://cghlewis.com/tags/data-organization/</link>
+    <description>Recent content in data organization on Crystal Lewis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/tags/data-organization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Let&#39;s talk about joins</title>
+      <link>https://cghlewis.com/blog/joins/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/joins/</guid>
+      <description>Working with data would be so much simpler if we always only had one dataset to work with. However, in the world of research, we often have multiple datasets, collected from different instruments, participants, or time periods, and our research questions typically require these data to be linked in some way. Yet, before combining data, it&amp;rsquo;s important to consider what type of join makes the most sense for our specific purposes, as well as how to correctly perform those joins.</description>
+    </item>
+    
+  </channel>
+</rss>

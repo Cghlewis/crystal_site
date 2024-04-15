@@ -52,6 +52,11 @@ I teach with a <a href=\"https://www.tidyverse.org\">Tidyverse</a> focus and I c
 <i><small>Through this training, Crystal did a terrific job engaging us through real examples from our project! I use R very frequently, however, through these trainings I realized that I was missing most of the shortcuts, functions and packages which could make my job easier! So glad that I was able to listen to Crystal and expand my knowledge of R. I would recommend this training to people from any background or any expertise level because Crystal’s training really focuses on personal or group needs!</i>
 <br>
 &emsp;- Anonymous Data Management and Data Cleaning in R training participant</small>
+<br>
+<br>
+<i><small>Wow! This was amazing. Walking through the process today and just thinking about all of the ways to consider your data was phenomenal. This was exactly as it was billed to me: \"Everything you were never taught and need to know.\"</i>
+<br>
+&emsp;- Anonymous Data Cleaning for Data Sharing Using R training participant</small>
 "
 show_outro: false
 outro: 

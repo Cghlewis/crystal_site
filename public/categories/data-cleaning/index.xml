@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data cleaning on Crystal Lewis</title>
+    <link>https://cghlewis.com/categories/data-cleaning/</link>
+    <description>Recent content in data cleaning on Crystal Lewis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 11 Apr 2024 08:45:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/data-cleaning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Cleaning for Data Sharing Using R</title>
+      <link>https://cghlewis.com/talk/ncme/</link>
+      <pubDate>Thu, 11 Apr 2024 08:45:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/ncme/</guid>
+      <description>Materials from a half-day professional development workshop given at the 2024 NCME Annual Meeting. This workshop provided a foundational understanding of how to organize data for the purpose of data sharing.</description>
+    </item>
+    
+  </channel>
+</rss>

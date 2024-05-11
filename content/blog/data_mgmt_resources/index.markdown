@@ -32,7 +32,7 @@ tags:
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2023/07/30* 
+*Resources were last updated on 2024/05/11* 
 
 ### Guides 
 
@@ -52,7 +52,7 @@ These are guides that are helpful for understanding data management in the conte
   </tr>
   <tr>
    <td style="text-align:left;"> Crystal Lewis </td>
-   <td style="text-align:left;"> <a href="https://cghlewis.github.io/mpsi-data-training/index.html">Data Management in Large-Scale Education Research</a> </td>
+   <td style="text-align:left;"> <a href="https://datamgmtinedresearch.com/">Data Management in Large-Scale Education Research Book</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> ELIXIR </td>
@@ -172,7 +172,7 @@ Thesea are checklists to help researchers plan for the data management process t
 <tbody>
   <tr>
    <td style="text-align:left;"> Crystal Lewis </td>
-   <td style="text-align:left;"> <a href="https://drive.google.com/drive/folders/1lRKEx_uMhbzcLeVZZBPX6_amde5uYuvf">Checklists</a> </td>
+   <td style="text-align:left;"> <a href="https://osf.io/e5g6t/">Checklists</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Harvard Longwood Research Data Management </td>
@@ -228,7 +228,7 @@ These are slides from presentations on the research data management life cycle a
 </tbody>
 </table>
 
-### Equity in Data Management 
+### Equity in Data Management
 
 These are guides on how to manage data while considering data equity and ethics.
 
@@ -380,12 +380,12 @@ Oftentimes people are interested in resources specific to developing good data c
    <td style="text-align:left;"> <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">Data Organization in Spreadsheets</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Crystal Lewis* </td>
-   <td style="text-align:left;"> <a href="https://cghlewis.github.io/mpsi-data-training/training_4.html">Data Cleaning Plan</a> </td>
+   <td style="text-align:left;"> Crystal Lewis </td>
+   <td style="text-align:left;"> <a href="https://cghlewis.github.io/ncme-data-cleaning-workshop/">Data Cleaning for Data Sharing Workshop Materials</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Crystal Lewis </td>
-   <td style="text-align:left;"> <a href="https://cghlewis.com/blog/data_clean_01/">Data Cleaning for Data Sharing</a> </td>
+   <td style="text-align:left;"> <a href="https://cghlewis.com/blog/data_clean_01/">Data Cleaning for Data Sharing Blog Post</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Dupriez, O., Sanchez Castro, M. &amp;  Revision, M. </td>

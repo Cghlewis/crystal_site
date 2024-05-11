@@ -71,16 +71,12 @@ These are guides that are helpful for understanding data management in the conte
    <td style="text-align:left;"> <a href="https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf">Sharing Study Data: A Guide for Education Researchers</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Johns Hopkins Institute for Clinical and Translational Research (ICTR) </td>
-   <td style="text-align:left;"> <a href="https://ictrweb.johnshopkins.edu/ictr/dmig/Best_Practice/home.html?v=65849">Best Practices for Research Data Management</a> </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> Reynolds, T., Schatschneider, C. &amp; Logan, J. </td>
    <td style="text-align:left;"> <a href="https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350">The Basics of Data Management</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> The Turing Way </td>
-   <td style="text-align:left;"> <a href="https://the-turing-way.netlify.app/welcome">Guide</a> </td>
+   <td style="text-align:left;"> <a href="https://the-turing-way.netlify.app/welcome">Handbook</a> </td>
   </tr>
 </tbody>
 </table>
@@ -228,7 +224,7 @@ These are slides from presentations on the research data management life cycle a
 </tbody>
 </table>
 
-### Equity in Data Management
+### Equity in Data Management 
 
 These are guides on how to manage data while considering data equity and ethics.
 

@@ -32,7 +32,7 @@ tags:
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2024/05/11* 
+*Resources were last updated on 2024/05/12* 
 
 ### Guides 
 
@@ -51,16 +51,8 @@ These are guides that are helpful for understanding data management in the conte
    <td style="text-align:left;"> <a href="https://dmeg.cessda.eu/">Data Management Expert Guide</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Crystal Lewis </td>
-   <td style="text-align:left;"> <a href="https://datamgmtinedresearch.com/">Data Management in Large-Scale Education Research Book</a> </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> ELIXIR </td>
    <td style="text-align:left;"> <a href="https://rdmkit.elixir-europe.org/">Research Data Management Kit</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> J-PAL </td>
-   <td style="text-align:left;"> <a href="https://www.povertyactionlab.org/resource/introduction-randomized-evaluations">Research Resources</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> ICPSR </td>
@@ -69,6 +61,14 @@ These are guides that are helpful for understanding data management in the conte
   <tr>
    <td style="text-align:left;"> Institute of Education Sciences </td>
    <td style="text-align:left;"> <a href="https://ies.ed.gov/ncee/pubs/2022004/pdf/2022004.pdf">Sharing Study Data: A Guide for Education Researchers</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> J-PAL </td>
+   <td style="text-align:left;"> <a href="https://www.povertyactionlab.org/resource/introduction-randomized-evaluations">Research Resources</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Lewis, C. </td>
+   <td style="text-align:left;"> <a href="https://datamgmtinedresearch.com/">Data Management in Large-Scale Education Research Book</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Reynolds, T., Schatschneider, C. &amp; Logan, J. </td>
@@ -151,6 +151,11 @@ Research Ideas and Outcomes</a> </td>
    <td style="text-align:right;"> 2021 </td>
    <td style="text-align:left;"> <a href="https://psyarxiv.com/rsn5y">Error Tight: Exercises for Lab Groups to Prevent Research Mistakes</a> </td>
   </tr>
+  <tr>
+   <td style="text-align:left;"> Wilson, et al. </td>
+   <td style="text-align:right;"> 2017 </td>
+   <td style="text-align:left;"> <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510">Good Enough Practices in Scientific Computing</a> </td>
+  </tr>
 </tbody>
 </table>
 
@@ -167,16 +172,16 @@ Thesea are checklists to help researchers plan for the data management process t
  </thead>
 <tbody>
   <tr>
-   <td style="text-align:left;"> Crystal Lewis </td>
-   <td style="text-align:left;"> <a href="https://osf.io/e5g6t/">Checklists</a> </td>
+   <td style="text-align:left;"> Briney, K. </td>
+   <td style="text-align:left;"> <a href="https://figshare.com/articles/poster/Data_Management_Plan_Checklist/1130852">Data Management Plan Checklist</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Harvard Longwood Research Data Management </td>
    <td style="text-align:left;"> <a href="https://datamanagement.hms.harvard.edu/about/what-research-data-management/biomedical-data-lifecycle">Research Data Management Checklist</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Kristin Briney </td>
-   <td style="text-align:left;"> <a href="https://figshare.com/articles/poster/Data_Management_Plan_Checklist/1130852">Data Management Plan Checklist</a> </td>
+   <td style="text-align:left;"> Lewis, C. </td>
+   <td style="text-align:left;"> <a href="https://osf.io/e5g6t/">Checklists for every phase of a project</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Stanford Medicine Lane Medical Library </td>
@@ -202,6 +207,10 @@ These are slides from presentations on the research data management life cycle a
  </thead>
 <tbody>
   <tr>
+   <td style="text-align:left;"> Briney, K. </td>
+   <td style="text-align:left;"> <a href="https://www.slideshare.net/kbriney?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideview">Kristin Briney Slide Share</a> </td>
+  </tr>
+  <tr>
    <td style="text-align:left;"> Lewis, C. </td>
    <td style="text-align:left;"> <a href="https://cghlewis.com/talk/uhcl/">Data Management Workflows for Education Research Studies</a> </td>
   </tr>
@@ -216,10 +225,6 @@ These are slides from presentations on the research data management life cycle a
   <tr>
    <td style="text-align:left;"> Logan, J. </td>
    <td style="text-align:left;"> <a href="https://figshare.com/articles/presentation/Data_Sharing_and_Data_Shared/15040740">Data Sharing and Data Shared</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> All slides available from Kristin Briney </td>
-   <td style="text-align:left;"> <a href="https://www.slideshare.net/kbriney?utm_campaign=profiletracking&amp;utm_medium=sssite&amp;utm_source=ssslideview">Kristin Briney Slide Share</a> </td>
   </tr>
 </tbody>
 </table>
@@ -278,6 +283,10 @@ These are other types of resources ranging from blog posts to podcasts, that als
   <tr>
    <td style="text-align:left;"> Blog </td>
    <td style="text-align:left;"> <a href="https://www.teaguehenry.com/strings-not-factors">Teague Henry: Strings Not Factors Blog</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Data Structure Standard </td>
+   <td style="text-align:left;"> <a href="https://docs.google.com/document/d/1u8o5jnWk0Iqp_J06PTu5NjBfVsdoPbBhstht6W0fFp0/edit#heading=h.qjnqq8b54i1d">Psych-DS: A Technical Specification for Psychological Datasets</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Glossaries </td>
@@ -352,7 +361,7 @@ These are organizations, many working in the area of open science and reproducib
 
 ### Data Cleaning Resources 
 
-Oftentimes people are interested in resources specific to developing good data cleaning workflows. While the resources above are about overall data management practices, below are some resources specific for how to structure and organize your data files, as well as common rules and steps for cleaning and validating your data in preparation for sharing and analysis. Although I advocate using code for data cleaning, and I am an avid #rstats user, I recognize that researchers use different tools and I want to provide resources that meet people where they are. Therefore, the resources below, even if specific tools are mentioned, are provided because I simply appreciate the general data cleaning process that is provided. In a future blog post I plan write about setting up a reproducible, reliable, and automated data cleaning workflow in R for those who are interested.
+Oftentimes people are interested in resources specific to developing good data cleaning workflows. While the resources above are about overall data management practices, below are some resources specific for how to structure and organize your data files, as well as common rules and steps for cleaning and validating your data in preparation for sharing and analysis. Although I advocate using code for data cleaning, and I am an avid #rstats user, I recognize that researchers use different tools and I want to provide resources that meet people where they are. Therefore, the resources below, even if specific tools are mentioned, are provided because I simply appreciate the general data cleaning process that is provided. 
 
 *Note: The entries with asterisks are cross-references from earlier in this post. They just fit in both areas.
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
@@ -372,16 +381,20 @@ Oftentimes people are interested in resources specific to developing good data c
    <td style="text-align:left;"> <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205">Some Simple Guidelines for Effective Data Managment</a> </td>
   </tr>
   <tr>
+   <td style="text-align:left;"> Broman, K. </td>
+   <td style="text-align:left;"> <a href="https://kbroman.org/steps2rr/">Steps toward reproducible research</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Broman, K. </td>
+   <td style="text-align:left;"> <a href="https://www.youtube.com/watch?v=7Ma8WIDinDc&amp;list=PLg5zZXwt2ZW56j8tlEzoSPZPXMRxYLHzu&amp;index=13">Data Cleaning Principles: Talk for csvconf</a> </td>
+  </tr>
+  <tr>
    <td style="text-align:left;"> Broman, K. &amp; Woo, K. </td>
    <td style="text-align:left;"> <a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">Data Organization in Spreadsheets</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Crystal Lewis </td>
-   <td style="text-align:left;"> <a href="https://cghlewis.github.io/ncme-data-cleaning-workshop/">Data Cleaning for Data Sharing Workshop Materials</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Crystal Lewis </td>
-   <td style="text-align:left;"> <a href="https://cghlewis.com/blog/data_clean_01/">Data Cleaning for Data Sharing Blog Post</a> </td>
+   <td style="text-align:left;"> DeCoster, J. </td>
+   <td style="text-align:left;"> <a href="https://prezi.com/p/mku89urakpnn/systematic-data-validation/">Data Validation</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Dupriez, O., Sanchez Castro, M. &amp;  Revision, M. </td>
@@ -408,20 +421,20 @@ Oftentimes people are interested in resources specific to developing good data c
    <td style="text-align:left;"> <a href="https://www.povertyactionlab.org/resource/data-cleaning-and-management">Data cleaning and management</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Karl Broman </td>
-   <td style="text-align:left;"> <a href="https://kbroman.org/steps2rr/">Steps toward reproducible research</a> </td>
+   <td style="text-align:left;"> Lewis, C. </td>
+   <td style="text-align:left;"> <a href="https://cghlewis.github.io/ncme-data-cleaning-workshop/">Data Cleaning for Data Sharing Workshop Materials</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Karl Broman </td>
-   <td style="text-align:left;"> <a href="https://www.youtube.com/watch?v=7Ma8WIDinDc&amp;list=PLg5zZXwt2ZW56j8tlEzoSPZPXMRxYLHzu&amp;index=13">Data Cleaning Principles: Talk for csvconf</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Kline, et al. </td>
-   <td style="text-align:left;"> <a href="https://docs.google.com/document/d/1u8o5jnWk0Iqp_J06PTu5NjBfVsdoPbBhstht6W0fFp0/edit#heading=h.qjnqq8b54i1d">Psych-DS: A Technical Specification for Psychological Datasets</a> </td>
+   <td style="text-align:left;"> Lewis, C. </td>
+   <td style="text-align:left;"> <a href="https://cghlewis.com/blog/data_clean_01/">Data Cleaning for Data Sharing Blog Post</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Reynolds, T., Schatschneider, C. &amp; Logan, J.* </td>
    <td style="text-align:left;"> <a href="https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350">The Basics of Data Management</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Schatschneider, C., Edwards, A., &amp; Shero, J. </td>
+   <td style="text-align:left;"> <a href="https://figshare.com/articles/preprint/De-Identification_Guide/13228664/2">De-identification Guide</a> </td>
   </tr>
 </tbody>
 </table>

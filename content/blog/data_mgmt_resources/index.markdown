@@ -32,7 +32,7 @@ tags:
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2024/05/12* 
+*Resources were last updated on 2024/05/13* 
 
 ### Guides 
 
@@ -150,11 +150,6 @@ Research Ideas and Outcomes</a> </td>
    <td style="text-align:left;"> Strand, J. </td>
    <td style="text-align:right;"> 2021 </td>
    <td style="text-align:left;"> <a href="https://psyarxiv.com/rsn5y">Error Tight: Exercises for Lab Groups to Prevent Research Mistakes</a> </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> Wilson, et al. </td>
-   <td style="text-align:right;"> 2017 </td>
-   <td style="text-align:left;"> <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510">Good Enough Practices in Scientific Computing</a> </td>
   </tr>
 </tbody>
 </table>
@@ -361,7 +356,7 @@ These are organizations, many working in the area of open science and reproducib
 
 ### Data Cleaning Resources 
 
-Oftentimes people are interested in resources specific to developing good data cleaning workflows. While the resources above are about overall data management practices, below are some resources specific for how to structure and organize your data files, as well as common rules and steps for cleaning and validating your data in preparation for sharing and analysis. Although I advocate using code for data cleaning, and I am an avid #rstats user, I recognize that researchers use different tools and I want to provide resources that meet people where they are. Therefore, the resources below, even if specific tools are mentioned, are provided because I simply appreciate the general data cleaning process that is provided. 
+Oftentimes people are interested in resources specific to developing good data cleaning workflows. While the resources above are about overall data management practices, below are some resources specific for how to structure and organize your data files, as well as common rules and steps for cleaning and validating your data in preparation for sharing and analysis. Although I advocate using code for data cleaning, and I am an avid #rstats user, I recognize that researchers use different tools and I want to provide resources that meet people where they are. Therefore, the resources below, even if specific tools are mentioned, are provided because I simply appreciate the general data cleaning process that is provided.
 
 *Note: The entries with asterisks are cross-references from earlier in this post. They just fit in both areas.
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
@@ -435,6 +430,10 @@ Oftentimes people are interested in resources specific to developing good data c
   <tr>
    <td style="text-align:left;"> Schatschneider, C., Edwards, A., &amp; Shero, J. </td>
    <td style="text-align:left;"> <a href="https://figshare.com/articles/preprint/De-Identification_Guide/13228664/2">De-identification Guide</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Wilson, et al. </td>
+   <td style="text-align:left;"> <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510">Good Enough Practices in Scientific Computing</a> </td>
   </tr>
 </tbody>
 </table>

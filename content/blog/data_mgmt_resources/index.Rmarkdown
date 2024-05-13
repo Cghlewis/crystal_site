@@ -131,11 +131,11 @@ data %>%
 ```
 
 
-### Data Cleaning Resources 
+### Data Organization and Cleaning Resources 
 
 Oftentimes people are interested in resources specific to developing good data cleaning workflows. While the resources above are about overall data management practices, below are some resources specific for how to structure and organize your data files, as well as common rules and steps for cleaning and validating your data in preparation for sharing and analysis. Although I advocate using code for data cleaning, and I am an avid #rstats user, I recognize that researchers use different tools and I want to provide resources that meet people where they are. Therefore, the resources below, even if specific tools are mentioned, are provided because I simply appreciate the general data cleaning process that is provided.
 
-*Note: The entries with asterisks are cross-references from earlier in this post. They just fit in both areas.
+
 ```{r echo = FALSE, message=FALSE, warning=FALSE}
 
 library(tidyverse)

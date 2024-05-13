@@ -51,8 +51,16 @@ These are guides that are helpful for understanding data management in the conte
    <td style="text-align:left;"> <a href="https://dmeg.cessda.eu/">Data Management Expert Guide</a> </td>
   </tr>
   <tr>
+   <td style="text-align:left;"> DIME Analytics </td>
+   <td style="text-align:left;"> <a href="https://dimewiki.worldbank.org/Primary_Data_Collection">Dimewiki</a> </td>
+  </tr>
+  <tr>
    <td style="text-align:left;"> ELIXIR </td>
    <td style="text-align:left;"> <a href="https://rdmkit.elixir-europe.org/">Research Data Management Kit</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Filip, A. </td>
+   <td style="text-align:left;"> <a href="https://www.sjsu.edu/research/docs/irb-data-management-handbook.pdf">Data Management Handbook for Human Subjects Research</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> ICPSR </td>
@@ -100,11 +108,6 @@ These are papers written about research data management practices and workflows.
    <td style="text-align:left;"> <a href="https://esajournals.onlinelibrary.wiley.com/doi/10.1002/bes2.1801">A Beginner's Guide to Conducting Reproducible Research</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Borer, E., Seabloom, E., Jones, M. &amp; Schildhauer, M. </td>
-   <td style="text-align:right;"> 2009 </td>
-   <td style="text-align:left;"> <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205">Some Simple Guidelines for Effective Data Managment</a> </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> Borghi, J., &amp; Van Gulick, A. </td>
    <td style="text-align:right;"> 2022 </td>
    <td style="text-align:left;"> <a href="https://hdsr.mitpress.mit.edu/pub/72kcw990/release/1">Promoting Open Science Through Research Data Management</a> </td>
@@ -150,6 +153,11 @@ Research Ideas and Outcomes</a> </td>
    <td style="text-align:left;"> Strand, J. </td>
    <td style="text-align:right;"> 2021 </td>
    <td style="text-align:left;"> <a href="https://psyarxiv.com/rsn5y">Error Tight: Exercises for Lab Groups to Prevent Research Mistakes</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Yenni, et al. </td>
+   <td style="text-align:right;"> 2019 </td>
+   <td style="text-align:left;"> <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000125">Developing a modern data workflow for regularly updated data</a> </td>
   </tr>
 </tbody>
 </table>
@@ -354,11 +362,11 @@ These are organizations, many working in the area of open science and reproducib
 </table>
 
 
-### Data Cleaning Resources 
+### Data Organization and Cleaning Resources 
 
 Oftentimes people are interested in resources specific to developing good data cleaning workflows. While the resources above are about overall data management practices, below are some resources specific for how to structure and organize your data files, as well as common rules and steps for cleaning and validating your data in preparation for sharing and analysis. Although I advocate using code for data cleaning, and I am an avid #rstats user, I recognize that researchers use different tools and I want to provide resources that meet people where they are. Therefore, the resources below, even if specific tools are mentioned, are provided because I simply appreciate the general data cleaning process that is provided.
 
-*Note: The entries with asterisks are cross-references from earlier in this post. They just fit in both areas.
+
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
  <thead>
   <tr>
@@ -372,7 +380,7 @@ Oftentimes people are interested in resources specific to developing good data c
    <td style="text-align:left;"> <a href="https://www.acaps.org/sites/acaps/files/resources/files/acaps_technical_brief_data_cleaning_april_2016_0.pdf">Data Cleaning</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Borer, E., Seabloom, E., Jones, M. &amp; Schildhauer, M.* </td>
+   <td style="text-align:left;"> Borer, E., Seabloom, E., Jones, M. &amp; Schildhauer, M. </td>
    <td style="text-align:left;"> <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1890/0012-9623-90.2.205">Some Simple Guidelines for Effective Data Managment</a> </td>
   </tr>
   <tr>
@@ -412,7 +420,7 @@ Oftentimes people are interested in resources specific to developing good data c
    <td style="text-align:left;"> <a href="https://povertyaction.github.io/guides/cleaning/readme/">Cleaning Guide</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> J-Pal* </td>
+   <td style="text-align:left;"> J-Pal </td>
    <td style="text-align:left;"> <a href="https://www.povertyactionlab.org/resource/data-cleaning-and-management">Data cleaning and management</a> </td>
   </tr>
   <tr>
@@ -424,12 +432,16 @@ Oftentimes people are interested in resources specific to developing good data c
    <td style="text-align:left;"> <a href="https://cghlewis.com/blog/data_clean_01/">Data Cleaning for Data Sharing Blog Post</a> </td>
   </tr>
   <tr>
-   <td style="text-align:left;"> Reynolds, T., Schatschneider, C. &amp; Logan, J.* </td>
-   <td style="text-align:left;"> <a href="https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350">The Basics of Data Management</a> </td>
-  </tr>
-  <tr>
    <td style="text-align:left;"> Schatschneider, C., Edwards, A., &amp; Shero, J. </td>
    <td style="text-align:left;"> <a href="https://figshare.com/articles/preprint/De-Identification_Guide/13228664/2">De-identification Guide</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Towse, A., Ellis, D., Towse, J. </td>
+   <td style="text-align:left;"> <a href="https://www.tandfonline.com/doi/full/10.1080/00224545.2021.1938811">Making data meaningful: guidelines for good quality open data</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> White, et al. </td>
+   <td style="text-align:left;"> <a href="https://ojs.library.queensu.ca/index.php/IEE/article/view/4608">Nine simple ways to make it easier to (re)use your data</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Wilson, et al. </td>

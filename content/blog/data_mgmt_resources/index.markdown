@@ -32,7 +32,7 @@ tags:
 
 Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
 
-*Resources were last updated on 2024/05/13* 
+*Resources were last updated on 2024/05/14* 
 
 ### Guides 
 
@@ -233,6 +233,10 @@ These are slides from presentations on the research data management life cycle a
    <td style="text-align:left;"> Logan, J. </td>
    <td style="text-align:left;"> <a href="https://figshare.com/articles/presentation/Data_Sharing_and_Data_Shared/15040740">Data Sharing and Data Shared</a> </td>
   </tr>
+  <tr>
+   <td style="text-align:left;"> POWER Data Management Hub </td>
+   <td style="text-align:left;"> <a href="https://osf.io/ap3tk/">Slides from hub presenters</a> </td>
+  </tr>
 </tbody>
 </table>
 
@@ -366,7 +370,7 @@ These are organizations, many working in the area of open science and reproducib
 </table>
 
 
-### Data Organization and Cleaning Resources
+### Data Organization and Cleaning Resources 
 
 Oftentimes people are interested in resources specific to developing good data cleaning workflows. While the resources above are about overall data management practices, below are some resources specific for how to structure and organize your data files, as well as common rules and steps for cleaning and validating your data in preparation for sharing and analysis. Although I advocate using code for data cleaning, and I am an avid #rstats user, I recognize that researchers use different tools and I want to provide resources that meet people where they are. Therefore, the resources below, even if specific tools are mentioned, are provided because I simply appreciate the general data cleaning process that is provided.
 

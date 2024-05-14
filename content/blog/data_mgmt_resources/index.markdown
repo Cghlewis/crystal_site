@@ -52,7 +52,7 @@ These are guides that are helpful for understanding data management in the conte
   </tr>
   <tr>
    <td style="text-align:left;"> DIME Analytics </td>
-   <td style="text-align:left;"> <a href="https://dimewiki.worldbank.org/Primary_Data_Collection">Dimewiki</a> </td>
+   <td style="text-align:left;"> <a href="https://dimewiki.worldbank.org/Main_Page">DIME Wiki</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> ELIXIR </td>
@@ -77,6 +77,10 @@ These are guides that are helpful for understanding data management in the conte
   <tr>
    <td style="text-align:left;"> Lewis, C. </td>
    <td style="text-align:left;"> <a href="https://datamgmtinedresearch.com/">Data Management in Large-Scale Education Research Book</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Responsible Data </td>
+   <td style="text-align:left;"> <a href="https://responsibledata.io/resources/handbook/">The Handbook of the Modern Development Specialist</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Reynolds, T., Schatschneider, C. &amp; Logan, J. </td>
@@ -362,7 +366,7 @@ These are organizations, many working in the area of open science and reproducib
 </table>
 
 
-### Data Organization and Cleaning Resources 
+### Data Organization and Cleaning Resources
 
 Oftentimes people are interested in resources specific to developing good data cleaning workflows. While the resources above are about overall data management practices, below are some resources specific for how to structure and organize your data files, as well as common rules and steps for cleaning and validating your data in preparation for sharing and analysis. Although I advocate using code for data cleaning, and I am an avid #rstats user, I recognize that researchers use different tools and I want to provide resources that meet people where they are. Therefore, the resources below, even if specific tools are mentioned, are provided because I simply appreciate the general data cleaning process that is provided.
 

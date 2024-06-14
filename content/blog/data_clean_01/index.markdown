@@ -27,7 +27,7 @@ So you can think of these as three unique data files:
 1. True raw data
     - This is the untouched raw file that comes directly from your data collection source.
     - If your data is collected on paper, this is the data that has been entered into a machine-readable format.
-    - In education research this data is typically not shared outside of the research team as it usually contains identifiable information and often needs further wrangling to be decipherable by a end user.
+    - In education research this data is typically not shared outside of the research team as it usually contains identifiable information and often needs further wrangling to be decipherable by an end user.
 2. The general clean study data
     - This is the data we will be discussing in this post
 3. Your analytic data
@@ -182,10 +182,10 @@ These last two steps are not necessarily data cleaning steps, but are additional
 The final step of your cleaning process will be to export or save your clean data. As I mentioned above, it can be helpful to export/save to more than one file type (for example a .csv and a .sav file). You can even export the .csv using the text response values (ex: yes/no) while exporting the .sav using the numeric values (1/0) with embedded metadata. 
 
 Last, when you are ready to share your clean data, it is crucial to always include documentation alongside your data to allow users to correctly interpret the information. The bare minimum documentation to share should include:
-  1. [Project-level documentation](https://datamgmtinedresearch.com/document#document-protocol) (contextual information about why and how your data was collected)
-      - If sharing data in a repository, including [project-level metadata](https://datamgmtinedresearch.com/document.html#metadata) can also be very helpful for searchability
-  2. A [data dictionary](https://datamgmtinedresearch.com/document#document-dictionary) that describes all relevant variable level information
-  3. A [README](https://datamgmtinedresearch.com/document.html#readme) that quickly explains what all of your files are and how they are related
+  1. [Project-level documentation](https://osf.io/q6g8d) (contextual information about why and how your data was collected)
+      - If sharing data in a repository, including [project-level metadata](https://datamgmtinedresearch.com/document.html#document-metadata) can also be very helpful for searchability
+  2. A [data dictionary](https://osf.io/ynqcu) that describes all relevant variable level information
+  3. A [README](https://osf.io/d3pum) that quickly explains what all of your files are and how they are related 
 
 ## Review
 

@@ -210,7 +210,7 @@ survey <- survey %>%
 
 **4. Embed variable labels**
 
-Embedding metadata in your data in the form of variable labels is not always a necessary part of data cleaning but it be a very helpful step. Without ever having to open your data dictionary, embedded metadata such as variable labels allows you to better understand the meaning of the columns in your data. In her blog post about labelled data, [Shannon Pileggi](https://www.pipinghotdata.com/posts/2022-09-13-the-case-for-variable-labels-in-r/) talks about additional benefits of working with labelled data, such as using metadata within data products such as tables or figures.
+Embedding metadata in your data in the form of variable labels is not always a necessary part of data cleaning but it can be a very helpful step. Without ever having to open your data dictionary, embedded metadata such as variable labels allows you to better understand the meaning of the columns in your data. In her blog post about labelled data, [Shannon Pileggi](https://www.pipinghotdata.com/posts/2022-09-13-the-case-for-variable-labels-in-r/) talks about additional benefits of working with labelled data, such as using metadata within data products such as tables or figures.
 
 There are many ways to add metadata in R, but I am personally a big fan of using the `labelled` package. As someone who often works with education researchers who work with data in programs such as SPSS and SAS, the `labelled` package and the way it assigns metadata, integrates well with other programs outside of R.
 
@@ -240,7 +240,7 @@ Now that we have done 4 transformations to our data using our data dictionary, w
 
 ### Update variable types (2023-11-21)
 
-After sharing this post, someone suggested using a data dictionary to update variable types so I thought I might as well as that as a 5th use for your data dictionary.
+After sharing this post, someone suggested using a data dictionary to update variable types so I thought I might as well add that as a 5th use for your data dictionary.
 
 In order to do this, you will need one additional column in your data dictionary, which we will call "type".
 

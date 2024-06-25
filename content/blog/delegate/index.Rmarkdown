@@ -11,7 +11,7 @@ categories:
 - tips
 tags:
 - data management
-- education research 
+- project management 
 ---
 
 So, exciting news! My book, [Data Management in Large-Scale Education Research](https://www.routledge.com/Data-Management-in-Large-Scale-Education-Research/Lewis/p/book/9781032622798), was recently published! As the title indicates, the book is not necessarily about managing small projects run by one person (although many of the practices are still applicable), but rather about how to manage a project that is large enough to necessitate more help. The large projects I am referring to often involve data collected in the field, on a large number of participants, over several waves of time. These projects may be managed by two people (e.g., a PI and a Project Coordinator), but often involve several more (i.e., a team of staff). My book has an entire chapter dedicated to discussing the various roles that may be necessary to have on this larger team. Yet, I often have PIs (principal investigators) tell me that they struggle with **how** to delegate tasks to roles on this team, specifically when it comes to data management tasks. The two things related to task delegation that often come up are:

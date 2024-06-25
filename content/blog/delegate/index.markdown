@@ -33,7 +33,7 @@ I am by no means an expert on project management and team dynamics. However, hav
 
 1. Start by implementing the bare necessities
     - If this is your first project, or maybe just your first project where you are beginning to implement some more involved data management practices, it is common for your team to feel overwhelmed. They may not fully understand why they are being asked to do the things you are asking them to do, and they may not understand how to fit those tasks into their routine. To help alleviate this concern, start by implementing a few bare necessity data management tasks and build from there once they become an accepted part of the team’s routine.
-        - For instance, instead of having the team create multiple types of documentation, pick one or two types of documentation for the team to record what is happening in a study. Or, instead of building a complicated database to track incoming information, just start with a simple spreadsheet system. 
+        - For instance, instead of having the team create multiple types of [documentation](https://datamgmtinedresearch.com/document), pick just one or two documents for the team to record what is happening in a study. Or, instead of building a complicated database to track incoming information, just start with a simple spreadsheet system. 
           - See this [list](https://datamgmtinedresearch.com/appendix) of some of the most common and necessary data management tasks for ideas of bare minimum tasks.
         - Once the team begins to feel comfortable with these few systems and begins to see the benefits of them, you can consider adding in more practices or increasing the complexity.
 2. Assign responsibilities to the right people
@@ -43,9 +43,10 @@ I am by no means an expert on project management and team dynamics. However, hav
       - Who has the time to do the task?
     - Document your roles and responsibilities and share the document with your team to get feedback.
 3. Develop a shared vision
-    - It’s important for PIs to talk to team members about the larger goals of the project in order to allow them to see their greater purpose beyond day-to-day tasks. Similarly, when assigning data management tasks, those tasks need to be put into context, otherwise they will just feel like needless grunt work.
+    - It’s important for PIs to talk to team members about the larger goals of the project in order to allow members to see their greater purpose beyond day-to-day tasks. Similarly, when assigning data management tasks, those tasks need to be put into context, otherwise they will just feel like needless grunt work.
       - Why are we keeping this documentation? 
       - Why are we taking so much time to build validation into this instrument? 
+      - Why are we checking for errors in the field?
     - Explaining the "why" helps create buy-in for tasks (Bennett & Gadlin 2013, Antonio 2022).
 4. Create a robust onboarding process
     - As you hire new staff, make sure you have a process for getting team members acclimated to the roles on the project and expectations for each role. Doing this early on helps new employees learn your systems in a more standardized way, rather than simply through osmosis.

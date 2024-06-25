@@ -6,14 +6,32 @@
     <description>Recent content in data management on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/data-management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Management in Large-Scale Education Research</title>
       <link>https://cghlewis.com/projects/book/</link>
-      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/projects/book/</guid>
-      <description>About the Book The modules and book are a compilation of lessons I have learned in my personal experiences as a data manager, knowledge collected from existing books, sites and blogs (many written by librarians or those involved in the open science movement), as well as advice and stories collected through interviews with other researchers who work with data. I cover best practices throughout the research data management life cycle that education researchers and research staff can implement into their workflow.</description>
+      <description>About the Book This book is a compilation of lessons I have learned in my personal experiences as a data manager, knowledge collected from existing books, sites and blogs (many written by librarians or those involved in the open science movement), as well as advice and stories collected through interviews with other researchers who work with data. This book covers best practices throughout the research data management life cycle that education researchers and research staff can implement into their workflow.</description>
+    </item>
+    
+    <item>
+      <title>Starting Your Freelance Career</title>
+      <link>https://cghlewis.com/talk/freelance/</link>
+      <pubDate>Fri, 19 Apr 2024 14:30:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/freelance/</guid>
+      <description>Materials from a presentation given to a group of students and faculty in the University of Nebraska, Lincoln QQPM Seminar. In this presentation I provided background into how I got into freelance consulting, as well as tips for anyone looking to get into this type of work.</description>
+    </item>
+    
+    <item>
+      <title>Example data repository</title>
+      <link>https://cghlewis.com/projects/repo/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/projects/repo/</guid>
+      <description>About the repository This project provides an example of the data products a researcher may choose to publicly share at the end of a research project. The files a researcher shares and how they share them will depend on their specific project and requirements (e.g., funder requirements, data reuse considerations). However, this repository provides just one example of how education researchers may consider organizing data products in a repository.</description>
     </item>
     
     <item>
@@ -31,7 +49,7 @@
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/projects/nature/</guid>
-      <description>About the article Several documentation templates, including a data dictionary, README, and project summary template, are linked in this Nature article.</description>
+      <description>About the article Several documentation templates, including a data dictionary, README, and project summary template, are linked in this Nature article. Since the article was published all templates have been updated and are now available in the OSF repository (linked above).</description>
     </item>
     
     <item>

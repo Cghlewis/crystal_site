@@ -6,7 +6,7 @@
     <description>Recent content on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Apr 2024 08:45:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netlify</title>
       <link>https://cghlewis.com/collection/day02/01-netlify/</link>
@@ -87,6 +87,42 @@ My content section is: collection My layout is: single-series part 2! does this 
     </item>
     
     <item>
+      <title>Let it go: Effectively delegating tasks</title>
+      <link>https://cghlewis.com/blog/delegate/</link>
+      <pubDate>Tue, 25 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/delegate/</guid>
+      <description>So, exciting news! My book, Data Management in Large-Scale Education Research, was recently published! As the title indicates, the book is not necessarily about managing small projects run by one person (although many of the practices are still applicable), but rather about how to manage a project that is large enough to necessitate more help. The large projects I am referring to often involve data collected in the field, on a large number of participants, over several waves of time.</description>
+    </item>
+    
+    <item>
+      <title>Data Management in Large-Scale Education Research</title>
+      <link>https://cghlewis.com/projects/book/</link>
+      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/projects/book/</guid>
+      <description>About the Book This book is a compilation of lessons I have learned in my personal experiences as a data manager, knowledge collected from existing books, sites and blogs (many written by librarians or those involved in the open science movement), as well as advice and stories collected through interviews with other researchers who work with data. This book covers best practices throughout the research data management life cycle that education researchers and research staff can implement into their workflow.</description>
+    </item>
+    
+    <item>
+      <title>Starting Your Freelance Career</title>
+      <link>https://cghlewis.com/talk/freelance/</link>
+      <pubDate>Fri, 19 Apr 2024 14:30:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/freelance/</guid>
+      <description>Materials from a presentation given to a group of students and faculty in the University of Nebraska, Lincoln QQPM Seminar. In this presentation I provided background into how I got into freelance consulting, as well as tips for anyone looking to get into this type of work.</description>
+    </item>
+    
+    <item>
+      <title>Example data repository</title>
+      <link>https://cghlewis.com/projects/repo/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/projects/repo/</guid>
+      <description>About the repository This project provides an example of the data products a researcher may choose to publicly share at the end of a research project. The files a researcher shares and how they share them will depend on their specific project and requirements (e.g., funder requirements, data reuse considerations). However, this repository provides just one example of how education researchers may consider organizing data products in a repository.</description>
+    </item>
+    
+    <item>
       <title>Data Cleaning for Data Sharing Using R</title>
       <link>https://cghlewis.com/talk/ncme/</link>
       <pubDate>Thu, 11 Apr 2024 08:45:00 +0000</pubDate>
@@ -102,15 +138,6 @@ My content section is: collection My layout is: single-series part 2! does this 
       
       <guid>https://cghlewis.com/blog/joins/</guid>
       <description>Working with data would be so much simpler if we always only had one dataset to work with. However, in the world of research, we often have multiple datasets, collected from different instruments, participants, or time periods, and our research questions typically require these data to be linked in some way. Yet, before combining data, it&amp;rsquo;s important to consider what type of join makes the most sense for our specific purposes, as well as how to correctly perform those joins.</description>
-    </item>
-    
-    <item>
-      <title>Data Management in Large-Scale Education Research</title>
-      <link>https://cghlewis.com/projects/book/</link>
-      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/projects/book/</guid>
-      <description>About the Book The modules and book are a compilation of lessons I have learned in my personal experiences as a data manager, knowledge collected from existing books, sites and blogs (many written by librarians or those involved in the open science movement), as well as advice and stories collected through interviews with other researchers who work with data. I cover best practices throughout the research data management life cycle that education researchers and research staff can implement into their workflow.</description>
     </item>
     
     <item>
@@ -139,7 +166,7 @@ One solution to this problem is to hire a data manager.</description>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/projects/nature/</guid>
-      <description>About the article Several documentation templates, including a data dictionary, README, and project summary template, are linked in this Nature article.</description>
+      <description>About the article Several documentation templates, including a data dictionary, README, and project summary template, are linked in this Nature article. Since the article was published all templates have been updated and are now available in the OSF repository (linked above).</description>
     </item>
     
     <item>
@@ -263,7 +290,7 @@ This same talk was also given to the University of Washington, SMART Center on 2
       
       <guid>https://cghlewis.com/blog/data_mgmt_resources/</guid>
       <description>Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
-Resources were last updated on 2023/07/30</description>
+Resources were last updated on 2024/05/14</description>
     </item>
     
     <item>

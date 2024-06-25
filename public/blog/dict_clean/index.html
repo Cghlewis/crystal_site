@@ -46,7 +46,7 @@
   <meta itemprop="name" content="Four simple ways to integrate your data dictionary into your data cleaning process">
 <meta itemprop="description" content="In an earlier blog post I argued that data dictionaries are one of the most important pieces of documentation you can keep for a project and I spoke about the four purposes of a data dictionary. One of those purposes being that they can be integrated in your data cleaning process. And when I say &ldquo;integrated&rdquo;, I mean that in both a non-literal sense (for example I can refer to my data dictionary for guidance as to what transformations my data might need), but I also mean it in a very literal sense."><meta itemprop="datePublished" content="2022-11-27T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-11-27T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1742"><meta itemprop="image" content="https://cghlewis.com/blog/dict_clean/featured.PNG">
+<meta itemprop="wordCount" content="1743"><meta itemprop="image" content="https://cghlewis.com/blog/dict_clean/featured.PNG">
 <meta itemprop="keywords" content="rstats,data cleaning,documentation," />
   
   
@@ -280,7 +280,7 @@
 <div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>survey <span style="color:#000;font-weight:bold">&lt;-</span> survey <span style="color:#000;font-weight:bold">%&gt;%</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#900;font-weight:bold">relocate</span>(<span style="color:#900;font-weight:bold">all_of</span>(var_order))
 </span></span></code></pre></div><p><strong>4. Embed variable labels</strong></p>
-<p>Embedding metadata in your data in the form of variable labels is not always a necessary part of data cleaning but it be a very helpful step. Without ever having to open your data dictionary, embedded metadata such as variable labels allows you to better understand the meaning of the columns in your data. In her blog post about labelled data, 
+<p>Embedding metadata in your data in the form of variable labels is not always a necessary part of data cleaning but it can be a very helpful step. Without ever having to open your data dictionary, embedded metadata such as variable labels allows you to better understand the meaning of the columns in your data. In her blog post about labelled data, 
 <a href="https://www.pipinghotdata.com/posts/2022-09-13-the-case-for-variable-labels-in-r/" target="_blank" rel="noopener">Shannon Pileggi</a> talks about additional benefits of working with labelled data, such as using metadata within data products such as tables or figures.</p>
 <p>There are many ways to add metadata in R, but I am personally a big fan of using the <code>labelled</code> package. As someone who often works with education researchers who work with data in programs such as SPSS and SAS, the <code>labelled</code> package and the way it assigns metadata, integrates well with other programs outside of R.</p>
 <p>The <code>labelled::set_variable_labels()</code> function works with lists so we first create a named list of our variable labels using our data dictionary.</p>
@@ -313,7 +313,7 @@
       <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
     </svg></a>
 </h3>
-<p>After sharing this post, someone suggested using a data dictionary to update variable types so I thought I might as well as that as a 5th use for your data dictionary.</p>
+<p>After sharing this post, someone suggested using a data dictionary to update variable types so I thought I might as well add that as a 5th use for your data dictionary.</p>
 <p>In order to do this, you will need one additional column in your data dictionary, which we will call &ldquo;type&rdquo;.</p>
 <table class="table" style="margin-left: auto; margin-right: auto;">
  <thead>
@@ -438,7 +438,7 @@ $ pet_4          &lt;chr&gt; &#34;sometimes&#34;, &#34;sometimes&#34;, &#34;some
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">9 minute read, 1742 words</dd>
+    <dd class="fw5 ml0">9 minute read, 1743 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">

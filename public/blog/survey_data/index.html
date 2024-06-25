@@ -48,7 +48,7 @@
 But instead you export data that looks like this? 🙀
 There are many issues with this data, ranging from unclear and inconsistent value entries, to vague variable names, to conflicting variable types, to multiple things being measured in one variable. While this data can still hopefully be salvaged, the time consuming, decision-heavy process that will go along with cleaning this data is an avoidable step in our data management process."><meta itemprop="datePublished" content="2022-10-31T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2022-10-31T00:00:00+00:00" />
-<meta itemprop="wordCount" content="3216"><meta itemprop="image" content="https://cghlewis.com/blog/survey_data/featured.PNG">
+<meta itemprop="wordCount" content="3395"><meta itemprop="image" content="https://cghlewis.com/blog/survey_data/featured.PNG">
 <meta itemprop="keywords" content="data collection,data management,Qualtrics,data quality," />
   
   
@@ -366,6 +366,27 @@ There are many issues with this data, ranging from unclear and inconsistent valu
 </p>
 </center>
 
+
+
+
+<h3 id="update-2024-05-08">Update 2024-05-08
+  <a href="#update-2024-05-08"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+
+
+
+
+<h4 id="tip-12-use-response-validation-as-needed">Tip #12: Use response validation as needed
+  <a href="#tip-12-use-response-validation-as-needed"></a>
+</h4>
+<p>It’s worth mentioning that in addition to content validation, also consider response validation. A common type of response validation is adding a “force” or “request” response option to questions where missing data would be a problem. However, in considering response validation, you may have reasons for adding or not adding either of those options (e.g., concerns about 
+<a href="https://datamgmtinedresearch.com/collect#collect-build" target="_blank" rel="noopener">data ethics</a>).</p>
+<p>Another example of adding response validation is not allowing participants to provide answers where they shouldn’t provide answers. One common way to do this is through skip or display logic, which directs you to questions based on responses to previous questions. Another example of this type of response validation is when you use a “select all” question type but you also provide a response option where, if selected, no other options should be selected. In Qualtrics you can add this kind of validation by selecting the relevant response option and adding the option to “Make Answer Exclusive”. Doing this ensures that no other answers are selected when this answer is chosen.</p>
+<img src="img/exclusive.PNG" width="50%" style="display: block; margin: auto;" />
+
         
         <details closed class="f6 fw7 input-reset">
   <dl class="f6 lh-copy">
@@ -374,7 +395,7 @@ There are many issues with this data, ranging from unclear and inconsistent valu
   </dl>
   <dl class="f6 lh-copy">
     <dt class="fw7">Length:</dt>
-    <dd class="fw5 ml0">16 minute read, 3216 words</dd>
+    <dd class="fw5 ml0">16 minute read, 3395 words</dd>
   </dl>
   
   <dl class="f6 lh-copy">
@@ -392,11 +413,11 @@ There are many issues with this data, ranging from unclear and inconsistent valu
   <dl class="f6 lh-copy">
     <dt class="fw7">See Also:</dt>
     
+    <dd class="fw5 ml0"><a href="/blog/delegate/">Let it go: Effectively delegating tasks</a></dd>
+    
     <dd class="fw5 ml0"><a href="/blog/hire_datamgr/">Hire a data manager</a></dd>
     
     <dd class="fw5 ml0"><a href="/blog/participant_id/">Creating unique participant study identifiers</a></dd>
-    
-    <dd class="fw5 ml0"><a href="/blog/data_clean_03/">Cleaning sample data in standardized way</a></dd>
     
   </dl>
 </details>

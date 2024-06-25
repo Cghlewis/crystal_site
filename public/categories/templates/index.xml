@@ -6,14 +6,23 @@
     <description>Recent content in templates on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/templates/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/templates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example data repository</title>
+      <link>https://cghlewis.com/projects/repo/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/projects/repo/</guid>
+      <description>About the repository This project provides an example of the data products a researcher may choose to publicly share at the end of a research project. The files a researcher shares and how they share them will depend on their specific project and requirements (e.g., funder requirements, data reuse considerations). However, this repository provides just one example of how education researchers may consider organizing data products in a repository.</description>
+    </item>
+    
     <item>
       <title>Templates featured in Nature article</title>
       <link>https://cghlewis.com/projects/nature/</link>
       <pubDate>Tue, 27 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/projects/nature/</guid>
-      <description>About the article Several documentation templates, including a data dictionary, README, and project summary template, are linked in this Nature article.</description>
+      <description>About the article Several documentation templates, including a data dictionary, README, and project summary template, are linked in this Nature article. Since the article was published all templates have been updated and are now available in the OSF repository (linked above).</description>
     </item>
     
   </channel>

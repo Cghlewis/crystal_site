@@ -28,7 +28,7 @@ I think it’s really important to address this issue of how to effectively dele
 knitr::include_graphics("img/spectrum.PNG")
 ```
 
-I am by no means an expert on project management and team dynamics. However, having been on several teams implementing data management practices (being both the person trying to delegate tasks and the person being delegated to), I have a few tips for delegating tasks in a way that sets team members up for success and helps you feel more confident that your project is in good hands.
+I am by no means an expert on project management and team dynamics. However, having been on several teams implementing data management practices (being both the person delegating tasks and the person being delegated to), I have a few tips for delegating tasks in a way that sets team members up for success and helps you feel more confident that your project is in good hands.
 
 1. Start by implementing the bare necessities
     - If this is your first project, or maybe just your first project where you are beginning to implement some more involved data management practices, it is common for your team to feel overwhelmed. They may not fully understand why they are being asked to do the things you are asking them to do, and they may not understand how to fit those tasks into their routine. To help alleviate this concern, start by implementing a few bare necessity data management tasks and build from there once they become an accepted part of the team’s routine.

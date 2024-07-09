@@ -2,7 +2,7 @@
 title: "Data Management in Large-Scale Education Research"
 subtitle: 
 excerpt: "A comprehensive review of best practices for managing data throughout the life cycle of an education research project."
-date: 2024-05-06
+date: 2024-07-09
 author:
 draft: false
 featured: true

@@ -30,9 +30,9 @@ tags:
 <script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
 <link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
-Below are resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow.
+Below are open access resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow. 
 
-*Resources were last updated on 2024/05/14* 
+*Resources were last updated on 2024/07/24* 
 
 ### Guides 
 
@@ -46,6 +46,10 @@ These are guides that are helpful for understanding data management in the conte
   </tr>
  </thead>
 <tbody>
+  <tr>
+   <td style="text-align:left;"> Briney, K. </td>
+   <td style="text-align:left;"> <a href="https://caltechlibrary.github.io/RDMworkbook/">The Research Data Management Workbook</a> </td>
+  </tr>
   <tr>
    <td style="text-align:left;"> CESSDA </td>
    <td style="text-align:left;"> <a href="https://dmeg.cessda.eu/">Data Management Expert Guide</a> </td>

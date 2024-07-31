@@ -27,7 +27,7 @@ links:
 location: virtual
 show_post_time: false
 categories:
-  - data management
+  - data management 
 ---
 
 In this webinar I discuss why I wrote the open access book, Data Management in Large-Scale Education Research, as well as share a few key takeaways from the book. 

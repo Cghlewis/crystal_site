@@ -8,7 +8,7 @@ time: false
 draft: false
 event: 
 event_url: 
-excerpt: Materials from a presentation, with the Center for Open Science, on Data Management in Large-Scale Education Research.
+excerpt: Materials from a presentation with the Center for Open Science, on Data Management in Large-Scale Education Research.
 featured: true
 layout: single
 links:

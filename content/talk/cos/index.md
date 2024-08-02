@@ -19,7 +19,7 @@ links:
 - icon: play-circle
   icon_pack: fas
   name: recording
-  url: https://www.youtube.com/watch?v=reCRoV94SxI&t=1465s
+  url: https://www.youtube.com/watch?v=reCRoV94SxI&t
 - icon: book-open
   icon_pack: fas
   name: open access book

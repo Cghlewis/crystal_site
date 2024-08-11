@@ -14,7 +14,7 @@ links:
 - icon: tv
   icon_pack: fas 
   name: Post
-  url: "https://github.com/Cghlewis/gtrends_school_closure"
+  url: "https://www.cos.io/blog/power-collaboration"
 ---
 
 ## About the post

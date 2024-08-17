@@ -32,7 +32,7 @@ tags:
 
 Below are open access resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow. 
 
-*Resources were last updated on 2024/07/24* 
+*Resources were last updated on 2024/08/17*
 
 ### Guides 
 
@@ -442,6 +442,10 @@ Oftentimes people are interested in resources specific to developing good data c
   <tr>
    <td style="text-align:left;"> Lewis, C. </td>
    <td style="text-align:left;"> <a href="https://cghlewis.com/blog/data_clean_01/">Data Cleaning for Data Sharing Blog Post</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> Morrow, J. </td>
+   <td style="text-align:left;"> <a href="https://www.slideshare.net/slideshow/brief-introduction-to-the-12-steps-of-evaluagio/26168236#4">Brief Introduction to the 12 Steps of Evaluation Data Cleaning</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Schatschneider, C., Edwards, A., &amp; Shero, J. </td>

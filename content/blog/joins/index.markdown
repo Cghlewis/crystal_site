@@ -102,7 +102,7 @@ tch_svy |>
 3    410     3     2     3
 ```
 
-**Note** While that it is typically best practice, and much more convenient, if keys are identically named across files, in programs like R you can still join data even if keys are named differently. See this example where the variable names in the survey are `f_name` and `l_name` but in the roster they are `first_name` and `last_name`. 
+**Note** While it is typically best practice, and much more convenient, if keys are identically named across files, in programs like R you can still join data even if keys are named differently. See this example where the variable names in the survey are `f_name` and `l_name` but in the roster they are `first_name` and `last_name`. 
 
 
 
@@ -319,7 +319,7 @@ However, there are some fundamental differences between horizontal and vertical 
 1. Rather than joining data on keys, columns are matched by variable names.
 2. In this case you do not want unique variable names. Here, it is imperative that variables are named and formatted identically across datasets. 
 
-**Note** Not all functions/statements match on column names. Some match on column order. Make sure to understand the program you are working with before appending data. Similarly, not all functions will require that your variable types (e.g., numeric, character) be identical across datasets. However, it is still good practice, no matter which function you use, to keep types consistent across datasets that you plan to append.
+**Note** Not all functions/statements match on column names. Some match on column order. Make sure to understand the program/function you are working with before appending data. Similarly, not all functions will require that your variable types (e.g., numeric, character) be identical across datasets. However, it is still good practice, no matter which function you use, to keep types consistent across datasets that you plan to append.
 
 Let's take an example where we have a questionnaire collected across two cohorts of teachers. We can append these data, creating a longer dataset. The inclusion of the cohort variable allows users to know which data is associated with which cohort in the combined data.
 
@@ -624,6 +624,10 @@ tch_svy |>
 ```
 
 
+## Checks
+
+No matter what type of join you use, make sure to **always** review your data after combining it to check that you have the expected number of cases. It's very easy to make a mistake in your joining process and end up with duplicate rows you didn't expect or accidentally dropping rows you meant to keep. So always check your row count after combining data to ensure that no mistakes were made in the process.
+
 ## Additional resources
 
 This blog post is just a primer to get you started thinking about joins. There are many more types of joins, as well as many more combinations of joins that can be used! In the end, it all depends on what is useful for your project and your purposes (read [here](https://datamgmtinedresearch.com/structure#structure-datastructure) for more information). Also, just because you can join data, doesn't mean you need to rush into it. The flat file format datasets often used in research (e.g., CSV files) can be easily stored separately until it becomes necessary for you to join them. I usually think this is the best method because it allows you to more easily update individual files as needed, and it prevents you from potentially joining in a way that is ultimately not necessary or not aligned with what is needed (more information can be found [here](https://datamgmtinedresearch.com/style#style-time)).
@@ -635,4 +639,4 @@ For further learning, check out these additional very helpful resources!
 - [R for HR](https://rforhr.com/join.html)  
 - [Tidy Animated Verbs](https://github.com/gadenbuie/tidyexplain)
 
-Post updated _2024-03-16_
+Post updated _2024-08-22_

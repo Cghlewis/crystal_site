@@ -13,9 +13,10 @@ featured: true
 layout: single
 links: 
 - icon: tv
-  icon_pack: audio and transcript
-  name: Slides
+  icon_pack: fas
+  name: audio and transcript
   url: https://rfortherestofus.com/2024/10/podcast-episode-19
+- icon: play-circle
   icon_pack: fas
   name: recording
   url: https://www.youtube.com/watch?v=g0-X02bBWkQ&embeds_referring_euri=https%3A%2F%2Frfortherestofus.com%2F

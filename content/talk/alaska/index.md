@@ -2,7 +2,7 @@
 title: Ten Common Data Management Mistakes
 author: 
 date: "2023-10-16T13:00:00"
-date_end: "2022-09-28T14:00:00"
+date_end: "2023-10-16T14:00:00"
 publishDate: "2023-10-17"
 time: false
 draft: false

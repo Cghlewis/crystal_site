@@ -91,13 +91,17 @@ enableEmoji = true
       icon_pack = "fab"
       url       = "https://github.com/Cghlewis"
   [[params.social]]
-      icon      = "twitter" # icon name without the 'fa-'
+      icon      = "x-twitter" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://twitter.com/Cghlewis"
   [[params.social]]
       icon      = "linkedin-in" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://www.linkedin.com/in/crystal-lewis-922b4193/"
+  [[params.social]]
+   icon      = "bluesky" # icon name without the 'fa-'
+   icon_pack = "fab"
+   url       = "https://bsky.app/profile/cghlewis.bsky.social" 
 
 
 [taxonomies]

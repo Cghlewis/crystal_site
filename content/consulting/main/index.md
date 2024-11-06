@@ -36,11 +36,8 @@ I currently provide two types of data management training for research teams.
 <br>
 <br>
 2. I also provide a series of hands-on workshops in Data Wrangling with R and RStudio. The goal of the workshop series is to give your team a consistent set of criteria for assessing the quality of a dataset, as well as equip them with skills to create a clean and shareable data product. This a la carte series is designed to meet the needs of your team, no matter their level of experience. 
-<ul>
-  <li>The first workshop in the series is an introduction to R, designed for beginners, such as those transitioning from another software like Excel or SPSS.</li>
-  <li>The second workshop provides attendees with a standardized data cleaning checklist and then introduces team members to a series of functions that are commonly used when wrangling education data. This workshop is an excellent overview for those new to R but is also beneficial for people who currently work in R but want to learn more efficient and reproducible practices.</li>
-  <li>The last workshop in the series reviews more advanced topics such as restructuring and joining data and also reviews the process of validating the quality of your data.</li>
-</ul>
+<br>
+<br>
 I teach with a <a href=\"https://www.tidyverse.org\">Tidyverse</a> focus and I cover functions and practices that help participants leave feeling confident in tackling common challenges in education data wrangling. Read what previous participants have learned in my workshops:
 <br>
 <br>

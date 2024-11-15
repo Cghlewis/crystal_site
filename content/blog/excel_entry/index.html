@@ -107,7 +107,7 @@ Figure 6: A drop-down list of values
 <div id="leading-zeros" class="section level4">
 <h4>Leading zeros</h4>
 <p>If you have a variable that requires leading zeros, you can also do things to stop Excel from deleting your leading zeros.</p>
-<p>Say for instance, instead of numeric values from 14000 - 15000 our <code>stu_id</code> variable ranges from 1 – 200, and all values must be 3 digits, requiring single and double digits to be padded with leading zeros. Here, we could still add our data validation to ensure entered values are unique, but now we need to change our column type to ensure that our zeros don’t disappear when they are entered. We can do this by applying custom number formatting.</p>
+<p>Say for instance, instead of numeric values from 14000 - 15000 our <code>stu_id</code> variable ranges from 1 – 200, and all values must be 3 digits, requiring single and double digits to be padded with leading zeros. Here, we could still add our data validation to ensure entered values are unique, but now we need to change our column type (using the Number Format drop down) to ensure that our zeros don’t disappear when they are entered. We can do this by applying custom number formatting.</p>
 <center>
 <video src="img/leading_zero.mp4" controls="controls" style="max-width: 730px;">
 </video>
@@ -116,7 +116,7 @@ Figure 6: A drop-down list of values
 </div>
 <div id="text-values" class="section level4">
 <h4>Text values</h4>
-<p>Similarly, if you have a column of text values that you know Excel likes to turn into dates (e.g., 05-02 gets turned into “2-May”), preemptively change that column to “Text” using that same number format drop down area to ensure that values remain the values they are entered as.</p>
+<p>Similarly, if you have a column of text values that you know Excel likes to turn into dates (e.g., “05-02” gets turned into “2-May”), preemptively change that column to “Text” using that same Number Format drop down area to ensure that values remain the values they are entered as.</p>
 <p>From here you can apply further data validation using the “Custom” validation to ensure that the format of the input is always “##-##”, using functions like <code>LEN</code> and/or <code>COUNTIF</code>.</p>
 </div>
 <div id="specialized-validation" class="section level4">

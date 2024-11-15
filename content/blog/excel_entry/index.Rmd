@@ -121,7 +121,7 @@ knitr::include_graphics("img/validate6.PNG")
 
 If you have a variable that requires leading zeros, you can also do things to stop Excel from deleting your leading zeros. 
 
-Say for instance, instead of numeric values from 14000 - 15000 our `stu_id` variable ranges from 1 -- 200, and all values must be 3 digits, requiring single and double digits to be padded with leading zeros. Here, we could still add our data validation to ensure entered values are unique, but now we need to change our column type to ensure that our zeros don't disappear when they are entered. We can do this by applying custom number formatting.
+Say for instance, instead of numeric values from 14000 - 15000 our `stu_id` variable ranges from 1 -- 200, and all values must be 3 digits, requiring single and double digits to be padded with leading zeros. Here, we could still add our data validation to ensure entered values are unique, but now we need to change our column type (using the Number Format drop down) to ensure that our zeros don't disappear when they are entered. We can do this by applying custom number formatting.
 
 <center><video src="img/leading_zero.mp4" controls="controls" style="max-width: 730px;">
 </video></center>
@@ -130,7 +130,7 @@ From here you can apply further data validation using the "Custom" validation an
 
 #### Text values
 
-Similarly, if you have a column of text values that you know Excel likes to turn into dates (e.g., 05-02 gets turned into "2-May"), preemptively change that column to "Text" using that same number format drop down area to ensure that values remain the values they are entered as.
+Similarly, if you have a column of text values that you know Excel likes to turn into dates (e.g., "05-02" gets turned into "2-May"), preemptively change that column to "Text" using that same Number Format drop down area to ensure that values remain the values they are entered as.
 
 From here you can apply further data validation using the "Custom" validation to ensure that the format of the input is always "##-##", using functions like `LEN` and/or `COUNTIF`.
 

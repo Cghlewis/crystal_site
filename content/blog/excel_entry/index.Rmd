@@ -3,8 +3,8 @@ title: "Tips for data entry in Excel"
 subtitle: 
 excerpt: "This post provides a few tips for collecting higher quality and more usable data when using Excel as a data entry tool."
 author: "Crystal Lewis"
-date: "2024-11-13"
-draft: true
+date: "2024-11-15"
+draft: false
 # layout options: single, single-sidebar
 layout: single
 categories:
@@ -215,7 +215,7 @@ We can now [copy this formula by dragging it down through the remaining cells](h
 
 What is really nice about linking this data is that if a teacher name is changed at any point, when you change it in the "teacher" tab, it will then be updated in the "student" tab as well. Not duplicating information across sheets removes duplication, reduces errors, and saves time. 
 
-**Note:** *Like most of this tutorial, there are many alternatives to what I am showing you. In addition to `XLOOKUP`, You can also use `VLOOKUP` or a combination of `INDEX` and `MATCH`. `XLOOKUP` works best for me but if you want to learn more about either of those alternatives, there are many great posts out there to read. For now, I've linked to an Excel sheet where I use all 3 options to pull teacher information into a spreadsheet. You can choose which works best for you!*
+**Note:** *Like most of this tutorial, there are many alternatives to what I am showing you. In addition to `XLOOKUP`, You can also use `VLOOKUP` or a combination of `INDEX` and `MATCH`. `XLOOKUP` works best for me but if you want to learn more about either of those alternatives, there are many great posts out there to read. For now, I've linked to a [downloadable Excel Workbook](https://github.com/Cghlewis/crystal_site/blob/main/content/blog/excel_entry/tracking_example_cl.xlsx) where I use all 3 options to pull teacher information into the "student" spreadsheet so you can review the differences and choose which works best for you!*
 
 
 ### (4) Using PivotTables to query data

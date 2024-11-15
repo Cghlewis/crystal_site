@@ -73,7 +73,7 @@ Figure 3: Getting an error when entering an unacceptable value
 </div>
 <p>However, I also know that the values in the <code>stu_id</code> column must be unique. So it would improve my data quality if I go one step further to add that to my data validation.</p>
 <p>While restricting duplicate values is fairly straightforward in many of the database (and some of the other data entry tools I mentioned earlier), it’s a little more involved to add this criteria in Excel. While there are probably several other ways to ensure values are unique, one way is to create custom data validation through a formula. Here I am writing the following formula:</p>
-<p><code>=AND(ISNUMBER(A1),COUNTIF($A:$A, A1) = 1, A1 &gt;=1400, A1&lt;=1500)</code></p>
+<p><code>=AND(ISNUMBER(A1),COUNTIF($A:$A, A1) = 1, A1&gt;=14000, A1&lt;=15000)</code></p>
 <ul>
 <li>We ensure that the value entered is numeric (using the <code>ISNUMBER</code> formula)</li>
 <li>We ensure the value is unique (using the <code>COUNTIF</code> formula where we are only allowing each value to be used once)</li>

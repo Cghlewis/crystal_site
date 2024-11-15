@@ -85,7 +85,7 @@ However, I also know that the values in the `stu_id` column must be unique. So i
 
 While restricting duplicate values is fairly straightforward in many of the database (and some of the other data entry tools I mentioned earlier), it's a little more involved to add this criteria in Excel. While there are probably several other ways to ensure values are unique, one way is to create custom data validation through a formula. Here I am writing the following formula:
 
-`=AND(ISNUMBER(A1),COUNTIF($A:$A, A1) = 1, A1 >=1400, A1<=1500)`
+`=AND(ISNUMBER(A1),COUNTIF($A:$A, A1) = 1, A1>=14000, A1<=15000)`
 
 - We ensure that the value entered is numeric (using the `ISNUMBER` formula)
 - We ensure the value is unique (using the `COUNTIF` formula where we are only allowing each value to be used once)

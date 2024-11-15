@@ -58,7 +58,7 @@ Figure 1: Data validation in Excel
 </div>
 <div id="numeric-range" class="section level4">
 <h4>Numeric range</h4>
-<p>Let’s say, for the column <code>stu_id</code>, I know that these values should be numeric and should fall within the range of 14000 – 15000. I can apply those rules to this column.</p>
+<p>We can restrict the type and range of our variable using data validation. Let’s say, for instance, that I know that the column <code>stu_id</code>, should only contain values that are numeric and fall within the range of 14000 – 15000. I can apply those rules to this column.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
 <img src="img/validate2.PNG" alt="Applying data validation rules to the stu_id column" width="520" />
 <p class="caption">
@@ -73,7 +73,7 @@ Figure 3: Getting an error when entering an unacceptable value
 </p>
 </div>
 <p>However, I also know that the values in the <code>stu_id</code> column must be unique. So it would improve my data quality if I go one step further to add that to my data validation.</p>
-<p>While restricting duplicate values is fairly straightforward in many of the database (and some of the other data entry tools I mentioned earlier), it’s a little more involved to add this criteria in Excel. While there are probably several other ways to ensure values are unique, one way is to create custom data validation through a formula. Here I am writing the following formula:</p>
+<p>While restricting duplicate values is fairly straightforward in many of the database (and some of the other data entry tools) I mentioned earlier, it’s a little more involved to add this criteria in Excel. While there are probably several other ways to ensure values are unique, one way is to create custom data validation through a formula. Here I am writing the following formula:</p>
 <p><code>=AND(ISNUMBER(A1),COUNTIF($A:$A, A1) = 1, A1&gt;=14000, A1&lt;=15000)</code></p>
 <ul>
 <li>We ensure that the value entered is numeric (using the <code>ISNUMBER</code> formula)</li>
@@ -89,7 +89,7 @@ Figure 4: Applying custom validation
 </div>
 <div id="list-of-values" class="section level4">
 <h4>List of values</h4>
-<p>Let’s apply validation using a list of values. We can do this for our <code>s_obs_complete</code> field.</p>
+<p>We can also apply validation using a list of values. As an example, we can do this for our <code>s_obs_complete</code> field.</p>
 <p>Here we select “List” as our “Allow” value, and we type our options in the “Source” box, with each option separated by a comma.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
 <img src="img/validate5.PNG" alt="Applying a validation list of values" width="562" />

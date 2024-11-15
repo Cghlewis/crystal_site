@@ -67,7 +67,7 @@ knitr::include_graphics("img/validate1.PNG")
 
 #### Numeric range
 
-Let's say, for the column `stu_id`, I know that these values should be numeric and should fall within the range of 14000 -- 15000. I can apply those rules to this column.
+We can restrict the type and range of our variable using data validation. Let's say, for instance, that I know that the column `stu_id`, should only contain values that are numeric and fall within the range of 14000 -- 15000. I can apply those rules to this column.
 
 ```{r echo = FALSE, fig.align= "center", fig.cap = "Applying data validation rules to the stu_id column"}
 
@@ -85,7 +85,7 @@ knitr::include_graphics("img/validate3.PNG")
 
 However, I also know that the values in the `stu_id` column must be unique. So it would improve my data quality if I go one step further to add that to my data validation. 
 
-While restricting duplicate values is fairly straightforward in many of the database (and some of the other data entry tools I mentioned earlier), it's a little more involved to add this criteria in Excel. While there are probably several other ways to ensure values are unique, one way is to create custom data validation through a formula. Here I am writing the following formula:
+While restricting duplicate values is fairly straightforward in many of the database (and some of the other data entry tools) I mentioned earlier, it's a little more involved to add this criteria in Excel. While there are probably several other ways to ensure values are unique, one way is to create custom data validation through a formula. Here I am writing the following formula:
 
 `=AND(ISNUMBER(A1),COUNTIF($A:$A, A1) = 1, A1>=14000, A1<=15000)`
 
@@ -101,7 +101,7 @@ knitr::include_graphics("img/validate4.PNG")
 
 #### List of values
 
-Let's apply validation using a list of values. We can do this for our `s_obs_complete` field.
+We can also apply validation using a list of values. As an example, we can do this for our `s_obs_complete` field.
 
 Here we select "List" as our "Allow" value, and we type our options in the "Source" box, with each option separated by a comma.
 

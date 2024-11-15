@@ -6,7 +6,16 @@
     <description>Recent content in rstats on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Apr 2024 08:45:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Oct 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/rstats/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R for the Rest of Us Podcast Guest</title>
+      <link>https://cghlewis.com/talk/rforrest/</link>
+      <pubDate>Thu, 10 Oct 2024 12:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/rforrest/</guid>
+      <description>In this podcast episode, David and I discuss topics such as the importance of data management planning, what a data validation and data cleaning process looks like, as well as my thoughts on writing my book using Bookdown in R.</description>
+    </item>
+    
     <item>
       <title>Data Cleaning for Data Sharing Using R</title>
       <link>https://cghlewis.com/talk/ncme/</link>
@@ -61,15 +70,6 @@
       <guid>https://cghlewis.com/projects/codebook/</guid>
       <description>Codebook Comparison I started this table as a way to compare existing r packages that assist in codebook creation. The criteria I am looking for include the following variable level metrics (specifically for working with haven::labelled() data):
 Name Label Type Values (if categorical) Value labels (if categorical) NA values (Missing values: for example -99 and -98) NA labels (Missing value labels: for example -99 = No response, -98 = Unclear response) Total valid N Total missing N N per value (if categorical) % per value (if categorical) N per NA value (Missing value) % per NA value (Missing value) Range (if continuous) Mean (if continuous) A table of all packages I reviewed can be found here: https://cghlewis.</description>
-    </item>
-    
-    <item>
-      <title>R Flexdashboard of School Closure Trends</title>
-      <link>https://cghlewis.com/projects/flexdashboard/</link>
-      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/projects/flexdashboard/</guid>
-      <description>About the dashboard This R Flexdashboard pulled data daily from Google Trends to display 7 day school closure trends across the U.S.</description>
     </item>
     
   </channel>

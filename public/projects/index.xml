@@ -6,14 +6,23 @@
     <description>Recent content in Projects on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Management in Large-Scale Education Research</title>
       <link>https://cghlewis.com/projects/book/</link>
-      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/projects/book/</guid>
       <description>About the Book This book is a compilation of lessons I have learned in my personal experiences as a data manager, knowledge collected from existing books, sites and blogs (many written by librarians or those involved in the open science movement), as well as advice and stories collected through interviews with other researchers who work with data. This book covers best practices throughout the research data management life cycle that education researchers and research staff can implement into their workflow.</description>
+    </item>
+    
+    <item>
+      <title>Empowering Education Research: The POWER of Collaboration and Open Science</title>
+      <link>https://cghlewis.com/projects/cos_post/</link>
+      <pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/projects/cos_post/</guid>
+      <description>About the post The post highlights the origin and importance of the larger POWER (Providing Opportunities to Women in Education Research) group, as well as the impact the Data Management Hub has had on our small community of members and broader research community.</description>
     </item>
     
     <item>
@@ -51,15 +60,6 @@
       <guid>https://cghlewis.com/projects/codebook/</guid>
       <description>Codebook Comparison I started this table as a way to compare existing r packages that assist in codebook creation. The criteria I am looking for include the following variable level metrics (specifically for working with haven::labelled() data):
 Name Label Type Values (if categorical) Value labels (if categorical) NA values (Missing values: for example -99 and -98) NA labels (Missing value labels: for example -99 = No response, -98 = Unclear response) Total valid N Total missing N N per value (if categorical) % per value (if categorical) N per NA value (Missing value) % per NA value (Missing value) Range (if continuous) Mean (if continuous) A table of all packages I reviewed can be found here: https://cghlewis.</description>
-    </item>
-    
-    <item>
-      <title>R Flexdashboard of School Closure Trends</title>
-      <link>https://cghlewis.com/projects/flexdashboard/</link>
-      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/projects/flexdashboard/</guid>
-      <description>About the dashboard This R Flexdashboard pulled data daily from Google Trends to display 7 day school closure trends across the U.S.</description>
     </item>
     
   </channel>

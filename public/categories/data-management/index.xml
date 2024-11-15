@@ -6,14 +6,41 @@
     <description>Recent content in data management on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Oct 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/data-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R for the Rest of Us Podcast Guest</title>
+      <link>https://cghlewis.com/talk/rforrest/</link>
+      <pubDate>Thu, 10 Oct 2024 12:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/rforrest/</guid>
+      <description>In this podcast episode, David and I discuss topics such as the importance of data management planning, what a data validation and data cleaning process looks like, as well as my thoughts on writing my book using Bookdown in R.</description>
+    </item>
+    
+    <item>
+      <title>Data Management in Large-Scale Education Research</title>
+      <link>https://cghlewis.com/talk/cos/</link>
+      <pubDate>Tue, 23 Jul 2024 11:30:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/cos/</guid>
+      <description>In this webinar I discuss why I wrote the open access book, Data Management in Large-Scale Education Research, as well as share a few key takeaways from the book.</description>
+    </item>
+    
     <item>
       <title>Data Management in Large-Scale Education Research</title>
       <link>https://cghlewis.com/projects/book/</link>
-      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/projects/book/</guid>
       <description>About the Book This book is a compilation of lessons I have learned in my personal experiences as a data manager, knowledge collected from existing books, sites and blogs (many written by librarians or those involved in the open science movement), as well as advice and stories collected through interviews with other researchers who work with data. This book covers best practices throughout the research data management life cycle that education researchers and research staff can implement into their workflow.</description>
+    </item>
+    
+    <item>
+      <title>Empowering Education Research: The POWER of Collaboration and Open Science</title>
+      <link>https://cghlewis.com/projects/cos_post/</link>
+      <pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/projects/cos_post/</guid>
+      <description>About the post The post highlights the origin and importance of the larger POWER (Providing Opportunities to Women in Education Research) group, as well as the impact the Data Management Hub has had on our small community of members and broader research community.</description>
     </item>
     
     <item>

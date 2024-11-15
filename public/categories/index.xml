@@ -6,40 +6,49 @@
     <description>Recent content in Categories on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 25 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>tips</title>
-      <link>https://cghlewis.com/categories/tips/</link>
-      <pubDate>Tue, 25 Jun 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/categories/tips/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data life cycle</title>
-      <link>https://cghlewis.com/categories/data-life-cycle/</link>
-      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/categories/data-life-cycle/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Thu, 10 Oct 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>data management</title>
       <link>https://cghlewis.com/categories/data-management/</link>
-      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 10 Oct 2024 12:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/categories/data-management/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>rstats</title>
+      <link>https://cghlewis.com/categories/rstats/</link>
+      <pubDate>Thu, 10 Oct 2024 12:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/categories/rstats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data life cycle</title>
+      <link>https://cghlewis.com/categories/data-life-cycle/</link>
+      <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/categories/data-life-cycle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>education research</title>
       <link>https://cghlewis.com/categories/education-research/</link>
-      <pubDate>Mon, 06 May 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/categories/education-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tips</title>
+      <link>https://cghlewis.com/categories/tips/</link>
+      <pubDate>Tue, 25 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/categories/tips/</guid>
       <description></description>
     </item>
     
@@ -80,15 +89,6 @@
     </item>
     
     <item>
-      <title>rstats</title>
-      <link>https://cghlewis.com/categories/rstats/</link>
-      <pubDate>Thu, 11 Apr 2024 08:45:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/categories/rstats/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>tutorials</title>
       <link>https://cghlewis.com/categories/tutorials/</link>
       <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
@@ -121,15 +121,6 @@
       <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://cghlewis.com/categories/data-documentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>data visualization</title>
-      <link>https://cghlewis.com/categories/data-visualization/</link>
-      <pubDate>Tue, 30 Aug 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://cghlewis.com/categories/data-visualization/</guid>
       <description></description>
     </item>
     

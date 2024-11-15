@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>project management on Crystal Lewis</title>
+    <link>https://cghlewis.com/tags/project-management/</link>
+    <description>Recent content in project management on Crystal Lewis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 25 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/tags/project-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Let it go: Effectively delegating tasks</title>
+      <link>https://cghlewis.com/blog/delegate/</link>
+      <pubDate>Tue, 25 Jun 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/blog/delegate/</guid>
+      <description>Exciting news! My book, Data Management in Large-Scale Education Research, was recently published! As the title indicates, the book is not necessarily about managing small projects run by one person (although many of the practices are still applicable), but rather about how to manage a project that is large enough to necessitate more help. The large projects I am referring to often involve data collected in the field, on a large number of participants, over several waves of time.</description>
+    </item>
+    
+  </channel>
+</rss>

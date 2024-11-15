@@ -6,7 +6,25 @@
     <description>Recent content in Talks &amp; Workshops on Crystal Lewis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 19 Apr 2024 14:30:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/talk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Oct 2024 12:00:00 +0000</lastBuildDate><atom:link href="https://cghlewis.com/talk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R for the Rest of Us Podcast Guest</title>
+      <link>https://cghlewis.com/talk/rforrest/</link>
+      <pubDate>Thu, 10 Oct 2024 12:00:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/rforrest/</guid>
+      <description>In this podcast episode, David and I discuss topics such as the importance of data management planning, what a data validation and data cleaning process looks like, as well as my thoughts on writing my book using Bookdown in R.</description>
+    </item>
+    
+    <item>
+      <title>Data Management in Large-Scale Education Research</title>
+      <link>https://cghlewis.com/talk/cos/</link>
+      <pubDate>Tue, 23 Jul 2024 11:30:00 +0000</pubDate>
+      
+      <guid>https://cghlewis.com/talk/cos/</guid>
+      <description>In this webinar I discuss why I wrote the open access book, Data Management in Large-Scale Education Research, as well as share a few key takeaways from the book.</description>
+    </item>
+    
     <item>
       <title>Starting Your Freelance Career</title>
       <link>https://cghlewis.com/talk/freelance/</link>

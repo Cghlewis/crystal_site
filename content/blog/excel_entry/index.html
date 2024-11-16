@@ -97,13 +97,11 @@ Figure 5: A drop-down list of values
 <p><strong>Unique values</strong></p>
 <p>There are times when you expect values in a column to be unique (e.g., study IDs). Say for instance that I expect our <code>stu_id</code> column to not have any duplicate values. If so, it would improve my data quality if I go one step further and add that criteria to my data validation from earlier.</p>
 <p>While restricting duplicate values is fairly straightforward in many of the database (and some of the other data entry tools) I mentioned earlier, it’s a little more involved to add this criteria in Excel. While there are probably other ways to ensure values are unique, one way is to create “Custom” data validation using a formula like the one shown here:</p>
-<p><code>=AND(ISNUMBER(A1),COUNTIF($A:$A, A1) = 1, A1&gt;=14000, A1&lt;=15000)</code></p>
+<p><code>=AND(ISNUMBER(A1), COUNTIF($A:$A,A1)=1, A1&gt;=14000, A1&lt;=15000)</code></p>
 <p>In this formula:</p>
 <ul>
-<li>We ensure that the value entered is numeric (using the <code>ISNUMBER</code> formula)<br />
-</li>
-<li>We ensure the value is unique (using the <code>COUNTIF</code> formula where we are only allowing each value to be used once)<br />
-</li>
+<li>We ensure that the value entered is numeric using the <code>ISNUMBER</code> function</li>
+<li>We ensure the value is unique using the <code>COUNTIF</code> function</li>
 <li>We restrict the range of the values to 14000 – 15000</li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
@@ -113,9 +111,15 @@ Figure 6: Applying custom validation
 </p>
 </div>
 <p><strong>Leading zeros</strong></p>
-<p>If you have a variable that requires leading zeros, you can also do things to stop Excel from deleting your leading zeros. Say for instance, instead of numeric values ranging from 14000 – 15000, our <code>stu_id</code> variable ranges from 1 – 200, and all values must be 3 digits, requiring single and double digits to be padded with leading zeros.</p>
-<p>Here, we could again add “Custom” data validation to ensure entered values are unique (using <code>COUNTIF</code>), are 3 digits (using <code>LEN</code>), and that 0s are included in the length count (specified in the <code>TEXT</code> function).</p>
-<p><code>=AND(COUNTIF($A:$A, L1) = 1, LEN(TEXT(A1,"000"))=3)</code></p>
+<p>If you have a variable that requires leading zeros, you can also do things to stop Excel from deleting your leading zeros. Say, for instance, instead of numeric values ranging from 14000 – 15000, our <code>stu_id</code> variable ranges from 1 – 200, and all values must be 3 digits, requiring single and double digits to be padded with leading zeros.</p>
+<p>Here, we could again add “Custom” data validation using a formula like the one shown here:</p>
+<p><code>=AND(COUNTIF($A:$A,A1)=1, LEN(TEXT(A1,"000"))=3)</code></p>
+<p>In this formula:</p>
+<ul>
+<li>We ensure the values are unique using <code>COUNTIF</code></li>
+<li>We ensure there are always 3 digits using <code>LEN</code></li>
+<li>And we ensure that 0s are included in the length count using <code>TEXT</code></li>
+</ul>
 <p>However, if we didn’t need unique values, we could instead add a custom format to this column by simply just using the Number Format drop down to ensure that our zeros don’t disappear when they are entered (see video).</p>
 <center>
 <video src="img/leading_zero.mp4" controls="controls" style="max-width: 730px;">

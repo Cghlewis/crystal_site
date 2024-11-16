@@ -113,12 +113,12 @@ There are times when you expect values in a column to be unique (e.g., study IDs
 
 While restricting duplicate values is fairly straightforward in many of the database (and some of the other data entry tools) I mentioned earlier, it's a little more involved to add this criteria in Excel. While there are probably other ways to ensure values are unique, one way is to create "Custom" data validation using a formula like the one shown here:
 
-`=AND(ISNUMBER(A1),COUNTIF($A:$A, A1) = 1, A1>=14000, A1<=15000)`
+`=AND(ISNUMBER(A1), COUNTIF($A:$A,A1)=1, A1>=14000, A1<=15000)`
 
 In this formula:  
 
-- We ensure that the value entered is numeric (using the `ISNUMBER` formula)  
-- We ensure the value is unique (using the `COUNTIF` formula where we are only allowing each value to be used once)  
+- We ensure that the value entered is numeric using the `ISNUMBER` function 
+- We ensure the value is unique using the `COUNTIF` function 
 - We restrict the range of the values to 14000 -- 15000  
 
 ```{r echo = FALSE, fig.align= "center", fig.cap = "Applying custom validation"}
@@ -129,11 +129,17 @@ knitr::include_graphics("img/validate4.PNG")
 
 **Leading zeros**
 
-If you have a variable that requires leading zeros, you can also do things to stop Excel from deleting your leading zeros. Say for instance, instead of numeric values ranging from 14000 -- 15000, our `stu_id` variable ranges from 1 -- 200, and all values must be 3 digits, requiring single and double digits to be padded with leading zeros. 
+If you have a variable that requires leading zeros, you can also do things to stop Excel from deleting your leading zeros. Say, for instance, instead of numeric values ranging from 14000 -- 15000, our `stu_id` variable ranges from 1 -- 200, and all values must be 3 digits, requiring single and double digits to be padded with leading zeros. 
 
-Here, we could again add "Custom" data validation to ensure entered values are unique (using `COUNTIF`), are 3 digits (using `LEN`), and that 0s are included in the length count (specified in the `TEXT` function).
+Here, we could again add "Custom" data validation using a formula like the one shown here: 
 
-`=AND(COUNTIF($A:$A, L1) = 1, LEN(TEXT(A1,"000"))=3)`
+`=AND(COUNTIF($A:$A,A1)=1, LEN(TEXT(A1,"000"))=3)`
+
+In this formula:  
+
+- We ensure the values are unique using `COUNTIF` 
+- We ensure there are always 3 digits using `LEN`
+- And we ensure that 0s are included in the length count using `TEXT` 
 
 However, if we didn't need unique values, we could instead add a custom format to this column by simply just using the Number Format drop down to ensure that our zeros don't disappear when they are entered (see video).
 

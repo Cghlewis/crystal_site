@@ -200,7 +200,7 @@ Figure 12: Teacher first name returned using XLOOKUP
 </div>
 <div id="using-pivottables-to-query-data" class="section level3">
 <h3>(4) Using PivotTables to query data</h3>
-<p>Another benefit of working with relational databases is that you have tons of flexibility in how you can combine and summarize information across tables. While that full range of flexibility may not be possible in Excel, <a href="https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576">PivotTables</a> still provide an excellent way to obtain necessary information for validation and reporting purposes.</p>
+<p>Another benefit of working with relational databases is that you have tons of flexibility in how you can query and summarize information within and across tables. While that full range of flexibility may not be possible in Excel, <a href="https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576">PivotTables</a> still provide an excellent way to obtain necessary information for validation and reporting purposes.</p>
 <p>PivotTables allow you to get summary information about individual sheets. Without using extensions such as <a href="https://support.microsoft.com/en-us/office/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed">Power Pivot</a> (which I’ve personally never used before), I’m not aware of a simple and easy way to link data across sheets. However, if you need information across different sheets, if you first pull information across sheets using <code>XLOOKUP</code> (like we did with teacher name), then that information can be used in our pivot tables.</p>
 <p>Once you’ve linked relevant information across sheets, you can now select a sheet to do a PivotTable on. For our example, we will do a PivotTable on the “student” sheet.</p>
 <p>Select “Insert” -&gt; “PivotTable” -&gt; “From Table/Range”</p>
@@ -211,7 +211,7 @@ Figure 13: Starting a PivotTable
 </p>
 </div>
 <p>Select the range of your data and select “New Worksheet”.</p>
-<p>What’s nice about creating PivotTables in other worksheets is that it reduces errors that might happen if you are sorting and filtering directly in your entry sheets.</p>
+<p>What’s nice about creating PivotTables in a new worksheet is that it reduces errors that might happen if you are sorting and filtering directly in your entry sheets.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
 <img src="img/pivot2.PNG" alt="Selecting PivotTable options" width="572" />
 <p class="caption">

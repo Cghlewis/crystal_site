@@ -240,7 +240,7 @@ What is really nice about linking this data is that if a teacher name is changed
 
 ### (4) Using PivotTables to query data
 
-Another benefit of working with relational databases is that you have tons of flexibility in how you can combine and summarize information across tables. While that full range of flexibility may not be possible in Excel, [PivotTables](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576) still provide an excellent way to obtain necessary information for validation and reporting purposes. 
+Another benefit of working with relational databases is that you have tons of flexibility in how you can query and summarize information within and across tables. While that full range of flexibility may not be possible in Excel, [PivotTables](https://support.microsoft.com/en-us/office/create-a-pivottable-to-analyze-worksheet-data-a9a84538-bfe9-40a9-a8e9-f99134456576) still provide an excellent way to obtain necessary information for validation and reporting purposes. 
 
 PivotTables allow you to get summary information about individual sheets. Without using extensions such as [Power Pivot](https://support.microsoft.com/en-us/office/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed) (which I've personally never used before), I'm not aware of a simple and easy way to link data across sheets. However, if you need information across different sheets, if you first pull information across sheets using `XLOOKUP` (like we did with teacher name), then that information can be used in our pivot tables.
 
@@ -257,7 +257,7 @@ knitr::include_graphics("img/pivot1.PNG")
 
 Select the range of your data and select "New Worksheet".
 
-What's nice about creating PivotTables in other worksheets is that it reduces errors that might happen if you are sorting and filtering directly in your entry sheets. 
+What's nice about creating PivotTables in a new worksheet is that it reduces errors that might happen if you are sorting and filtering directly in your entry sheets. 
 
 ```{r echo = FALSE, fig.align= "center", fig.cap = "Selecting PivotTable options"}
 

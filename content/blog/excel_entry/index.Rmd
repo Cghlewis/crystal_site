@@ -303,6 +303,7 @@ Additional articles/tutorials on this topic that I have found helpful:
 - [Basic Data Entry Using Excel](https://www.youtube.com/watch?v=Ry2xjTBtNFE&t=145s)
 - [Simple Tips for Recording Data in Spreadsheets](https://statsepi.substack.com/p/simple-tips-for-recording-data-in)
 - [Tidy Spreadsheetes in Medical Research](https://www.youtube.com/watch?v=9f-hpJbjKZo)
+- [The Basics of Data Management](https://figshare.com/articles/preprint/The_Basics_of_Data_Management/13215350/2?file=34917783)
 - [Database vs. Spreadsheet: What's the Difference](https://365datascience.com/tutorials/sql-tutorials/database-vs-spreadsheet/)
 - [Index Match Formula](https://corporatefinanceinstitute.com/resources/excel/index-match-formula-excel/)
 - [VLOOKUP Hack #1: Sort Order](https://www.excel-university.com/vlookup-hack-1-sort-order/)

@@ -40,7 +40,7 @@ However, there are times when all of the tools mentioned above might not work fo
 3. Linking information across sheets to reduce redundancy
 4. Using PivotTables to query data
 
-*Note: Before moving forward it's important to have a basic understanding of how data should be organized in a spreadsheet, and you can get a brief overview [here](https://datamgmtinedresearch.com/structure#basics-of-a-dataset).*
+**Note:** *Before moving forward it's important to have a basic understanding of how data should be organized in a spreadsheet, and you can get a brief overview [here](https://datamgmtinedresearch.com/structure#basics-of-a-dataset).*
   
 ## (1) Adding data validation to improve data quality
 
@@ -151,7 +151,7 @@ However, if we didn't need unique values, we could instead add a custom format t
 
 Similarly, if you have a column of text values that you know Excel likes to turn into dates (e.g., "05-02" gets turned into "2-May"), you can preemptively change that column to "Text" using that same Number Format drop down to ensure that values are not changed after entry.
 
-From here you can apply further data validation using "Custom" validation to ensure that the format of the input is always "##-##", using a function like `LEN`.
+From there you can apply further data validation using "Custom" validation to ensure that the format of the input is always "##-##", using a function like `LEN`.
 
 
 **Other common values**
@@ -161,7 +161,7 @@ Last, one of the really nice things about the other data entry tools mentioned e
 
 ### (2) Using forms to improve data entry security
 
-The next thing that can help reduce errors, as well as the chances of writing over or deleting existing data, is using forms in Excel. I don't want you to get too excited because they are not the caliber of forms you might see in many databases or the other tools I mentioned above. The forms available in Excel are not pretty, not customizable, and are very limited (e.g., you can only use them for data entry that includes up to 32 columns/variables, drop-down lists can't be used in forms).
+The next thing that can help reduce errors, as well as the chances of writing over or deleting existing data, is using forms in Excel. I don't want you to get too excited because they are not the caliber of forms you might see in many databases or the other tools I mentioned above. The forms available in Excel are not pretty, not customizable, and are very limited (i.e., you can only use them for data entry that includes up to 32 columns/variables, and drop-down lists can't be used in forms). 
 
 ```{r echo = FALSE, fig.align= "center", fig.cap = "Forms in Microsoft Excel"}
 
@@ -174,7 +174,7 @@ Adding these forms and using them are really straightforward. You can click thro
 
 ### (3) Linking information across sheets to reduce redundancy
 
-One of the biggest pros about building relational databases is that you are able to link data across tables through [primary and foreign keys](https://datamgmtinedresearch.com/structure#structure-link) (see Figure 8 where primary keys are in rectangles and foreign keys are in ovals). This type of functionality is not always necessary for a data entry task, but there are situations where this can be helpful. Relating tables in this way, allows us to pull information across tables, reducing duplication. In Figure 8, you can see that in the "student" tab, we're only entering student information (with exception of `tch_id`). However,  to improve user experience, if I wanted my team to see the teacher first and last name as well while looking at the student tab, not just the `tch_id`, I could simply generate a query to pull that information from the teacher table through the `tch_id` key. This relation removes the need for us to have to type the teacher first and last name over and over for every student in the teacher table, reducing both effort and error.
+One of the biggest pros about entering data in relational databases is that you are able to link data across tables through [primary and foreign keys](https://datamgmtinedresearch.com/structure#structure-link) (see Figure 8 where primary keys are in rectangles and foreign keys are in ovals). This type of functionality is not always necessary for a data entry task (i.e., you are only entering one form, or if you don't need to query the data), but there are situations where this can be helpful. Relating tables in this way, allows us to pull information across tables, reducing duplication. In Figure 8, you can see that in the "student" tab, we're only entering student information (with exception of `tch_id`). However,  to improve user experience, if I wanted my team to see the teacher first and last name as well while looking at the student tab, not just the `tch_id`, I could simply generate a query to pull that information from the teacher table through the `tch_id` key. This relation removes the need for us to have to type the teacher first and last name over and over for every student in the teacher table, reducing both effort and error.
 
 ```{r echo = FALSE, fig.align= "center", fig.cap = "Participant database built using a relational model"}
 

@@ -36,7 +36,7 @@ tags:
 <li>Linking information across sheets to reduce redundancy</li>
 <li>Using PivotTables to query data</li>
 </ol>
-<p><em>Note: Before moving forward it’s important to have a basic understanding of how data should be organized in a spreadsheet, and you can get a brief overview <a href="https://datamgmtinedresearch.com/structure#basics-of-a-dataset">here</a>.</em></p>
+<p><strong>Note:</strong> <em>Before moving forward it’s important to have a basic understanding of how data should be organized in a spreadsheet, and you can get a brief overview <a href="https://datamgmtinedresearch.com/structure#basics-of-a-dataset">here</a>.</em></p>
 <div id="adding-data-validation-to-improve-data-quality" class="section level2">
 <h2>(1) Adding data validation to improve data quality</h2>
 <p>Adding data validation to your data entry tool is the number one thing you can do to improve the quality of your data. Here you want to consider things like:</p>
@@ -127,13 +127,13 @@ Figure 6: Applying custom validation
 </center>
 <p><strong>Text values</strong></p>
 <p>Similarly, if you have a column of text values that you know Excel likes to turn into dates (e.g., “05-02” gets turned into “2-May”), you can preemptively change that column to “Text” using that same Number Format drop down to ensure that values are not changed after entry.</p>
-<p>From here you can apply further data validation using “Custom” validation to ensure that the format of the input is always “##-##”, using a function like <code>LEN</code>.</p>
+<p>From there you can apply further data validation using “Custom” validation to ensure that the format of the input is always “##-##”, using a function like <code>LEN</code>.</p>
 <p><strong>Other common values</strong></p>
 <p>Last, one of the really nice things about the other data entry tools mentioned earlier, is that a few of them have built in options for validating more specific, but common, types of values such as emails and phone numbers. Adding validation for those values is typically just a simple point and click in some other tools, but the readily available options for Excel are much more limited. However, as we’ve seen, you can use the “Custom” validation option to build almost any other types of validation that you might need, including validation for <a href="https://www.lido.app/excel/excel-email-validation">emails</a>, <a href="https://www.tutorialspoint.com/how-to-apply-data-validation-to-force-phone-number-format-in-excel">phone numbers</a>, and so forth. You can most likely search for tutorials on any validation type you can come up with.</p>
 </div>
 <div id="using-forms-to-improve-data-entry-security" class="section level3">
 <h3>(2) Using forms to improve data entry security</h3>
-<p>The next thing that can help reduce errors, as well as the chances of writing over or deleting existing data, is using forms in Excel. I don’t want you to get too excited because they are not the caliber of forms you might see in many databases or the other tools I mentioned above. The forms available in Excel are not pretty, not customizable, and are very limited (e.g., you can only use them for data entry that includes up to 32 columns/variables, drop-down lists can’t be used in forms).</p>
+<p>The next thing that can help reduce errors, as well as the chances of writing over or deleting existing data, is using forms in Excel. I don’t want you to get too excited because they are not the caliber of forms you might see in many databases or the other tools I mentioned above. The forms available in Excel are not pretty, not customizable, and are very limited (i.e., you can only use them for data entry that includes up to 32 columns/variables, and drop-down lists can’t be used in forms).</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
 <img src="img/form.PNG" alt="Forms in Microsoft Excel" width="434" />
 <p class="caption">
@@ -144,7 +144,7 @@ Figure 7: Forms in Microsoft Excel
 </div>
 <div id="linking-information-across-sheets-to-reduce-redundancy" class="section level3">
 <h3>(3) Linking information across sheets to reduce redundancy</h3>
-<p>One of the biggest pros about building relational databases is that you are able to link data across tables through <a href="https://datamgmtinedresearch.com/structure#structure-link">primary and foreign keys</a> (see Figure 8 where primary keys are in rectangles and foreign keys are in ovals). This type of functionality is not always necessary for a data entry task, but there are situations where this can be helpful. Relating tables in this way, allows us to pull information across tables, reducing duplication. In Figure 8, you can see that in the “student” tab, we’re only entering student information (with exception of <code>tch_id</code>). However, to improve user experience, if I wanted my team to see the teacher first and last name as well while looking at the student tab, not just the <code>tch_id</code>, I could simply generate a query to pull that information from the teacher table through the <code>tch_id</code> key. This relation removes the need for us to have to type the teacher first and last name over and over for every student in the teacher table, reducing both effort and error.</p>
+<p>One of the biggest pros about entering data in relational databases is that you are able to link data across tables through <a href="https://datamgmtinedresearch.com/structure#structure-link">primary and foreign keys</a> (see Figure 8 where primary keys are in rectangles and foreign keys are in ovals). This type of functionality is not always necessary for a data entry task (i.e., you are only entering one form, or if you don’t need to query the data), but there are situations where this can be helpful. Relating tables in this way, allows us to pull information across tables, reducing duplication. In Figure 8, you can see that in the “student” tab, we’re only entering student information (with exception of <code>tch_id</code>). However, to improve user experience, if I wanted my team to see the teacher first and last name as well while looking at the student tab, not just the <code>tch_id</code>, I could simply generate a query to pull that information from the teacher table through the <code>tch_id</code> key. This relation removes the need for us to have to type the teacher first and last name over and over for every student in the teacher table, reducing both effort and error.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
 <img src="img/link1.PNG" alt="Participant database built using a relational model" width="532" />
 <p class="caption">

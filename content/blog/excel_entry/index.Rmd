@@ -83,8 +83,6 @@ knitr::include_graphics("img/validate3.PNG")
 
 ```
 
-This type of validation is also great to add for date variables. Without assigning this validation, it's possible that people enter varying date formats ("2024-10-15", "Oct. 15, 2004", "Oct 15th", "15/10/2004"), making it more difficult to work with the information.
-
 #### List of values
 
 We can also apply validation using a list of values for categorical variables. As an example, we can do this for our `s_obs_complete` field where our allowable values are "yes", "no", or "in progress".

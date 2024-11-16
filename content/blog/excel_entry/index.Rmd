@@ -40,7 +40,7 @@ However, there are times when all of the tools mentioned above might not work fo
 3. Linking information across sheets to reduce redundancy
 4. Using PivotTables to query data
 
-*Note: Before moving forward I think it's important to have a basic understanding of how data should be organized in a spreadsheet, and you can get a brief overview [here](https://datamgmtinedresearch.com/structure#basics-of-a-dataset).*
+*Note: Before moving forward it's important to have a basic understanding of how data should be organized in a spreadsheet, and you can get a brief overview [here](https://datamgmtinedresearch.com/structure#basics-of-a-dataset).*
   
 ## (1) Adding data validation to improve data quality
 
@@ -50,7 +50,7 @@ Adding data validation to your data entry tool is the number one thing you can d
 - What are the allowable values or ranges of your variables?
 - Are duplicates allowed?
 
-A document like a [data dictionary](https://datamgmtinedresearch.com/document#document-dictionary) is an excellent tool for helping you think through what kinds of validation should be added to each column. 
+Creating a document like a [data dictionary](https://datamgmtinedresearch.com/document#document-dictionary) before you build your data entry form is an excellent way to think through what variables need to exist in your data entry sheet and what validation should be added to each column. 
 
 Let's say you have a simple data entry sheet like we see in Figure 1, where we plan to enter some basic tracking information about the students in our sample. Adding some [simple data validation](https://support.microsoft.com/en-us/office/apply-data-validation-to-cells-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249) is fairly easy to set up in Excel. 
 
@@ -83,27 +83,11 @@ knitr::include_graphics("img/validate3.PNG")
 
 ```
 
-However, I also know that the values in the `stu_id` column must be unique. So it would improve my data quality if I go one step further to add that to my data validation. 
-
-While restricting duplicate values is fairly straightforward in many of the database (and some of the other data entry tools) I mentioned earlier, it's a little more involved to add this criteria in Excel. While there are probably several other ways to ensure values are unique, one way is to create custom data validation using a formula like the one shown here:
-
-`=AND(ISNUMBER(A1),COUNTIF($A:$A, A1) = 1, A1>=14000, A1<=15000)`
-
-In this formula:  
-
-- We ensure that the value entered is numeric (using the `ISNUMBER` formula)  
-- We ensure the value is unique (using the `COUNTIF` formula where we are only allowing each value to be used once)  
-- We restrict the range of the values to 14000 -- 15000  
-
-```{r echo = FALSE, fig.align= "center", fig.cap = "Applying custom validation"}
-
-knitr::include_graphics("img/validate4.PNG")
-
-```
+This type of validation is also great to add for date variables. Without assigning this validation, it's possible that people enter varying date formats ("2024-10-15", "Oct. 15, 2004", "Oct 15th", "15/10/2004"), making it more difficult to work with the information.
 
 #### List of values
 
-We can also apply validation using a list of values. As an example, we can do this for our `s_obs_complete` field.
+We can also apply validation using a list of values for categorical variables. As an example, we can do this for our `s_obs_complete` field where our allowable values are "yes", "no", or "in progress".
 
 Here we select "List" as our "Allow" value, and we type our options in the "Source" box, with each option separated by a comma.
 
@@ -121,26 +105,54 @@ knitr::include_graphics("img/validate6.PNG")
 
 ```
 
-#### Leading zeros
+#### Specialized validation
 
-If you have a variable that requires leading zeros, you can also do things to stop Excel from deleting your leading zeros. 
+There are many reasons to add more specialized data validation to columns as well, and many different ways to do this. I've reviewed a few common examples below.
 
-Say for instance, instead of numeric values from 14000 - 15000 our `stu_id` variable ranges from 1 -- 200, and all values must be 3 digits, requiring single and double digits to be padded with leading zeros. Here, we could still add our data validation to ensure entered values are unique, but now we need to change our column type (using the Number Format drop down) to ensure that our zeros don't disappear when they are entered. We can do this by applying custom number formatting.
+**Unique values**
+
+There are times when you expect values in a column to be unique (e.g., study IDs). Say for instance that I expect our `stu_id` column to not have any duplicate values. If so, it would improve my data quality if I go one step further and add that criteria to my data validation from earlier. 
+
+While restricting duplicate values is fairly straightforward in many of the database (and some of the other data entry tools) I mentioned earlier, it's a little more involved to add this criteria in Excel. While there are probably other ways to ensure values are unique, one way is to create "Custom" data validation using a formula like the one shown here:
+
+`=AND(ISNUMBER(A1),COUNTIF($A:$A, A1) = 1, A1>=14000, A1<=15000)`
+
+In this formula:  
+
+- We ensure that the value entered is numeric (using the `ISNUMBER` formula)  
+- We ensure the value is unique (using the `COUNTIF` formula where we are only allowing each value to be used once)  
+- We restrict the range of the values to 14000 -- 15000  
+
+```{r echo = FALSE, fig.align= "center", fig.cap = "Applying custom validation"}
+
+knitr::include_graphics("img/validate4.PNG")
+
+```
+
+**Leading zeros**
+
+If you have a variable that requires leading zeros, you can also do things to stop Excel from deleting your leading zeros. Say for instance, instead of numeric values ranging from 14000 -- 15000, our `stu_id` variable ranges from 1 -- 200, and all values must be 3 digits, requiring single and double digits to be padded with leading zeros. 
+
+Here, we could again add "Custom" data validation to ensure entered values are unique (using `COUNTIF`), are 3 digits (using `LEN`), and that 0s are included in the length count (specified in the `TEXT` function).
+
+`=AND(COUNTIF($A:$A, L1) = 1, LEN(TEXT(A1,"000"))=3)`
+
+However, if we didn't need unique values, we could instead add a custom format to this column by simply just using the Number Format drop down to ensure that our zeros don't disappear when they are entered (see video).
 
 <center><video src="img/leading_zero.mp4" controls="controls" style="max-width: 730px;">
 </video></center>
 
-From here you can apply further data validation using the "Custom" validation and use a function like `LEN` to ensure that a 3 digit value is always entered.
 
-#### Text values
+**Text values**
 
-Similarly, if you have a column of text values that you know Excel likes to turn into dates (e.g., "05-02" gets turned into "2-May"), preemptively change that column to "Text" using that same Number Format drop down area to ensure that values remain the values they are entered as.
+Similarly, if you have a column of text values that you know Excel likes to turn into dates (e.g., "05-02" gets turned into "2-May"), you can preemptively change that column to "Text" using that same Number Format drop down to ensure that values are not changed after entry.
 
-From here you can apply further data validation using the "Custom" validation to ensure that the format of the input is always "##-##", using functions like `LEN` and/or `COUNTIF`.
+From here you can apply further data validation using "Custom" validation to ensure that the format of the input is always "##-##", using a function like `LEN`.
 
-#### Specialized validation
 
-Last, one of the really nice things about some of the other data entry tools mentioned earlier, is that a few of them have built in options for validating more specific, but common, other types of values (e.g., emails, phone numbers). Adding validation for those values is typically just a simple point and click in other tools,but the readily available options for Excel are much more limited. However, as we've seen, you can use the "Custom" validation option to build any other types of validation that you might need, including validation for [emails](https://www.lido.app/excel/excel-email-validation), [phone numbers](https://www.tutorialspoint.com/how-to-apply-data-validation-to-force-phone-number-format-in-excel), and so forth. You can probably search for tutorials on most any validation type you can come up with.
+**Other common values**
+
+Last, one of the really nice things about the other data entry tools mentioned earlier, is that a few of them have built in options for validating more specific, but common, types of values such as emails and phone numbers. Adding validation for those values is typically just a simple point and click in some other tools, but the readily available options for Excel are much more limited. However, as we've seen, you can use the "Custom" validation option to build almost any other types of validation that you might need, including validation for [emails](https://www.lido.app/excel/excel-email-validation), [phone numbers](https://www.tutorialspoint.com/how-to-apply-data-validation-to-force-phone-number-format-in-excel), and so forth. You can most likely search for tutorials on any validation type you can come up with.
 
 
 ### (2) Using forms to improve data entry security

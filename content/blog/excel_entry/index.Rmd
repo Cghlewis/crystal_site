@@ -58,7 +58,7 @@ First we select the column we want to apply our rules to.
 
 Then, we go to "Data" -> "Data Validation" -> "Data Validation".  
 
-Then, we can start applying rules for each variable.   
+From there, we can start applying rules to our variables.   
 
 ```{r echo = FALSE, fig.align= "center", fig.cap = "Data validation in Excel"}
 

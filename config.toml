@@ -5,7 +5,7 @@ title = "Crystal Lewis"
 author = "Crystal Lewis"
 copyright = "" # set to override the auto generated copyright using org info and now year
 googleAnalytics = ""
-disqusShortname = "" # see params.utterances to use utterances instead of Disqus
+#disqusShortname = "" # see params.utterances to use utterances instead of Disqus
 metaDataFormat = "yaml"
 footnoteReturnLinkContents = "&#8617;" # ↩
 # set deliberately low for testing choose your preffered number based on the blog layout you've chosen
@@ -69,6 +69,9 @@ enableEmoji = true
   textFontFamily = "sans-serif"
   headingFontFamily = "sans-serif"
 
+  # Specify use of utterances, giscus or disqus
+  comments = "giscus"
+  
   # Configuration of https://utteranc.es/ for comments
   [params.utterances]
     use_utterances = true
@@ -76,6 +79,21 @@ enableEmoji = true
     issue_term = "pathname" # url, pathname, or title
     theme = "boxy-light"
     label = "comments :crystal_ball:"
+    
+      # To enable giscus, the github discussions based comment section,
+  # Follow the steps described to enable giscus and get the values
+  # needed to populate the below information.
+  # https://www.joelnitta.com/posts/2021-11-24_using-giscus/
+  [params.giscus]
+    repo = "rbind/apreshill"
+    repo_id = "MDEwOlJlcG9zaXRvcnk5MTAwNTYxNQ=="
+    category = "Comments"
+    category_id = "DIC_kwDOBWyir84CfrDg"
+    mapping = "pathname"
+    reactions_enabled = "1"
+    emit_metadata = "0"
+    theme = "light_protanopia"
+    lang = "en"
 
   # Configuration of math rendering
   [params.math]

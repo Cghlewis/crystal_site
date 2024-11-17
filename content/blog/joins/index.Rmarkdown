@@ -354,7 +354,9 @@ stu_svy |>
 
 ```
 
-**Note** In `dplyr` version 1.1.0 or higher, an additional argument was added *relationship*. By adding this argument to your join, and specifying the correct type (e.g. "one-to-many", "many-to-one", "one-to-one"), you will receive an error if the join violates the constraints of the relationship. Read more [here](https://www.tidyverse.org/blog/2023/03/dplyr-1-1-1/).
+**Note** In `dplyr` version 1.1.0 or higher, an additional argument was added, *relationship*. By adding this argument to your join, and specifying the correct type (e.g. _one-to-many_, _many-to-one_, _one-to-one_), you will receive an error if the join violates the constraints of the relationship. Read more [here](https://www.tidyverse.org/blog/2023/03/dplyr-1-1-1/).
+
+**Note** We did not discuss _many-to-many_ relationships but if you want to see an example of one, you can see an example [here](https://gist.github.com/Cghlewis/3eaa0823770c2dd95067f1b9b5ee6837).
 
 ### Vertical joins
 
@@ -679,4 +681,4 @@ For further learning, check out these additional very helpful resources!
 - [R for HR](https://rforhr.com/join.html)  
 - [Tidy Animated Verbs](https://github.com/gadenbuie/tidyexplain)
 
-Post updated _2024-08-22_
+Post updated _2024-11-16_

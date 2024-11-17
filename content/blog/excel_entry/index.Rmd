@@ -40,7 +40,7 @@ However, there are times when all of the tools mentioned above might not work fo
 3. Linking information across sheets to reduce redundancy
 4. Using PivotTables to query data
 
-**Note:** *Before moving forward it's important to have a basic understanding of how data should be organized in a spreadsheet, and you can get a brief overview [here](https://datamgmtinedresearch.com/structure#basics-of-a-dataset).*
+**Note:** *Before moving forward it's important to have a basic understanding of how data should be organized in a spreadsheet. A brief overview is provided [here](https://datamgmtinedresearch.com/structure#structure-rules).*
   
 ## (1) Adding data validation to improve data quality
 
@@ -54,8 +54,10 @@ Creating a document like a [data dictionary](https://datamgmtinedresearch.com/do
 
 Let's say you have a simple data entry sheet like we see in Figure 1, where we plan to enter some basic tracking information about the students in our sample. Adding some [simple data validation](https://support.microsoft.com/en-us/office/apply-data-validation-to-cells-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249) is fairly easy to set up in Excel. 
 
-First we select the column we want to apply our rules to.   
+First we select the column we want to apply our rules to.  
+
 Then, we go to "Data" -> "Data Validation" -> "Data Validation".  
+
 Then, we can start applying rules for each variable.   
 
 ```{r echo = FALSE, fig.align= "center", fig.cap = "Data validation in Excel"}

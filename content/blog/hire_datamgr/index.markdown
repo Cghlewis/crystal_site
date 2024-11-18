@@ -122,14 +122,14 @@ If you are able to budget for and hire a data manager, the next consideration is
 
 - [Professional status](https://doi.org/10.1093/ije/dyaa087)
   - As mentioned at the [DBFest in 2022](https://twitter.com/Cat_Davies/status/1541707717546500096?s=20), "Recognising and rewarding technical staff is at the heart of ensuring high-quality, reproducible research".
-  - Data managers often live in a fuzzy area between academics and professional staff. They may miss out on opportunities such as recognition, awards, and promotions. Recognizing data curation as an essential research activity, [paying data managers well](https://www.glassdoor.com/Salaries/research-data-manager-salary-SRCH_KO0,21.htm), providing career progression opportunities, and finding ways to recognize the contributions of data managers can help both recruit and maintain top talent.
-- Ongoing training
+  - Data managers often live in a fuzzy area between academics and professional staff. They may miss out on opportunities such as recognition, awards, and promotions. Recognizing [data curation as an essential research activity](https://journals.sagepub.com/doi/10.1177/25152459231156419), [paying data managers well](https://www.glassdoor.com/Salaries/research-data-manager-salary-SRCH_KO0,21.htm), providing career progression opportunities, and finding ways to recognize the contributions of data managers can help both recruit and maintain top talent.
+- Ongoing training 
   - Data management requirements are constantly evolving. Providing resources for data managers to stay up to date on both changes in technology as well as updates to funder requirements is absolutely necessary for a data manager to be effective.
 - Integrate them into the decision-making team
   - Data managers cannot be effective if data-related decisions are made without them in the room. Giving data managers a voice at the highest level in the organization and allowing them to provide feedback on plans helps to reduce data curation debt.
 - Encourage the formation of support groups as part of their paid work
   - While data managers are part of research teams, the work they do is often siloed, making it very difficult to get feedback, learn, or grow in a position. Depending on the size of your organization, support can come in many ways
-    - If you are a small team, this may mean encouraging your data manager to simply join existing groups of other data managers. One example of this is joining the Providing Opportunities for Women in Education Research (POWER) [Issues in Data Management in Education Research Hub](https://www.womeninedresearch.com/hubs.html) or it could be meeting up with other data managers in your university, even across disciplines.
+    - If you are a small team, this may mean encouraging your data manager to simply join existing groups of other data managers. One example of this is joining the Providing Opportunities for Women in Education Research (POWER) [Issues in Data Management in Education Research Hub](https://osf.io/ap3tk/) or it could be meeting up with other data managers in your university, even across disciplines.
     - If you are a larger organization, creating a Data Core can be an excellent way for data managers across different units to share ideas and develop standardized practices
   
 ---

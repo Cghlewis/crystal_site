@@ -260,7 +260,7 @@ knitr::include_graphics("img/pivot1.PNG")
 
 Select the range of your data and select "New Worksheet".
 
-What's nice about creating PivotTables in a new worksheet is that it reduces errors that might happen if you are sorting and filtering directly in your entry sheets.
+**Side note:** *What's nice about creating PivotTables in a new worksheet is that it reduces errors that might happen if you are sorting and filtering directly in your entry sheets. While databases always sort in a way that keeps rowwise data (records) together, Excel does not. Be very careful when you sort in Excel so that you don't sort columns independently of each other.*
 
 ```{r echo = FALSE, fig.align= "center", fig.cap = "Selecting PivotTable options"}
 

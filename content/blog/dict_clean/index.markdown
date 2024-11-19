@@ -238,7 +238,9 @@ Now that we have done 4 transformations to our data using our data dictionary, w
 
 ![](img/final.PNG)
 
-### Update variable types (2023-11-21)
+----
+
+**5. Update variable types** (2023-11-21)
 
 After sharing this post, someone suggested using a data dictionary to update variable types so I thought I might as well add that as a 5th use for your data dictionary.
 
@@ -328,9 +330,7 @@ In order to do this, you will need one additional column in your data dictionary
 </tbody>
 </table>
 
-**5. Update variable types**
-
-Picking up where we left off in step #4, let's see what our current variable types are.
+Picking up where we left off in example #4, let's see what our current variable types are.
 
 
 ```r
@@ -387,4 +387,14 @@ $ pet_3          <chr> "almost always", "often", "sometimes", "never", "often"~
 $ pet_4          <chr> "sometimes", "sometimes", "sometimes", "never", "someti~
 ```
 
+----
+
+**Additional use cases** (2024-11-18)
+
+There are further things you can use your data dictionary for as well (e.g., adding categorical value lables, as well as for recoding variables).
+
+You can see examples of these use cases at these links.
+
+1. [Adding value labels to categorical variables using a data dictionary](https://cghlewis.github.io/data-wrangling-functions/labelling-data/add-value-labels-dictionary-wide.html).
+2. [Recode categorical values using a data dictionary](https://cghlewis.github.io/data-wrangling-functions/recode-values/recode-values-dictionary-wide.html).
 

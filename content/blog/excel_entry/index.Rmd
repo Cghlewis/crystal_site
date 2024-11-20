@@ -51,7 +51,7 @@ Adding data validation to your data entry tool is the number one thing you can d
 - What are the allowable values or ranges of your variables?
 - Are duplicates allowed?
 
-Creating a document like a [data dictionary](https://datamgmtinedresearch.com/document#document-dictionary) before you build your data entry form is an excellent way to think through what variables need to exist in your data entry sheet and what validation should be added to each column. 
+Creating a document like a [data dictionary](https://cghlewis.com/blog/data_dictionary/) before you build your data entry form is an excellent way to think through what variables need to exist in your data entry sheet and what validation should be added to each column. 
 
 Let's say you have a simple data entry sheet like we see in Figure 1, where we plan to enter some basic tracking information about the students in our sample. Adding some [simple data validation](https://support.microsoft.com/en-us/office/apply-data-validation-to-cells-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249) is fairly easy to set up in Excel. 
 
@@ -236,7 +236,7 @@ We can now [copy this formula by dragging it down through the remaining cells](h
 
 `=XLOOKUP(D2,teacher!$A$2:$A$4,school!$B$2:$B$4)`
 
-What is really nice about linking this data is that if a teacher name is changed at any point, when you change it in the "teacher" tab, it will then be updated in the "student" tab as well. Not duplicating information across sheets removes duplication, reduces errors, and saves time. 
+What is really nice about linking this data is that if a teacher name is changed at any point, when you change it in the "teacher" tab, it will then be updated in the "student" tab as well. Not repeating information across sheets removes duplication, reduces errors, and saves time. 
 
 **Note:** *Like most of this tutorial, there are many alternatives to what I am showing you. In addition to `XLOOKUP`, You can also use `VLOOKUP` or a combination of `INDEX` and `MATCH`. `XLOOKUP` works best for me but if you want to learn more about either of those alternatives, there are many great posts out there to read. For now, I've linked to a [downloadable Excel Workbook](https://github.com/Cghlewis/crystal_site/blob/main/content/blog/excel_entry/tracking_example_cl.xlsx) where I use all 3 options to pull teacher information into the "student" spreadsheet so you can review the differences and choose which works best for you!*
 
@@ -258,7 +258,7 @@ knitr::include_graphics("img/pivot1.PNG")
 
 ```
 
-Select the range of your data and select "New Worksheet".
+Select the range of your data and select "New Worksheet" (see Figure 14).
 
 **Side note:** *What's nice about creating PivotTables in a new worksheet is that it reduces errors that might happen if you are sorting and filtering directly in your entry sheets. While databases always sort in a way that keeps rowwise data (records) together, Excel does not. Be very careful when you sort in Excel so that you don't sort columns independently of each other.*
 
@@ -278,7 +278,7 @@ knitr::include_graphics("img/pivot3.PNG")
 
 From there you can begin dragging other variables of interest to Columns, Rows, or Filters depending on your question. 
 
-For instance, I want to see the status of observation completion per classroom. But I only want to know this for students who have not withdrawn from the study. To get this I could drag `t_l_name` to Columns, `s_obs_complete` to Rows, and `s_withdrawn` to Filters. Then filter to "no" on `s_withdrawn` and I would get something like Figure 16.
+For instance, I want to see the status of observation completion per classroom, but I only want to know this for students who have not withdrawn from the study. To get this I could drag `t_l_name` to Columns, `s_obs_complete` to Rows, and `s_withdrawn` to Filters. Then filter to "no" on `s_withdrawn` and I would get something like Figure 16.
 
 ```{r echo = FALSE, fig.align= "center", fig.cap = "A pivot table to show the completion of observations by classroom"}
 

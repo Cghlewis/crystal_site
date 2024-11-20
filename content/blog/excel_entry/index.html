@@ -46,7 +46,7 @@ tags:
 <li>What are the allowable values or ranges of your variables?</li>
 <li>Are duplicates allowed?</li>
 </ul>
-<p>Creating a document like a <a href="https://datamgmtinedresearch.com/document#document-dictionary">data dictionary</a> before you build your data entry form is an excellent way to think through what variables need to exist in your data entry sheet and what validation should be added to each column.</p>
+<p>Creating a document like a <a href="https://cghlewis.com/blog/data_dictionary/">data dictionary</a> before you build your data entry form is an excellent way to think through what variables need to exist in your data entry sheet and what validation should be added to each column.</p>
 <p>Let’s say you have a simple data entry sheet like we see in Figure 1, where we plan to enter some basic tracking information about the students in our sample. Adding some <a href="https://support.microsoft.com/en-us/office/apply-data-validation-to-cells-29fecbcc-d1b9-42c1-9d76-eff3ce5f7249">simple data validation</a> is fairly easy to set up in Excel.</p>
 <p>First we select the column we want to apply our rules to.</p>
 <p>Then, we go to “Data” -&gt; “Data Validation” -&gt; “Data Validation”.</p>
@@ -196,7 +196,7 @@ Figure 12: Teacher first name returned using XLOOKUP
 </div>
 <p>We can now <a href="https://support.microsoft.com/en-us/office/copy-a-formula-by-dragging-the-fill-handle-in-excel-for-mac-dd928259-622b-473f-9a33-83aa1a63e218">copy this formula by dragging it down through the remaining cells</a>, but first we need to tell Excel which values need to stay consistent, and we can do this using <code>$</code>.</p>
 <p><code>=XLOOKUP(D2,teacher!$A$2:$A$4,school!$B$2:$B$4)</code></p>
-<p>What is really nice about linking this data is that if a teacher name is changed at any point, when you change it in the “teacher” tab, it will then be updated in the “student” tab as well. Not duplicating information across sheets removes duplication, reduces errors, and saves time.</p>
+<p>What is really nice about linking this data is that if a teacher name is changed at any point, when you change it in the “teacher” tab, it will then be updated in the “student” tab as well. Not repeating information across sheets removes duplication, reduces errors, and saves time.</p>
 <p><strong>Note:</strong> <em>Like most of this tutorial, there are many alternatives to what I am showing you. In addition to <code>XLOOKUP</code>, You can also use <code>VLOOKUP</code> or a combination of <code>INDEX</code> and <code>MATCH</code>. <code>XLOOKUP</code> works best for me but if you want to learn more about either of those alternatives, there are many great posts out there to read. For now, I’ve linked to a <a href="https://github.com/Cghlewis/crystal_site/blob/main/content/blog/excel_entry/tracking_example_cl.xlsx">downloadable Excel Workbook</a> where I use all 3 options to pull teacher information into the “student” spreadsheet so you can review the differences and choose which works best for you!</em></p>
 </div>
 <div id="using-pivottables-to-query-data" class="section level3">
@@ -211,7 +211,7 @@ Figure 12: Teacher first name returned using XLOOKUP
 Figure 13: Starting a PivotTable
 </p>
 </div>
-<p>Select the range of your data and select “New Worksheet”.</p>
+<p>Select the range of your data and select “New Worksheet” (see Figure 14).</p>
 <p><strong>Side note:</strong> <em>What’s nice about creating PivotTables in a new worksheet is that it reduces errors that might happen if you are sorting and filtering directly in your entry sheets. While databases always sort in a way that keeps rowwise data (records) together, Excel does not. Be very careful when you sort in Excel so that you don’t sort columns independently of each other.</em></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-14"></span>
 <img src="img/pivot2.PNG" alt="Selecting PivotTable options" width="572" />
@@ -227,7 +227,7 @@ Figure 15: Changing Value Field Settings
 </p>
 </div>
 <p>From there you can begin dragging other variables of interest to Columns, Rows, or Filters depending on your question.</p>
-<p>For instance, I want to see the status of observation completion per classroom. But I only want to know this for students who have not withdrawn from the study. To get this I could drag <code>t_l_name</code> to Columns, <code>s_obs_complete</code> to Rows, and <code>s_withdrawn</code> to Filters. Then filter to “no” on <code>s_withdrawn</code> and I would get something like Figure 16.</p>
+<p>For instance, I want to see the status of observation completion per classroom, but I only want to know this for students who have not withdrawn from the study. To get this I could drag <code>t_l_name</code> to Columns, <code>s_obs_complete</code> to Rows, and <code>s_withdrawn</code> to Filters. Then filter to “no” on <code>s_withdrawn</code> and I would get something like Figure 16.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
 <img src="img/pivot4.PNG" alt="A pivot table to show the completion of observations by classroom" width="495" />
 <p class="caption">

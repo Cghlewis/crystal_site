@@ -55,7 +55,7 @@ It looks like I have all of the documents I need and I am ready to start the dat
 
 The remainder of this post will provide an overview of how I would clean this data, integrating the steps we spoke about in the previous blog post that help ensure that our data is reproducible and reliable. Following the steps laid out in my data cleaning plan, I can start the process.
 
-Our raw data, along with a sampling of our data cleaning syntax are seen below. The actual example data and the full example syntax can be accessed in this [GitHub](https://github.com/Cghlewis/sample_math_proj) repository.
+Our raw data, along with a sampling of our data cleaning syntax (written in R) are seen below. The actual example data and the full example syntax can be accessed in this [GitHub](https://github.com/Cghlewis/sample_math_proj) repository.
 
 
 **Our raw data**
@@ -213,8 +213,8 @@ You can see here what the embedded metadata looks like in this dataset as well. 
 
 ```
 # A tibble: 5 x 7
-  stu_id grade_level       math1       math2         math3         math4     int
-   <dbl>       <dbl>  <hvn_lbl_>  <hvn_lbl_>    <hvn_lbl_>    <hvn_lbl_> <dbl+l>
+  stu_id grade_level math1       math2       math3         math4         int    
+   <dbl>       <dbl> <dbl+lbl>   <dbl+lbl>   <dbl+lbl>     <dbl+lbl>     <dbl+l>
 1   1347           9 2 [disagre~ 1 [strongl~   3 [agree]     3 [agree]   1 [tre~
 2   1368          10 3 [agree]   2 [disagre~   2 [disagre~   2 [disagre~ 1 [tre~
 3   1377           9 4 [strongl~ 4 [strongl~   4 [strongl~   4 [strongl~ 0 [con~

@@ -3,7 +3,7 @@ title: "2024 Year in Review"
 subtitle:
 excerpt: "As I wrap up my 3rd year consulting, it's rewarding to look back on some of the highlights of the year. Image from Sincerely Media on Unsplash."
 author: "Crystal Lewis"
-date: '2024-12-20'
+date: '2024-12-16'
 draft: false 
 # layout options: single, single-sidebar
 layout: single

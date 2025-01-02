@@ -1,0 +1,158 @@
+---
+title: "Bare Necessities of Data Management"
+subtitle: 
+excerpt: "An overview of data management priorities in the early phases of an education research project."
+author: "Crystal Lewis"
+date: "2025-01-02"
+draft: false
+# layout options: single, single-sidebar
+layout: single
+categories:
+- tips
+tags:
+- data management
+- education research
+---
+
+About six months ago I finished writing my book, [Data Management in Large-Scale Education Research](https://datamgmtinedresearch.com/), and as I reflect on the content, I acknowledge that it can be a lot to absorb, especially for someone who is looking to manage data for their very first grant. There are so many data management practices that can help you better organize your project, yet a team's ability to "do it all" is really limited by factors such as funding, timing, team size, and expertise. Therefore, it is important for teams to consider what practices are feasible as well as which ones will give them the largest return on investment.  
+
+This comes up in my consulting work a lot too. For projects just starting up, often teams want to know what practices they can get into place fairly quickly, before a project starts, that will prevent future disasters. There's an understanding that the more teams can do, the better. However, it's often not feasible to do it all right away, and it's okay for data management practices to continue to expand and become more polished along the way.
+
+So, if you need to prioritize a small list of practices to start implementing right away, what should those practices be? While the answer may vary slightly depending on the team, I think there is a list of core practices that should be implemented early on, before data collection begins, in order for your project to be successful. This blog post will review those practices. 
+
+### (01) Create a Data Management Plan (DMP)
+
+Often a [data management plan](https://datamgmtinedresearch.com/dmp) is already created by the time a project begins, as part of a grant application. However, even if a DMP was not required, it is still a worthwhile document to create. It provides a high-level, easily digestible plan for how data will be managed and shared throughout a project.
+
+In preparation for writing a DMP, you'll need to make decisions about how your data will be organized, managed, secured, and shared (including choosing a future data repository). As part of this process, it's important to look into requirements from any stakeholders and make sure relevant information is included in your plan:
+  - Funder requirements (e.g., what does NIH require?)
+  - Future data sharing repository requirements (e.g., if you plan to shared data on [LDbase](https://ldbase.org/), what are the requirements?)
+  - Requirements from any other partners (e.g., school districts)
+  
+Another extremely helpful document to create during this time is a [data sources catalog](https://datamgmtinedresearch.com/dmp#dmp-catalog) which outlines a plan for how each data source/instrument being collected for your project will be managed individually.
+
+```{r echo = FALSE, fig.align= "center", fig.cap="Data Sources Catalog example"}
+
+knitr::include_graphics("img/fig5-2.PNG")
+
+```
+
+### (02) Choose storage locations and design your storage structures 
+
+This may seem like a trivial step, but choosing your project file [storage locations](https://datamgmtinedresearch.com/store) **and** setting up your folder and file structures before your project begins ensures that you never have to think about where or how to save a file because the roadmap will already exist for you. It also helps ensure that your files are always findable and understandable. I'm sure we've all received that email that says,
+
+> Hey, where can I find X document? I've searched around and can't find it.
+
+While setting up organized and logical storage structures can't remove all chances of this happening, it can certainly minimize it. 
+
+```{r echo = FALSE, fig.align= "center", out.width = "80%", fig.cap="Example of an unorganized and an organized directory structure"}
+
+knitr::include_graphics("img/structure.jpg")
+
+```
+
+**For electronic files**
+  - First, decide how you want to organize a project directory
+    - How will you [organize](https://datamgmtinedresearch.com/style#style-directory) the first level of folders? (e.g., phases of a research project life cycle)
+      - How will you organize the second level of folders? (e.g., wave of data collection)
+    - How will you name folders consistently and clearly?
+    - How should team members[name files](https://datamgmtinedresearch.com/style#style-file) consistently and clearly?
+  - Second, [assign access](https://datamgmtinedresearch.com/store#store-electronic) to folders
+    - In assigning access you are considering two things
+      - Data security for the purposes of protecting confidential information (i.e., PII)
+      - Data security for the purposes of protecting accidental edits to information (e.g., someone writes over a data file)
+  - Last, have a team member build the shell of your directory structure in your designated project file storage location (e.g., SharePoint) early on and move any existing documents (e.g., grant proposal, data management plan), into this project folder. Write up all rules for how folders and files should be named in a [style guide](https://datamgmtinedresearch.com/style) and train your team on the rules to ensure adherence.
+  
+**For paper files**
+  - Design a similar [logical physical folder structure](https://datamgmtinedresearch.com/store#store-paper) for storing paper files that keeps data secure and allows team members to easily understand how to find appropriate files.
+
+### (03) Schedule planning meetings with core team members
+
+These planning meetings are essential to laying the ground work for your team's data management practices. In these meetings you will want to cover tasks such as
+
+- Reviewing planning [checklists](https://datamgmtinedresearch.com/plan#plan-checklist)
+  - Document all decisions made while reviewing these checklists
+- Developing [workflow diagrams](https://datamgmtinedresearch.com/plan#data-management-workflow)
+- Assigning project [roles and responsibilities](https://datamgmtinedresearch.com/roles#roledoc)
+- Creating data collection [timelines](https://datamgmtinedresearch.com/document#document-supplement)
+- Initiating any necessary procedures (e.g., data request process, IRB application)
+- Set up recurring project meeting schedules
+
+### (04) Consider future data sharing
+
+As part of your planning process, if data sharing is a requirement of your grant, you'll also want to consider future data sharing during this time.
+
+- If participant consent is required for your study, [add appropriate data sharing language to consent forms](https://datamgmtinedresearch.com/collect#collect-irb).
+- Talk with research partners (e.g., school districts) about data sharing and make sure there are no issues with your data sharing plans.
+
+### (05) Create most urgent standard operating procedures
+
+[Standard operating procedures](https://datamgmtinedresearch.com/document#document-sop), or SOPs, are standalone documents that provide a set of detailed instructions or rules for repeatable tasks. SOPs ensure that practices are implemented consistently and allow continuation of practices, even when staff turnover or tasks are reassigned.
+
+There will be many SOPs to create during your project (e.g., SOPs for creating tools, SOPs for field data collection, SOPs for data entry). However, if you want to prioritize which SOPs to create first, I would start with these few.
+
+  - Screening and consenting process
+    - Before you collect data, you will be recruiting, potentially screening, and then consenting participants to be in your study. That process, including an inclusion/exclusion criteria, should be documented in an SOP.
+  - Assigning unique participant study IDs
+    - This SOP should include an [ID Schema](https://datamgmtinedresearch.com/track#track-ids)
+      - What are the ranges or allowable values? (e.g., Students *3000-4000*, Teachers *200-300*, Schools *50-80*)
+    - As well as how unique IDs should be assigned to participants as they are recruited into your study. 
+      - Where and when is this information recorded? (e.g., participant tracking database)
+
+With those documents in place, begin training your team on those processes so that as soon as your project is up and running, your team is prepared to follow your outlined process.
+
+### (06) Start creating data dictionaries
+
+- Create a [data dictionary](https://datamgmtinedresearch.com/document#document-dictionary) for each unique instrument in your [data sources catalog](https://datamgmtinedresearch.com/dmp#dmp-catalog)
+  - Each row of this rectangular formatted document will represent a variable that should exist in the final dataset for that source. Each column in that dictionary is an attribute about that variable (e.g., variable name, variable description, variable type, allowable values). This dictionary will be a compass for the remainder of your project, ensuring that you are always collecting, capturing, and cleaning data in a way that produces the datasets you planned for.
+  
+```{r echo = FALSE, fig.align= "center", fig.cap="Data Dictionary example"}
+
+knitr::include_graphics("img/fig8-17.PNG")
+
+```
+
+### (07) Create a participant tracking system
+
+If your study collects data on human participants, it's important to have a place for [storing and tracking information](https://datamgmtinedresearch.com/track) about those participants (e.g., their assigned unique study IDs, their contact information, tracking forms collected). This internal tracking system can be built in any tool that allows you to collect fields of information (e.g., Microsoft Excel, Claris FileMaker, REDCap, Microsoft Access, Quick Base). What's most important is that this information is stored securely since it contains identifiable personal information and is your single source of truth for who is in your study sample and what data has been collected on them.
+
+Early on you don't need this system to be comprehensive. You can continue adding tables/sheets and fields as your project progresses. But before you begin collecting data, it's important to create your entity tables (e.g., school, teacher, student) and add fields for tracking basic information about your participants (e.g., first and last name, assigned unique study ID, contact information, consent completion).
+
+```{r echo = FALSE, fig.align= "center", out.width = "80%", fig.cap="Example tables in a participant tracking system"}
+
+knitr::include_graphics("img/tracking.PNG")
+
+```
+
+---
+
+#### Once you check those priorities off your list, I see the next level priorities as follows:
+
+---
+
+### (08) Document data collection workflows, along with any associated decision rules (e.g., inclusion criteria), in the relative SOP
+
+Make sure that those workflows include all data management decisions and rules around data tracking, data entry, data extraction, data cleaning, data checking, data security, and so forth.
+
+### (09) Create a research protocol if required by your IRB
+
+Even if a [research protocol](https://datamgmtinedresearch.com/document#document-protocol) is not required by your IRB, I still recommend creating this document at some point in your study. This document is a comprehensive project plan that describes the what, who, when, where, and how of your study. It is an excellent summary documents for sharing with your data in a public repository. 
+
+### (10) Begin building data collection and capture tools using quality assurance
+
+- Using your data dictionaries as your guide, build [data validation](https://datamgmtinedresearch.com/collect#collect-build) in your tools to improve data quality (e.g., restrict values allowed in entry).
+- [Pilot test](https://datamgmtinedresearch.com/collect#pilot-the-instrument) instruments and tools before collecting data
+- Get IRB approval for instruments as necessary
+- Begin writing [data cleaning plans](https://datamgmtinedresearch.com/document#document-plan) based on a review of pilot sample data
+
+### (11) Add fields to your participant tracking system necessary for tracking data collection efforts
+
+Early on in a project we only need tables that allow us to track incoming participant contact and consent information. But as data collection begins, we also need [fields](https://datamgmtinedresearch.com/track#choosing-fields) that allow us to track other incoming data, especially data that is being collected in the field (e.g., survey collected, observation collected, math assessment collected). It's important to document that incoming information on an ongoing basis to ensure the entire team has an accurate count of what is coming in and what is left to collect. 
+
+---
+
+*Additional practices outside of this list will most certainly be needed as your project progresses through phases of the research life cycle. If you are looking for best practices from data collection and on, you can pick up more information starting at **Collect** in this [appendix](https://datamgmtinedresearch.com/appendix).*
+
+## Other data management practices
+
+These are the data management practices I often see as being the biggest priorities for research projects, particularly for those collecting human subjects data. Again, there are many other data management practices that can be implemented in early phases of the project depending on the amount of time you have, your project needs, and your team's enthusiasm for doing more. If you have other ideas of what should be added to this list, I'd love your feedback!

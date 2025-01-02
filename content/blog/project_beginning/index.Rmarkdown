@@ -104,8 +104,10 @@ With those documents in place, begin training your team on those processes so th
 ### (06) Start creating data dictionaries
 
 - Create a [data dictionary](https://datamgmtinedresearch.com/document#document-dictionary) for each unique instrument in your [data sources catalog](https://datamgmtinedresearch.com/dmp#dmp-catalog)
-  - Each row of this rectangular formatted document will represent a variable that should exist in the final dataset for that source. Each column in that dictionary is an attribute about that variable (e.g., variable name, variable description, variable type, allowable values). This dictionary will be a compass for the remainder of your project, ensuring that you are always collecting, capturing, and cleaning data in a way that produces the datasets you planned for.
-  
+  - Creating these dictionaries requires considering things such as how your [datasets will be organized](https://datamgmtinedresearch.com/structure#basics-of-a-dataset), as well as choosing consistent [variable naming and value coding conventions](https://datamgmtinedresearch.com/style#style-varname).
+  - Each row of this rectangular formatted document will represent a variable that should exist in the final dataset for that source. Each column of the data dictionary is an attribute about that variable (e.g., variable name, variable description, variable type, allowable values). These dictionaries will be a compass for the remainder of your project, ensuring that you are always collecting, capturing, and cleaning data in a way that produces the datasets you planned for. 
+
+
 ```{r echo = FALSE, fig.align= "center", fig.cap="Data Dictionary example"}
 
 knitr::include_graphics("img/fig8-17.PNG")
@@ -151,7 +153,9 @@ Early on in a project we only need tables that allow us to track incoming partic
 
 ---
 
-*Additional practices outside of this list will most certainly be needed as your project progresses through phases of the research life cycle. If you are looking for best practices from data collection and on, you can pick up more information starting at **Collect** in this [appendix](https://datamgmtinedresearch.com/appendix).*
+#### Additional practices outside of this list will most certainly be needed as your project progresses through phases of the research life cycle. If you are looking for best practices from data collection and on, you can pick up more information starting at *Collect* in this [appendix](https://datamgmtinedresearch.com/appendix).
+
+---
 
 ## Other data management practices
 

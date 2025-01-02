@@ -59,12 +59,12 @@ knitr::include_graphics("img/structure.jpg")
     - How should team members[name files](https://datamgmtinedresearch.com/style#style-file) consistently and clearly?
   - Second, [assign access](https://datamgmtinedresearch.com/store#store-electronic) to folders
     - In assigning access you are considering two things
-      - Data security for the purposes of protecting confidential information (i.e., PII)
+      - Data security for the purposes of protecting confidential information (i.e., [PII](https://datamgmtinedresearch.com/hsd#identifiability-of-a-dataset))
       - Data security for the purposes of protecting accidental edits to information (e.g., someone writes over a data file)
   - Last, have a team member build the shell of your directory structure in your designated project file storage location (e.g., SharePoint) early on and move any existing documents (e.g., grant proposal, data management plan), into this project folder. Write up all rules for how folders and files should be named in a [style guide](https://datamgmtinedresearch.com/style) and train your team on the rules to ensure adherence.
   
 **For paper files**
-  - Design a similar [logical physical folder structure](https://datamgmtinedresearch.com/store#store-paper) for storing paper files that keeps data secure and allows team members to easily understand how to find appropriate files.
+  - Design a similar [logical physical folder structure](https://datamgmtinedresearch.com/store#store-paper) for storing paper files that keeps data secure and allows team members to easily understand how to find necessary documents.
 
 ### (03) Schedule planning meetings with core team members
 

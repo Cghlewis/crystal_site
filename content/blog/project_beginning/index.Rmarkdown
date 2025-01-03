@@ -138,7 +138,7 @@ Make sure that those workflows include all data management decisions and rules a
 
 ### (09) Create a research protocol if required by your IRB
 
-Even if a [research protocol](https://datamgmtinedresearch.com/document#document-protocol) is not required by your IRB, I still recommend creating this document at some point in your study. This document is a comprehensive project plan that describes the what, who, when, where, and how of your study. It is an excellent summary documents for sharing with your data in a public repository. 
+Even if a [research protocol](https://datamgmtinedresearch.com/document#document-protocol) is not required by your IRB, I still recommend creating this document at some point in your study. This document is a comprehensive project plan that describes the what, who, when, where, and how of your study. It is an excellent summary document for sharing with your data in a public repository. 
 
 ### (10) Begin building data collection and capture tools using quality assurance
 
@@ -149,7 +149,7 @@ Even if a [research protocol](https://datamgmtinedresearch.com/document#document
 
 ### (11) Add fields to your participant tracking system necessary for tracking data collection efforts
 
-Early on in a project we only need tables that allow us to track incoming participant contact and consent information. But as data collection begins, we also need [fields](https://datamgmtinedresearch.com/track#choosing-fields) that allow us to track other incoming data, especially data that is being collected in the field (e.g., survey collected, observation collected, math assessment collected). It's important to document that incoming information on an ongoing basis to ensure the entire team has an accurate count of what is coming in and what is left to collect. 
+Early on in a project we only need tables that allow us to track incoming participant contact and consent information. But as data collection begins, we also need [fields](https://datamgmtinedresearch.com/track#choosing-fields) that allow us to track other incoming data, especially data that is being collected in the field (e.g., survey collected, observation form collected, math assessment collected). It's important to document that incoming information on an ongoing basis to ensure the entire team has an accurate count of what is coming in and what is left to collect. 
 
 ---
 

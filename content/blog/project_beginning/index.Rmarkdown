@@ -26,7 +26,7 @@ Often a [data management plan](https://datamgmtinedresearch.com/dmp) is already 
 
 In preparation for writing a DMP, you'll need to make decisions about how your data will be organized, managed, secured, and shared (including choosing a future data repository). As part of this process, it's important to look into requirements from any stakeholders and make sure relevant information is included in your plan:
   - Funder requirements (e.g., what does NIH require?)
-  - Future data sharing repository requirements (e.g., if you plan to shared data on [LDbase](https://ldbase.org/), what are the requirements?)
+  - Future data sharing repository requirements (e.g., if you plan to share data on [LDbase](https://ldbase.org/), what are the requirements?)
   - Requirements from any other partners (e.g., school districts)
   
 Another extremely helpful document to create during this time is a [data sources catalog](https://datamgmtinedresearch.com/dmp#dmp-catalog) which outlines a plan for how each data source/instrument being collected for your project will be managed individually.

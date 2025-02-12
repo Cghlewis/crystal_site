@@ -190,7 +190,7 @@ knitr::include_graphics("img/recode.PNG")
 These last two steps are not necessarily data cleaning steps, but are additional transformations that can be performed to allow you to structure your data for more user-friendly data sharing.  
 
 15. Merge and/or append data as needed
-    - In this step you can merge or append forms within or across time
+    - In this step you can [merge or append forms](https://cghlewis.com/blog/joins/) within or across time
     - Merging is joining forms horizontally (linking by a unique identifier). Appending is joining forms vertically, stacking forms on one another, joined by unique variable names.
     - Again do validation checks here
       - Do you have the correct number of rows and columns after the merge/append?
@@ -232,3 +232,5 @@ With all of this said, this set of standards and data cleaning steps are still m
 - [Data Cleaning Principles](https://kbroman.org/Talk_DataCleaning/data_cleaning_notes.pdf)  
 
 In the next post we will dive into my next question, how do we integrate these standards into a data cleaning workflow?
+
+_2025-02-12: Since this post was originally written, I have further refined and elaborated on this data cleaning list in my open access book which you can find here: [https://datamgmtinedresearch.com/clean](https://datamgmtinedresearch.com/clean)_

@@ -32,7 +32,7 @@ tags:
 
 Below are open access resources for those wanting to learn more about research data management. I have organized resources by type (papers, guides, slides, etc). There are MANY more resources than the ones listed below, but I have narrowed them down to those that I have found most helpful in understanding general best practices in data management and how to implement them into a research workflow. 
 
-*Resources were last updated on 2025/03/10*
+*Resources were last updated on 2025/03/10* 
 
 ### Guides 
 
@@ -153,6 +153,11 @@ Research Ideas and Outcomes</a> </td>
    <td style="text-align:left;"> <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010397">Ten Simple Rules for maximizing the recommendation of NIH Data Mgmt and Sharing Plan</a> </td>
   </tr>
   <tr>
+   <td style="text-align:left;"> Hertz, M. &amp; McNeill, A. </td>
+   <td style="text-align:right;"> 2024 </td>
+   <td style="text-align:left;"> <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012604">Eleven quick tips for properly handling tabular data</a> </td>
+  </tr>
+  <tr>
    <td style="text-align:left;"> Logan, J., Hart, S. &amp; Schatscneider, C. </td>
    <td style="text-align:right;"> 2021 </td>
    <td style="text-align:left;"> <a href="https://journals.sagepub.com/doi/full/10.1177/23328584211006475#.YGuYDCaQo48">Data Sharing in Education Science</a> </td>
@@ -161,6 +166,11 @@ Research Ideas and Outcomes</a> </td>
    <td style="text-align:left;"> Strand, J. </td>
    <td style="text-align:right;"> 2021 </td>
    <td style="text-align:left;"> <a href="https://psyarxiv.com/rsn5y">Error Tight: Exercises for Lab Groups to Prevent Research Mistakes</a> </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> White, et al. </td>
+   <td style="text-align:right;"> 2024 </td>
+   <td style="text-align:left;"> <a href="https://doi.org/10.25894/rise.2604">Getting started with data sharing: Advice for researchers in education</a> </td>
   </tr>
   <tr>
    <td style="text-align:left;"> Yenni, et al. </td>

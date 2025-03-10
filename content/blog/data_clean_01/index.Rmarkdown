@@ -230,6 +230,9 @@ With all of this said, this set of standards and data cleaning steps are still m
 - [Six Data Cleaning Checks](http://evalu-ate.org/blog/hubbard-sep2016/)  
 - [Data Organization in Spreadsheets](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989)  
 - [Data Cleaning Principles](https://kbroman.org/Talk_DataCleaning/data_cleaning_notes.pdf)  
+- [Twelve Steps of Data Cleaning Handout](https://www.dropbox.com/scl/fi/x2bf2t0q134p0cx4kvej0/TWELVE-STEPS-OF-DATA-CLEANING-BRIEF-HANDOUT-MORROW-2017.pdf?rlkey=lfrllz3zya83qzeny6ubwzvjj&e=2&dl=0)
+- [Data Quality Indicator Checklist](https://osf.io/t8upr)
+- [Additional Resources](https://cghlewis.com/blog/data_mgmt_resources/#data-organization-and-cleaning-resources)
 
 In the next post we will dive into my next question, how do we integrate these standards into a data cleaning workflow?
 

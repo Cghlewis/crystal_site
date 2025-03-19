@@ -232,9 +232,9 @@ knitr::include_graphics("img/link5.PNG")
 
 ```
 
-We can now [copy this formula by dragging it down through the remaining cells](https://support.microsoft.com/en-us/office/copy-a-formula-by-dragging-the-fill-handle-in-excel-for-mac-dd928259-622b-473f-9a33-83aa1a63e218), but first we need to tell Excel which values need to stay consistent, and we can do this using `$`.
+We can now [copy this formula by dragging it down through the remaining cells](https://support.microsoft.com/en-us/office/copy-a-formula-by-dragging-the-fill-handle-in-excel-for-mac-dd928259-622b-473f-9a33-83aa1a63e218), but first we need to tell Excel which values need to stay consistent, and we can do this using `$`. 
 
-`=XLOOKUP(D2,teacher!$A$2:$A$4,school!$B$2:$B$4)`
+`=XLOOKUP(D2,teacher!$A$2:$A$4,teacher!$B$2:$B$4)`
 
 What is really nice about linking this data is that if a teacher name is changed at any point, when you change it in the "teacher" tab, it will then be updated in the "student" tab as well. Not repeating information across sheets removes duplication, reduces errors, and saves time. 
 

@@ -40,7 +40,7 @@ In this three part series I hope to cover the following things:
 
 ## Data cleaning standards
 
-A good starting point for thinking about standards comes from an article written by [Omar Elgabry](https://towardsdatascience.com/the-ultimate-guide-to-data-cleaning-3969843991d4). He writes about five data quality indicators (originally found on Wikipedia) that should be considered when you review your data. The way I interpret these indicators for education research data cleaning are as follows.
+A good starting point for thinking about standards comes from an article written by [Omar Elgabry](https://medium.com/data-science/the-ultimate-guide-to-data-cleaning-3969843991d4). He writes about five data quality indicators (originally found on Wikipedia) that should be considered when you review your data. The way I interpret these indicators for education research data cleaning are as follows.
 
 1. Complete - All forms that you collected have been entered and/or retrieved. You should also not have extraneous data that doesn't belong (duplicates, participants who aren't consented, etc.). Your [participant tracking database](https://datamgmtinedresearch.com/track.html) should be used to confirm the completeness of your data.
 2. Valid - Variables conform to the constraints that you have laid out in your [data dictionary](https://datamgmtinedresearch.com/documentation.html#data-dictionary). Remember from my previous [post](https://cghlewis.com/blog/data_dictionary/), your data dictionary lays out your expected variable names, types, ranges, categories, and more.

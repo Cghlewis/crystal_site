@@ -167,7 +167,7 @@ create_agent(svy) %>%
   interrogate()
 ```
 
-As we get to the end of our syntax, you can see that I have added some data validation code. This code (using the [pointblank](https://rich-iannone.github.io/pointblank/) package here), creates a report that shows me if my data are meeting my expected criteria. Using my data dictionary as a reference, I added several checks:
+As we get to the end of our syntax, you can see that I have added some data validation code. This code (using the [pointblank](https://rstudio.github.io/pointblank/) package here), creates a report that shows me if my data are meeting my expected criteria. Using my data dictionary as a reference, I added several checks:
 
 1. Are my cases all distinct? Do I still have duplicate student IDs?
 2. Are my student IDs all valid (fall within my expected range)?
